@@ -1,6 +1,7 @@
 {
  "version": 1,
  "defines": {
+  "WAR_MAJOR_MINIMUM_TURNS": 10,
   "MAX_UNIT_SUPPLY_GROWTH_MOD": 70,
   "PRODUCTION_PENALTY_PER_UNIT_OVER_SUPPLY": 5,
   "GROWTH_PENALTY_PER_UNIT_OVER_SUPPLY": 5,
@@ -19,6 +20,7 @@
   "MINOR_CIV_UNIT_SUPPLY_MODIFIER_HOSTILE": 0,
   "MINOR_CIV_UNIT_SUPPLY_MODIFIER_IRRATIONAL": 0,
   "MINOR_CIV_UNIT_SUPPLY_MULTIPLIER_PER_EXTRA_CITY": 0,
+  "UNIT_COST_WAR_WEARINESS_PERCENT_INCREASE": 75,
   "UNHAPPINESS_PER_POPULATION_FLOAT": 0.0,
   "UNHAPPY_THRESHOLD": 50,
   "GLOBAL_GROWTH_PENALTY_PER_UNHAPPY": 2.5,
@@ -50,7 +52,8 @@
   "UNHAPPINESS_PER_PILLAGED_TILE": 0.5,
   "UNHAPPINESS_PER_ISOLATED_POP": 0.34,
   "UNHAPPINESS_PER_SPECIALIST": 100,
-  "UNHAPPINESS_PER_X_PUPPET_CITIZENS": 4
+  "UNHAPPINESS_PER_X_PUPPET_CITIZENS": 4,
+  "WAR_WEARINESS_POPULATION_PERCENT_CAP": 34
  },
  "difficulties": {
   "Settler": {
@@ -797,6 +800,11 @@
     "boredomFlat": 1
    }
   },
+  "Honor": {
+   "flags": {
+    "warWearinessMod": 25
+   }
+  },
   "Divine Right": {
    "global": {
     "boredomFlat": 1
@@ -838,6 +846,11 @@
   "Fortified Borders": {
    "global": {
     "distressFlat": 2
+   }
+  },
+  "Order": {
+   "flags": {
+    "warWearinessMod": 25
    }
   },
   "Academy of Sciences": {

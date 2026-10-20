@@ -422,7 +422,8 @@
    "[Great Artist] is earned [+33]% faster <during a Golden Age>",
    "[Great Musician] is earned [+33]% faster <during a Golden Age>",
    "[Great Writer] is earned [+33]% faster <during a Golden Age>",
-   "[Great Prophet] is earned [+33]% faster <during a Golden Age>"
+   "[Great Prophet] is earned [+33]% faster <during a Golden Age>",
+   "[Great Diplomat] is earned [+33]% faster <during a Golden Age>"
   ]
  },
  {
@@ -617,6 +618,7 @@
   "type": "Enhancer",
   "uniques": [
    "[+2 Science, +2 Faith] from [Landmark] tiles [in all cities]",
+   "[+2 Science, +2 Faith] from [Embassy] tiles [in all cities]",
    "[+2 Culture] from every [Great Work]"
   ]
  },

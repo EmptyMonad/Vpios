@@ -62,6 +62,8 @@ struct VPNeedsData: Decodable {
 /// Saved with the game.
 struct VPMedians: Codable, Equatable {
     var basicNeeds = 0, gold = 0, science = 0, culture = 0
+    /// CvPlayer::m_aiWarWeariness, "civ-enemy" -> accumulated weariness (VP/VPWar.swift)
+    var warWeariness: [String: Int]? = nil
 }
 
 /// One city's unhappiness by source, in GetUnhappinessAggregated's order, already capped.
@@ -340,9 +342,10 @@ extension GameState {
             let alpha = Float(vp.define(alphaKey, 0.65))
             return Int(0.5 + Float(Int(sorted[min(n, sorted.count - 1)])) * alpha + Float(old) * (1 - alpha))
         }
+        let ww = vpMedians.warWeariness
         vpMedians = VPMedians(basicNeeds: next(.distress, vpMedians.basicNeeds, "DISTRESS_MEDIAN_RATE_CHANGE"),
                               gold: next(.poverty, vpMedians.gold, "POVERTY_MEDIAN_RATE_CHANGE"),
                               science: next(.illiteracy, vpMedians.science, "ILLITERACY_MEDIAN_RATE_CHANGE"),
-                              culture: next(.boredom, vpMedians.culture, "BOREDOM_MEDIAN_RATE_CHANGE"))
+                              culture: next(.boredom, vpMedians.culture, "BOREDOM_MEDIAN_RATE_CHANGE"), warWeariness: ww)
     }
 }

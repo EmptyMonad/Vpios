@@ -67,6 +67,7 @@ extension GameState {
         // counted here), "[stats] per [n] social policies", the empire's bare "[stats]" by source, "Natural Wonders".
         if onlyCity == nil {
             for (key, st) in globalStatsFromUniques(civId) { h.add(key, st.happiness) }
+            if vpNeeds != nil { h.add("War Weariness", -Double(vpWarWearinessUnhappiness(civId))) }   // VP: VP/VPWar.swift
         }
         return h
     }
