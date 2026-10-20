@@ -70,6 +70,8 @@ extension GameState {
             }
             let (greatGeneralName, greatGeneralBonus) = getGreatGeneralBonus(combatant, enemy, action: action)
             if greatGeneralBonus != 0 { modifiers.put(greatGeneralName, greatGeneralBonus) }
+            let vpMono = u.isMilitary ? vpMonopolyCombat(u.civId, attacking: action == "Attack") : 0   // VP: strategic monopolies
+            if vpMono != 0 { modifiers.put("Monopoly", vpMono) }
         } else if let city = cCity(combatant) {
             for u in cityUniques(city) where u.pattern == "[]% Strength for cities" && conditionalsHold(u, conditionalState) {
                 modifiers.add(modifierString(u), u.int(0))

@@ -40,6 +40,8 @@
   "Policy_YieldFromTechRetroactive",
   "Policy_YieldFromWorldWonderConstruction",
   "Policy_YieldGPExpend",
+  "Resource_CityYieldModFromMonopoly",
+  "Resource_YieldChangeFromMonopoly",
   "Trait_YieldFromCSAlly",
   "Trait_YieldFromCSFriend",
   "Trait_YieldFromConquest",
@@ -17262,6 +17264,1620 @@
     "MonopolyModPercent": 5,
     "UniqueLuxuryCities": 9999,
     "UniqueLuxuryQuantity": 1
+   }
+  }
+ },
+ "resources": {
+  "Stone": {
+   "Resource_YieldChanges": [
+    {
+     "YieldType": "Production",
+     "Yield": 1
+    }
+   ],
+   "_": {
+    "ResourceClassType": "Bonus",
+    "LandResource": 1,
+    "RockResource": 1,
+    "TechReveal": "The Wheel",
+    "WonderProductionMod": 10,
+    "WonderProductionModObsoleteEra": "Medieval era",
+    "MaxLatitude": 90,
+    "PlacementOrder": 2,
+    "ConstAppearance": 50,
+    "RandApp1": 25,
+    "RandApp2": 25,
+    "TilesPer": 12
+   }
+  },
+  "Wheat": {
+   "Resource_YieldChanges": [
+    {
+     "YieldType": "Food",
+     "Yield": 1
+    }
+   ],
+   "_": {
+    "ResourceClassType": "Bonus",
+    "LandResource": 1,
+    "PlantResource": 1,
+    "TechReveal": "Agriculture",
+    "MaxLatitude": 90,
+    "PlacementOrder": 2,
+    "ConstAppearance": 50,
+    "RandApp1": 25,
+    "RandApp2": 25,
+    "TilesPer": 12
+   }
+  },
+  "Rice": {
+   "Resource_YieldChanges": [
+    {
+     "YieldType": "Food",
+     "Yield": 1
+    }
+   ],
+   "_": {
+    "ResourceClassType": "Bonus",
+    "LandResource": 1,
+    "PlantResource": 1,
+    "IconString": "Res Rice]",
+    "Flatlands": 1,
+    "Normalize": 1,
+    "TechReveal": "Agriculture",
+    "MaxLatitude": 40,
+    "PlacementOrder": 2,
+    "ConstAppearance": 50,
+    "RandApp1": 25,
+    "RandApp2": 25,
+    "TilesPer": 12
+   }
+  },
+  "Maize": {
+   "Resource_YieldChanges": [
+    {
+     "YieldType": "Food",
+     "Yield": 1
+    }
+   ],
+   "_": {
+    "ResourceClassType": "Bonus",
+    "LandResource": 1,
+    "PlantResource": 1,
+    "IconString": "Res Maize]",
+    "Flatlands": 1,
+    "Normalize": 1,
+    "TechReveal": "Agriculture",
+    "MaxLatitude": 50,
+    "PlacementOrder": 2,
+    "ConstAppearance": 50,
+    "RandApp1": 25,
+    "RandApp2": 25,
+    "TilesPer": 12
+   }
+  },
+  "Cattle": {
+   "Resource_YieldChanges": [
+    {
+     "YieldType": "Production",
+     "Yield": 1
+    }
+   ],
+   "_": {
+    "ResourceClassType": "Bonus",
+    "LandResource": 1,
+    "AnimalResource": 1,
+    "TechReveal": "Animal Husbandry",
+    "MaxLatitude": 90,
+    "PlacementOrder": 2,
+    "ConstAppearance": 50,
+    "RandApp1": 25,
+    "RandApp2": 25,
+    "TilesPer": 12
+   }
+  },
+  "Sheep": {
+   "Resource_YieldChanges": [
+    {
+     "YieldType": "Food",
+     "Yield": 1
+    }
+   ],
+   "_": {
+    "ResourceClassType": "Bonus",
+    "LandResource": 1,
+    "AnimalResource": 1,
+    "TechReveal": "Animal Husbandry",
+    "MaxLatitude": 90,
+    "PlacementOrder": 2,
+    "ConstAppearance": 50,
+    "RandApp1": 25,
+    "RandApp2": 25,
+    "TilesPer": 12
+   }
+  },
+  "Deer": {
+   "Resource_YieldChanges": [
+    {
+     "YieldType": "Food",
+     "Yield": 1
+    }
+   ],
+   "_": {
+    "ResourceClassType": "Bonus",
+    "LandResource": 1,
+    "AnimalResource": 1,
+    "TechReveal": "Trapping",
+    "MaxLatitude": 90,
+    "PlacementOrder": 2,
+    "ConstAppearance": 50,
+    "RandApp1": 25,
+    "RandApp2": 25,
+    "TilesPer": 12
+   }
+  },
+  "Bison": {
+   "Resource_YieldChanges": [
+    {
+     "YieldType": "Food",
+     "Yield": 1
+    }
+   ],
+   "_": {
+    "ResourceClassType": "Bonus",
+    "LandResource": 1,
+    "AnimalResource": 1,
+    "TechReveal": "Trapping",
+    "MaxLatitude": 90,
+    "PlacementOrder": 2,
+    "ConstAppearance": 50,
+    "RandApp1": 25,
+    "RandApp2": 25,
+    "TilesPer": 12
+   }
+  },
+  "Fish": {
+   "Resource_YieldChanges": [
+    {
+     "YieldType": "Food",
+     "Yield": 2
+    }
+   ],
+   "_": {
+    "ResourceClassType": "Bonus",
+    "SeaResource": 1,
+    "AnimalResource": 1,
+    "TechReveal": "Pottery",
+    "MaxLatitude": 90,
+    "PlacementOrder": 2,
+    "ConstAppearance": 50,
+    "RandApp1": 25,
+    "RandApp2": 25,
+    "TilesPer": 12
+   }
+  },
+  "Iron": {
+   "Resource_YieldChanges": [
+    {
+     "YieldType": "Production",
+     "Yield": 1
+    }
+   ],
+   "Resource_YieldChangeFromMonopoly": [
+    {
+     "YieldType": "Production",
+     "Yield": 2
+    }
+   ],
+   "_": {
+    "ResourceClassType": "Rush",
+    "ResourceUsage": 1,
+    "IsMonopoly": 1,
+    "MonopolyDefenseBonus": 10,
+    "StrategicHelp": "Key Resource Monopoly Strat Iron",
+    "StrategicPriority": 2,
+    "LandResource": 1,
+    "RockResource": 1,
+    "MaxLatitude": 90,
+    "PlacementOrder": 1,
+    "ConstAppearance": 100,
+    "RandApp1": 10,
+    "RandApp2": 10,
+    "Player": 67
+   }
+  },
+  "Horses": {
+   "Resource_YieldChanges": [
+    {
+     "YieldType": "Production",
+     "Yield": 1
+    }
+   ],
+   "Resource_YieldChangeFromMonopoly": [
+    {
+     "YieldType": "Science",
+     "Yield": 2
+    }
+   ],
+   "_": {
+    "ResourceClassType": "Rush",
+    "ResourceUsage": 1,
+    "IsMonopoly": 1,
+    "MonopolyAttackBonus": 10,
+    "StrategicHelp": "Key Resource Monopoly Strat Horse",
+    "StrategicPriority": 1,
+    "LandResource": 1,
+    "AnimalResource": 1,
+    "TechObsolete": "Rocketry",
+    "MaxLatitude": 90,
+    "PlacementOrder": 1,
+    "ConstAppearance": 100,
+    "RandApp1": 10,
+    "RandApp2": 10,
+    "Player": 67
+   }
+  },
+  "Coal": {
+   "Resource_YieldChanges": [
+    {
+     "YieldType": "Production",
+     "Yield": 1
+    }
+   ],
+   "Resource_YieldChangeFromMonopoly": [
+    {
+     "YieldType": "Gold",
+     "Yield": 3
+    }
+   ],
+   "_": {
+    "ResourceClassType": "Rush",
+    "ResourceUsage": 1,
+    "IsMonopoly": 1,
+    "MonopolyMovementBonus": 1,
+    "StrategicHelp": "Key Resource Monopoly Strat Coal",
+    "StrategicPriority": 3,
+    "TechImproveable": "Chemistry",
+    "LandResource": 1,
+    "RockResource": 1,
+    "TechCityTrade": "Chemistry",
+    "TechReveal": "Chemistry",
+    "MaxLatitude": 90,
+    "PlacementOrder": 1,
+    "ConstAppearance": 100,
+    "RandApp1": 10,
+    "RandApp2": 10,
+    "Player": 67
+   }
+  },
+  "Oil": {
+   "Resource_YieldChanges": [
+    {
+     "YieldType": "Production",
+     "Yield": 1
+    }
+   ],
+   "Resource_YieldChangeFromMonopoly": [
+    {
+     "YieldType": "Science",
+     "Yield": 2
+    }
+   ],
+   "_": {
+    "ResourceClassType": "Rush",
+    "ResourceUsage": 1,
+    "IsMonopoly": 1,
+    "MonopolyXPBonus": 2,
+    "StrategicHelp": "Key Resource Monopoly Strat Oil",
+    "StrategicPriority": 4,
+    "TechImproveable": "Dynamite",
+    "LandResource": 1,
+    "SeaResource": 1,
+    "TechCityTrade": "Dynamite",
+    "TechReveal": "Dynamite",
+    "MaxLatitude": 90,
+    "PlacementOrder": 1,
+    "ConstAppearance": 100,
+    "RandApp1": 10,
+    "RandApp2": 10,
+    "Player": 67
+   }
+  },
+  "Aluminum": {
+   "Resource_YieldChanges": [
+    {
+     "YieldType": "Production",
+     "Yield": 1
+    }
+   ],
+   "Resource_YieldChangeFromMonopoly": [
+    {
+     "YieldType": "Production",
+     "Yield": 2
+    }
+   ],
+   "_": {
+    "ResourceClassType": "Rush",
+    "ResourceUsage": 1,
+    "IsMonopoly": 1,
+    "MonopolyHealBonus": 5,
+    "StrategicHelp": "Key Resource Monopoly Strat Aluminum",
+    "StrategicPriority": 5,
+    "TechImproveable": "Industrialization",
+    "LandResource": 1,
+    "RockResource": 1,
+    "TechCityTrade": "Industrialization",
+    "TechReveal": "Industrialization",
+    "MaxLatitude": 90,
+    "PlacementOrder": 1,
+    "ConstAppearance": 100,
+    "RandApp1": 10,
+    "RandApp2": 10,
+    "Player": 67
+   }
+  },
+  "Uranium": {
+   "Resource_YieldChanges": [
+    {
+     "YieldType": "Production",
+     "Yield": 1
+    },
+    {
+     "YieldType": "Science",
+     "Yield": 1
+    }
+   ],
+   "Resource_CityYieldModFromMonopoly": [
+    {
+     "YieldType": "Science",
+     "Yield": 10
+    }
+   ],
+   "_": {
+    "ResourceClassType": "Rush",
+    "ResourceUsage": 1,
+    "IsMonopoly": 1,
+    "MonopolyAttackBonus": 10,
+    "StrategicHelp": "Key Resource Monopoly Strat Uranium",
+    "StrategicPriority": 6,
+    "LandResource": 1,
+    "RockResource": 1,
+    "MaxLatitude": 90,
+    "PlacementOrder": 1,
+    "ConstAppearance": 100,
+    "RandApp1": 10,
+    "RandApp2": 10,
+    "Player": 67
+   }
+  },
+  "Amber": {
+   "Resource_YieldChanges": [
+    {
+     "YieldType": "Production",
+     "Yield": 1
+    },
+    {
+     "YieldType": "Gold",
+     "Yield": 1
+    }
+   ],
+   "_": {
+    "ResourceClassType": "Luxury",
+    "Happiness": 2,
+    "ResourceUsage": 2,
+    "IsMonopoly": 1,
+    "MonopolyHappiness": 6,
+    "LandResource": 1,
+    "PlantResource": 1,
+    "RockResource": 1,
+    "IconString": "Res Amber]",
+    "Hills": 1,
+    "MaxLatitude": 90,
+    "GroupRange": 3,
+    "GroupRand": 15,
+    "ConstAppearance": 50,
+    "RandApp1": 25,
+    "RandApp2": 25,
+    "Player": 100
+   }
+  },
+  "Citrus": {
+   "Resource_YieldChanges": [
+    {
+     "YieldType": "Food",
+     "Yield": 1
+    },
+    {
+     "YieldType": "Gold",
+     "Yield": 1
+    }
+   ],
+   "Resource_YieldChangeFromMonopoly": [
+    {
+     "YieldType": "Science",
+     "Yield": 2
+    }
+   ],
+   "_": {
+    "ResourceClassType": "Luxury",
+    "Happiness": 2,
+    "ResourceUsage": 2,
+    "IsMonopoly": 1,
+    "LandResource": 1,
+    "PlantResource": 1,
+    "MaxLatitude": 90,
+    "GroupRange": 3,
+    "GroupRand": 15,
+    "ConstAppearance": 50,
+    "RandApp1": 25,
+    "RandApp2": 25,
+    "Player": 100
+   }
+  },
+  "Cocoa": {
+   "Resource_YieldChanges": [
+    {
+     "YieldType": "Food",
+     "Yield": 1
+    },
+    {
+     "YieldType": "Gold",
+     "Yield": 1
+    }
+   ],
+   "Resource_YieldChangeFromMonopoly": [
+    {
+     "YieldType": "Culture",
+     "Yield": 2
+    }
+   ],
+   "_": {
+    "ResourceClassType": "Luxury",
+    "Happiness": 2,
+    "ResourceUsage": 2,
+    "IsMonopoly": 1,
+    "LandResource": 1,
+    "PlantResource": 1,
+    "MaxLatitude": 90,
+    "GroupRange": 3,
+    "GroupRand": 15,
+    "ConstAppearance": 50,
+    "RandApp1": 25,
+    "RandApp2": 25,
+    "Player": 100
+   }
+  },
+  "Coffee": {
+   "Resource_YieldChanges": [
+    {
+     "YieldType": "Food",
+     "Yield": 1
+    },
+    {
+     "YieldType": "Gold",
+     "Yield": 1
+    }
+   ],
+   "Resource_CityYieldModFromMonopoly": [
+    {
+     "YieldType": "Production",
+     "Yield": 10
+    }
+   ],
+   "_": {
+    "ResourceClassType": "Luxury",
+    "Happiness": 2,
+    "ResourceUsage": 2,
+    "IsMonopoly": 1,
+    "LandResource": 1,
+    "PlantResource": 1,
+    "IconString": "Res Coffee]",
+    "Flatlands": 1,
+    "MaxLatitude": 90,
+    "GroupRange": 3,
+    "GroupRand": 15,
+    "ConstAppearance": 50,
+    "RandApp1": 25,
+    "RandApp2": 25,
+    "Player": 100
+   }
+  },
+  "Copper": {
+   "Resource_YieldChanges": [
+    {
+     "YieldType": "Production",
+     "Yield": 1
+    }
+   ],
+   "Resource_CityYieldModFromMonopoly": [
+    {
+     "YieldType": "Production",
+     "Yield": 10
+    }
+   ],
+   "_": {
+    "ResourceClassType": "Luxury",
+    "Happiness": 2,
+    "ResourceUsage": 2,
+    "IsMonopoly": 1,
+    "LandResource": 1,
+    "RockResource": 1,
+    "MaxLatitude": 90,
+    "GroupRange": 3,
+    "GroupRand": 15,
+    "ConstAppearance": 50,
+    "RandApp1": 25,
+    "RandApp2": 25,
+    "Player": 100
+   }
+  },
+  "Coral": {
+   "Resource_YieldChanges": [
+    {
+     "YieldType": "Production",
+     "Yield": 1
+    },
+    {
+     "YieldType": "Gold",
+     "Yield": 2
+    }
+   ],
+   "Resource_YieldChangeFromMonopoly": [
+    {
+     "YieldType": "Science",
+     "Yield": 2
+    }
+   ],
+   "_": {
+    "ResourceClassType": "Luxury",
+    "Happiness": 2,
+    "ResourceUsage": 2,
+    "IsMonopoly": 1,
+    "TechImproveable": "Sailing",
+    "SeaResource": 1,
+    "AnimalResource": 1,
+    "IconString": "Res Coral]",
+    "MaxLatitude": 90,
+    "GroupRange": 3,
+    "GroupRand": 15,
+    "ConstAppearance": 50,
+    "RandApp1": 25,
+    "RandApp2": 25,
+    "Player": 100
+   }
+  },
+  "Cotton": {
+   "Resource_YieldChanges": [
+    {
+     "YieldType": "Gold",
+     "Yield": 2
+    }
+   ],
+   "Resource_YieldChangeFromMonopoly": [
+    {
+     "YieldType": "Gold",
+     "Yield": 3
+    }
+   ],
+   "_": {
+    "ResourceClassType": "Luxury",
+    "Happiness": 2,
+    "ResourceUsage": 2,
+    "IsMonopoly": 1,
+    "LandResource": 1,
+    "PlantResource": 1,
+    "MaxLatitude": 90,
+    "GroupRange": 3,
+    "GroupRand": 15,
+    "ConstAppearance": 50,
+    "RandApp1": 25,
+    "RandApp2": 25,
+    "Player": 100
+   }
+  },
+  "Crab": {
+   "Resource_YieldChanges": [
+    {
+     "YieldType": "Food",
+     "Yield": 1
+    },
+    {
+     "YieldType": "Gold",
+     "Yield": 1
+    }
+   ],
+   "Resource_YieldChangeFromMonopoly": [
+    {
+     "YieldType": "Food",
+     "Yield": 3
+    }
+   ],
+   "_": {
+    "ResourceClassType": "Luxury",
+    "Happiness": 2,
+    "ResourceUsage": 2,
+    "IsMonopoly": 1,
+    "SeaResource": 1,
+    "AnimalResource": 1,
+    "MaxLatitude": 90,
+    "GroupRange": 3,
+    "GroupRand": 15,
+    "ConstAppearance": 50,
+    "RandApp1": 25,
+    "RandApp2": 25,
+    "Player": 100
+   }
+  },
+  "Dyes": {
+   "Resource_YieldChanges": [
+    {
+     "YieldType": "Gold",
+     "Yield": 1
+    }
+   ],
+   "Resource_YieldChangeFromMonopoly": [
+    {
+     "YieldType": "Gold",
+     "Yield": 3
+    }
+   ],
+   "_": {
+    "ResourceClassType": "Luxury",
+    "Happiness": 2,
+    "ResourceUsage": 2,
+    "IsMonopoly": 1,
+    "LandResource": 1,
+    "PlantResource": 1,
+    "MaxLatitude": 90,
+    "GroupRange": 3,
+    "GroupRand": 15,
+    "ConstAppearance": 50,
+    "RandApp1": 25,
+    "RandApp2": 25,
+    "Player": 100
+   }
+  },
+  "Furs": {
+   "Resource_YieldChanges": [
+    {
+     "YieldType": "Food",
+     "Yield": 2
+    }
+   ],
+   "_": {
+    "ResourceClassType": "Luxury",
+    "Happiness": 2,
+    "ResourceUsage": 2,
+    "IsMonopoly": 1,
+    "MonopolyHappiness": 6,
+    "LandResource": 1,
+    "AnimalResource": 1,
+    "MaxLatitude": 90,
+    "GroupRange": 3,
+    "GroupRand": 15,
+    "ConstAppearance": 50,
+    "RandApp1": 25,
+    "RandApp2": 25,
+    "Player": 100
+   }
+  },
+  "Gems": {
+   "Resource_YieldChanges": [
+    {
+     "YieldType": "Gold",
+     "Yield": 1
+    }
+   ],
+   "Resource_CityYieldModFromMonopoly": [
+    {
+     "YieldType": "Gold",
+     "Yield": 10
+    }
+   ],
+   "_": {
+    "ResourceClassType": "Luxury",
+    "Happiness": 2,
+    "ResourceUsage": 2,
+    "IsMonopoly": 1,
+    "LandResource": 1,
+    "RockResource": 1,
+    "MaxLatitude": 90,
+    "GroupRange": 3,
+    "GroupRand": 15,
+    "ConstAppearance": 50,
+    "RandApp1": 25,
+    "RandApp2": 25,
+    "Player": 100
+   }
+  },
+  "Glass": {
+   "Resource_YieldChanges": [
+    {
+     "YieldType": "Gold",
+     "Yield": 2
+    }
+   ],
+   "_": {
+    "ResourceClassType": "Luxury",
+    "Happiness": 2,
+    "ResourceUsage": 2,
+    "IsMonopoly": 1,
+    "MonopolyHappiness": 6,
+    "IconString": "Res Glass]",
+    "MaxLatitude": 90
+   }
+  },
+  "Gold Ore": {
+   "Resource_YieldChanges": [
+    {
+     "YieldType": "Gold",
+     "Yield": 2
+    }
+   ],
+   "Resource_YieldChangeFromMonopoly": [
+    {
+     "YieldType": "GoldenAgePoints",
+     "Yield": 2
+    }
+   ],
+   "_": {
+    "ResourceClassType": "Luxury",
+    "Happiness": 2,
+    "ResourceUsage": 2,
+    "IsMonopoly": 1,
+    "MonopolyGALength": 25,
+    "LandResource": 1,
+    "RockResource": 1,
+    "MaxLatitude": 90,
+    "GroupRange": 3,
+    "GroupRand": 15,
+    "ConstAppearance": 50,
+    "RandApp1": 25,
+    "RandApp2": 25,
+    "Player": 100
+   }
+  },
+  "Incense": {
+   "Resource_YieldChanges": [
+    {
+     "YieldType": "Gold",
+     "Yield": 2
+    }
+   ],
+   "Resource_YieldChangeFromMonopoly": [
+    {
+     "YieldType": "Faith",
+     "Yield": 2
+    }
+   ],
+   "_": {
+    "ResourceClassType": "Luxury",
+    "Happiness": 2,
+    "ResourceUsage": 2,
+    "IsMonopoly": 1,
+    "LandResource": 1,
+    "PlantResource": 1,
+    "MaxLatitude": 90,
+    "GroupRange": 3,
+    "GroupRand": 15,
+    "ConstAppearance": 50,
+    "RandApp1": 25,
+    "RandApp2": 25,
+    "Player": 100
+   }
+  },
+  "Ivory": {
+   "Resource_YieldChanges": [
+    {
+     "YieldType": "Production",
+     "Yield": 1
+    }
+   ],
+   "Resource_YieldChangeFromMonopoly": [
+    {
+     "YieldType": "GoldenAgePoints",
+     "Yield": 2
+    }
+   ],
+   "_": {
+    "ResourceClassType": "Luxury",
+    "Happiness": 2,
+    "ResourceUsage": 2,
+    "IsMonopoly": 1,
+    "MonopolyGALength": 25,
+    "LandResource": 1,
+    "AnimalResource": 1,
+    "MaxLatitude": 90,
+    "GroupRange": 3,
+    "GroupRand": 15,
+    "ConstAppearance": 50,
+    "RandApp1": 25,
+    "RandApp2": 25,
+    "Player": 100
+   }
+  },
+  "Jade": {
+   "Resource_YieldChanges": [
+    {
+     "YieldType": "Gold",
+     "Yield": 2
+    }
+   ],
+   "Resource_YieldChangeFromMonopoly": [
+    {
+     "YieldType": "GoldenAgePoints",
+     "Yield": 2
+    }
+   ],
+   "_": {
+    "ResourceClassType": "Luxury",
+    "Happiness": 2,
+    "ResourceUsage": 2,
+    "IsMonopoly": 1,
+    "MonopolyGALength": 25,
+    "LandResource": 1,
+    "RockResource": 1,
+    "IconString": "Res Jade]",
+    "Hills": 1,
+    "MaxLatitude": 90,
+    "GroupRange": 3,
+    "GroupRand": 15,
+    "ConstAppearance": 50,
+    "RandApp1": 25,
+    "RandApp2": 25,
+    "Player": 100
+   }
+  },
+  "Jewelry": {
+   "Resource_YieldChanges": [
+    {
+     "YieldType": "Gold",
+     "Yield": 2
+    }
+   ],
+   "_": {
+    "ResourceClassType": "Luxury",
+    "Happiness": 2,
+    "ResourceUsage": 2,
+    "IsMonopoly": 1,
+    "MonopolyHappiness": 6,
+    "MaxLatitude": 90
+   }
+  },
+  "Lapis Lazuli": {
+   "Resource_YieldChanges": [
+    {
+     "YieldType": "Production",
+     "Yield": 1
+    }
+   ],
+   "Resource_YieldChangeFromMonopoly": [
+    {
+     "YieldType": "GoldenAgePoints",
+     "Yield": 2
+    }
+   ],
+   "_": {
+    "ResourceClassType": "Luxury",
+    "Happiness": 2,
+    "ResourceUsage": 2,
+    "IsMonopoly": 1,
+    "MonopolyGALength": 25,
+    "LandResource": 1,
+    "RockResource": 1,
+    "IconString": "Res Lapis]",
+    "Hills": 1,
+    "MaxLatitude": 90,
+    "GroupRange": 3,
+    "GroupRand": 15,
+    "ConstAppearance": 50,
+    "RandApp1": 25,
+    "RandApp2": 25,
+    "Player": 100
+   }
+  },
+  "Marble": {
+   "Resource_YieldChanges": [
+    {
+     "YieldType": "Production",
+     "Yield": 1
+    }
+   ],
+   "Resource_CityYieldModFromMonopoly": [
+    {
+     "YieldType": "Culture",
+     "Yield": 10
+    }
+   ],
+   "_": {
+    "ResourceClassType": "Luxury",
+    "Happiness": 2,
+    "ResourceUsage": 2,
+    "IsMonopoly": 1,
+    "LandResource": 1,
+    "RockResource": 1,
+    "WonderProductionMod": 15,
+    "WonderProductionModObsoleteEra": "Industrial era",
+    "MaxLatitude": 90,
+    "GroupRange": 3,
+    "GroupRand": 15,
+    "ConstAppearance": 50,
+    "RandApp1": 25,
+    "RandApp2": 25,
+    "Player": 100
+   }
+  },
+  "Olives": {
+   "Resource_YieldChanges": [
+    {
+     "YieldType": "Food",
+     "Yield": 1
+    },
+    {
+     "YieldType": "Gold",
+     "Yield": 1
+    }
+   ],
+   "Resource_CityYieldModFromMonopoly": [
+    {
+     "YieldType": "Food",
+     "Yield": 10
+    }
+   ],
+   "_": {
+    "ResourceClassType": "Luxury",
+    "Happiness": 2,
+    "ResourceUsage": 2,
+    "IsMonopoly": 1,
+    "LandResource": 1,
+    "PlantResource": 1,
+    "IconString": "Res Olive]",
+    "Flatlands": 1,
+    "MaxLatitude": 90,
+    "GroupRange": 3,
+    "GroupRand": 15,
+    "ConstAppearance": 50,
+    "RandApp1": 25,
+    "RandApp2": 25,
+    "Player": 100
+   }
+  },
+  "Pearls": {
+   "Resource_YieldChanges": [
+    {
+     "YieldType": "Gold",
+     "Yield": 2
+    }
+   ],
+   "Resource_YieldChangeFromMonopoly": [
+    {
+     "YieldType": "Faith",
+     "Yield": 2
+    }
+   ],
+   "_": {
+    "ResourceClassType": "Luxury",
+    "Happiness": 2,
+    "ResourceUsage": 2,
+    "IsMonopoly": 1,
+    "SeaResource": 1,
+    "AnimalResource": 1,
+    "MaxLatitude": 90,
+    "GroupRange": 3,
+    "GroupRand": 15,
+    "ConstAppearance": 50,
+    "RandApp1": 25,
+    "RandApp2": 25,
+    "Player": 100
+   }
+  },
+  "Perfume": {
+   "Resource_YieldChanges": [
+    {
+     "YieldType": "Gold",
+     "Yield": 2
+    }
+   ],
+   "Resource_YieldChangeFromMonopoly": [
+    {
+     "YieldType": "Gold",
+     "Yield": 3
+    }
+   ],
+   "_": {
+    "ResourceClassType": "Luxury",
+    "Happiness": 2,
+    "ResourceUsage": 2,
+    "IsMonopoly": 1,
+    "LandResource": 1,
+    "PlantResource": 1,
+    "IconString": "Res Perfume]",
+    "Flatlands": 1,
+    "MaxLatitude": 90,
+    "GroupRange": 3,
+    "GroupRand": 15,
+    "ConstAppearance": 50,
+    "RandApp1": 25,
+    "RandApp2": 25,
+    "Player": 100
+   }
+  },
+  "Porcelain": {
+   "Resource_YieldChanges": [
+    {
+     "YieldType": "Gold",
+     "Yield": 2
+    }
+   ],
+   "_": {
+    "ResourceClassType": "Luxury",
+    "Happiness": 2,
+    "ResourceUsage": 2,
+    "IsMonopoly": 1,
+    "MonopolyGALength": 30,
+    "MaxLatitude": 90
+   }
+  },
+  "Salt": {
+   "Resource_YieldChanges": [
+    {
+     "YieldType": "Food",
+     "Yield": 1
+    },
+    {
+     "YieldType": "Production",
+     "Yield": 1
+    }
+   ],
+   "Resource_CityYieldModFromMonopoly": [
+    {
+     "YieldType": "Food",
+     "Yield": 10
+    }
+   ],
+   "_": {
+    "ResourceClassType": "Luxury",
+    "Happiness": 2,
+    "ResourceUsage": 2,
+    "IsMonopoly": 1,
+    "LandResource": 1,
+    "RockResource": 1,
+    "MaxLatitude": 90,
+    "GroupRange": 3,
+    "GroupRand": 15,
+    "ConstAppearance": 50,
+    "RandApp1": 25,
+    "RandApp2": 25,
+    "Player": 100
+   }
+  },
+  "Silk": {
+   "Resource_YieldChanges": [
+    {
+     "YieldType": "Gold",
+     "Yield": 2
+    }
+   ],
+   "Resource_CityYieldModFromMonopoly": [
+    {
+     "YieldType": "Gold",
+     "Yield": 10
+    }
+   ],
+   "_": {
+    "ResourceClassType": "Luxury",
+    "Happiness": 2,
+    "ResourceUsage": 2,
+    "IsMonopoly": 1,
+    "LandResource": 1,
+    "AnimalResource": 1,
+    "MaxLatitude": 90,
+    "GroupRange": 3,
+    "GroupRand": 15,
+    "ConstAppearance": 50,
+    "RandApp1": 25,
+    "RandApp2": 25,
+    "Player": 100
+   }
+  },
+  "Silver": {
+   "Resource_YieldChanges": [
+    {
+     "YieldType": "Gold",
+     "Yield": 1
+    }
+   ],
+   "Resource_YieldChangeFromMonopoly": [
+    {
+     "YieldType": "Culture",
+     "Yield": 2
+    }
+   ],
+   "_": {
+    "ResourceClassType": "Luxury",
+    "Happiness": 2,
+    "ResourceUsage": 2,
+    "IsMonopoly": 1,
+    "LandResource": 1,
+    "RockResource": 1,
+    "MaxLatitude": 90,
+    "GroupRange": 3,
+    "GroupRand": 15,
+    "ConstAppearance": 50,
+    "RandApp1": 25,
+    "RandApp2": 25,
+    "Player": 100
+   }
+  },
+  "Spices": {
+   "Resource_YieldChanges": [
+    {
+     "YieldType": "Gold",
+     "Yield": 1
+    }
+   ],
+   "Resource_YieldChangeFromMonopoly": [
+    {
+     "YieldType": "Culture",
+     "Yield": 2
+    }
+   ],
+   "_": {
+    "ResourceClassType": "Luxury",
+    "Happiness": 2,
+    "ResourceUsage": 2,
+    "IsMonopoly": 1,
+    "LandResource": 1,
+    "PlantResource": 1,
+    "MaxLatitude": 90,
+    "GroupRange": 3,
+    "GroupRand": 15,
+    "ConstAppearance": 50,
+    "RandApp1": 25,
+    "RandApp2": 25,
+    "Player": 100
+   }
+  },
+  "Sugar": {
+   "Resource_YieldChanges": [
+    {
+     "YieldType": "Production",
+     "Yield": 1
+    },
+    {
+     "YieldType": "Gold",
+     "Yield": 1
+    }
+   ],
+   "Resource_CityYieldModFromMonopoly": [
+    {
+     "YieldType": "Food",
+     "Yield": 10
+    }
+   ],
+   "_": {
+    "ResourceClassType": "Luxury",
+    "Happiness": 2,
+    "ResourceUsage": 2,
+    "IsMonopoly": 1,
+    "LandResource": 1,
+    "PlantResource": 1,
+    "MaxLatitude": 90,
+    "GroupRange": 3,
+    "GroupRand": 15,
+    "ConstAppearance": 50,
+    "RandApp1": 25,
+    "RandApp2": 25,
+    "Player": 100
+   }
+  },
+  "Tea": {
+   "Resource_YieldChanges": [
+    {
+     "YieldType": "Production",
+     "Yield": 2
+    }
+   ],
+   "Resource_CityYieldModFromMonopoly": [
+    {
+     "YieldType": "Culture",
+     "Yield": 10
+    }
+   ],
+   "_": {
+    "ResourceClassType": "Luxury",
+    "Happiness": 2,
+    "ResourceUsage": 2,
+    "IsMonopoly": 1,
+    "LandResource": 1,
+    "PlantResource": 1,
+    "IconString": "Res Tea]",
+    "Flatlands": 1,
+    "MaxLatitude": 90,
+    "GroupRange": 3,
+    "GroupRand": 15,
+    "ConstAppearance": 50,
+    "RandApp1": 25,
+    "RandApp2": 25,
+    "Player": 100
+   }
+  },
+  "Tobacco": {
+   "Resource_YieldChanges": [
+    {
+     "YieldType": "Gold",
+     "Yield": 2
+    }
+   ],
+   "Resource_YieldChangeFromMonopoly": [
+    {
+     "YieldType": "Faith",
+     "Yield": 2
+    }
+   ],
+   "_": {
+    "ResourceClassType": "Luxury",
+    "Happiness": 2,
+    "ResourceUsage": 2,
+    "IsMonopoly": 1,
+    "LandResource": 1,
+    "PlantResource": 1,
+    "IconString": "Res Tobacco]",
+    "Flatlands": 1,
+    "MaxLatitude": 90,
+    "GroupRange": 3,
+    "GroupRand": 15,
+    "ConstAppearance": 50,
+    "RandApp1": 25,
+    "RandApp2": 25,
+    "Player": 100
+   }
+  },
+  "Truffles": {
+   "Resource_YieldChanges": [
+    {
+     "YieldType": "Gold",
+     "Yield": 2
+    }
+   ],
+   "Resource_YieldChangeFromMonopoly": [
+    {
+     "YieldType": "Food",
+     "Yield": 3
+    }
+   ],
+   "_": {
+    "ResourceClassType": "Luxury",
+    "Happiness": 2,
+    "ResourceUsage": 2,
+    "IsMonopoly": 1,
+    "LandResource": 1,
+    "PlantResource": 1,
+    "MaxLatitude": 90,
+    "GroupRange": 3,
+    "GroupRand": 15,
+    "ConstAppearance": 50,
+    "RandApp1": 25,
+    "RandApp2": 25,
+    "Player": 100
+   }
+  },
+  "Whales": {
+   "Resource_YieldChanges": [
+    {
+     "YieldType": "Food",
+     "Yield": 1
+    },
+    {
+     "YieldType": "Production",
+     "Yield": 1
+    }
+   ],
+   "Resource_CityYieldModFromMonopoly": [
+    {
+     "YieldType": "Science",
+     "Yield": 10
+    }
+   ],
+   "_": {
+    "ResourceClassType": "Luxury",
+    "Happiness": 2,
+    "ResourceUsage": 2,
+    "IsMonopoly": 1,
+    "SeaResource": 1,
+    "AnimalResource": 1,
+    "MaxLatitude": 90,
+    "GroupRange": 3,
+    "GroupRand": 15,
+    "ConstAppearance": 50,
+    "RandApp1": 25,
+    "RandApp2": 25,
+    "Player": 100
+   }
+  },
+  "Wine": {
+   "Resource_YieldChanges": [
+    {
+     "YieldType": "Food",
+     "Yield": 1
+    },
+    {
+     "YieldType": "Gold",
+     "Yield": 1
+    }
+   ],
+   "Resource_YieldChangeFromMonopoly": [
+    {
+     "YieldType": "Faith",
+     "Yield": 2
+    }
+   ],
+   "_": {
+    "ResourceClassType": "Luxury",
+    "Happiness": 2,
+    "ResourceUsage": 2,
+    "IsMonopoly": 1,
+    "LandResource": 1,
+    "PlantResource": 1,
+    "MaxLatitude": 90,
+    "GroupRange": 3,
+    "GroupRand": 15,
+    "ConstAppearance": 50,
+    "RandApp1": 25,
+    "RandApp2": 25,
+    "Player": 100
+   }
+  },
+  "Brazilwood": {
+   "Resource_YieldChanges": [
+    {
+     "YieldType": "Gold",
+     "Yield": 1
+    }
+   ],
+   "Resource_YieldChangeFromMonopoly": [
+    {
+     "YieldType": "Culture",
+     "Yield": 2
+    }
+   ],
+   "_": {
+    "ResourceClassType": "Luxury",
+    "Happiness": 2,
+    "ResourceUsage": 2,
+    "IsMonopoly": 1,
+    "LandResource": 1,
+    "PlantResource": 1,
+    "IconString": "Res Brazilwood]",
+    "Flatlands": 1,
+    "Hills": 1,
+    "CivilizationType": "Brazil",
+    "MaxLatitude": 90
+   }
+  },
+  "Cloves": {
+   "Resource_YieldChanges": [
+    {
+     "YieldType": "Gold",
+     "Yield": 2
+    }
+   ],
+   "_": {
+    "ResourceClassType": "Luxury",
+    "Happiness": 2,
+    "ResourceUsage": 2,
+    "IsMonopoly": 1,
+    "MonopolyHappiness": 6,
+    "LandResource": 1,
+    "PlantResource": 1,
+    "MaxLatitude": 90
+   }
+  },
+  "Nutmeg": {
+   "Resource_YieldChanges": [
+    {
+     "YieldType": "Production",
+     "Yield": 1
+    },
+    {
+     "YieldType": "Gold",
+     "Yield": 1
+    }
+   ],
+   "Resource_CityYieldModFromMonopoly": [
+    {
+     "YieldType": "Production",
+     "Yield": 10
+    }
+   ],
+   "_": {
+    "ResourceClassType": "Luxury",
+    "Happiness": 2,
+    "ResourceUsage": 2,
+    "IsMonopoly": 1,
+    "LandResource": 1,
+    "PlantResource": 1,
+    "MaxLatitude": 90
+   }
+  },
+  "Pepper": {
+   "Resource_YieldChanges": [
+    {
+     "YieldType": "Food",
+     "Yield": 1
+    },
+    {
+     "YieldType": "Gold",
+     "Yield": 1
+    }
+   ],
+   "Resource_YieldChangeFromMonopoly": [
+    {
+     "YieldType": "Food",
+     "Yield": 3
+    }
+   ],
+   "_": {
+    "ResourceClassType": "Luxury",
+    "Happiness": 2,
+    "ResourceUsage": 2,
+    "IsMonopoly": 1,
+    "LandResource": 1,
+    "PlantResource": 1,
+    "MaxLatitude": 90
+   }
+  },
+  "Bananas": {
+   "_": {
+    "ResourceClassType": "Bonus",
+    "LandResource": 1,
+    "PlantResource": 1,
+    "TechReveal": "Agriculture",
+    "MaxLatitude": 90,
+    "PlacementOrder": 2,
+    "ConstAppearance": 50,
+    "RandApp1": 25,
+    "RandApp2": 25,
+    "TilesPer": 12
+   }
+  },
+  "Trade Route": {
+   "_": {
+    "ResourceClassType": "Rush",
+    "ResourceUsage": 1,
+    "IsMonopoly": 1,
+    "MaxLatitude": 90,
+    "PlacementOrder": 1,
+    "ConstAppearance": 100,
+    "RandApp1": 10,
+    "RandApp2": 10,
+    "Player": 67
+   }
+  },
+  "Antiquity Site": {
+   "_": {
+    "ResourceClassType": "Bonus",
+    "MaxLatitude": 90,
+    "PlacementOrder": 2,
+    "ConstAppearance": 50,
+    "RandApp1": 25,
+    "RandApp2": 25,
+    "TilesPer": 12
+   }
+  },
+  "Hidden Antiquity Site": {
+   "_": {
+    "ResourceClassType": "Bonus",
+    "MaxLatitude": 90,
+    "PlacementOrder": 2,
+    "ConstAppearance": 50,
+    "RandApp1": 25,
+    "RandApp2": 25,
+    "TilesPer": 12
+   }
+  },
+  "Great Work of Writing": {
+   "_": {
+    "ResourceClassType": "Bonus",
+    "MaxLatitude": 90,
+    "PlacementOrder": 2,
+    "ConstAppearance": 50,
+    "RandApp1": 25,
+    "RandApp2": 25,
+    "TilesPer": 12
+   }
+  },
+  "Great Work of Art": {
+   "_": {
+    "ResourceClassType": "Bonus",
+    "MaxLatitude": 90,
+    "PlacementOrder": 2,
+    "ConstAppearance": 50,
+    "RandApp1": 25,
+    "RandApp2": 25,
+    "TilesPer": 12
+   }
+  },
+  "Great Work of Music": {
+   "_": {
+    "ResourceClassType": "Bonus",
+    "MaxLatitude": 90,
+    "PlacementOrder": 2,
+    "ConstAppearance": 50,
+    "RandApp1": 25,
+    "RandApp2": 25,
+    "TilesPer": 12
+   }
+  },
+  "Artifact": {
+   "_": {
+    "ResourceClassType": "Bonus",
+    "MaxLatitude": 90,
+    "PlacementOrder": 2,
+    "ConstAppearance": 50,
+    "RandApp1": 25,
+    "RandApp2": 25,
+    "TilesPer": 12
+   }
+  },
+  "Tourism": {
+   "_": {
+    "ResourceClassType": "Rush",
+    "ResourceUsage": 1,
+    "IsMonopoly": 1,
+    "MaxLatitude": 90,
+    "PlacementOrder": 1,
+    "ConstAppearance": 100,
+    "RandApp1": 10,
+    "RandApp2": 10,
+    "Player": 67
+   }
+  },
+  "Level 1 Policy": {
+   "_": {
+    "ResourceClassType": "Bonus",
+    "MaxLatitude": 90,
+    "PlacementOrder": 2,
+    "ConstAppearance": 50,
+    "RandApp1": 25,
+    "RandApp2": 25,
+    "TilesPer": 12
+   }
+  },
+  "Level 2 Policy": {
+   "_": {
+    "ResourceClassType": "Bonus",
+    "MaxLatitude": 90,
+    "PlacementOrder": 2,
+    "ConstAppearance": 50,
+    "RandApp1": 25,
+    "RandApp2": 25,
+    "TilesPer": 12
+   }
+  },
+  "Accumulated Culture": {
+   "_": {
+    "ResourceClassType": "Bonus",
+    "MaxLatitude": 90,
+    "PlacementOrder": 2,
+    "ConstAppearance": 50,
+    "RandApp1": 25,
+    "RandApp2": 25,
+    "TilesPer": 12
+   }
+  },
+  "Paper": {
+   "_": {
+    "ResourceClassType": "Rush",
+    "ResourceUsage": 1,
+    "StrategicPriority": 7,
+    "TechImproveable": "Writing",
+    "TechCityTrade": "Writing",
+    "IconString": "Res Paper]",
+    "TechReveal": "Writing",
+    "TechObsolete": "Agriculture",
+    "MaxLatitude": 90,
+    "PlacementOrder": 1
    }
   }
  }

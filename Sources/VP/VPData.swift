@@ -17,6 +17,7 @@ struct VPData {
     let buildings: [String: [String: Any]]
     let beliefs: [String: [String: Any]]
     let nations: [String: [String: Any]]
+    let resources: [String: [String: Any]]
     let engineTables: Set<String>
 
     nonisolated(unsafe) private static var cache: [String: VPData?] = [:]
@@ -34,6 +35,7 @@ struct VPData {
                            buildings: obj["buildings"] as? [String: [String: Any]] ?? [:],
                            beliefs: obj["beliefs"] as? [String: [String: Any]] ?? [:],
                            nations: obj["nations"] as? [String: [String: Any]] ?? [:],
+                           resources: obj["resources"] as? [String: [String: Any]] ?? [:],
                            engineTables: Set(obj["engineTables"] as? [String] ?? []))
         }
         cache[key] = found

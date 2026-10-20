@@ -30,6 +30,7 @@ extension GameState {
                 let lux = Set(civResourceSupply(civId).keys.filter { rs.resources[$0]?.resourceType == "Luxury" })
                 let uniqueExtra = Double(perLux - Float(4.0 + diff.extraHappinessPerLuxury))   // "[n] Happiness from each type of luxury resource"
                 h.add("Luxury resources", Double(vpLuxuryHappiness(civId: civId, luxuries: lux) ?? 0) + uniqueExtra * Double(lux.filter { (vpNeeds?.luxuryHappiness[$0] ?? 0) > 0 }.count))
+                h.add("Monopolies", Double(vpMonopolyHappiness(civId)))   // VP: MonopolyHappiness of global monopolies
                 perLux = 0   // the city-state and traded-luxury rows below are Unciv's, not VP's
             } else {
                 h.add("Luxury resources", Double(Float(luxuryTypesOwned(civId)) * perLux))

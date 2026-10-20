@@ -495,6 +495,7 @@ final class CityStats {
         newStatsBonusTree.addStats(getStatPercentBonusesFromRailroad(), "Railroad")
         newStatsBonusTree.addStats(getStatPercentBonusesFromPuppetCity(), "Puppet City")
         newStatsBonusTree.addStats(getStatPercentBonusesFromUnitSupply(), "Unit Supply")
+        newStatsBonusTree.addStats(state.vpMonopolyCityPercent(city.civId), "Monopolies")   // VP: VP/VPMonopolies.swift
         newStatsBonusTree.add(getStatsPercentBonusesFromUniquesBySource(currentConstruction))
         // Unciv Building.getStatPercentageBonuses: the building's own percentStatBonus PLUS the city's
         // "[amount]% [stat] from every [buildingFilter]" for the buildings that match it.

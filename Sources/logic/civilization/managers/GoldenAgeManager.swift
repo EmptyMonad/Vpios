@@ -38,6 +38,8 @@ extension GameState {
     func calculateGoldenAgeLength(_ civId: Int, _ unmodifiedNumberOfTurns: Int) -> Int {
         var length = Float(unmodifiedNumberOfTurns)
         for u in civUniques(civId) where u.pattern == "[]% Golden Age length" && conditionalsHold(u, UniqueContext(civId: civId)) { length *= 1 + Float(u.double(0)) / 100 }
+        let vpMono = vpMonopolyGoldenAgePercent(civId)   // VP: MonopolyGALength of global monopolies
+        if vpMono != 0 { length *= 1 + Float(vpMono) / 100 }
         length *= Float(speed.goldenAgeLengthModifier)
         return Int(length)
     }
