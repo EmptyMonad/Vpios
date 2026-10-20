@@ -119,8 +119,20 @@ extension View {
         fullScreenCover(isPresented: isPresented) { VirtualCanvas { content() } }
     }
 
-    /// Analytics hook in the store build; nothing here.
-    func screenShown(_ name: String) -> some View { self }
+    /// The store build's "coming soon" overlay on entry points it hasn't opened; everything is open here.
+    func comingSoon(alignment: Alignment = .topTrailing, mods: Bool = false, place: String) -> some View { self }
+
+    /// The store build's launch-argument test hooks; none here.
+    func launchArgumentHooks(_ root: RootView) -> some View { self }
+
+    /// A popup menu (Unciv's Popup with a list of buttons), as a sheet.
+    func themedMenu<C: View>(isPresented: Binding<Bool>, @ViewBuilder content: @escaping () -> C) -> some View {
+        sheet(isPresented: isPresented) {
+            ScrollView { VStack(alignment: .leading, spacing: 2) { content() }.padding(12) }
+                .background(Theme.background.ignoresSafeArea())
+                .presentationDetents([.medium, .large])
+        }
+    }
 }
 
 // MARK: - building blocks
@@ -145,12 +157,15 @@ struct ThemedButtonStyle: ButtonStyle {
     var filled = false
     var destructive = false
     var compact = false
-    init(filled: Bool = false, destructive: Bool = false, compact: Bool = false) {
-        self.filled = filled; self.destructive = destructive; self.compact = compact
+    var multiline = false
+    init(filled: Bool = false, destructive: Bool = false, compact: Bool = false, multiline: Bool = false) {
+        self.filled = filled; self.destructive = destructive; self.compact = compact; self.multiline = multiline
     }
     func makeBody(configuration: Configuration) -> some View {
         let tint = destructive ? Theme.danger : Theme.gold
         configuration.label
+            .lineLimit(multiline ? nil : 1)
+            .multilineTextAlignment(.center)
             .font(compact ? Theme.caption.weight(.semibold) : Theme.body.weight(.semibold))
             .foregroundStyle(filled ? Theme.background : tint)
             .padding(.horizontal, compact ? 10 : 16).padding(.vertical, compact ? 5 : 9)
@@ -210,7 +225,7 @@ struct MenuRow: View {
 
 struct ThemedRow<Leading: View, Trailing: View>: View {
     let title: String
-    let detail: String
+    let detail: String?
     let selected: Bool
     var onDoubleTap: (() -> Void)? = nil
     var onLongPress: (() -> Void)? = nil
@@ -220,7 +235,7 @@ struct ThemedRow<Leading: View, Trailing: View>: View {
     @ViewBuilder var trailing: () -> Trailing
     @State private var longPressFired = false
 
-    init(title: String, detail: String, selected: Bool, onDoubleTap: (() -> Void)? = nil, onLongPress: (() -> Void)? = nil,
+    init(title: String, detail: String?, selected: Bool, onDoubleTap: (() -> Void)? = nil, onLongPress: (() -> Void)? = nil,
          titleColor: Color? = nil, action: @escaping () -> Void,
          @ViewBuilder leading: @escaping () -> Leading, @ViewBuilder trailing: @escaping () -> Trailing) {
         self.title = title; self.detail = detail; self.selected = selected; self.onDoubleTap = onDoubleTap
@@ -233,7 +248,7 @@ struct ThemedRow<Leading: View, Trailing: View>: View {
             leading()
             VStack(alignment: .leading, spacing: 2) {
                 Text(title).font(Theme.body).foregroundStyle(titleColor ?? (selected ? Theme.gold : Theme.cream))
-                if !detail.isEmpty { Text(detail).font(Theme.small).foregroundStyle(Theme.creamDim).fixedSize(horizontal: false, vertical: true) }
+                if let detail, !detail.isEmpty { Text(detail).font(Theme.small).foregroundStyle(Theme.creamDim).fixedSize(horizontal: false, vertical: true) }
             }
             Spacer(minLength: 0)
             trailing()
@@ -248,7 +263,7 @@ struct ThemedRow<Leading: View, Trailing: View>: View {
 }
 
 extension ThemedRow where Trailing == EmptyView {
-    init(title: String, detail: String, selected: Bool, onDoubleTap: (() -> Void)? = nil, onLongPress: (() -> Void)? = nil,
+    init(title: String, detail: String?, selected: Bool, onDoubleTap: (() -> Void)? = nil, onLongPress: (() -> Void)? = nil,
          titleColor: Color? = nil, action: @escaping () -> Void, @ViewBuilder leading: @escaping () -> Leading) {
         self.init(title: title, detail: detail, selected: selected, onDoubleTap: onDoubleTap, onLongPress: onLongPress,
                   titleColor: titleColor, action: action, leading: leading, trailing: { EmptyView() })
@@ -256,7 +271,7 @@ extension ThemedRow where Trailing == EmptyView {
 }
 
 extension ThemedRow where Leading == EmptyView, Trailing == EmptyView {
-    init(title: String, detail: String, selected: Bool, onDoubleTap: (() -> Void)? = nil, onLongPress: (() -> Void)? = nil,
+    init(title: String, detail: String?, selected: Bool, onDoubleTap: (() -> Void)? = nil, onLongPress: (() -> Void)? = nil,
          titleColor: Color? = nil, action: @escaping () -> Void) {
         self.init(title: title, detail: detail, selected: selected, onDoubleTap: onDoubleTap, onLongPress: onLongPress,
                   titleColor: titleColor, action: action, leading: { EmptyView() }, trailing: { EmptyView() })
@@ -357,8 +372,8 @@ struct ArtIcon: View {
 // MARK: - measurement (off)
 
 enum UIMeasure {
-    static func start() {}
-    static func stop(_ label: String) {}
+    @discardableResult static func start() -> Double { 0 }
+    static func stop(_ label: String, _ started: Double = 0) {}
     static func count(_ label: String) {}
 }
 
@@ -418,5 +433,28 @@ struct AboutView: View {
             }
             .font(Theme.body).foregroundStyle(Theme.cream)
         }
+    }
+}
+
+// MARK: - misc store-build pieces
+
+/// The store build's analytics sink; nothing is sent here.
+func observe(_ event: GameEvent) {}
+
+extension L10n {
+    /// The store build's own Turkish strings (its developer's additions); none here.
+    static let turkish: [String: String] = [:]
+}
+
+extension OptionsView {
+    /// The store build's analytics/privacy options; there is nothing to opt out of here.
+    var privacySection: some View { EmptyView() }
+}
+
+extension UIColor {
+    /// An Unciv RGB triple (0...255); fewer than three numbers is Color.PURPLE, as Nation.safeColorFromRGB.
+    convenience init(rgb: [Int]) {
+        let v = rgb.count >= 3 ? rgb : [160, 32, 240]
+        self.init(red: CGFloat(v[0]) / 255, green: CGFloat(v[1]) / 255, blue: CGFloat(v[2]) / 255, alpha: 1)
     }
 }
