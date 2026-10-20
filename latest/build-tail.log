@@ -1,0 +1,436 @@
+Command line invocation:
+    /Applications/Xcode_16.4.app/Contents/Developer/usr/bin/xcodebuild -project VPiOS.xcodeproj -scheme VPiOS -configuration Debug -sdk iphonesimulator -destination "generic/platform=iOS Simulator" -derivedDataPath dd CODE_SIGNING_ALLOWED=NO build
+
+Build settings from command line:
+    CODE_SIGNING_ALLOWED = NO
+    SDKROOT = iphonesimulator18.5
+
+ComputePackagePrebuildTargetDependencyGraph
+
+Prepare packages
+
+CreateBuildRequest
+
+SendProjectDescription
+
+CreateBuildOperation
+
+ComputeTargetDependencyGraph
+note: Building targets in dependency order
+note: Target dependency graph (1 target)
+    Target 'VPiOS' in project 'VPiOS' (no dependencies)
+
+GatherProvisioningInputs
+
+CreateBuildDescription
+
+ExecuteExternalTool /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc --version
+
+ExecuteExternalTool /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -x c -c /dev/null
+
+ExecuteExternalTool /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld -version_details
+
+Build description signature: e2708a60b9d4ee10841c5a1ca6cb5291
+Build description path: dd/Build/Intermediates.noindex/XCBuildData/e2708a60b9d4ee10841c5a1ca6cb5291.xcbuilddata
+ClangStatCache /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk dd/SDKStatCaches.noindex/iphonesimulator18.5-22F76-96ae0914227b19deccb34b33ba7b5dea.sdkstatcache
+    cd VPiOS.xcodeproj
+    /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -o dd/SDKStatCaches.noindex/iphonesimulator18.5-22F76-96ae0914227b19deccb34b33ba7b5dea.sdkstatcache
+
+CreateBuildDirectory dd/Build/Products
+    cd VPiOS.xcodeproj
+    builtin-create-build-directory dd/Build/Products
+
+CreateBuildDirectory dd/Build/Intermediates.noindex
+    cd VPiOS.xcodeproj
+    builtin-create-build-directory dd/Build/Intermediates.noindex
+
+WriteAuxiliaryFile dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS-3652c52f81ca1e1fb07b4a507647a3f9-VFS-iphonesimulator/all-product-headers.yaml
+    cd VPiOS.xcodeproj
+    write-file dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS-3652c52f81ca1e1fb07b4a507647a3f9-VFS-iphonesimulator/all-product-headers.yaml
+
+CreateBuildDirectory dd/Build/Products/Debug-iphonesimulator
+    cd VPiOS.xcodeproj
+    builtin-create-build-directory dd/Build/Products/Debug-iphonesimulator
+
+CreateBuildDirectory dd/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphonesimulator
+    cd VPiOS.xcodeproj
+    builtin-create-build-directory dd/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphonesimulator
+
+WriteAuxiliaryFile dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/empty-VPiOS.plist (in target 'VPiOS' from project 'VPiOS')
+    cd /Users/runner/work/Vpios/Vpios
+    write-file dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/empty-VPiOS.plist
+
+WriteAuxiliaryFile dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/VPiOS.hmap (in target 'VPiOS' from project 'VPiOS')
+    cd /Users/runner/work/Vpios/Vpios
+    write-file dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/VPiOS.hmap
+
+WriteAuxiliaryFile dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/VPiOS.DependencyStaticMetadataFileList (in target 'VPiOS' from project 'VPiOS')
+    cd /Users/runner/work/Vpios/Vpios
+    write-file dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/VPiOS.DependencyStaticMetadataFileList
+
+WriteAuxiliaryFile dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/VPiOS.DependencyMetadataFileList (in target 'VPiOS' from project 'VPiOS')
+    cd /Users/runner/work/Vpios/Vpios
+    write-file dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/VPiOS.DependencyMetadataFileList
+
+WriteAuxiliaryFile dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/VPiOS-project-headers.hmap (in target 'VPiOS' from project 'VPiOS')
+    cd /Users/runner/work/Vpios/Vpios
+    write-file dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/VPiOS-project-headers.hmap
+
+WriteAuxiliaryFile dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/VPiOS-own-target-headers.hmap (in target 'VPiOS' from project 'VPiOS')
+    cd /Users/runner/work/Vpios/Vpios
+    write-file dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/VPiOS-own-target-headers.hmap
+
+WriteAuxiliaryFile dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/VPiOS-generated-files.hmap (in target 'VPiOS' from project 'VPiOS')
+    cd /Users/runner/work/Vpios/Vpios
+    write-file dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/VPiOS-generated-files.hmap
+
+WriteAuxiliaryFile dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/VPiOS-all-target-headers.hmap (in target 'VPiOS' from project 'VPiOS')
+    cd /Users/runner/work/Vpios/Vpios
+    write-file dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/VPiOS-all-target-headers.hmap
+
+WriteAuxiliaryFile dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/VPiOS-all-non-framework-target-headers.hmap (in target 'VPiOS' from project 'VPiOS')
+    cd /Users/runner/work/Vpios/Vpios
+    write-file dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/VPiOS-all-non-framework-target-headers.hmap
+
+WriteAuxiliaryFile dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/VPiOS-DebugDylibPath-normal-x86_64.txt (in target 'VPiOS' from project 'VPiOS')
+    cd /Users/runner/work/Vpios/Vpios
+    write-file dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/VPiOS-DebugDylibPath-normal-x86_64.txt
+
+WriteAuxiliaryFile dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/VPiOS-DebugDylibPath-normal-arm64.txt (in target 'VPiOS' from project 'VPiOS')
+    cd /Users/runner/work/Vpios/Vpios
+    write-file dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/VPiOS-DebugDylibPath-normal-arm64.txt
+
+WriteAuxiliaryFile dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/VPiOS-DebugDylibInstallName-normal-x86_64.txt (in target 'VPiOS' from project 'VPiOS')
+    cd /Users/runner/work/Vpios/Vpios
+    write-file dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/VPiOS-DebugDylibInstallName-normal-x86_64.txt
+
+WriteAuxiliaryFile dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/VPiOS-DebugDylibInstallName-normal-arm64.txt (in target 'VPiOS' from project 'VPiOS')
+    cd /Users/runner/work/Vpios/Vpios
+    write-file dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/VPiOS-DebugDylibInstallName-normal-arm64.txt
+
+WriteAuxiliaryFile dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/Objects-normal/x86_64/VPiOS_const_extract_protocols.json (in target 'VPiOS' from project 'VPiOS')
+    cd /Users/runner/work/Vpios/Vpios
+    write-file dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/Objects-normal/x86_64/VPiOS_const_extract_protocols.json
+
+WriteAuxiliaryFile dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/Objects-normal/x86_64/VPiOS.SwiftFileList (in target 'VPiOS' from project 'VPiOS')
+    cd /Users/runner/work/Vpios/Vpios
+    write-file dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/Objects-normal/x86_64/VPiOS.SwiftFileList
+
+WriteAuxiliaryFile dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/Objects-normal/x86_64/VPiOS.SwiftConstValuesFileList (in target 'VPiOS' from project 'VPiOS')
+    cd /Users/runner/work/Vpios/Vpios
+    write-file dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/Objects-normal/x86_64/VPiOS.SwiftConstValuesFileList
+
+WriteAuxiliaryFile dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/Objects-normal/x86_64/VPiOS.LinkFileList (in target 'VPiOS' from project 'VPiOS')
+    cd /Users/runner/work/Vpios/Vpios
+    write-file dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/Objects-normal/x86_64/VPiOS.LinkFileList
+
+WriteAuxiliaryFile dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/Objects-normal/x86_64/VPiOS-OutputFileMap.json (in target 'VPiOS' from project 'VPiOS')
+    cd /Users/runner/work/Vpios/Vpios
+    write-file dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/Objects-normal/x86_64/VPiOS-OutputFileMap.json
+
+WriteAuxiliaryFile dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/Objects-normal/arm64/VPiOS_const_extract_protocols.json (in target 'VPiOS' from project 'VPiOS')
+    cd /Users/runner/work/Vpios/Vpios
+    write-file dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/Objects-normal/arm64/VPiOS_const_extract_protocols.json
+
+WriteAuxiliaryFile dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/Objects-normal/arm64/VPiOS.SwiftFileList (in target 'VPiOS' from project 'VPiOS')
+    cd /Users/runner/work/Vpios/Vpios
+    write-file dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/Objects-normal/arm64/VPiOS.SwiftFileList
+
+WriteAuxiliaryFile dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/Objects-normal/arm64/VPiOS.SwiftConstValuesFileList (in target 'VPiOS' from project 'VPiOS')
+    cd /Users/runner/work/Vpios/Vpios
+    write-file dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/Objects-normal/arm64/VPiOS.SwiftConstValuesFileList
+
+WriteAuxiliaryFile dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/Objects-normal/arm64/VPiOS.LinkFileList (in target 'VPiOS' from project 'VPiOS')
+    cd /Users/runner/work/Vpios/Vpios
+    write-file dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/Objects-normal/arm64/VPiOS.LinkFileList
+
+WriteAuxiliaryFile dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/Objects-normal/arm64/VPiOS-OutputFileMap.json (in target 'VPiOS' from project 'VPiOS')
+    cd /Users/runner/work/Vpios/Vpios
+    write-file dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/Objects-normal/arm64/VPiOS-OutputFileMap.json
+
+MkDir dd/Build/Products/Debug-iphonesimulator/VPiOS.app (in target 'VPiOS' from project 'VPiOS')
+    cd /Users/runner/work/Vpios/Vpios
+    /bin/mkdir -p dd/Build/Products/Debug-iphonesimulator/VPiOS.app
+
+Ld dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/Objects-normal/arm64/Binary/__preview.dylib normal arm64 (in target 'VPiOS' from project 'VPiOS')
+    cd /Users/runner/work/Vpios/Vpios
+    /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target arm64-apple-ios17.0-simulator -dynamiclib -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -O0 -Ldd/Build/Products/Debug-iphonesimulator -Fdd/Build/Products/Debug-iphonesimulator -install_name @rpath/VPiOS.debug.dylib -dead_strip -rdynamic -Xlinker -no_deduplicate -Xlinker -objc_abi_version -Xlinker 2 -Xlinker -dependency_info -Xlinker dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/Objects-normal/arm64/VPiOS_dependency_info.dat -o dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/Objects-normal/arm64/Binary/__preview.dylib
+
+Ld dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/Objects-normal/x86_64/Binary/__preview.dylib normal x86_64 (in target 'VPiOS' from project 'VPiOS')
+    cd /Users/runner/work/Vpios/Vpios
+    /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target x86_64-apple-ios17.0-simulator -dynamiclib -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -O0 -Ldd/Build/Products/Debug-iphonesimulator -Fdd/Build/Products/Debug-iphonesimulator -install_name @rpath/VPiOS.debug.dylib -dead_strip -rdynamic -Xlinker -no_deduplicate -Xlinker -objc_abi_version -Xlinker 2 -Xlinker -dependency_info -Xlinker dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/Objects-normal/x86_64/VPiOS_dependency_info.dat -o dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/Objects-normal/x86_64/Binary/__preview.dylib
+
+CpResource dd/Build/Products/Debug-iphonesimulator/VPiOS.app/GameData GameData (in target 'VPiOS' from project 'VPiOS')
+    cd /Users/runner/work/Vpios/Vpios
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks GameData dd/Build/Products/Debug-iphonesimulator/VPiOS.app
+
+ProcessInfoPlistFile dd/Build/Products/Debug-iphonesimulator/VPiOS.app/Info.plist dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/empty-VPiOS.plist (in target 'VPiOS' from project 'VPiOS')
+    cd /Users/runner/work/Vpios/Vpios
+    builtin-infoPlistUtility dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/empty-VPiOS.plist -producttype com.apple.product-type.application -genpkginfo dd/Build/Products/Debug-iphonesimulator/VPiOS.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o dd/Build/Products/Debug-iphonesimulator/VPiOS.app/Info.plist
+
+CreateUniversalBinary dd/Build/Products/Debug-iphonesimulator/VPiOS.app/__preview.dylib normal arm64\ x86_64 (in target 'VPiOS' from project 'VPiOS')
+    cd /Users/runner/work/Vpios/Vpios
+    /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo -create dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/Objects-normal/arm64/Binary/__preview.dylib dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/Objects-normal/x86_64/Binary/__preview.dylib -output dd/Build/Products/Debug-iphonesimulator/VPiOS.app/__preview.dylib
+
+SwiftDriver VPiOS normal arm64 com.apple.xcode.tools.swift.compiler (in target 'VPiOS' from project 'VPiOS')
+    cd /Users/runner/work/Vpios/Vpios
+    builtin-SwiftDriver -- /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name VPiOS -Onone -enforce-exclusivity\=checked @dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/Objects-normal/arm64/VPiOS.SwiftFileList -DDEBUG -enable-bare-slash-regex -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -target arm64-apple-ios17.0-simulator -g -module-cache-path dd/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path dd/Index.noindex/DataStore -swift-version 5 -I dd/Build/Products/Debug-iphonesimulator -F dd/Build/Products/Debug-iphonesimulator -c -j3 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc dd/SDKStatCaches.noindex/iphonesimulator18.5-22F76-96ae0914227b19deccb34b33ba7b5dea.sdkstatcache -output-file-map dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/Objects-normal/arm64/VPiOS-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/Objects-normal/arm64/VPiOS.swiftmodule -validate-clang-modules-once -clang-build-session-file dd/ModuleCache.noindex/Session.modulevalidation -Xcc -Idd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/Objects-normal/arm64/VPiOS_const_extract_protocols.json -Xcc -iquote -Xcc dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/VPiOS-generated-files.hmap -Xcc -Idd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/VPiOS-own-target-headers.hmap -Xcc -Idd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/VPiOS-all-target-headers.hmap -Xcc -iquote -Xcc dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/VPiOS-project-headers.hmap -Xcc -Idd/Build/Products/Debug-iphonesimulator/include -Xcc -Idd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/DerivedSources-normal/arm64 -Xcc -Idd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/DerivedSources/arm64 -Xcc -Idd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/DerivedSources -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/Objects-normal/arm64/VPiOS-Swift.h -working-directory /Users/runner/work/Vpios/Vpios -experimental-emit-module-separately -disable-cmo
+
+SwiftDriver VPiOS normal x86_64 com.apple.xcode.tools.swift.compiler (in target 'VPiOS' from project 'VPiOS')
+    cd /Users/runner/work/Vpios/Vpios
+    builtin-SwiftDriver -- /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name VPiOS -Onone -enforce-exclusivity\=checked @dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/Objects-normal/x86_64/VPiOS.SwiftFileList -DDEBUG -enable-bare-slash-regex -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -target x86_64-apple-ios17.0-simulator -g -module-cache-path dd/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path dd/Index.noindex/DataStore -swift-version 5 -I dd/Build/Products/Debug-iphonesimulator -F dd/Build/Products/Debug-iphonesimulator -c -j3 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc dd/SDKStatCaches.noindex/iphonesimulator18.5-22F76-96ae0914227b19deccb34b33ba7b5dea.sdkstatcache -output-file-map dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/Objects-normal/x86_64/VPiOS-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/Objects-normal/x86_64/VPiOS.swiftmodule -validate-clang-modules-once -clang-build-session-file dd/ModuleCache.noindex/Session.modulevalidation -Xcc -Idd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/Objects-normal/x86_64/VPiOS_const_extract_protocols.json -Xcc -iquote -Xcc dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/VPiOS-generated-files.hmap -Xcc -Idd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/VPiOS-own-target-headers.hmap -Xcc -Idd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/VPiOS-all-target-headers.hmap -Xcc -iquote -Xcc dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/VPiOS-project-headers.hmap -Xcc -Idd/Build/Products/Debug-iphonesimulator/include -Xcc -Idd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/DerivedSources-normal/x86_64 -Xcc -Idd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/DerivedSources/x86_64 -Xcc -Idd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/DerivedSources -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/Objects-normal/x86_64/VPiOS-Swift.h -working-directory /Users/runner/work/Vpios/Vpios -experimental-emit-module-separately -disable-cmo
+
+SwiftEmitModule normal arm64 Emitting\ module\ for\ VPiOS (in target 'VPiOS' from project 'VPiOS')
+
+EmitSwiftModule normal arm64 (in target 'VPiOS' from project 'VPiOS')
+    cd /Users/runner/work/Vpios/Vpios
+    
+Sources/logic/city/City.swift:37:16: error: cannot find 'EvLog' in scope
+            if EvLog.on { EvLog.productionSet(self) }
+               ^~~~~
+Sources/logic/city/City.swift:37:27: error: cannot find 'EvLog' in scope
+            if EvLog.on { EvLog.productionSet(self) }
+                          ^~~~~
+Sources/logic/city/CityConstructions.swift:780:5: warning: @discardableResult declared on a function returning Void is unnecessary
+    @discardableResult
+    ^~~~~~~~~~~~~~~~~~
+    
+Sources/logic/city/managers/CityExpansionManager.swift:142:5: warning: @discardableResult declared on a function returning Void is unnecessary
+    @discardableResult
+    ^~~~~~~~~~~~~~~~~~
+    
+Sources/UI/CityScreenModel.swift:92:19: error: cannot find 'UIMeasure' in scope
+        let umT = UIMeasure.start(); defer { UIMeasure.stop("constructionEntries", umT) }
+                  ^~~~~~~~~
+Sources/UI/CityScreenModel.swift:301:19: error: cannot find 'UIMeasure' in scope
+        let umT = UIMeasure.start(); defer { UIMeasure.stop("mapTiles", umT) }
+                  ^~~~~~~~~
+Sources/UI/CityScreenModel.swift:336:26: error: cannot find 'Art' in scope
+            let layers = Art.shared.layers(for: shown, cityEra: era)
+                         ^~~
+Sources/logic/civilization/Civilization.swift:200:40: error: cannot find 'EvLog' in scope
+    var gold: Double = 0 { didSet { if EvLog.on { EvLog.gold(nation, oldValue, gold) } } }   // EVLOG: GOLD at every change
+                                       ^~~~~
+Sources/logic/civilization/Civilization.swift:200:51: error: cannot find 'EvLog' in scope
+    var gold: Double = 0 { didSet { if EvLog.on { EvLog.gold(nation, oldValue, gold) } } }   // EVLOG: GOLD at every change
+                                                  ^~~~~
+Sources/App/EpochsApp.swift:45:26: error: cannot find 'AppFlowState' in scope
+    @State var appFlow = AppFlowState()
+                         ^~~~~~~~~~~~
+Sources/UI/GameView.swift:48:6: error: generic parameter 'T' could not be inferred
+    @Environment(\.stageWidth) private var canvasStageWidth
+     ^
+SwiftUICore.Environment.init:3:10: note: in call to initializer
+  public init<T>(_ objectType: T.Type) where Value == T?, T : AnyObject, T : Observable}
+         ^
+Sources/UI/GameView.swift:48:18: error: cannot infer key path type from context; consider explicitly specifying a root type
+    @Environment(\.stageWidth) private var canvasStageWidth
+                 ^
+                  <#Root#>
+Sources/Scene/MapScene.swift:163:39: error: cannot find type 'TouchTraceRecognizer' in scope
+    private weak var traceRecognizer: TouchTraceRecognizer?
+                                      ^~~~~~~~~~~~~~~~~~~~
+Sources/UI/ModManagerView.swift:29:32: error: cannot find type 'ModDownloader' in scope
+    @State private var repos: [ModDownloader.Repo] = []
+                               ^~~~~~~~~~~~~
+Sources/UI/ModManagerView.swift:193:32: error: cannot find type 'ModDownloader' in scope
+    private var sortedOnline: [ModDownloader.Repo] {
+                               ^~~~~~~~~~~~~
+Sources/UI/ModManagerView.swift:232:31: error: cannot find type 'ModDownloader' in scope
+    private func install(_ r: ModDownloader.Repo) {
+                              ^~~~~~~~~~~~~
+Sources/UI/MultiplayerHelpers.swift:26:80: warning: main actor-isolated static property 'shared' can not be referenced from a nonisolated context; this is an error in the Swift 6 language mode
+    static func descriptionText(_ gameId: String, status: MultiplayerStatus = .shared) -> String {
+                                                                               ^
+Sources/UI/ChatView.swift:112:16: note: static property declared here
+    static let shared = MultiplayerStatus()
+               ^
+Sources/UI/MultiplayerHelpers.swift:56:77: warning: main actor-isolated static property 'shared' can not be referenced from a nonisolated context; this is an error in the Swift 6 language mode
+    static func downloadGame(_ gameId: String, status: MultiplayerStatus = .shared) async throws -> GameState {
+                                                                            ^
+Sources/UI/ChatView.swift:112:16: note: static property declared here
+    static let shared = MultiplayerStatus()
+               ^
+Sources/logic/automation/civilization/NextTurnAutomation.swift:61:28: error: cannot find 'epochsAutoplay' in scope
+        if me.isPlayer && !epochsAutoplay, let ci = civIndex(civId) {
+                           ^~~~~~~~~~~~~~
+Sources/UI/OptionsView.swift:30:28: error: cannot find 'Theme' in scope
+        var color: Color = Theme.cream
+                           ^~~~~
+Sources/logic/trade/TradeLogic.swift:239:22: error: type 'GameState' has no member 'evlogOn'
+        if GameState.evlogOn, EvLog.game === self {
+           ~~~~~~~~~ ^~~~~~~
+Sources/logic/trade/TradeLogic.swift:239:31: error: cannot find 'EvLog' in scope
+        if GameState.evlogOn, EvLog.game === self {
+                              ^~~~~
+Sources/logic/trade/TradeLogic.swift:240:24: error: cannot find 'EvLog' in scope
+            let list = EvLog.pendingInstantTradeEnds.removeValue(forKey: k) ?? []
+                       ^~~~~
+Sources/logic/trade/TradeLogic.swift:241:24: error: cannot find 'EvLog' in scope
+            let seqs = EvLog.pendingSeq.removeValue(forKey: "I|\(k)") ?? []
+                       ^~~~~
+Sources/logic/trade/TradeLogic.swift:243:25: error: cannot find 'EvLog' in scope
+            let plist = EvLog.pendingPeaceTradeEnds[k] ?? [], pseqs = EvLog.pendingSeq["P|\(k)"] ?? []
+                        ^~~~~
+Sources/logic/trade/TradeLogic.swift:243:71: error: cannot find 'EvLog' in scope
+            let plist = EvLog.pendingPeaceTradeEnds[k] ?? [], pseqs = EvLog.pendingSeq["P|\(k)"] ?? []
+                                                                      ^~~~~
+Sources/logic/trade/TradeLogic.swift:282:34: error: type 'GameState' has no member 'evlogOn'
+                    if GameState.evlogOn, n < peaceEnds.count { ev(civId, "TRADE", evOtherName(other), "end", peaceEnds[n].summary); peaceEnded.append(n) }   // EVLOG: trades.remove
+                       ~~~~~~~~~ ^~~~~~~
+Sources/logic/trade/TradeLogic.swift:282:65: error: cannot find 'ev' in scope
+                    if GameState.evlogOn, n < peaceEnds.count { ev(civId, "TRADE", evOtherName(other), "end", peaceEnds[n].summary); peaceEnded.append(n) }   // EVLOG: trades.remove
+                                                                ^~
+Sources/logic/trade/TradeLogic.swift:282:84: error: cannot find 'evOtherName' in scope
+                    if GameState.evlogOn, n < peaceEnds.count { ev(civId, "TRADE", evOtherName(other), "end", peaceEnds[n].summary); peaceEnded.append(n) }   // EVLOG: trades.remove
+                                                                                   ^~~~~~~~~~~
+Sources/logic/trade/TradeLogic.swift:288:115: error: cannot find 'EvLog' in scope
+                if !instantEnds.isEmpty { let tid = deals[group[0]].tradeId; flushInstantEnds(before: (tid != 0 ? EvLog.tradeSeq["\(tid)>\(civId)"] : nil) ?? -1) }
+                                                                                                                  ^~~~~
+Sources/logic/trade/TradeLogic.swift:315:34: error: type 'GameState' has no member 'evlogOn'
+                    if GameState.evlogOn { evTradeEnd(civId, other, group) }   // EVLOG: TRADE end (trades.remove)
+                       ~~~~~~~~~ ^~~~~~~
+Sources/logic/trade/TradeLogic.swift:315:44: error: cannot find 'evTradeEnd' in scope
+                    if GameState.evlogOn { evTradeEnd(civId, other, group) }   // EVLOG: TRADE end (trades.remove)
+                                           ^~~~~~~~~~
+Sources/logic/trade/TradeLogic.swift:356:22: error: type 'GameState' has no member 'evlogOn'
+        if GameState.evlogOn, !peaceEnded.isEmpty {   // EVLOG: the treaty trades printed above leave the pending list
+           ~~~~~~~~~ ^~~~~~~
+Sources/logic/trade/TradeLogic.swift:358:13: error: cannot find 'EvLog' in scope
+            EvLog.pendingPeaceTradeEnds[k] = keep.isEmpty ? nil : keep.map { peaceEnds[$0].summary }
+            ^~~~~
+Sources/logic/trade/TradeLogic.swift:359:13: error: cannot find 'EvLog' in scope
+            EvLog.pendingSeq["P|\(k)"] = keep.isEmpty ? nil : keep.map { peaceEnds[$0].seq }
+            ^~~~~
+Sources/UI/UncivTaps.swift:24:6: error: generic parameter 'T' could not be inferred
+    @Environment(\.onVirtualCanvas) private var onCanvas
+     ^
+SwiftUICore.Environment.init:3:10: note: in call to initializer
+  public init<T>(_ objectType: T.Type) where Value == T?, T : AnyObject, T : Observable}
+         ^
+Sources/UI/UncivTaps.swift:24:18: error: cannot infer key path type from context; consider explicitly specifying a root type
+    @Environment(\.onVirtualCanvas) private var onCanvas
+                 ^
+                  <#Root#>
+
+Failed frontend command:
+/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift-frontend -frontend -emit-module -experimental-skip-non-inlinable-function-bodies-without-types Sources/logic/battle/AirInterception.swift Sources/logic/automation/unit/AirUnitAutomation.swift Sources/logic/civilization/AlertAnswers.swift Sources/UI/AlertPopupView.swift Sources/logic/civilization/managers/quests/AssignedQuest.swift Sources/logic/battle/AttackEvent.swift Sources/logic/battle/AttackParticipant.swift Sources/logic/battle/AttackRecorder.swift Sources/logic/battle/AttackableTile.swift Sources/App/Audio.swift Sources/logic/automation/Automation.swift Sources/logic/BackwardCompatibility.swift Sources/logic/automation/civilization/BarbarianAutomation.swift Sources/logic/automation/civilization/BarbarianEncampment.swift Sources/logic/automation/civilization/BarbarianManager.swift Sources/models/metadata/BaseRuleset.swift Sources/models/ruleset/unit/BaseUnit.swift Sources/logic/battle/Battle.swift Sources/logic/battle/BattleConstants.swift Sources/logic/battle/BattleDamage.swift Sources/logic/automation/unit/BattleHelper.swift Sources/UI/BattleTable.swift Sources/logic/battle/BattleUnitCapture.swift Sources/models/ruleset/Belief.swift Sources/models/ruleset/Building.swift Sources/logic/map/CarrierSlotMatcher.swift Sources/UI/ChatView.swift Sources/logic/multiplayer/chat/ChatWebSocket.swift Sources/logic/city/City.swift Sources/logic/battle/CityCombatant.swift Sources/logic/city/managers/CityConquestFunctions.swift Sources/logic/city/CityConstructions.swift Sources/logic/city/managers/CityEspionageManager.swift Sources/logic/city/managers/CityExpansionManager.swift Sources/logic/city/managers/CityFounder.swift Sources/logic/automation/unit/CityLocationTileRanker.swift Sources/logic/city/managers/CityPopulationManager.swift Sources/logic/city/managers/CityReligionManager.swift Sources/UI/CityScreen.swift Sources/UI/CityScreenModel.swift Sources/UI/CityScreenParts.swift Sources/logic/civilization/diplomacy/CityStateFunctions.swift Sources/models/ruleset/nation/CityStateType.swift Sources/logic/city/CityStats.swift Sources/logic/city/managers/CityTurnManager.swift Sources/logic/civilization/CivConstructions.swift Sources/logic/civilization/transients/CivInfoStatsForNextTurn.swift Sources/logic/civilization/transients/CivInfoTransientCache.swift Sources/logic/automation/unit/CivilianUnitAutomation.swift Sources/logic/civilization/Civilization.swift Sources/UI/Civilopedia.swift Sources/models/ruleset/unique/Conditionals.swift Sources/logic/automation/city/ConstructionAutomation.swift Sources/models/ruleset/unique/Countables.swift Sources/logic/civilization/diplomacy/DeclareWar.swift Sources/logic/automation/civilization/DeclareWarPlanEvaluator.swift Sources/logic/civilization/diplomacy/Demand.swift Sources/App/DevConsole.swift Sources/UI/DevConsoleView.swift Sources/models/ruleset/nation/Difficulty.swift Sources/logic/automation/civilization/DiplomacyAutomation.swift Sources/logic/civilization/diplomacy/DiplomacyFunctions.swift Sources/logic/civilization/diplomacy/DiplomacyManager.swift Sources/UI/DiplomacyScreen.swift Sources/logic/civilization/diplomacy/DiplomacyTurnManager.swift Sources/UI/DiplomaticVoteScreens.swift Sources/UI/EasterEggFloatingArt.swift Sources/UI/EmpireScreens.swift Sources/App/EpochsApp.swift Sources/models/ruleset/tech/Era.swift Sources/logic/automation/unit/EspionageAutomation.swift Sources/logic/civilization/managers/EspionageManager.swift Sources/models/ruleset/Event.swift Sources/logic/civilization/ExploredRegion.swift Sources/models/ruleset/unique/expressions/Expressions.swift Sources/UI/FunctionKeys.swift Sources/models/ruleset/unique/GameContext.swift Sources/App/GameController+Actions.swift Sources/App/GameController.swift Sources/App/GameEvents.swift Sources/logic/GameInfo.swift Sources/logic/GameInfoSerialization.swift Sources/models/metadata/GameParameters.swift Sources/models/metadata/GameSettings.swift Sources/logic/GameStarter.swift Sources/UI/GameView.swift Sources/models/ruleset/GlobalUniques.swift Sources/logic/civilization/managers/GoldenAgeManager.swift Sources/logic/battle/GreatGeneralImplementation.swift Sources/logic/civilization/managers/GreatPersonManager.swift Sources/UI/GreatPersonPicker.swift Sources/logic/automation/unit/HeadTowardsEnemyCityAutomation.swift Sources/logic/map/HexMath.swift Sources/logic/HolidayDates.swift Sources/logic/battle/ICombatant.swift Sources/models/ruleset/IConstruction.swift Sources/logic/IdChecker.swift Sources/UI/KeyBindings.swift Sources/UI/KeyboardShortcuts.swift Sources/UI/LanguagePickerScreen.swift Sources/UI/LoadSaveScreens.swift Sources/models/ruleset/unique/LocalUniqueCache.swift Sources/models/metadata/LocaleCode.swift Sources/UI/Localization.swift Sources/UI/MainMenuView.swift Sources/UI/MapEditorView.swift Sources/logic/map/mapgenerator/MapGenerator.swift Sources/logic/map/mapgenerator/resourceplacement/MapRegionResources.swift Sources/logic/map/mapgenerator/mapregions/MapRegions.swift Sources/logic/files/MapSaver.swift Sources/Scene/MapScene.swift Sources/logic/map/MapSize.swift Sources/logic/map/mapunit/MapUnit.swift Sources/logic/battle/MapUnitCombatant.swift Sources/UI/Minimap.swift Sources/models/ModConstants.swift Sources/UI/ModManagerView.swift Sources/models/ruleset/ModOptions.swift Sources/logic/automation/civilization/MotivationToAttackAutomation.swift Sources/logic/map/mapunit/movement/MovementCost.swift Sources/logic/MultiFilter.swift Sources/logic/multiplayer/Multiplayer.swift Sources/UI/MultiplayerHelpers.swift Sources/UI/MultiplayerView.swift Sources/App/Music.swift Sources/UI/MusicPopup.swift Sources/models/ruleset/nation/Nation.swift Sources/UI/NewGameScreen.swift Sources/logic/automation/civilization/NextTurnAutomation.swift Sources/logic/civilization/Notification.swift Sources/logic/civilization/NotificationActions.swift Sources/UI/NotificationsScrollPane.swift Sources/logic/battle/Nuke.swift Sources/UI/ObjectDescriptions.swift Sources/UI/OptionsView.swift Sources/UI/OverviewScreen.swift Sources/models/ruleset/unique/expressions/Parser.swift Sources/models/ruleset/nation/Personality.swift Sources/UI/Pickers.swift Sources/models/metadata/Player.swift Sources/models/ruleset/Policy.swift Sources/models/ruleset/PolicyBranch.swift Sources/logic/civilization/managers/PolicyManager.swift Sources/logic/civilization/PopupAlert.swift Sources/models/ruleset/unit/Promotion.swift Sources/logic/civilization/Proximity.swift Sources/models/ruleset/Quest.swift Sources/logic/civilization/managers/quests/QuestImplementation.swift Sources/logic/civilization/managers/quests/QuestManager.swift Sources/logic/civilization/managers/quests/QuestTargetHelpers.swift Sources/logic/automation/civilization/ReligionAutomation.swift Sources/logic/civilization/managers/ReligionManager.swift Sources/UI/ReligionScreens.swift Sources/logic/automation/unit/ReligiousUnitAutomation.swift Sources/UI/ReplayView.swift Sources/logic/map/mapgenerator/RiverGenerator.swift Sources/logic/automation/unit/RoadToAutomation.swift Sources/models/ruleset/RuinReward.swift Sources/models/ruleset/Ruleset.swift Sources/models/ruleset/RulesetObject.swift Sources/models/ruleset/validation/RulesetValidator.swift Sources/logic/simulation/Simulation.swift Sources/models/ruleset/Specialist.swift Sources/logic/automation/unit/SpecificUnitAutomation.swift Sources/models/ruleset/Speed.swift Sources/models/Spy.swift Sources/models/stats/Stat.swift Sources/models/ruleset/unique/StateBasedRandom.swift Sources/models/stats/Stats.swift Sources/logic/battle/TargetHelper.swift Sources/models/ruleset/tech/TechColumn.swift Sources/logic/civilization/managers/TechManager.swift Sources/models/ruleset/tech/Technology.swift Sources/models/ruleset/unique/TemporaryUnique.swift Sources/models/ruleset/tile/Terrain.swift Sources/models/ruleset/tile/TerrainType.swift Sources/logic/map/tile/Tile.swift Sources/logic/map/tile/TileHistory.swift Sources/models/ruleset/tile/TileImprovement.swift Sources/logic/map/tile/TileImprovementFunctions.swift Sources/UI/TileInfoTable.swift Sources/logic/map/tile/TileNormalizer.swift Sources/models/ruleset/tile/TileResource.swift Sources/logic/map/tile/TileStatFunctions.swift Sources/models/ruleset/unique/expressions/Tokenizer.swift Sources/logic/trade/Trade.swift Sources/logic/automation/civilization/TradeAutomation.swift Sources/logic/trade/TradeLogic.swift Sources/logic/trade/TradeOffer.swift Sources/UI/TradeScreen.swift Sources/models/translations/TranslationEntry.swift Sources/models/translations/TranslationFileReader.swift Sources/models/translations/Translations.swift Sources/logic/civilization/managers/TurnManager.swift Sources/logic/TurnThread.swift Sources/models/ruleset/Tutorial.swift Sources/logic/files/UncivFiles.swift Sources/UI/UncivTaps.swift Sources/models/ruleset/unique/Unique.swift Sources/models/ruleset/unique/UniqueMap.swift Sources/models/ruleset/unique/UniqueParameterType.swift Sources/models/ruleset/unique/UniqueTarget.swift Sources/models/ruleset/unique/UniqueTriggerActivation.swift Sources/models/ruleset/unique/UniqueTriggerExecutors.swift Sources/models/UnitAction.swift Sources/UI/UnitActionsTable.swift Sources/logic/automation/unit/UnitAutomation.swift Sources/logic/map/mapunit/movement/UnitMovement.swift Sources/models/ruleset/unit/UnitNameGroup.swift Sources/logic/map/mapunit/UnitPromotions.swift Sources/logic/map/mapunit/UnitTurnManager.swift Sources/models/ruleset/unit/UnitType.swift Sources/logic/map/mapunit/UnitUpgradeManager.swift Sources/UI/UnitUpgradeMenu.swift Sources/logic/automation/civilization/UseGoldAutomation.swift Shell/VPApp.swift Sources/models/ruleset/Victory.swift Sources/logic/civilization/managers/VictoryManager.swift Sources/UI/VictoryScreen.swift Sources/logic/files/WesnothImporter.swift Sources/logic/automation/unit/WorkerAutomation.swift Sources/UI/WorldHUDLayout.swift -target arm64-apple-ios17.0-simulator -Xllvm -aarch64-use-tbi -enable-objc-interop -sdk /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -I dd/Build/Products/Debug-iphonesimulator -F dd/Build/Products/Debug-iphonesimulator -no-color-diagnostics -enable-testing -g -debug-info-format\=dwarf -dwarf-version\=4 -module-cache-path dd/ModuleCache.noindex -swift-version 5 -enforce-exclusivity\=checked -Onone -D DEBUG -serialize-debugging-options -const-gather-protocols-file dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/Objects-normal/arm64/VPiOS_const_extract_protocols.json -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -empty-abi-descriptor -validate-clang-modules-once -clang-build-session-file dd/ModuleCache.noindex/Session.modulevalidation -Xcc -working-directory -Xcc /Users/runner/work/Vpios/Vpios -resource-dir /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift -enable-anonymous-context-mangled-names -file-compilation-dir /Users/runner/work/Vpios/Vpios -Xcc -ivfsstatcache -Xcc dd/SDKStatCaches.noindex/iphonesimulator18.5-22F76-96ae0914227b19deccb34b33ba7b5dea.sdkstatcache -Xcc -Idd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/swift-overrides.hmap -Xcc -iquote -Xcc dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/VPiOS-generated-files.hmap -Xcc -Idd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/VPiOS-own-target-headers.hmap -Xcc -Idd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/VPiOS-all-target-headers.hmap -Xcc -iquote -Xcc dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/VPiOS-project-headers.hmap -Xcc -Idd/Build/Products/Debug-iphonesimulator/include -Xcc -Idd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/DerivedSources-normal/arm64 -Xcc -Idd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/DerivedSources/arm64 -Xcc -Idd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/DerivedSources -Xcc -DDEBUG\=1 -module-name VPiOS -frontend-parseable-output -disable-clang-spi -target-sdk-version 18.5 -target-sdk-name iphonesimulator18.5 -external-plugin-path /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/lib/swift/host/plugins\#/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/swift-plugin-server -external-plugin-path /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/local/lib/swift/host/plugins\#/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/swift-plugin-server -in-process-plugin-server-path /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/libSwiftInProcPluginServer.dylib -plugin-path /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins -plugin-path /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/local/lib/swift/host/plugins -emit-module-doc-path dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/Objects-normal/arm64/VPiOS.swiftdoc -emit-module-source-info-path dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/Objects-normal/arm64/VPiOS.swiftsourceinfo -emit-objc-header-path dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/Objects-normal/arm64/VPiOS-Swift.h -serialize-diagnostics-path dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/Objects-normal/arm64/VPiOS-master-emit-module.dia -emit-dependencies-path dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/Objects-normal/arm64/VPiOS-master-emit-module.d -o dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/Objects-normal/arm64/VPiOS.swiftmodule -emit-abi-descriptor-path dd/Build/Intermediates.noindex/VPiOS.build/Debug-iphonesimulator/VPiOS.build/Objects-normal/arm64/VPiOS.abi.json
+SwiftEmitModule normal x86_64 Emitting\ module\ for\ VPiOS (in target 'VPiOS' from project 'VPiOS')
+EmitSwiftModule normal x86_64 (in target 'VPiOS' from project 'VPiOS')
+    cd /Users/runner/work/Vpios/Vpios
+    
+
+SwiftCompile normal arm64 Compiling\ MusicPopup.swift,\ Nation.swift,\ NewGameScreen.swift,\ NextTurnAutomation.swift,\ Notification.swift,\ NotificationActions.swift,\ NotificationsScrollPane.swift,\ Nuke.swift,\ ObjectDescriptions.swift,\ OptionsView.swift,\ OverviewScreen.swift,\ Parser.swift,\ Personality.swift,\ Pickers.swift,\ Player.swift,\ Policy.swift,\ PolicyBranch.swift,\ PolicyManager.swift,\ PopupAlert.swift,\ Promotion.swift,\ Proximity.swift,\ Quest.swift,\ QuestImplementation.swift,\ QuestManager.swift,\ QuestTargetHelpers.swift Sources/UI/MusicPopup.swift Sources/models/ruleset/nation/Nation.swift Sources/UI/NewGameScreen.swift Sources/logic/automation/civilization/NextTurnAutomation.swift Sources/logic/civilization/Notification.swift Sources/logic/civilization/NotificationActions.swift Sources/UI/NotificationsScrollPane.swift Sources/logic/battle/Nuke.swift Sources/UI/ObjectDescriptions.swift Sources/UI/OptionsView.swift Sources/UI/OverviewScreen.swift Sources/models/ruleset/unique/expressions/Parser.swift Sources/models/ruleset/nation/Personality.swift Sources/UI/Pickers.swift Sources/models/metadata/Player.swift Sources/models/ruleset/Policy.swift Sources/models/ruleset/PolicyBranch.swift Sources/logic/civilization/managers/PolicyManager.swift Sources/logic/civilization/PopupAlert.swift Sources/models/ruleset/unit/Promotion.swift Sources/logic/civilization/Proximity.swift Sources/models/ruleset/Quest.swift Sources/logic/civilization/managers/quests/QuestImplementation.swift Sources/logic/civilization/managers/quests/QuestManager.swift Sources/logic/civilization/managers/quests/QuestTargetHelpers.swift (in target 'VPiOS' from project 'VPiOS')
+
+SwiftCompile normal arm64 Sources/UI/MusicPopup.swift (in target 'VPiOS' from project 'VPiOS')
+    cd /Users/runner/work/Vpios/Vpios
+    
+
+SwiftCompile normal arm64 Sources/models/ruleset/nation/Nation.swift (in target 'VPiOS' from project 'VPiOS')
+    cd /Users/runner/work/Vpios/Vpios
+    
+
+SwiftCompile normal arm64 Sources/UI/NewGameScreen.swift (in target 'VPiOS' from project 'VPiOS')
+    cd /Users/runner/work/Vpios/Vpios
+    
+
+SwiftCompile normal arm64 Sources/logic/automation/civilization/NextTurnAutomation.swift (in target 'VPiOS' from project 'VPiOS')
+    cd /Users/runner/work/Vpios/Vpios
+    
+
+SwiftCompile normal arm64 Sources/logic/civilization/Notification.swift (in target 'VPiOS' from project 'VPiOS')
+    cd /Users/runner/work/Vpios/Vpios
+    
+
+SwiftCompile normal arm64 Sources/logic/civilization/NotificationActions.swift (in target 'VPiOS' from project 'VPiOS')
+    cd /Users/runner/work/Vpios/Vpios
+    
+
+SwiftCompile normal arm64 Sources/UI/NotificationsScrollPane.swift (in target 'VPiOS' from project 'VPiOS')
+    cd /Users/runner/work/Vpios/Vpios
+    
+
+SwiftCompile normal arm64 Sources/logic/battle/Nuke.swift (in target 'VPiOS' from project 'VPiOS')
+    cd /Users/runner/work/Vpios/Vpios
+    
+
+SwiftCompile normal arm64 Sources/UI/ObjectDescriptions.swift (in target 'VPiOS' from project 'VPiOS')
+    cd /Users/runner/work/Vpios/Vpios
+    
+
+SwiftCompile normal arm64 Sources/UI/OptionsView.swift (in target 'VPiOS' from project 'VPiOS')
+    cd /Users/runner/work/Vpios/Vpios
+    
+
+SwiftCompile normal arm64 Sources/UI/OverviewScreen.swift (in target 'VPiOS' from project 'VPiOS')
+    cd /Users/runner/work/Vpios/Vpios
+    
+
+SwiftCompile normal arm64 Sources/models/ruleset/unique/expressions/Parser.swift (in target 'VPiOS' from project 'VPiOS')
+    cd /Users/runner/work/Vpios/Vpios
+    
+
+SwiftCompile normal arm64 Sources/models/ruleset/nation/Personality.swift (in target 'VPiOS' from project 'VPiOS')
+    cd /Users/runner/work/Vpios/Vpios
+    
+
+SwiftCompile normal arm64 Sources/UI/Pickers.swift (in target 'VPiOS' from project 'VPiOS')
+    cd /Users/runner/work/Vpios/Vpios
+    
+
+SwiftCompile normal arm64 Sources/models/metadata/Player.swift (in target 'VPiOS' from project 'VPiOS')
+    cd /Users/runner/work/Vpios/Vpios
+    
+
+SwiftCompile normal arm64 Sources/models/ruleset/Policy.swift (in target 'VPiOS' from project 'VPiOS')
+    cd /Users/runner/work/Vpios/Vpios
+    
+
+SwiftCompile normal arm64 Sources/models/ruleset/PolicyBranch.swift (in target 'VPiOS' from project 'VPiOS')
+    cd /Users/runner/work/Vpios/Vpios
+    
+
+SwiftCompile normal arm64 Sources/logic/civilization/managers/PolicyManager.swift (in target 'VPiOS' from project 'VPiOS')
+    cd /Users/runner/work/Vpios/Vpios
+    
+
+SwiftCompile normal arm64 Sources/logic/civilization/PopupAlert.swift (in target 'VPiOS' from project 'VPiOS')
+    cd /Users/runner/work/Vpios/Vpios
+    
+
+SwiftCompile normal arm64 Sources/models/ruleset/unit/Promotion.swift (in target 'VPiOS' from project 'VPiOS')
+    cd /Users/runner/work/Vpios/Vpios
+    
+
+SwiftCompile normal arm64 Sources/logic/civilization/Proximity.swift (in target 'VPiOS' from project 'VPiOS')
+    cd /Users/runner/work/Vpios/Vpios
+    
+
+SwiftCompile normal arm64 Sources/models/ruleset/Quest.swift (in target 'VPiOS' from project 'VPiOS')
+    cd /Users/runner/work/Vpios/Vpios
+    
+
+SwiftCompile normal arm64 Sources/logic/civilization/managers/quests/QuestImplementation.swift (in target 'VPiOS' from project 'VPiOS')
+    cd /Users/runner/work/Vpios/Vpios
+    
+
+SwiftCompile normal arm64 Sources/logic/civilization/managers/quests/QuestManager.swift (in target 'VPiOS' from project 'VPiOS')
+    cd /Users/runner/work/Vpios/Vpios
+    
+
+SwiftCompile normal arm64 Sources/logic/civilization/managers/quests/QuestTargetHelpers.swift (in target 'VPiOS' from project 'VPiOS')
+    cd /Users/runner/work/Vpios/Vpios
+    
+
+SwiftCompile normal x86_64 Compiling\ Civilopedia.swift,\ Conditionals.swift,\ ConstructionAutomation.swift,\ Countables.swift,\ DeclareWar.swift,\ DeclareWarPlanEvaluator.swift,\ Demand.swift,\ DevConsole.swift,\ DevConsoleView.swift,\ Difficulty.swift,\ DiplomacyAutomation.swift,\ DiplomacyFunctions.swift,\ DiplomacyManager.swift,\ DiplomacyScreen.swift,\ DiplomacyTurnManager.swift,\ DiplomaticVoteScreens.swift,\ EasterEggFloatingArt.swift,\ EmpireScreens.swift,\ EpochsApp.swift,\ Era.swift,\ EspionageAutomation.swift,\ EspionageManager.swift,\ Event.swift,\ ExploredRegion.swift,\ Expressions.swift Sources/UI/Civilopedia.swift Sources/models/ruleset/unique/Conditionals.swift Sources/logic/automation/city/ConstructionAutomation.swift Sources/models/ruleset/unique/Countables.swift Sources/logic/civilization/diplomacy/DeclareWar.swift Sources/logic/automation/civilization/DeclareWarPlanEvaluator.swift Sources/logic/civilization/diplomacy/Demand.swift Sources/App/DevConsole.swift Sources/UI/DevConsoleView.swift Sources/models/ruleset/nation/Difficulty.swift Sources/logic/automation/civilization/DiplomacyAutomation.swift Sources/logic/civilization/diplomacy/DiplomacyFunctions.swift Sources/logic/civilization/diplomacy/DiplomacyManager.swift Sources/UI/DiplomacyScreen.swift Sources/logic/civilization/diplomacy/DiplomacyTurnManager.swift Sources/UI/DiplomaticVoteScreens.swift Sources/UI/EasterEggFloatingArt.swift Sources/UI/EmpireScreens.swift Sources/App/EpochsApp.swift Sources/models/ruleset/tech/Era.swift Sources/logic/automation/unit/EspionageAutomation.swift Sources/logic/civilization/managers/EspionageManager.swift Sources/models/ruleset/Event.swift Sources/logic/civilization/ExploredRegion.swift Sources/models/ruleset/unique/expressions/Expressions.swift (in target 'VPiOS' from project 'VPiOS')
+Command SwiftCompile failed with a nonzero exit code
+
+** BUILD FAILED **
+
+
+The following build commands failed:
+	EmitSwiftModule normal arm64 (in target 'VPiOS' from project 'VPiOS')
+	SwiftEmitModule normal arm64 Emitting\ module\ for\ VPiOS (in target 'VPiOS' from project 'VPiOS')
+	SwiftCompile normal x86_64 Compiling\ Civilopedia.swift,\ Conditionals.swift,\ ConstructionAutomation.swift,\ Countables.swift,\ DeclareWar.swift,\ DeclareWarPlanEvaluator.swift,\ Demand.swift,\ DevConsole.swift,\ DevConsoleView.swift,\ Difficulty.swift,\ DiplomacyAutomation.swift,\ DiplomacyFunctions.swift,\ DiplomacyManager.swift,\ DiplomacyScreen.swift,\ DiplomacyTurnManager.swift,\ DiplomaticVoteScreens.swift,\ EasterEggFloatingArt.swift,\ EmpireScreens.swift,\ EpochsApp.swift,\ Era.swift,\ EspionageAutomation.swift,\ EspionageManager.swift,\ Event.swift,\ ExploredRegion.swift,\ Expressions.swift Sources/UI/Civilopedia.swift Sources/models/ruleset/unique/Conditionals.swift Sources/logic/automation/city/ConstructionAutomation.swift Sources/models/ruleset/unique/Countables.swift Sources/logic/civilization/diplomacy/DeclareWar.swift Sources/logic/automation/civilization/DeclareWarPlanEvaluator.swift Sources/logic/civilization/diplomacy/Demand.swift Sources/App/DevConsole.swift Sources/UI/DevConsoleView.swift Sources/models/ruleset/nation/Difficulty.swift Sources/logic/automation/civilization/DiplomacyAutomation.swift Sources/logic/civilization/diplomacy/DiplomacyFunctions.swift Sources/logic/civilization/diplomacy/DiplomacyManager.swift Sources/UI/DiplomacyScreen.swift Sources/logic/civilization/diplomacy/DiplomacyTurnManager.swift Sources/UI/DiplomaticVoteScreens.swift Sources/UI/EasterEggFloatingArt.swift Sources/UI/EmpireScreens.swift Sources/App/EpochsApp.swift Sources/models/ruleset/tech/Era.swift Sources/logic/automation/unit/EspionageAutomation.swift Sources/logic/civilization/managers/EspionageManager.swift Sources/models/ruleset/Event.swift Sources/logic/civilization/ExploredRegion.swift Sources/models/ruleset/unique/expressions/Expressions.swift (in target 'VPiOS' from project 'VPiOS')
+	Building project VPiOS with scheme VPiOS and configuration Debug
+(4 failures)

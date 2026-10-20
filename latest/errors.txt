@@ -1,0 +1,33 @@
+Sources/App/EpochsApp.swift:45:26: error: cannot find 'AppFlowState' in scope
+Sources/logic/automation/civilization/NextTurnAutomation.swift:61:28: error: cannot find 'epochsAutoplay' in scope
+Sources/logic/city/City.swift:37:16: error: cannot find 'EvLog' in scope
+Sources/logic/city/City.swift:37:27: error: cannot find 'EvLog' in scope
+Sources/logic/civilization/Civilization.swift:200:40: error: cannot find 'EvLog' in scope
+Sources/logic/civilization/Civilization.swift:200:51: error: cannot find 'EvLog' in scope
+Sources/logic/trade/TradeLogic.swift:239:22: error: type 'GameState' has no member 'evlogOn'
+Sources/logic/trade/TradeLogic.swift:239:31: error: cannot find 'EvLog' in scope
+Sources/logic/trade/TradeLogic.swift:240:24: error: cannot find 'EvLog' in scope
+Sources/logic/trade/TradeLogic.swift:241:24: error: cannot find 'EvLog' in scope
+Sources/logic/trade/TradeLogic.swift:243:25: error: cannot find 'EvLog' in scope
+Sources/logic/trade/TradeLogic.swift:243:71: error: cannot find 'EvLog' in scope
+Sources/logic/trade/TradeLogic.swift:282:34: error: type 'GameState' has no member 'evlogOn'
+Sources/logic/trade/TradeLogic.swift:282:65: error: cannot find 'ev' in scope
+Sources/logic/trade/TradeLogic.swift:282:84: error: cannot find 'evOtherName' in scope
+Sources/logic/trade/TradeLogic.swift:288:115: error: cannot find 'EvLog' in scope
+Sources/logic/trade/TradeLogic.swift:315:34: error: type 'GameState' has no member 'evlogOn'
+Sources/logic/trade/TradeLogic.swift:315:44: error: cannot find 'evTradeEnd' in scope
+Sources/logic/trade/TradeLogic.swift:356:22: error: type 'GameState' has no member 'evlogOn'
+Sources/logic/trade/TradeLogic.swift:358:13: error: cannot find 'EvLog' in scope
+Sources/logic/trade/TradeLogic.swift:359:13: error: cannot find 'EvLog' in scope
+Sources/Scene/MapScene.swift:163:39: error: cannot find type 'TouchTraceRecognizer' in scope
+Sources/UI/CityScreenModel.swift:301:19: error: cannot find 'UIMeasure' in scope
+Sources/UI/CityScreenModel.swift:336:26: error: cannot find 'Art' in scope
+Sources/UI/CityScreenModel.swift:92:19: error: cannot find 'UIMeasure' in scope
+Sources/UI/GameView.swift:48:18: error: cannot infer key path type from context; consider explicitly specifying a root type
+Sources/UI/GameView.swift:48:6: error: generic parameter 'T' could not be inferred
+Sources/UI/ModManagerView.swift:193:32: error: cannot find type 'ModDownloader' in scope
+Sources/UI/ModManagerView.swift:232:31: error: cannot find type 'ModDownloader' in scope
+Sources/UI/ModManagerView.swift:29:32: error: cannot find type 'ModDownloader' in scope
+Sources/UI/OptionsView.swift:30:28: error: cannot find 'Theme' in scope
+Sources/UI/UncivTaps.swift:24:18: error: cannot infer key path type from context; consider explicitly specifying a root type
+Sources/UI/UncivTaps.swift:24:6: error: generic parameter 'T' could not be inferred
