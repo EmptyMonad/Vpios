@@ -1,0 +1,35 @@
+VPTEST start mods=["Civ V Brave New World", "Vox Populi 4.22"] vpNeeds=true buildings=256 units=171
+VPTEST turn 11 17s medians=VPMedians(basicNeeds: 0, gold: 0, science: 0, culture: 0)
+VPTEST   The Huns: cities=0 pop=0 happiness=8 approval=100 [Base happiness=8]
+VPTEST   The Maya: cities=0 pop=0 happiness=8 approval=100 [Base happiness=8]
+VPTEST   Arabia: cities=0 pop=0 happiness=9 approval=100 [Base happiness=8,Natural Wonders=1]
+VPTEST   Byzantium: cities=0 pop=0 happiness=9 approval=100 [Base happiness=8,Natural Wonders=1]
+VPTEST   Austria: cities=0 pop=0 happiness=9 approval=100 [Base happiness=8,Natural Wonders=1]
+VPTEST turn 21 34s medians=VPMedians(basicNeeds: 0, gold: 0, science: 0, culture: 0)
+VPTEST   The Huns: cities=0 pop=0 happiness=9 approval=100 [Base happiness=8,Natural Wonders=1]
+VPTEST   The Maya: cities=0 pop=0 happiness=8 approval=100 [Base happiness=8]
+VPTEST   Arabia: cities=0 pop=0 happiness=9 approval=100 [Base happiness=8,Natural Wonders=1]
+VPTEST   Byzantium: cities=0 pop=0 happiness=9 approval=100 [Base happiness=8,Natural Wonders=1]
+VPTEST   Austria: cities=0 pop=0 happiness=9 approval=100 [Base happiness=8,Natural Wonders=1]
+VPTEST turn 31 61s medians=VPMedians(basicNeeds: 0, gold: 0, science: 0, culture: 0)
+VPTEST   The Huns: cities=0 pop=0 happiness=10 approval=100 [Base happiness=8,Natural Wonders=2]
+VPTEST   Arabia: cities=0 pop=0 happiness=9 approval=100 [Base happiness=8,Natural Wonders=1]
+VPTEST   Byzantium: cities=0 pop=0 happiness=10 approval=100 [Base happiness=8,Natural Wonders=2]
+VPTEST   Austria: cities=0 pop=0 happiness=10 approval=100 [Base happiness=8,Natural Wonders=2]
+VPTEST turn 41 87s medians=VPMedians(basicNeeds: 0, gold: 0, science: 0, culture: 0)
+VPTEST   The Huns: cities=0 pop=0 happiness=10 approval=100 [Base happiness=8,Natural Wonders=2]
+VPTEST   Byzantium: cities=0 pop=0 happiness=10 approval=100 [Base happiness=8,Natural Wonders=2]
+VPTEST   Austria: cities=0 pop=0 happiness=10 approval=100 [Base happiness=8,Natural Wonders=2]
+VPTEST turn 51 121s medians=VPMedians(basicNeeds: 0, gold: 0, science: 0, culture: 0)
+VPTEST   The Huns: cities=0 pop=0 happiness=10 approval=100 [Base happiness=8,Natural Wonders=2]
+VPTEST   Austria: cities=0 pop=0 happiness=10 approval=100 [Base happiness=8,Natural Wonders=2]
+VPTEST turn 61 157s medians=VPMedians(basicNeeds: 0, gold: 0, science: 0, culture: 0)
+VPTEST   The Huns: cities=0 pop=0 happiness=10 approval=100 [Base happiness=8,Natural Wonders=2]
+VPTEST   Austria: cities=0 pop=0 happiness=10 approval=100 [Base happiness=8,Natural Wonders=2]
+VPTEST turn 71 191s medians=VPMedians(basicNeeds: 0, gold: 0, science: 0, culture: 0)
+VPTEST   The Huns: cities=0 pop=0 happiness=10 approval=100 [Base happiness=8,Natural Wonders=2]
+VPTEST   Austria: cities=0 pop=0 happiness=10 approval=100 [Base happiness=8,Natural Wonders=2]
+VPTEST turn 81 248s medians=VPMedians(basicNeeds: 0, gold: 0, science: 0, culture: 0)
+VPTEST   The Huns: cities=0 pop=0 happiness=10 approval=100 [Base happiness=8,Natural Wonders=2]
+VPTEST   Austria: cities=0 pop=0 happiness=10 approval=100 [Base happiness=8,Natural Wonders=2]
+VPTEST done
