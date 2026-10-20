@@ -1,7 +1,7 @@
 // Shell for the Unciv 4X core (MPL-2.0): JVM-order primitives the core calls but the published source leaves out.
 // Both are transliterated from a Python model checked against a real JVM (OpenJDK 21) in this repo's ci/jvmcheck:
 //  - JavaHash1Set: 1269/1269 HashSet iteration orders, 9 initial capacities x 0...140 elements, plus 141/141 for
-//    HashSet(collection) with jdk19CollectionCapacity
+//    HashSet(collection) with jdk19CollectionCapacity, plus 977/977 orders after remove() and cleared-table refills
 //  - kotlinSortedWith: 264/264 sorts with the identical comparator-call sequence and result (n up to 2048)
 // This Source Code Form is subject to the terms of the Mozilla Public
 // License, v. 2.0. If a copy of the MPL was not distributed with this
@@ -14,19 +14,9 @@ import Foundation
 /// The order java.util.HashSet walks its elements when every element hashes to 1 and identity ties all break the same
 /// way (Unciv's reference runs the JVM with -XX:hashCode=2): one bucket; a linked list in insertion order until the
 /// ninth entry, which first grows the table to 64 and then turns the bucket into a red-black tree whose `next` chain -
-/// rotated by moveRootToFront and by each insert going in after its tree parent - is the iteration order.
+/// rotated by moveRootToFront and by each insert going in after its tree parent - is the iteration order. Removal is
+/// HashMap.removeNode / TreeNode.removeTreeNode with balanceDeletion (and untreeify when the tree gets too small).
 enum JavaHash1Set {
-    private final class Node<K> {
-        let key: K
-        var next: Node?
-        weak var prev: Node?
-        weak var parent: Node?
-        var left: Node?
-        var right: Node?
-        var red = false
-        init(_ key: K, next: Node? = nil) { self.key = key; self.next = next }
-    }
-
     /// Kotlin `toHashSet()` / `HashSet(mapCapacity(n))`
     static func kotlinCollectionCapacity(_ n: Int) -> Int {
         if n < 0 { return n }
@@ -40,17 +30,48 @@ enum JavaHash1Set {
         Int((Double(max(n, 12)) / 0.75).rounded(.up))
     }
 
-    /// `initialCapacity` nil: `HashSet()` (16). Otherwise `HashSet(initialCapacity)`.
-    static func iterationOrder<S: Sequence>(_ inserts: S, initialCapacity: Int? = nil) -> [S.Element] where S.Element: Hashable {
-        typealias N = Node<S.Element>
-        var seen = Set<S.Element>()
+    /// `initialCapacity` nil: `HashSet()` (16). Otherwise `HashSet(initialCapacity)` - also a set cleared and refilled,
+    /// with its old table length. `removing`: then `remove(element)`.
+    static func iterationOrder<S: Sequence>(_ inserts: S, initialCapacity: Int? = nil, removing: S.Element? = nil) -> [S.Element] where S.Element: Hashable {
+        let b = Bin<S.Element>(initialCapacity: initialCapacity)
+        for k in inserts { b.put(k) }
+        if let r = removing { b.remove(r) }
+        return b.keys()
+    }
+
+    /// The walk, and the table length afterwards (0 while no table was allocated): Unciv clears and refills a region's
+    /// tile set, which keeps its table.
+    static func iterationOrderAndTableLength<S: Sequence>(_ inserts: S, initialCapacity: Int? = nil) -> (order: [S.Element], tableLength: Int) where S.Element: Hashable {
+        let b = Bin<S.Element>(initialCapacity: initialCapacity)
+        for k in inserts { b.put(k) }
+        return (b.keys(), b.cap)
+    }
+
+    private final class Node<K> {
+        let key: K
+        var next: Node?
+        weak var prev: Node?
+        weak var parent: Node?
+        var left: Node?
+        var right: Node?
+        var red = false
+        init(_ key: K, next: Node? = nil) { self.key = key; self.next = next }
+    }
+
+    private final class Bin<K: Hashable> {
+        typealias N = Node<K>
         var first: N? = nil
         var isTree = false
+        var seen = Set<K>()
         var size = 0
         var cap = 0
         var thr: Int
-        var usesDefault = initialCapacity == nil
-        if let c = initialCapacity { var t = 1; while t < max(c, 0) { t <<= 1 }; thr = t } else { thr = 16 }
+        var usesDefault: Bool
+
+        init(initialCapacity: Int?) {
+            usesDefault = initialCapacity == nil
+            if let c = initialCapacity { var t = 1; while t < max(c, 0) { t <<= 1 }; thr = t } else { thr = 16 }
+        }
 
         func resize() {
             let newCap: Int, newThr: Int
@@ -65,6 +86,7 @@ enum JavaHash1Set {
             usesDefault = false
             cap = newCap; thr = newThr      // every key sits in the one bucket; a split keeps its order (and its tree)
         }
+
         func rotateLeft(_ rootIn: N?, _ p: N?) -> N? {
             var root = rootIn
             if let p, let r = p.right {
@@ -129,6 +151,66 @@ enum JavaHash1Set {
                 }
             }
         }
+        func balanceDeletion(_ rootIn: N?, _ xIn: N?) -> N? {
+            var root = rootIn
+            var x = xIn
+            while true {
+                guard let cx = x, cx !== root else { return root }
+                guard var xp = cx.parent else { cx.red = false; return cx }
+                if cx.red { cx.red = false; return root }
+                if xp.left === cx {
+                    var xpr = xp.right
+                    if let r = xpr, r.red {
+                        r.red = false; xp.red = true; root = rotateLeft(root, xp)
+                        if let np = cx.parent { xp = np; xpr = np.right } else { xpr = nil }
+                    }
+                    guard let w = xpr else { x = cx.parent; continue }
+                    let sl = w.left, sr = w.right
+                    if (sr == nil || !sr!.red) && (sl == nil || !sl!.red) {
+                        w.red = true; x = cx.parent
+                    } else {
+                        var wv: N? = w
+                        var xpv: N? = cx.parent
+                        if sr == nil || !sr!.red {
+                            sl?.red = false
+                            w.red = true; root = rotateRight(root, w)
+                            xpv = cx.parent; wv = xpv?.right
+                        }
+                        if let w2 = wv {
+                            w2.red = xpv?.red ?? false
+                            w2.right?.red = false
+                        }
+                        if let p2 = xpv { p2.red = false; root = rotateLeft(root, p2) }
+                        x = root
+                    }
+                } else {
+                    var xpl = xp.left
+                    if let l = xpl, l.red {
+                        l.red = false; xp.red = true; root = rotateRight(root, xp)
+                        if let np = cx.parent { xp = np; xpl = np.left } else { xpl = nil }
+                    }
+                    guard let w = xpl else { x = cx.parent; continue }
+                    let sl = w.left, sr = w.right
+                    if (sl == nil || !sl!.red) && (sr == nil || !sr!.red) {
+                        w.red = true; x = cx.parent
+                    } else {
+                        var wv: N? = w
+                        var xpv: N? = cx.parent
+                        if sl == nil || !sl!.red {
+                            sr?.red = false
+                            w.red = true; root = rotateLeft(root, w)
+                            xpv = cx.parent; wv = xpv?.left
+                        }
+                        if let w2 = wv {
+                            w2.red = xpv?.red ?? false
+                            w2.left?.red = false
+                        }
+                        if let p2 = xpv { p2.red = false; root = rotateRight(root, p2) }
+                        x = root
+                    }
+                }
+            }
+        }
         func moveRootToFront(_ root: N) {
             if root !== first {
                 let rn = root.next, rp = root.prev
@@ -163,7 +245,17 @@ enum JavaHash1Set {
             if let root { moveRootToFront(root) }
             isTree = true
         }
-        func putTree(_ k: S.Element) {
+        func untreeify() {
+            let ks = keys()
+            first = nil; isTree = false
+            var prev: N? = nil
+            for k in ks {
+                let n = N(k)
+                if let p = prev { p.next = n; n.prev = p } else { first = n }
+                prev = n
+            }
+        }
+        func putTree(_ k: K) {
             let root = treeRoot()
             var p: N? = root
             while true {
@@ -179,9 +271,8 @@ enum JavaHash1Set {
                 }
             }
         }
-
-        for k in inserts {
-            if seen.contains(k) { continue }
+        func put(_ k: K) {
+            if seen.contains(k) { return }
             if cap == 0 { resize() }
             if first == nil {
                 first = N(k)
@@ -198,11 +289,72 @@ enum JavaHash1Set {
             seen.insert(k); size += 1
             if size > thr { resize() }
         }
-        var out: [S.Element] = []
-        out.reserveCapacity(size)
-        var e = first
-        while let n = e { out.append(n.key); e = n.next }
-        return out
+        func remove(_ key: K) {
+            guard seen.contains(key) else { return }
+            var e = first
+            while let c = e, c.key != key { e = c.next }
+            guard let p = e else { return }
+            seen.remove(key); size -= 1
+            if !isTree {
+                if let pr = p.prev { pr.next = p.next } else { first = p.next }
+                p.next?.prev = p.prev
+                return
+            }
+            var root: N? = first
+            let succ = p.next, pred = p.prev
+            if let pr = pred { pr.next = succ } else { first = succ }
+            succ?.prev = pred
+            guard first != nil else { isTree = false; return }
+            if root?.parent != nil { var r = root!; while let q = r.parent { r = q }; root = r }
+            if let rt = root, rt.right == nil || rt.left == nil || rt.left!.left == nil { untreeify(); return }
+            let pl = p.left, pr = p.right
+            var replacement: N
+            if let pl, let pr {
+                var s = pr
+                while let sl = s.left { s = sl }
+                let c = s.red; s.red = p.red; p.red = c
+                let sr = s.right
+                let pp = p.parent
+                if s === pr { p.parent = s; s.right = p }
+                else {
+                    let sp = s.parent
+                    p.parent = sp
+                    if let sp { if s === sp.left { sp.left = p } else { sp.right = p } }
+                    s.right = pr
+                    pr.parent = s
+                }
+                p.left = nil
+                p.right = sr
+                sr?.parent = p
+                s.left = pl
+                pl.parent = s
+                s.parent = pp
+                if let pp { if p === pp.left { pp.left = s } else { pp.right = s } } else { root = s }
+                replacement = sr ?? p
+            } else if let pl { replacement = pl }
+            else if let pr { replacement = pr }
+            else { replacement = p }
+            if replacement !== p {
+                replacement.parent = p.parent
+                if let pp = replacement.parent {
+                    if p === pp.left { pp.left = replacement } else { pp.right = replacement }
+                } else { root = replacement; replacement.red = false }
+                p.left = nil; p.right = nil; p.parent = nil
+            }
+            let r = p.red ? root : balanceDeletion(root, replacement)
+            if replacement === p {
+                let pp = p.parent; p.parent = nil
+                if let pp { if p === pp.left { pp.left = nil } else if p === pp.right { pp.right = nil } }
+            }
+            if let r { moveRootToFront(r) }
+        }
+        func keys() -> [K] {
+            var out: [K] = []
+            out.reserveCapacity(size)
+            var e = first
+            while let n = e { out.append(n.key); e = n.next }
+            return out
+        }
     }
 }
 

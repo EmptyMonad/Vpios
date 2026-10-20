@@ -165,3 +165,159 @@ if __name__ == "__main__":
             bad += 1
             if bad <= 5: print("MISMATCH cap", cap, "n", n, "\n want", want[:30], "\n got ", got[:30])
     print(f"{total - bad}/{total} match")
+
+# ---- removal (HashMap.removeNode / TreeNode.removeTreeNode + balanceDeletion) and table length ----
+def balance_deletion(root, x):
+    while True:
+        if x is None or x is root: return root
+        xp = x.parent
+        if xp is None: x.red = False; return x
+        if x.red: x.red = False; return root
+        xpl = xp.left
+        if xpl is x:
+            xpr = xp.right
+            if xpr is not None and xpr.red:
+                xpr.red = False; xp.red = True; root = rotate_left(root, xp)
+                xp = x.parent; xpr = None if xp is None else xp.right
+            if xpr is None: x = xp
+            else:
+                sl, sr = xpr.left, xpr.right
+                if (sr is None or not sr.red) and (sl is None or not sl.red):
+                    xpr.red = True; x = xp
+                else:
+                    if sr is None or not sr.red:
+                        if sl is not None: sl.red = False
+                        xpr.red = True; root = rotate_right(root, xpr)
+                        xp = x.parent; xpr = None if xp is None else xp.right
+                    if xpr is not None:
+                        xpr.red = False if xp is None else xp.red
+                        sr = xpr.right
+                        if sr is not None: sr.red = False
+                    if xp is not None: xp.red = False; root = rotate_left(root, xp)
+                    x = root
+        else:
+            if xpl is not None and xpl.red:
+                xpl.red = False; xp.red = True; root = rotate_right(root, xp)
+                xp = x.parent; xpl = None if xp is None else xp.left
+            if xpl is None: x = xp
+            else:
+                sl, sr = xpl.left, xpl.right
+                if (sl is None or not sl.red) and (sr is None or not sr.red):
+                    xpl.red = True; x = xp
+                else:
+                    if sl is None or not sl.red:
+                        if sr is not None: sr.red = False
+                        xpl.red = True; root = rotate_left(root, xpl)
+                        xp = x.parent; xpl = None if xp is None else xp.left
+                    if xpl is not None:
+                        xpl.red = False if xp is None else xp.red
+                        sl = xpl.left
+                        if sl is not None: sl.red = False
+                    if xp is not None: xp.red = False; root = rotate_right(root, xp)
+                    x = root
+
+def remove(b, key):
+    e = b.first
+    while e is not None and e.k != key: e = e.next
+    if e is None: return
+    if not b.tree:
+        if e.prev is None: b.first = e.next
+        else: e.prev.next = e.next
+        if e.next is not None: e.next.prev = e.prev
+        return
+    p = e
+    first = b.first; root = first
+    succ, pred = p.next, p.prev
+    if pred is None: b.first = first = succ
+    else: pred.next = succ
+    if succ is not None: succ.prev = pred
+    if first is None: b.tree = False; return
+    if root.parent is not None:
+        while root.parent is not None: root = root.parent
+    rl = root.left
+    if root.right is None or rl is None or rl.left is None:
+        b.untreeify(); return
+    pl, pr = p.left, p.right
+    if pl is not None and pr is not None:
+        s = pr
+        while s.left is not None: s = s.left
+        s.red, p.red = p.red, s.red
+        sr = s.right; pp = p.parent
+        if s is pr: p.parent = s; s.right = p
+        else:
+            sp = s.parent
+            p.parent = sp
+            if sp is not None:
+                if s is sp.left: sp.left = p
+                else: sp.right = p
+            s.right = pr
+            if pr is not None: pr.parent = s
+        p.left = None
+        p.right = sr
+        if sr is not None: sr.parent = p
+        s.left = pl
+        if pl is not None: pl.parent = s
+        s.parent = pp
+        if pp is None: root = s
+        elif p is pp.left: pp.left = s
+        else: pp.right = s
+        replacement = sr if sr is not None else p
+    elif pl is not None: replacement = pl
+    elif pr is not None: replacement = pr
+    else: replacement = p
+    if replacement is not p:
+        pp = replacement.parent = p.parent
+        if pp is None: root = replacement; replacement.red = False
+        elif p is pp.left: pp.left = replacement
+        else: pp.right = replacement
+        p.left = p.right = p.parent = None
+    r = root if p.red else balance_deletion(root, replacement)
+    if replacement is p:
+        pp = p.parent; p.parent = None
+        if pp is not None:
+            if p is pp.left: pp.left = None
+            elif p is pp.right: pp.right = None
+    b.move_root_to_front(r)
+
+def build(inserts, initial_capacity=None):
+    """iteration_order's machinery, returning the bin and the table length."""
+    seen = set(); b = Bin(); size = 0
+    st = {"cap": 0, "thr": 16 if initial_capacity is None else table_size_for(max(initial_capacity, 0)), "dflt": initial_capacity is None}
+    def resize():
+        cap, thr = st["cap"], st["thr"]
+        if cap > 0:
+            nc = cap << 1; nt = thr << 1 if cap >= 16 else int(nc * 0.75)
+        elif thr > 0 and not st["dflt"]: nc = thr; nt = int(nc * 0.75)
+        else: nc = 16; nt = 12
+        st["dflt"] = False; st["cap"], st["thr"] = nc, nt
+    for k in inserts:
+        if k in seen: continue
+        if st["cap"] == 0: resize()
+        if b.first is None: b.first = N(k)
+        elif b.tree: b.put_tree(k)
+        else:
+            e = b.first; count = 1
+            while e.next is not None: e = e.next; count += 1
+            n = N(k); e.next = n; n.prev = e
+            if count >= 8:
+                if st["cap"] < 64: resize()
+                else: b.treeify()
+        seen.add(k); size += 1
+        if size > st["thr"]: resize()
+    return b, st["cap"]
+
+def check_remove(path):
+    ok = tot = 0
+    for line in open(path):
+        head, _, rest = line.partition(":"); h = head.split(); want = [int(x) for x in rest.split()]
+        if h[0] == "R":
+            n, r = int(h[1]), int(h[2])
+            b, _ = build(range(n)); remove(b, r); got = b.keys(); good = got == want
+        else:
+            n1, len1, n2, len2 = map(int, h[1:])
+            _, l1 = build(range(n1))
+            b, l2 = build(range(n2), l1 if l1 > 0 else None)
+            got = b.keys(); good = got == want and (l2 if n2 > 0 else l1) == len2 and l1 == len1
+        tot += 1; ok += good
+        if not good and tot - ok <= 5: print("MISMATCH", line.strip()[:120], "got", got[:20])
+    print(f"{ok}/{tot} remove / table-length cases match")

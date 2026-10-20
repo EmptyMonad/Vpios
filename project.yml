@@ -16,6 +16,7 @@ targets:
     settings:
       base:
         PRODUCT_NAME: VPiOS
+        PRODUCT_MODULE_NAME: Epochs          # the core qualifies some types by module (Epochs.CityStats)
         PRODUCT_BUNDLE_IDENTIFIER: com.emptymonad.vpios
         SWIFT_VERSION: "5.0"
         SWIFT_STRICT_CONCURRENCY: minimal

@@ -45,4 +45,23 @@ for l in lines(dir + "/refsort.txt") {
     n3 += 1; if sig == f[2] && ids == f[3] { ok3 += 1 } else if failures < 10 { failures += 1; print("SORT MISMATCH n \(keys.count): want \(f[2]) got \(sig)") }
 }
 print("kotlinSortedWith (TimSort): \(ok3)/\(n3)")
-exit(ok1 == n1 && ok2 == n2 && ok3 == n3 ? 0 : 1)
+// 4. remove() and a cleared set refilled with its old table length
+var ok4 = 0, n4 = 0
+for l in lines(dir + "/refremove.txt") {
+    let parts = l.split(separator: ":", maxSplits: 1, omittingEmptySubsequences: false)
+    let h = parts[0].split(separator: " ").map(String.init)
+    let want = parts.count > 1 ? parts[1].split(separator: " ").map { Int($0)! } : []
+    var good: Bool
+    if h[0] == "R" {
+        let n = Int(h[1])!, r = Int(h[2])!
+        good = JavaHash1Set.iterationOrder(Array(0..<n), removing: r) == want
+    } else {
+        let n1 = Int(h[1])!, len1 = Int(h[2])!, n2 = Int(h[3])!, len2 = Int(h[4])!
+        let first = JavaHash1Set.iterationOrderAndTableLength(Array(0..<n1))
+        let second = JavaHash1Set.iterationOrderAndTableLength(Array(0..<n2), initialCapacity: first.tableLength > 0 ? first.tableLength : nil)
+        good = second.order == want && first.tableLength == len1 && (n2 > 0 ? second.tableLength : first.tableLength) == len2
+    }
+    n4 += 1; if good { ok4 += 1 } else if failures < 15 { failures += 1; print("REMOVE/TABLE MISMATCH \(l.prefix(40))") }
+}
+print("JavaHash1Set remove/table: \(ok4)/\(n4)")
+exit(ok1 == n1 && ok2 == n2 && ok3 == n3 && ok4 == n4 ? 0 : 1)
