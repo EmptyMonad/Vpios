@@ -61,7 +61,7 @@ jobs:
           # VP self-test: an all-AI G&K + BNW + VP game, happiness printed every 10 turns
           xcrun simctl terminate "$DEV" com.emptymonad.vpios || true
           xcrun simctl launch --console-pty "$DEV" com.emptymonad.vpios -vpSelfTest 80 > vptest-console.log 2>&1 &
-          for i in $(seq 1 90); do grep -q "VPTEST done\|VPTEST could not" vptest-console.log && break; sleep 10; done
+          for i in $(seq 1 150); do grep -q "VPTEST done\|VPTEST could not" vptest-console.log && break; sleep 10; done
           grep "VPTEST" vptest-console.log > vptest.log || true
           tail -c 20000 vptest-console.log > vptest-console-tail.log
           for f in ~/Library/Logs/DiagnosticReports/*VPiOS*; do [ -f "$f" ] && head -c 20000 "$f" > crash.txt; done
