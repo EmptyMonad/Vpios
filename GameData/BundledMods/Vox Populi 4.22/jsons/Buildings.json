@@ -4658,6 +4658,7 @@
   "name": "Trader Sid's Headquarters",
   "isWonder": true,
   "cost": 1300,
+  "requiredTech": "Corporations",
   "maintenance": 4,
   "culture": 1,
   "uniques": [
@@ -4671,6 +4672,7 @@
   "name": "Centaurus Extractors Headquarters",
   "isWonder": true,
   "cost": 1300,
+  "requiredTech": "Corporations",
   "maintenance": 4,
   "culture": 1,
   "uniques": [
@@ -4684,6 +4686,7 @@
   "name": "Hexxon Refineries Headquarters",
   "isWonder": true,
   "cost": 1300,
+  "requiredTech": "Corporations",
   "maintenance": 4,
   "culture": 1,
   "uniques": [
@@ -4701,6 +4704,7 @@
   "name": "Giorgio Armeier Headquarters",
   "isWonder": true,
   "cost": 1300,
+  "requiredTech": "Corporations",
   "maintenance": 4,
   "culture": 1,
   "uniques": [
@@ -4715,6 +4719,7 @@
   "name": "Firaxite Materials Headquarters",
   "isWonder": true,
   "cost": 1300,
+  "requiredTech": "Corporations",
   "maintenance": 4,
   "culture": 1,
   "uniques": [
@@ -4728,6 +4733,7 @@
   "name": "TwoKay Foods Headquarters",
   "isWonder": true,
   "cost": 1300,
+  "requiredTech": "Corporations",
   "maintenance": 4,
   "culture": 1,
   "uniques": [
@@ -4742,6 +4748,7 @@
   "name": "Civilized Jewelers Headquarters",
   "isWonder": true,
   "cost": 1300,
+  "requiredTech": "Corporations",
   "maintenance": 4,
   "culture": 1,
   "uniques": [
