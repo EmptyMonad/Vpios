@@ -193,7 +193,6 @@
      "[+1 Food] [in all cities]",
      "[+1 Science] [in capital]",
      "[+1 Food, +1 Production] from [Landmark] tiles [in all cities]",
-     "[+1 Food, +1 Production] from [Embassy] tiles [in all cities]",
      "Gain a free [Throne Room] [in capital]",
      "May buy [Great Engineer] units for [1000] [Faith] [in all cities in which the majority religion is a major religion] at an increasing price ([500]) <starting from the [Industrial era]>",
      "Get the leader title of [Lord [leaderName]]"
@@ -1462,7 +1461,6 @@
      "[+5]% Production when constructing [Sword] units [in all cities]",
      "[+2 Science, +1 Culture] from [Fort] tiles [in all cities]",
      "[+2 Science, +1 Culture] from [Citadel] tiles [in all cities]",
-     "[+2 Science, +1 Culture] from [Ordo] tiles [in all cities]",
      "[-5]% Gold cost of upgrading"
     ],
     "civilopediaText": [
@@ -1813,56 +1811,86 @@
    {
     "name": "Creative Expression",
     "uniques": [
-     "[+1 Culture] from all [Great Work] buildings",
+     "[+3 Culture] from all [Museum] buildings",
+     "[+3 Culture] from all [Broadcast Tower] buildings",
+     "[+3 Culture] from all [Opera House] buildings",
+     "[+3 Culture] from all [Amphitheater] buildings",
      "Instantly provides [1] [Level 1 Policy] <hidden from users>",
      "[+10]% weight to this choice for AI decisions"
     ],
     "row": 1,
-    "column": 3
+    "column": 3,
+    "civilopediaText": [
+     {
+      "text": "Creative Expression: +2 Tourism from Great Works. Museums, Broadcast Towers, Opera Houses, and Amphitheaters gain +3 Golden Age Points and Culture."
+     }
+    ]
    },
    {
     "name": "Civil Society",
     "uniques": [
-     "[-50]% Food consumption by [Specialists] [in your cities]",
+     "[+4 Food] from [Farm] tiles [in all cities]",
+     "[+4 Food] from [Camp] tiles [in all cities]",
+     "[+4 Food] from [Plantation] tiles [in all cities]",
+     "[-100]% Food consumption by [Specialists] [in all cities]",
      "Instantly provides [1] [Level 1 Policy] <hidden from users>",
      "[+10]% weight to this choice for AI decisions"
     ],
     "row": 1,
-    "column": 5
+    "column": 5,
+    "civilopediaText": [
+     {
+      "text": "Civil Society: Specialists consume 2 Food less than normal (minimum 1 Food). Farms, Plantations, Camps, and all Unique Improvements produce +4 Food."
+     }
+    ]
    },
    {
     "name": "Covert Action",
     "uniques": [
-     "[+100]% spy effectiveness [in City-State cities]",
+     "Gain an extra spy",
      "Instantly provides [1] [Level 1 Policy] <hidden from users>",
      "[-20]% weight to this choice for AI decisions",
      "[-40]% weight to this choice for AI decisions <when number of [Remaining [City-State] Civilizations] is less than [2]>",
      "[-40]% weight to this choice for AI decisions <when espionage is disabled>"
     ],
     "row": 1,
-    "column": 7
+    "column": 7,
+    "civilopediaText": [
+     {
+      "text": "Covert Action: Receive 100 Spy Points. When successfully rigging an election in a City-State, the Influence you gain and the Influence other Players lose are increased by +50%. Spies stationed in a foreign City gain +10 Network Points per turn."
+     }
+    ]
    },
    {
     "name": "Capitalism",
     "uniques": [
-     "[+1 Happiness] from every [Mint]",
-     "[+1 Happiness] from every [Bank]",
-     "[+1 Happiness] from every [Stock Exchange]",
+     "[+1 Gold, +1 Science] from every specialist [in all cities]",
+     "Comment [2 Specialist(s) in every city produce no Unhappiness from Urbanization]",
      "Instantly provides [1] [Level 1 Policy] <hidden from users>",
      "[+10]% weight to this choice for AI decisions"
     ],
     "row": 1,
-    "column": 9
+    "column": 9,
+    "civilopediaText": [
+     {
+      "text": "Capitalism: 2 Specialists in each of your cities generate +1 Happiness instead of -1 Unhappiness from Urbanization. Specialists generate +1 Gold and Science."
+     }
+    ]
    },
    {
     "name": "Economic Union",
     "uniques": [
-     "[+1 Gold] from each Trade Route",
+     "Instantly provides [2] [Trade Route]",
      "Instantly provides [1] [Level 1 Policy] <hidden from users>",
      "[-10]% weight to this choice for AI decisions"
     ],
     "row": 1,
-    "column": 11
+    "column": 11,
+    "civilopediaText": [
+     {
+      "text": "Economic Union: Receive two additional Trade Routes. +6 Gold from trade routes with civilizations following Freedom."
+     }
+    ]
    },
    {
     "name": "Universal Healthcare (Freedom)",
@@ -1921,8 +1949,8 @@
    {
     "name": "Universal Suffrage",
     "uniques": [
-     "[+50]% Golden Age length",
-     "[-50]% Unhappiness from [Specialists] [in your cities]",
+     "[+1 Happiness] [in all cities]",
+     "Empire enters golden age",
      "Instantly provides [1] [Level 2 Policy] <hidden from users>",
      "Instantly consumes [1] [Level 1 Policy] <hidden from users>",
      "Only available <when above [1] [Level 1 Policy]> <hidden from users>",
@@ -1931,16 +1959,21 @@
      "Only available <when number of [Adopted [Ideology: Level 2 Tenet] Policies] is less than [4]> <hidden from users>"
     ],
     "row": 2,
-    "column": 8
+    "column": 8,
+    "civilopediaText": [
+     {
+      "text": "Universal Suffrage: A Golden Age begins, and Golden Ages last 50% longer. Cities produce +1 Happiness."
+     }
+    ]
    },
    {
     "name": "New Deal",
     "uniques": [
-     "[+4 Science] from [Academy] tiles [in your cities]",
-     "[+4 Culture] from [Landmark] tiles [in your cities]",
-     "[+4 Production] from [Manufactory] tiles [in your cities]",
-     "[+4 Gold] from [Customs house] tiles [in your cities]",
-     "[+4 Faith] from [Holy site] tiles [in your cities]",
+     "[+6 Science] from [Academy] tiles [in all cities]",
+     "[+6 Gold] from [Customs house] tiles [in all cities]",
+     "[+6 Production] from [Manufactory] tiles [in all cities]",
+     "[+6 Production] from [Citadel] tiles [in all cities]",
+     "[+6 Faith] from [Holy site] tiles [in all cities]",
      "Instantly provides [1] [Level 2 Policy] <hidden from users>",
      "Instantly consumes [1] [Level 1 Policy] <hidden from users>",
      "Only available <when above [1] [Level 1 Policy]> <hidden from users>",
@@ -1948,7 +1981,12 @@
      "Only available <when number of [Adopted [Ideology: Level 2 Tenet] Policies] is less than [4]> <hidden from users>"
     ],
     "row": 2,
-    "column": 10
+    "column": 10,
+    "civilopediaText": [
+     {
+      "text": "New Deal: Landmarks and Great Person improvements produce +6 of their base yield types ( Manufactory/Citadel, Town, Academy, Embassy, Holy Site, Landmark), and +2 Tourism"
+     }
+    ]
    },
    {
     "name": "Arsenal of Democracy",
@@ -1967,14 +2005,20 @@
    {
     "name": "Media Culture",
     "uniques": [
-     "Comment [[+34]% [Tourism] resource production <in cities with a [Broadcast Tower]>]",
+     "[+1 Happiness] from all [Broadcast Tower] buildings",
+     "[+20]% [Culture] [in all cities] <in cities with a [Stadium]>",
      "Instantly consumes [1] [Level 2 Policy] <hidden from users>",
      "Only available <when above [1] [Level 2 Policy]> <hidden from users>",
      "[-100]% weight to this choice for AI decisions <when [Cultural] Victory is disabled>",
      "[+30]% weight to this choice for AI decisions"
     ],
     "row": 3,
-    "column": 3
+    "column": 3,
+    "civilopediaText": [
+     {
+      "text": "Media Culture: +25% Tourism and +1 Happiness generated by cities with a Broadcast Tower. +20% Culture from Stadiums."
+     }
+    ]
    },
    {
     "name": "Treaty Organization",
@@ -1991,14 +2035,20 @@
    {
     "name": "Space Procurements",
     "uniques": [
-     "May buy [Spaceship part] units with [Gold] [in your cities]",
+     "[+20]% [Science] [in all cities] <in cities with a [Research Lab]>",
+     "[+100]% Production when constructing [Spaceship Factory] buildings [in all cities]",
      "Instantly consumes [1] [Level 2 Policy] <hidden from users>",
      "Only available <when above [1] [Level 2 Policy]> <hidden from users>",
      "[-100]% weight to this choice for AI decisions <when [Scientific] Victory is disabled>",
      "[+30]% weight to this choice for AI decisions"
     ],
     "row": 3,
-    "column": 7
+    "column": 7,
+    "civilopediaText": [
+     {
+      "text": "Space Procurements: May invest in Spaceship parts with Gold. Build Spaceship Factories in half the usual time. +20% Science from Research Labs."
+     }
+    ]
    },
    {
     "name": "Freedom Complete",
@@ -2044,22 +2094,39 @@
    {
     "name": "Elite Forces",
     "uniques": [
-     "[+25]% Strength <for [{Wounded} {Military}] units> <when attacking>",
+     "[+50]% XP gained from combat",
+     "New [Military] units start with [15] XP [in all cities]",
      "Instantly provides [1] [Level 1 Policy] <hidden from users>",
      "[-10]% weight to this choice for AI decisions"
     ],
     "row": 1,
-    "column": 1
+    "column": 1,
+    "civilopediaText": [
+     {
+      "text": "Elite Forces: Newly created Military Units receive +15 Experience. Military Units gain 50% more Experience from combat."
+     }
+    ]
    },
    {
-    "name": "Mobilization",
+    "name": "Military-Industrial Complex",
     "uniques": [
-     "[Gold] cost of purchasing [Military] units [-33]%",
+     "[+3 Science] from all [Walls] buildings",
+     "[+3 Science] from all [Castle] buildings",
+     "[+3 Science] from all [Bastion Fort] buildings",
+     "[+3 Science] from all [Arsenal] buildings",
+     "[+3 Science] from all [Military Base] buildings",
+     "[+3 Science] from [Fort] tiles [in all cities]",
+     "[+3 Science] from [Citadel] tiles [in all cities]",
      "Instantly provides [1] [Level 1 Policy] <hidden from users>",
      "[+10]% weight to this choice for AI decisions"
     ],
     "row": 1,
-    "column": 3
+    "column": 3,
+    "civilopediaText": [
+     {
+      "text": "Military-Industrial Complex: -33% Gold cost of purchasing units. +3 Science from Defense Buildings, Citadels, Forts, and Unique Improvements."
+     }
+    ]
    },
    {
     "name": "United Front",
@@ -2096,16 +2163,23 @@
     "column": 9
    },
    {
-    "name": "Fortified Borders",
+    "name": "New World Order",
     "uniques": [
-     "[+1 Happiness] from all [Castle] buildings",
-     "[+1 Happiness] from all [Arsenal] buildings",
-     "[+1 Happiness] from all [Military Base] buildings",
+     "[+5 Production, +3 Culture] from all [Constabulary] buildings",
+     "[+5 Production, +3 Culture] from all [Police Station] buildings",
+     "[+100]% Production when constructing [Constabulary] buildings [in all cities]",
+     "[+100]% Production when constructing [Police Station] buildings [in all cities]",
+     "Comment [-2 Unhappiness from Distress in all cities]",
      "Instantly provides [1] [Level 1 Policy] <hidden from users>",
      "[+10]% weight to this choice for AI decisions"
     ],
     "row": 1,
-    "column": 11
+    "column": 11,
+    "civilopediaText": [
+     {
+      "text": "New World Order: -2 Unhappiness from and Distress in all Cities. Police Stations and Constabularies provide +3 Culture and +5 Production, and are constructed 100% more quickly."
+     }
+    ]
    },
    {
     "name": "Universal Healthcare (Autocracy)",
@@ -2120,9 +2194,9 @@
    {
     "name": "Air Supremacy",
     "uniques": [
-     "[+2 Happiness] from every [Barracks]",
-     "[+2 Happiness] from every [Armory]",
-     "[+2 Happiness] from every [Military Academy]",
+     "[+25]% Production when constructing [Atomic Bomber] units [in all cities]",
+     "[+25]% Production when constructing [Bomber] units [in all cities]",
+     "[+25]% Production when constructing [Fighter] units [in all cities]",
      "Instantly provides [1] [Level 2 Policy] <hidden from users>",
      "Instantly consumes [1] [Level 1 Policy] <hidden from users>",
      "Only available <when above [1] [Level 1 Policy]> <hidden from users>",
@@ -2131,13 +2205,22 @@
      "Only available <when number of [Adopted [Ideology: Level 2 Tenet] Policies] is less than [4]> <hidden from users>"
     ],
     "row": 2,
-    "column": 2
+    "column": 2,
+    "civilopediaText": [
+     {
+      "text": "Air Supremacy: Receive a free Airport in every City. +25% Production when building Aircraft. Can build Zeroes."
+     }
+    ]
    },
    {
     "name": "Lightning Warfare",
     "uniques": [
-     "[3] Movement <for [Great General] units>",
-     "[Armored] units gain the [Lightning Warfare] promotion",
+     "All newly-trained [Military] units [in all cities] receive the [Fast General] promotion",
+     "[Military] units gain the [Fast General] promotion",
+     "All newly-trained [Military] units [in all cities] receive the [Lightning Warfare (Gun)] promotion",
+     "[Military] units gain the [Lightning Warfare (Gun)] promotion",
+     "All newly-trained [Military] units [in all cities] receive the [Lightning Warfare (Armor)] promotion",
+     "[Military] units gain the [Lightning Warfare (Armor)] promotion",
      "All newly-trained [Armored] units [in your cities] receive the [Lightning Warfare] promotion <hidden from users>",
      "Instantly provides [1] [Level 2 Policy] <hidden from users>",
      "Instantly consumes [1] [Level 1 Policy] <hidden from users>",
@@ -2150,16 +2233,14 @@
     "column": 4,
     "civilopediaText": [
      {
-      "text": "Lightning Warfare",
-      "link": "Promotion/Lightning Warfare"
+      "text": "Lightning Warfare: +3 Movement for Great Generals. Gunpowder units gain +15% attack and ignore enemy ZOC; Armored units gain +15% attack and +1 Movement."
      }
     ]
    },
    {
     "name": "Police State",
     "uniques": [
-     "[+3 Happiness] from every [Courthouse]",
-     "[+100]% Production when constructing [Courthouse] buildings [in your cities]",
+     "[+100]% Production when constructing [Police Station] buildings [in all cities]",
      "Instantly provides [1] [Level 2 Policy] <hidden from users>",
      "Instantly consumes [1] [Level 1 Policy] <hidden from users>",
      "Only available <when above [1] [Level 1 Policy]> <hidden from users>",
@@ -2167,12 +2248,21 @@
      "Only available <when number of [Adopted [Ideology: Level 2 Tenet] Policies] is less than [4]> <hidden from users>"
     ],
     "row": 2,
-    "column": 6
+    "column": 6,
+    "civilopediaText": [
+     {
+      "text": "Police State: +3 Local Happiness from every Courthouse, and +10 City Security from Police Stations. +100% Production towards Courthouses and Police Stations."
+     }
+    ]
    },
    {
-    "name": "Nationalism",
+    "name": "Mare Nostrum",
     "uniques": [
-     "[-33]% maintenance costs <for [All] units>",
+     "[+2 Production, +2 Culture] from [Offshore Platform] tiles [in all cities]",
+     "[+2 Production, +2 Culture] from [Fishing Boats] tiles [in all cities]",
+     "[+2 Production, +2 Culture] from [Atoll] tiles [in all cities]",
+     "All newly-trained [Military] units [in all cities] receive the [Mare Nostrum] promotion",
+     "[Military] units gain the [Mare Nostrum] promotion",
      "Instantly provides [1] [Level 2 Policy] <hidden from users>",
      "Instantly consumes [1] [Level 1 Policy] <hidden from users>",
      "Only available <when above [1] [Level 1 Policy]> <hidden from users>",
@@ -2180,18 +2270,17 @@
      "Only available <when number of [Adopted [Ideology: Level 2 Tenet] Policies] is less than [4]> <hidden from users>"
     ],
     "row": 2,
-    "column": 8
+    "column": 8,
+    "civilopediaText": [
+     {
+      "text": "Mare Nostrum: +1 Oil and Coal for every City-State Alliance. +2 Production and Culture to Atolls, Fishing Boats, and Offshore Oil Platforms. Naval Ranged Units gain the Mare Nostrum Promotion."
+     }
+    ]
    },
    {
     "name": "Third Alternative",
     "uniques": [
-     "[+5 Food, +5 Science] [in capital]",
-     "[+100]% [Horses] resource production",
-     "[+100]% [Iron] resource production",
-     "[+100]% [Coal] resource production",
-     "[+100]% [Oil] resource production",
-     "[+100]% [Aluminum] resource production",
-     "[+100]% [Uranium] resource production",
+     "[-25]% maintenance costs",
      "Instantly provides [1] [Level 2 Policy] <hidden from users>",
      "Instantly consumes [1] [Level 1 Policy] <hidden from users>",
      "Only available <when above [1] [Level 1 Policy]> <hidden from users>",
@@ -2199,13 +2288,25 @@
      "Only available <when number of [Adopted [Ideology: Level 2 Tenet] Policies] is less than [4]> <hidden from users>"
     ],
     "row": 2,
-    "column": 10
+    "column": 10,
+    "civilopediaText": [
+     {
+      "text": "Third Alternative: Quantity of Strategic Resources produced is increased by 100%. Reduces Unit Gold Maintenance costs by 25%."
+     }
+    ]
    },
    {
     "name": "Total War",
     "uniques": [
-     "[+25]% Production when constructing [Military] units [in your cities]",
-     "New [Military] units start with [15] XP [in your cities]",
+     "[+25]% Production when constructing [Archery] units [in all cities]",
+     "[+25]% Production when constructing [Armored] units [in all cities]",
+     "[+25]% Production when constructing [Gunpowder] units [in all cities]",
+     "[+25]% Production when constructing [Helicopter] units [in all cities]",
+     "[+25]% Production when constructing [Mounted] units [in all cities]",
+     "[+25]% Production when constructing [Ranged Gunpowder] units [in all cities]",
+     "[+25]% Production when constructing [Scout] units [in all cities]",
+     "[+25]% Production when constructing [Siege] units [in all cities]",
+     "[+25]% Production when constructing [Sword] units [in all cities]",
      "Instantly provides [1] [Level 2 Policy] <hidden from users>",
      "Instantly consumes [1] [Level 1 Policy] <hidden from users>",
      "Only available <when above [1] [Level 1 Policy]> <hidden from users>",
@@ -2214,18 +2315,28 @@
      "Only available <when number of [Adopted [Ideology: Level 2 Tenet] Policies] is less than [4]> <hidden from users>"
     ],
     "row": 2,
-    "column": 12
+    "column": 12,
+    "civilopediaText": [
+     {
+      "text": "Total War: +25% Production when building Land Units. Warscore increases 25% more quickly, and it is 25% easier to bully City-States."
+     }
+    ]
    },
    {
     "name": "Cult of Personality",
     "uniques": [
-     "[+50]% [Tourism] resource production <when at war> <when number of [Remaining [Friendly] Civilizations] is more than [0]>",
+     "Free Great Person",
      "Instantly consumes [1] [Level 2 Policy] <hidden from users>",
      "Only available <when above [1] [Level 2 Policy]> <hidden from users>",
      "[-100]% weight to this choice for AI decisions <when [Cultural] Victory is disabled>"
     ],
     "row": 3,
-    "column": 3
+    "column": 3,
+    "civilopediaText": [
+     {
+      "text": "Cult of Personality: +50% Tourism to civilizations fighting a common enemy. 50% of your highest Warscore counts as a Tourism Modifier with all Civilizations. Free Great Person of your choice."
+     }
+    ]
    },
    {
     "name": "Gunboat Diplomacy",
@@ -2297,32 +2408,50 @@
    {
     "name": "Hero of the People",
     "uniques": [
-     "[+25]% Great Person generation [in your cities]",
+     "Free Great Person",
      "Instantly provides [1] [Level 1 Policy] <hidden from users>",
      "[+10]% weight to this choice for AI decisions"
     ],
     "row": 1,
-    "column": 1
+    "column": 1,
+    "civilopediaText": [
+     {
+      "text": "Hero of the People: Great Person rate increases by 25%. A Great Person of your choice appears near your Capital."
+     }
+    ]
    },
    {
-    "name": "Socialist Realism",
+    "name": "People's Army",
     "uniques": [
-     "[+20]% Production when constructing [Monument] buildings [in your cities]",
-     "[+1 Happiness] from all [Monument] buildings",
+     "[+5 Culture] from all [Public School] buildings",
+     "[+2 Happiness] from all [Public School] buildings",
+     "[+100]% Production when constructing [Military Academy] buildings [in all cities]",
+     "Provides a [Military Academy] in your first [5] cities for free",
      "Instantly provides [1] [Level 1 Policy] <hidden from users>",
      "[+10]% weight to this choice for AI decisions"
     ],
     "row": 1,
-    "column": 3
+    "column": 3,
+    "civilopediaText": [
+     {
+      "text": "People's Army: +100% Production towards Military Academies, and receive 5 Free Military Academies in your Empire. Public Schools produce +5 Culture and +2 Happiness."
+     }
+    ]
    },
    {
-    "name": "Skyscrapers",
+    "name": "Communism",
     "uniques": [
-     "[Gold] cost of purchasing [Building] buildings [-33]%",
+     "[+20]% Production when constructing [All] wonders [in all cities]",
+     "[Gold] cost of purchasing [All] buildings [-25]%",
      "Instantly provides [1] [Level 1 Policy] <hidden from users>"
     ],
     "row": 1,
-    "column": 5
+    "column": 5,
+    "civilopediaText": [
+     {
+      "text": "Communism: Gold cost of investing in buildings reduced by 25%. +20% Production when building Wonders."
+     }
+    ]
    },
    {
     "name": "Patriotic War",
@@ -2337,27 +2466,35 @@
    {
     "name": "Double Agents",
     "uniques": [
-     "[-50]% enemy spy effectiveness [in your cities]",
+     "Gain an extra spy",
+     "Gain an extra spy",
      "Instantly provides [1] [Level 1 Policy] <hidden from users>",
      "[-20]% weight to this choice for AI decisions",
      "[-80]% weight to this choice for AI decisions <when espionage is disabled>"
     ],
     "row": 1,
-    "column": 9
+    "column": 9,
+    "civilopediaText": [
+     {
+      "text": "Double Agents: Receive 200 Spy Points. Gain 125 Science when you identify a foreign Spy, scaling with Era."
+     }
+    ]
    },
    {
-    "name": "Young Pioneers",
+    "name": "Great Leap Forward",
     "uniques": [
-     "[+1 Happiness] from all [Workshop] buildings",
-     "[+1 Happiness] from all [Factory] buildings",
-     "[+1 Happiness] from all [Solar Plant] buildings",
-     "[+1 Happiness] from all [Nuclear Plant] buildings",
-     "[+1 Happiness] from all [Hydro Plant] buildings",
+     "[+1 Science] per [3] population [in all cities]",
+     "Free Technology",
      "Instantly provides [1] [Level 1 Policy] <hidden from users>",
      "[+10]% weight to this choice for AI decisions"
     ],
     "row": 1,
-    "column": 11
+    "column": 11,
+    "civilopediaText": [
+     {
+      "text": "Great Leap Forward: Receive a free Technology. Spies gain +100% Science. +1 Science in Cities for every 3 non-Specialist Citizens."
+     }
+    ]
    },
    {
     "name": "Universal Healthcare (Order)",
@@ -2371,9 +2508,10 @@
    {
     "name": "Academy of Sciences",
     "uniques": [
-     "[+1 Happiness] from all [Observatory] buildings",
-     "[+1 Happiness] from all [Public School] buildings",
-     "[+1 Happiness] from all [Research Lab] buildings",
+     "[+2 Science] from all [Research Lab] buildings",
+     "[+100]% Production when constructing [Research Lab] buildings [in all cities]",
+     "Provides a [Research Lab] in your first [5] cities for free",
+     "Comment [-2 Unhappiness from Illiteracy in all cities]",
      "Instantly provides [1] [Level 2 Policy] <hidden from users>",
      "Instantly consumes [1] [Level 1 Policy] <hidden from users>",
      "Only available <when above [1] [Level 1 Policy]> <hidden from users>",
@@ -2382,7 +2520,12 @@
      "Only available <when number of [Adopted [Ideology: Level 2 Tenet] Policies] is less than [4]> <hidden from users>"
     ],
     "row": 2,
-    "column": 2
+    "column": 2,
+    "civilopediaText": [
+     {
+      "text": "Academy of Sciences: -2 Unhappiness from Illiteracy in all Cities, +100% Production towards Research Labs, and receive 5 Free Research Labs in your Empire. Research Labs generate an additional +2 Science."
+     }
+    ]
    },
    {
     "name": "Party Leadership",
@@ -2400,7 +2543,7 @@
    {
     "name": "Resettlement",
     "uniques": [
-     "[3] population [in this city] <upon founding a city>",
+     "[2] population [in all cities]",
      "Instantly provides [1] [Level 2 Policy] <hidden from users>",
      "Instantly consumes [1] [Level 1 Policy] <hidden from users>",
      "Only available <when above [1] [Level 1 Policy]> <hidden from users>",
@@ -2409,7 +2552,12 @@
      "Only available <when number of [Adopted [Ideology: Level 2 Tenet] Policies] is less than [4]> <hidden from users>"
     ],
     "row": 2,
-    "column": 6
+    "column": 6,
+    "civilopediaText": [
+     {
+      "text": "Resettlement: New Cities have +3 Population. All Cities gain +2 Citizens immediately. No Partisans from razing enemy Cities."
+     }
+    ]
    },
    {
     "name": "Cultural Revolution",
@@ -2428,8 +2576,7 @@
    {
     "name": "Workers' Faculties",
     "uniques": [
-     "[+25]% [Science] from every [Factory]",
-     "[+100]% Production when constructing [Factory] buildings [in your cities]",
+     "Provides a [Factory] in your first [5] cities for free",
      "Instantly provides [1] [Level 2 Policy] <hidden from users>",
      "Instantly consumes [1] [Level 1 Policy] <hidden from users>",
      "Only available <when above [1] [Level 1 Policy]> <hidden from users>",
@@ -2438,14 +2585,21 @@
      "Only available <when number of [Adopted [Ideology: Level 2 Tenet] Policies] is less than [4]> <hidden from users>"
     ],
     "row": 2,
-    "column": 10
+    "column": 10,
+    "civilopediaText": [
+     {
+      "text": "Worker Faculties: Factories increase City Science output by 10%. +100% Production towards Factories, and receive 5 Free Factories in your Empire."
+     }
+    ]
    },
    {
     "name": "Five-Year Plan",
     "uniques": [
-     "[+2 Production] [in your cities]",
-     "[+1 Production] from [Mine] tiles [in your cities]",
-     "[+1 Production] from [Quarry] tiles [in your cities]",
+     "[+3 Production] from [Lumber mill] tiles [in all cities]",
+     "[+3 Production] from [Mine] tiles [in all cities]",
+     "[+3 Production] from [Oil well] tiles [in all cities]",
+     "[+3 Production] from [Quarry] tiles [in all cities]",
+     "[+20]% Production when constructing [All] buildings [in all cities]",
      "Instantly provides [1] [Level 2 Policy] <hidden from users>",
      "Instantly consumes [1] [Level 1 Policy] <hidden from users>",
      "Only available <when above [1] [Level 1 Policy]> <hidden from users>",
@@ -2454,45 +2608,61 @@
      "Only available <when number of [Adopted [Ideology: Level 2 Tenet] Policies] is less than [4]> <hidden from users>"
     ],
     "row": 2,
-    "column": 12
+    "column": 12,
+    "civilopediaText": [
+     {
+      "text": "Five-Year Plan: +20% Production towards Buildings in all Cities. +3 Production for every Mine, Quarry, Lumber Mill, Oil Well, and Unique Improvement."
+     }
+    ]
    },
    {
     "name": "Dictatorship of the Proletariat",
     "uniques": [
-     "[+34]% [Tourism] resource production <when above [0] [Happiness]>",
+     "[+1 Happiness] from all [Factory] buildings",
      "Instantly consumes [1] [Level 2 Policy] <hidden from users>",
      "Only available <when above [1] [Level 2 Policy]> <hidden from users>",
      "[-100]% weight to this choice for AI decisions <when [Cultural] Victory is disabled>"
     ],
     "row": 3,
-    "column": 3
+    "column": 3,
+    "civilopediaText": [
+     {
+      "text": "Cultural Revolution: +25% Tourism to civilizations with less Happiness. +1 Happiness from Factories."
+     }
+    ]
    },
    {
     "name": "Iron Curtain",
     "uniques": [
-     "[+100]% Production when constructing [Courthouse] buildings [in annexed cities]",
-     "[+4 Food, +8 Production] from each Trade Route",
+     "[+5 Production, +5 Gold] from each Trade Route",
      "Instantly consumes [1] [Level 2 Policy] <hidden from users>",
      "Only available <when above [1] [Level 2 Policy]> <hidden from users>",
      "[+30]% weight to this choice for AI decisions"
     ],
     "row": 3,
-    "column": 5
+    "column": 5,
+    "civilopediaText": [
+     {
+      "text": "Iron Curtain: Free Courthouse upon immediate City annexation. +200% Food or Production from Internal Trade Routes. City connections generate +5 Gold and Production."
+     }
+    ]
    },
    {
     "name": "Spaceflight Pioneers",
     "uniques": [
-     "Comment [[Great Engineer]s can finish [spaceship parts]]",
-     "[+15]% Production when constructing [Spaceship part] units [in your cities]",
-     "Free [Great Engineer] appears",
-     "Free [Great Scientist] appears",
+     "Gain [100] [Science] <upon expending a [Great Person] unit>",
      "Instantly consumes [1] [Level 2 Policy] <hidden from users>",
      "Only available <when above [1] [Level 2 Policy]> <hidden from users>",
      "[-100]% weight to this choice for AI decisions <when [Scientific] Victory is disabled>",
      "[+30]% weight to this choice for AI decisions"
     ],
     "row": 3,
-    "column": 7
+    "column": 7,
+    "civilopediaText": [
+     {
+      "text": "Spaceflight Pioneers: Gain a free Great Engineer and Great Scientist. May finish Spaceship parts with Great Engineers, and expending a Great Person grants 100 Science, scaling with Era. Hurrying Production with Great Engineers 50% more effective."
+     }
+    ]
    },
    {
     "name": "Order Complete",

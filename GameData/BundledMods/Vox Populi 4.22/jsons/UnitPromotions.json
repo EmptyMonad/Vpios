@@ -1469,6 +1469,12 @@
   ]
  },
  {
+  "name": "Fast General",
+  "uniques": [
+   "[+3] Movement"
+  ]
+ },
+ {
   "name": "Only Defensive"
  },
  {
@@ -2316,6 +2322,27 @@
  },
  {
   "name": "Banzai!"
+ },
+ {
+  "name": "Lightning Warfare (Gun)",
+  "uniques": [
+   "[+15]% Strength <when attacking>",
+   "Ignores Zone of Control"
+  ]
+ },
+ {
+  "name": "Lightning Warfare (Armor)",
+  "uniques": [
+   "[+15]% Strength <when attacking>",
+   "[+1] Movement"
+  ]
+ },
+ {
+  "name": "Mare Nostrum",
+  "uniques": [
+   "[+25]% Strength <vs cities>",
+   "[5] HP when healing <in [Friendly Land] tiles>"
+  ]
  },
  {
   "name": "Brute Force"

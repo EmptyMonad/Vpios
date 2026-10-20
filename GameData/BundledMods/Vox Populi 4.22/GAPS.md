@@ -109,6 +109,80 @@
 
 - SpySecurityModifier = 12
 
+## Ideology tenets kept from BNW (no VP effect translated)
+
+- Avant Garde
+- Universal Healthcare (Freedom)
+- Volunteer Army
+- Urbanization
+- Their Finest Hour
+- Arsenal of Democracy
+- Treaty Organization
+- United Front
+- Futurism
+- Industrial Espionage
+- Universal Healthcare (Autocracy)
+- Gunboat Diplomacy
+- Clausewitz's Legacy
+- Patriotic War
+- Universal Healthcare (Order)
+- Party Leadership
+- Cultural Revolution
+
+## Policies: untranslated effects (Freedom)
+
+- Covert Action: EspionageNetworkPoints = 10
+- Covert Action: RigElectionInfluenceModifier = 50
+- Capitalism: HappfromXSpecialists = 2
+- Economic Union: SharedIdeologyTradeGoldChange = 6
+
+## Policies: untranslated effects (Autocracy)
+
+- Militarism: AllCityFreeBuilding = BUILDINGCLASS_AIRPORT
+- Police State: Policy_BuildingClassSecurityChanges: 1 row(s)
+- Nationalism: Policy_ResourcefromCSAlly: 2 row(s)
+- Total War: WarScoreModifier = 25
+- Total War: MinorBullyScoreModifier = 25
+- Cult of Personality: PositiveWarScoreTourismMod = 50
+
+## Policies: untranslated effects (Order)
+
+- Double Agents: Policy_YieldForSpyID: 1 row(s)
+- Young Pioneers: PassiveEspionageBonusModifier = 100
+- Resettlement: NoPartisans = 1
+- Dictatorship of the Proletariat: LessHappyTourismModifier = 25
+- Iron Curtain: InternalTradeRouteYieldModifier = 200
+- Spaceflight Pioneers: GreatEngineerHurryModifier = 50
+
+## Policy tile effects dropped (improvement not in ruleset)
+
+- Tradition Complete: [+1 Food, +1 Production] from [Embassy] tiles [in all cities]
+- Colonialism: [+2 Science, +1 Culture] from [Ordo] tiles [in all cities]
+- Rationalism: [+2 Production, +3 Science] from [Paper] tiles [in all cities]
+- Civil Society: [+4 Food] from [Siheyuan] tiles [in all cities]
+- Civil Society: [+4 Food] from [Eki] tiles [in all cities]
+- Civil Society: [+4 Food] from [Kuna] tiles [in all cities]
+- Civil Society: [+4 Food] from [Polder Water] tiles [in all cities]
+- Civil Society: [+4 Food] from [Ordo] tiles [in all cities]
+- Civil Society: [+4 Food] from [Hacienda] tiles [in all cities]
+- Civil Society: [+4 Food] from [Encampment] tiles [in all cities]
+- New Deal: [+6 Culture] from [Embassy] tiles [in all cities]
+- New Deal: [+6 Production] from [Ordo] tiles [in all cities]
+- Military-Industrial Complex: [+3 Science] from [Siheyuan] tiles [in all cities]
+- Military-Industrial Complex: [+3 Science] from [Eki] tiles [in all cities]
+- Military-Industrial Complex: [+3 Science] from [Kuna] tiles [in all cities]
+- Military-Industrial Complex: [+3 Science] from [Polder Water] tiles [in all cities]
+- Military-Industrial Complex: [+3 Science] from [Ordo] tiles [in all cities]
+- Military-Industrial Complex: [+3 Science] from [Hacienda] tiles [in all cities]
+- Military-Industrial Complex: [+3 Science] from [Encampment] tiles [in all cities]
+- Five-Year Plan: [+3 Production] from [Siheyuan] tiles [in all cities]
+- Five-Year Plan: [+3 Production] from [Eki] tiles [in all cities]
+- Five-Year Plan: [+3 Production] from [Kuna] tiles [in all cities]
+- Five-Year Plan: [+3 Production] from [Polder Water] tiles [in all cities]
+- Five-Year Plan: [+3 Production] from [Ordo] tiles [in all cities]
+- Five-Year Plan: [+3 Production] from [Hacienda] tiles [in all cities]
+- Five-Year Plan: [+3 Production] from [Encampment] tiles [in all cities]
+
 ## Promotion effects with no Unciv unique (column: promotions using it)
 
 - MaxHitPointsChange: 10
@@ -604,6 +678,5 @@
 - Amphitheater: [+1 Culture, +1 Gold] from [Brazilwood] tiles [in this city]
 - Acropolis: [+1 Culture, +1 Gold] from [Brazilwood] tiles [in this city]
 - Seowon: [+1 Production, +1 Science] from [Embassy] tiles [in this city]
-- Rationalism: [+2 Production, +3 Science] from [Paper] tiles [in all cities]
 - Missionary Zeal: [Great Diplomat] is earned [+33]% faster <during a Golden Age>
 - Unity of the Prophets: [+2 Science, +2 Faith] from [Embassy] tiles [in all cities]
