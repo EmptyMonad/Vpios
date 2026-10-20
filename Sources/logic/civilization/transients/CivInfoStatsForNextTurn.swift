@@ -22,11 +22,17 @@ extension GameState {
         if onlyCity == nil {
             // Unciv getHappinessBreakdown, in its order. The four civ-wide rows are always put in the map, zero or not
             // - which decides the map's size, and with it the order its values are summed in.
-            h.add("Base happiness", Double(diff.baseHappiness))
+            h.add("Base happiness", Double(vpBaseHappiness(civId: civId) ?? diff.baseHappiness))   // VP: handicap + capital default
             var perLux = Float(4.0 + diff.extraHappinessPerLuxury)
             for u in civUniques(civId) where u.pattern == "[] Happiness from each type of luxury resource" && conditionalsHold(u, ctx) { perLux += Float(u.int(0)) }
             // "Luxury resources": the summarized supply's luxuries (a zero sum is not in it) that are not obsolete.
-            h.add("Luxury resources", Double(Float(luxuryTypesOwned(civId)) * perLux))
+            if vpNeeds != nil {   // VP: each luxury's own Happiness (CvPlayer::GetBonusHappinessFromLuxuriesFlat)
+                let lux = Set(civResourceSupply(civId).keys.filter { rs.resources[$0]?.resourceType == "Luxury" })
+                h.add("Luxury resources", Double(vpLuxuryHappiness(civId: civId, luxuries: lux) ?? 0))
+                perLux = 0   // the city-state and traded-luxury rows below are Unciv's, not VP's
+            } else {
+                h.add("Luxury resources", Double(Float(luxuryTypesOwned(civId)) * perLux))
+            }
             // "City-State Luxuries": distinct luxuries in allied city-states' supply that we also have, in
             // getKnownCivs() order, × "[x]% Happiness from luxury resources gifted by City-States".
             let bonus = Float(civUniques(civId).filter { $0.pattern == "[]% Happiness from luxury resources gifted by City-States" && conditionalsHold($0, ctx) }.reduce(0) { $0 + $1.int(0) }) / 100
@@ -118,6 +124,10 @@ extension GameState {
         // population + Σ (x% of a population filter) doubled when annexed, never negative, × modifier, and "Occupied City" −2
         var citiesPercent = 0.0
         for u in civUniques(civId) where u.pattern == "[]% unhappiness from the number of cities" && conditionalsHold(u, ctx) { citiesPercent += u.double(0) }
+        if vpNeeds != nil {   // VP: needs-based unhappiness (VP/VPNeeds.swift)
+            for c in myCities { for (k, v) in vpCityUnhappiness(c)?.rows ?? [] { h.add(k, -Double(v)) } }
+            return
+        }
         var cityUnhappy = 0.0, pop = 0.0
         for c in myCities {
             // Unciv hasExtraAnnexUnhappiness: `civName == foundingCiv` - a married city-state ("" founder) is occupied

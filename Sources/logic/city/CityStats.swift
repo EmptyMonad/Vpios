@@ -416,29 +416,34 @@ final class CityStats {
         if !civ.isPlayer { unhappinessModifierF *= Float(state.difficulty.aiUnhappinessModifier) }
         let unhappinessModifier = Double(unhappinessModifierF)
 
-        var unhappinessFromCity = -3.0   // -3 happiness per city
-        if hasExtraAnnexUnhappiness() { unhappinessFromCity -= 2 }
+        // VP: needs-based unhappiness replaces the per-city and per-citizen rows (VP/VPNeeds.swift)
+        if let vp = state.vpCityUnhappiness(city) {
+            for (k, v) in vp.rows { set(k, -Double(v)) }
+        } else {
+            var unhappinessFromCity = -3.0   // -3 happiness per city
+            if hasExtraAnnexUnhappiness() { unhappinessFromCity -= 2 }
 
-        var uniqueUnhappinessModifier = 0.0
-        for unique in state.civUniques(city.civId) where unique.pattern == "[]% unhappiness from the number of cities" {
-            uniqueUnhappinessModifier += unique.double(0)
+            var uniqueUnhappinessModifier = 0.0
+            for unique in state.civUniques(city.civId) where unique.pattern == "[]% unhappiness from the number of cities" {
+                uniqueUnhappinessModifier += unique.double(0)
+            }
+            // Unciv: `unhappinessFromCity * unhappinessModifier * uniqueUnhappinessModifier.toPercent()`, Float.
+            set("Cities", Stats.f32(Stats.f32(unhappinessFromCity * unhappinessModifier) * Stats.toPercent(uniqueUnhappinessModifier)))
+
+            var unhappinessFromCitizens = Double(city.population)
+            // Unciv UnhappinessFromPopulationTypePercentageChange is "[relativeAmount]% Unhappiness from
+            // [populationFilter] [cityFilter]" - capital U, as all eight uses in the rulesets are. We looked for a
+            // lowercase "unhappiness", which matched nothing: Meritocracy's "-5% Unhappiness from [Population]" never
+            // reached a city's happiness list. The empire's live breakdown spelled it right, so the live path hid it.
+            for unique in matching("[]% Unhappiness from [] []") where matchesFilter(unique.param(2)) {
+                unhappinessFromCitizens = Stats.f32(unhappinessFromCitizens + Stats.f32(Stats.f32(unique.double(0) / 100) * Double(state.populationFilterAmount(city, unique.param(1)))))
+            }
+            if hasExtraAnnexUnhappiness() { unhappinessFromCitizens = Stats.f32(unhappinessFromCitizens * 2) }
+            if unhappinessFromCitizens < 0 { unhappinessFromCitizens = 0 }
+            set("Population", Stats.f32(-unhappinessFromCitizens * unhappinessModifier))
+
+            if hasExtraAnnexUnhappiness() { set("Occupied City", -2) }
         }
-        // Unciv: `unhappinessFromCity * unhappinessModifier * uniqueUnhappinessModifier.toPercent()`, Float.
-        set("Cities", Stats.f32(Stats.f32(unhappinessFromCity * unhappinessModifier) * Stats.toPercent(uniqueUnhappinessModifier)))
-
-        var unhappinessFromCitizens = Double(city.population)
-        // Unciv UnhappinessFromPopulationTypePercentageChange is "[relativeAmount]% Unhappiness from
-        // [populationFilter] [cityFilter]" - capital U, as all eight uses in the rulesets are. We looked for a
-        // lowercase "unhappiness", which matched nothing: Meritocracy's "-5% Unhappiness from [Population]" never
-        // reached a city's happiness list. The empire's live breakdown spelled it right, so the live path hid it.
-        for unique in matching("[]% Unhappiness from [] []") where matchesFilter(unique.param(2)) {
-            unhappinessFromCitizens = Stats.f32(unhappinessFromCitizens + Stats.f32(Stats.f32(unique.double(0) / 100) * Double(state.populationFilterAmount(city, unique.param(1)))))
-        }
-        if hasExtraAnnexUnhappiness() { unhappinessFromCitizens = Stats.f32(unhappinessFromCitizens * 2) }
-        if unhappinessFromCitizens < 0 { unhappinessFromCitizens = 0 }
-        set("Population", Stats.f32(-unhappinessFromCitizens * unhappinessModifier))
-
-        if hasExtraAnnexUnhappiness() { set("Occupied City", -2) }
 
         let happinessFromSpecialists = statsFromSpecialists.happiness.rounded(.towardZero)
         if happinessFromSpecialists > 0 { set("Specialists", happinessFromSpecialists) }

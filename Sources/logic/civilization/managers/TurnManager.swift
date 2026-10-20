@@ -249,6 +249,7 @@ extension GameState {
         if epochsDebug { AI.profile.removeAll() }   // AI.timed fills it only with --debug; a UI turn runs on its own thread
         turnAITime = 0; turnProcessTime = 0   // the PROFILE line covers one full round of AI turns
         diplomacyTurnDoneThisRound.removeAll()
+        vpUpdateMedians()   // VP: CvGame::DoUpdateGlobalMedians, once a round (no-op without the VP mod)
         turn += 1
     }
 
