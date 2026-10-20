@@ -106,7 +106,8 @@
  {
   "name": "Indirect Fire",
   "uniques": [
-   "[-10]% Strength <when attacking>"
+   "[-10]% Strength <when attacking>",
+   "Ranged attacks may be performed over obstacles"
   ],
   "row": 4,
   "column": 3
@@ -213,7 +214,8 @@
  {
   "name": "Charge",
   "uniques": [
-   "[+10]% Strength <when attacking> <when fighting in [Open terrain] tiles>"
+   "[+10]% Strength <when attacking> <when fighting in [Open terrain] tiles>",
+   "[+20]% Strength <when attacking> <vs [Wounded] units>"
   ],
   "prerequisites": [
    "Shock II"
@@ -262,6 +264,7 @@
  {
   "name": "Blitz",
   "uniques": [
+   "[1] additional attacks per turn",
    "Can move after attacking"
   ],
   "prerequisites": [
@@ -364,7 +367,8 @@
  {
   "name": "Scouting I",
   "uniques": [
-   "[+1] Sight"
+   "[+1] Sight",
+   "[+1] Sight <for [Embarked] units>"
   ],
   "prerequisites": [
    "Trailblazer II",
@@ -422,7 +426,8 @@
  {
   "name": "Survivalism III",
   "uniques": [
-   "Unit will heal every turn, even if it performs an action"
+   "Unit will heal every turn, even if it performs an action",
+   "No movement cost to pillage"
   ],
   "prerequisites": [
    "Survivalism II"
@@ -666,7 +671,8 @@
   "uniques": [
    "[5] HP when healing <in [Foreign Land] tiles>",
    "[5] HP when healing <in [Enemy Land] tiles>",
-   "[5] HP when healing <in [Friendly Land] tiles>"
+   "[5] HP when healing <in [Friendly Land] tiles>",
+   "May heal outside of friendly territory"
   ],
   "prerequisites": [
    "Targeting III",
@@ -746,7 +752,7 @@
  {
   "name": "Interception I",
   "uniques": [
-   "[+33]% Damage when intercepting"
+   "[15]% chance to intercept air attacks"
   ],
   "unitTypes": [
    "Aircraft Carrier",
@@ -759,7 +765,7 @@
  {
   "name": "Interception II",
   "uniques": [
-   "[+33]% Damage when intercepting"
+   "[15]% chance to intercept air attacks"
   ],
   "prerequisites": [
    "Interception I"
@@ -775,7 +781,7 @@
  {
   "name": "Interception III",
   "uniques": [
-   "[+34]% Damage when intercepting"
+   "[15]% chance to intercept air attacks"
   ],
   "prerequisites": [
    "Interception II"
@@ -859,7 +865,8 @@
   "name": "Sortie",
   "uniques": [
    "[+1] Range",
-   "[+34]% Damage when intercepting"
+   "[+34]% Damage when intercepting",
+   "[1] extra interceptions may be made per turn"
   ],
   "prerequisites": [
    "Ace Pilot III"
@@ -1003,7 +1010,8 @@
  {
   "name": "Logistics",
   "uniques": [
-   "[-30]% Strength <when attacking>"
+   "[-30]% Strength <when attacking>",
+   "[1] additional attacks per turn"
   ],
   "prerequisites": [
    "Accuracy III",
@@ -1230,6 +1238,9 @@
  },
  {
   "name": "Ace Pilot I",
+  "uniques": [
+   "[33]% chance to intercept air attacks"
+  ],
   "unitTypes": [
    "Fighter"
   ]
@@ -1237,7 +1248,8 @@
  {
   "name": "Ace Pilot II",
   "uniques": [
-   "[+33]% Damage when intercepting"
+   "[+33]% Damage when intercepting",
+   "[33]% chance to intercept air attacks"
   ],
   "prerequisites": [
    "Ace Pilot I"
@@ -1250,7 +1262,8 @@
   "name": "Ace Pilot III",
   "uniques": [
    "[+1] Range",
-   "[+33]% Damage when intercepting"
+   "[+33]% Damage when intercepting",
+   "[34]% chance to intercept air attacks"
   ],
   "prerequisites": [
    "Ace Pilot II"
@@ -1333,6 +1346,9 @@
  },
  {
   "name": "Air Logistics",
+  "uniques": [
+   "[1] additional attacks per turn"
+  ],
   "prerequisites": [
    "Air Siege 3",
    "Air Targeting III"
@@ -1410,6 +1426,9 @@
  },
  {
   "name": "Interceptor IV",
+  "uniques": [
+   "[15]% chance to intercept air attacks"
+  ],
   "prerequisites": [
    "Interception III"
   ],
@@ -1448,6 +1467,9 @@
  },
  {
   "name": "See Invisible Submarine",
+  "uniques": [
+   "Can see invisible [Submarine] units"
+  ],
   "prerequisites": [
    "Coastal Raider I",
    "Boarding Party I"
@@ -1478,7 +1500,10 @@
   "name": "Only Defensive"
  },
  {
-  "name": "No Defensive Bonuses"
+  "name": "No Defensive Bonuses",
+  "uniques": [
+   "No defensive terrain bonus"
+  ]
  },
  {
   "name": "Can Move After Attacking",
@@ -1493,13 +1518,22 @@
   ]
  },
  {
-  "name": "Hovering Unit"
+  "name": "Hovering Unit",
+  "uniques": [
+   "Can pass through impassable tiles"
+  ]
  },
  {
-  "name": "All tiles cost 1 Movement.Cannot use Roads and Railroads."
+  "name": "All tiles cost 1 Movement.Cannot use Roads and Railroads.",
+  "uniques": [
+   "Ignores terrain cost"
+  ]
  },
  {
-  "name": "Moves at half-speed in enemy territory"
+  "name": "Moves at half-speed in enemy territory",
+  "uniques": [
+   "Must set up to ranged attack"
+  ]
  },
  {
   "name": "Siege Engine",
@@ -1508,10 +1542,16 @@
   ]
  },
  {
-  "name": "Embarked Sight"
+  "name": "Embarked Sight",
+  "uniques": [
+   "[+1] Sight <for [Embarked] units>"
+  ]
  },
  {
-  "name": "Defensive Embarkation"
+  "name": "Defensive Embarkation",
+  "uniques": [
+   "[+100]% Strength <for [Embarked] units> <when defending>"
+  ]
  },
  {
   "name": "Attack Bonus",
@@ -1520,7 +1560,10 @@
   ]
  },
  {
-  "name": "Free Pillage Moves"
+  "name": "Free Pillage Moves",
+  "uniques": [
+   "No movement cost to pillage"
+  ]
  },
  {
   "name": "Oceanic Perils"
@@ -1550,10 +1593,16 @@
   ]
  },
  {
-  "name": "Invisible Submarine"
+  "name": "Invisible Submarine",
+  "uniques": [
+   "Invisible to others"
+  ]
  },
  {
-  "name": "Can Move Impassable"
+  "name": "Can Move Impassable",
+  "uniques": [
+   "Can pass through impassable tiles"
+  ]
  },
  {
   "name": "Air Sweep"
@@ -1568,16 +1617,25 @@
   "name": "Domestic Focus"
  },
  {
-  "name": "Rival Territory"
+  "name": "Rival Territory",
+  "uniques": [
+   "May enter foreign tiles without open borders"
+  ]
  },
  {
-  "name": "Unwelcome Evangelist"
+  "name": "Unwelcome Evangelist",
+  "uniques": [
+   "May enter foreign tiles without open borders"
+  ]
  },
  {
   "name": "Great Admiral"
  },
  {
-  "name": "Withdraw Before Melee"
+  "name": "Withdraw Before Melee",
+  "uniques": [
+   "Withdraws before melee combat <with [100]% chance>"
+  ]
  },
  {
   "name": "Unity",
@@ -1629,7 +1687,10 @@
   "name": "Jaguar"
  },
  {
-  "name": "Expeditionary Warfare"
+  "name": "Expeditionary Warfare",
+  "uniques": [
+   "[+20]% Strength <when fighting in [Foreign Land] tiles>"
+  ]
  },
  {
   "name": "Faster Healing",
@@ -1640,7 +1701,10 @@
   ]
  },
  {
-  "name": "Marksmanship"
+  "name": "Marksmanship",
+  "uniques": [
+   "[+33]% Strength <when attacking> <vs [Wounded] units>"
+  ]
  },
  {
   "name": "Highlanders",
@@ -1694,10 +1758,16 @@
   "name": "General Stacking"
  },
  {
-  "name": "Only Attacks Cities"
+  "name": "Only Attacks Cities",
+  "uniques": [
+   "Can only attack [City] units"
+  ]
  },
  {
-  "name": "Prize Ships"
+  "name": "Prize Ships",
+  "uniques": [
+   "May capture killed [Military] units"
+  ]
  },
  {
   "name": "Field I",
@@ -1739,6 +1809,7 @@
   "name": "Trailblazer I",
   "uniques": [
    "[+1] Sight",
+   "[+1] Sight <for [Embarked] units>",
    "Double movement in [Hill]",
    "Double movement in [Jungle]",
    "Double movement in [Forest]"
@@ -1766,6 +1837,7 @@
  {
   "name": "Trailblazer III",
   "uniques": [
+   "[+20]% Strength <when fighting in [Foreign Land] tiles>",
    "Ignores Zone of Control"
   ],
   "prerequisites": [
@@ -1898,7 +1970,8 @@
  {
   "name": "Charge II",
   "uniques": [
-   "[+10]% Strength <when attacking> <when fighting in [Open terrain] tiles>"
+   "[+10]% Strength <when attacking> <when fighting in [Open terrain] tiles>",
+   "[+20]% Strength <when attacking> <vs [Wounded] units>"
   ],
   "prerequisites": [
    "Charge"
@@ -1967,6 +2040,10 @@
  },
  {
   "name": "Infiltrators",
+  "uniques": [
+   "[+15]% Strength <when attacking> <vs [Wounded] units>",
+   "[+15]% Strength <when fighting in [Foreign Land] tiles>"
+  ],
   "prerequisites": [
    "Accuracy III",
    "Siege III",
@@ -2008,7 +2085,8 @@
  {
   "name": "Blockade",
   "uniques": [
-   "[+25]% Strength <when defending> <vs [Ranged] units>"
+   "[+25]% Strength <when defending> <vs [Ranged] units>",
+   "Withdraws before melee combat <with [100]% chance>"
   ],
   "prerequisites": [
    "Coastal Raider III"
@@ -2046,6 +2124,9 @@
  },
  {
   "name": "Commerce Raider",
+  "uniques": [
+   "No movement cost to pillage"
+  ],
   "prerequisites": [
    "Coastal Raider II",
    "Wolfpack II"
@@ -2141,7 +2222,8 @@
  {
   "name": "Naval Siege",
   "uniques": [
-   "[+75]% Strength <vs cities>"
+   "[+75]% Strength <vs cities>",
+   "May heal outside of friendly territory"
   ],
   "prerequisites": [
    "Coastal Raider II"
@@ -2204,6 +2286,9 @@
  {
   "name": "Frogman",
   "uniques": [
+   "[+50]% Strength <for [Embarked] units> <when defending>",
+   "[1] Movement point cost to embark",
+   "[1] Movement point cost to disembark",
    "Eliminates combat penalty for attacking across a coast"
   ],
   "prerequisites": [
@@ -2217,7 +2302,8 @@
  {
   "name": "Screening",
   "uniques": [
-   "[+10]% to Flank Attack bonuses"
+   "[+10]% to Flank Attack bonuses",
+   "[+1]% to Flank Attack bonuses"
   ],
   "prerequisites": [
    "Survivalism III",
@@ -2244,6 +2330,7 @@
  {
   "name": "Hunter Killer",
   "uniques": [
+   "Can see invisible [Submarine] units",
    "[+50]% Strength <vs [Submarine] units>"
   ],
   "prerequisites": [
@@ -2278,7 +2365,8 @@
  {
   "name": "Periscope Depth",
   "uniques": [
-   "[+40]% Strength <when defending> <vs [Ranged] units>"
+   "[+40]% Strength <when defending> <vs [Ranged] units>",
+   "Withdraws before melee combat <with [100]% chance>"
   ],
   "prerequisites": [
    "Wolfpack III"
@@ -2345,7 +2433,10 @@
   ]
  },
  {
-  "name": "Brute Force"
+  "name": "Brute Force",
+  "uniques": [
+   "[+25]% Strength <vs [Barbarian] units>"
+  ]
  },
  {
   "name": "Discipline",
@@ -2407,7 +2498,8 @@
  {
   "name": "Skirmisher Doctrine",
   "uniques": [
-   "[+50]% Strength <when defending> <vs [Ranged] units>"
+   "[+50]% Strength <when defending> <vs [Ranged] units>",
+   "[+1]% to Flank Attack bonuses"
   ]
  },
  {
@@ -2423,7 +2515,10 @@
   "name": "Scavenger"
  },
  {
-  "name": "Commando"
+  "name": "Commando",
+  "uniques": [
+   "Withdraws before melee combat <with [100]% chance>"
+  ]
  },
  {
   "name": "Naval Inaccuracy"
@@ -2462,7 +2557,10 @@
   "name": "Military Tradition"
  },
  {
-  "name": "Master Diplomat"
+  "name": "Master Diplomat",
+  "uniques": [
+   "May enter foreign tiles without open borders"
+  ]
  },
  {
   "name": "Shielded Silo"
@@ -2495,14 +2593,16 @@
  {
   "name": "Hakkaa Päälle!",
   "uniques": [
-   "Heals [30] damage if it kills a unit"
+   "Heals [30] damage if it kills a unit",
+   "[+20]% Strength <when attacking> <vs [Wounded] units>"
   ]
  },
  {
   "name": "Scout Cavalry",
   "uniques": [
    "[-20]% Strength",
-   "[+1] Sight"
+   "[+1] Sight",
+   "No movement cost to pillage"
   ]
  },
  {
