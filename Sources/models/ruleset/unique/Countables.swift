@@ -13,7 +13,12 @@ extension GameState {
         return CountableExpression.eval(text) { self.simpleCountable($0, ctx) ?? Int($0) }
     }
 
+    /// Unciv Civilization.matchesFilter: a MultiFilter (`non-[X]`, `{a} {b}`) over matchesSingleFilter. VP/BNW use
+    /// `<for [non-[Venice]] Civilizations>` on the Settler's founding unique; read as a plain name, no civ could found.
     func civMatches(_ c: Civilization, _ filter: String, viewer: Int) -> Bool {
+        MultiFilter.multiFilter(filter) { self.civMatchesSingle(c, $0, viewer: viewer) }
+    }
+    private func civMatchesSingle(_ c: Civilization, _ filter: String, viewer: Int) -> Bool {
         switch filter.trimmingCharacters(in: .whitespaces) {
         case "All", "all": return true
         case "Major", "Major Civilizations": return c.isMajor
@@ -25,7 +30,9 @@ extension GameState {
         case "Known", "known": return c.id == viewer || (civ(viewer)?.metCivs.contains(c.id) ?? false)
         case "Friendly": return c.id == viewer || relationshipLevel(viewer, c.id) >= .friend
         case "Enemy", "at war", "Hostile": return areAtWar(viewer, c.id)
-        default: return c.nation == filter || c.nationDef?.cityStateType == filter
+        // Unciv matchesSingleFilter ends in `civInfo.hasTagUnique(filter)`: BNW tags nations ("Double the normal number of
+        // Trade Routes available") and filters on the tag
+        default: return c.nation == filter || c.nationDef?.cityStateType == filter || (c.nationDef?.uniques.contains(filter) ?? false)
         }
     }
     /// Unciv Building.matchesFilter (models/ruleset/Building.swift)

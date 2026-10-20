@@ -57,9 +57,10 @@ enum VPSelfTest {
                         let h = g.happinessBreakdown(c.id)
                         let rows = h.rows.map { "\($0.0)=\(Int($0.1))" }.joined(separator: ",")
                         let cs = g.cities(of: c.id)
-                        print("VPTEST   \(c.nation): cities=\(cs.count) pop=\(cs.reduce(0) { $0 + $1.population }) happiness=\(g.happiness(of: c.id)) approval=\(g.vpApproval(civId: c.id).map(String.init) ?? "-") [\(rows)]")
+                        print("VPTEST   \(c.nation): units=\(g.units(of: c.id).count) supply=\(g.unitSupply(c.id)) cities=\(cs.count) pop=\(cs.reduce(0) { $0 + $1.population }) happiness=\(g.happiness(of: c.id)) approval=\(g.vpApproval(civId: c.id).map(String.init) ?? "-") [\(rows)]")
                     }
                 }
+                if t == 20 && !g.civs.contains(where: { $0.isMajor && !g.cities(of: $0.id).isEmpty }) { print("VPTEST FAIL no major civ has founded a city by turn 20") }
                 if g.outcome != nil { break }
             }
             print("VPTEST done")

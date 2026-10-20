@@ -714,7 +714,7 @@ struct TopBar<Menu: View>: View {
                     HStack(spacing: 8) {
                         Button { overviewTab = "Stats" } label: { stat("💰", "\(Int(civ.gold)) (\(GameView.rateLabel(gold)))", color: civ.gold < 0 ? Theme.danger : Theme.cream) }
                         Button { controller.showTech = true } label: { stat("🔬", GameView.rateLabel(science), color: Theme.cream) }
-                        Button { overviewTab = "Resources" } label: { stat(happy >= 0 ? "😊" : "😠", "\(happy)" + (civ.isInGoldenAge ? "    " + L("GOLDEN AGE") + "(\(civ.goldenAgeTurns))" : " (\(Int(civ.goldenAgePoints))/\(Int(s.goldenAgeThreshold(civ))))"), color: happy < 0 ? Theme.danger : Theme.cream) }
+                        Button { overviewTab = "Resources" } label: { stat(happy >= 0 ? "😊" : "😠", (s.vpCachedApproval(civ.id).map { "\($0)%" } ?? "\(happy)") + (civ.isInGoldenAge ? "    " + L("GOLDEN AGE") + "(\(civ.goldenAgeTurns))" : " (\(Int(civ.goldenAgePoints))/\(Int(s.goldenAgeThreshold(civ))))"), color: happy < 0 ? Theme.danger : Theme.cream) }
                         Button { controller.showPolicies = true } label: { stat("🎵", "\(GameView.rateLabel(culture)) (\(policyTurns))", color: Theme.cream) }
                         if s.religionEnabled { Button { overviewTab = "Religion" } label: { stat("🕊", "\(Int(civ.faithStored)) (\(GameView.rateLabel(s.faithForNextTurn(civ.id))))", color: Theme.cream) } }   // Unciv: statsForNextTurn.faith
                         else { Text(L("Religion: Off")).font(.system(size: 10, weight: .semibold)).foregroundStyle(Theme.creamDim) }   // Unciv WorldScreenTopBarStats
