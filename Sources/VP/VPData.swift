@@ -19,6 +19,7 @@ struct VPData {
     let nations: [String: [String: Any]]
     let resources: [String: [String: Any]]
     let engineTables: Set<String>
+    let corporations: [VPCorporation]
 
     nonisolated(unsafe) private static var cache: [String: VPData?] = [:]
     private static let lock = NSLock()
@@ -36,7 +37,8 @@ struct VPData {
                            beliefs: obj["beliefs"] as? [String: [String: Any]] ?? [:],
                            nations: obj["nations"] as? [String: [String: Any]] ?? [:],
                            resources: obj["resources"] as? [String: [String: Any]] ?? [:],
-                           engineTables: Set(obj["engineTables"] as? [String] ?? []))
+                           engineTables: Set(obj["engineTables"] as? [String] ?? []),
+                           corporations: (obj["corporations"] as? [[String: Any]] ?? []).compactMap(VPCorporation.init))
         }
         cache[key] = found
         return found

@@ -57,7 +57,7 @@ enum VPSelfTest {
                         let h = g.happinessBreakdown(c.id)
                         let rows = h.rows.map { "\($0.0)=\(Int($0.1))" }.joined(separator: ",")
                         let cs = g.cities(of: c.id)
-                        print("VPTEST   \(c.nation): gold=\(Int(c.gold)) culture=\(Int(c.totalCulture)) policies=\(c.policies.count) techs=\(c.techs.count) ww=\(g.vpWarWearinessPercent(c.id))% units=\(g.units(of: c.id).count) supply=\(g.unitSupply(c.id)) cities=\(cs.count) pop=\(cs.reduce(0) { $0 + $1.population }) happiness=\(g.happiness(of: c.id)) approval=\(g.vpApproval(civId: c.id).map(String.init) ?? "-") [\(rows)]")
+                        print("VPTEST   \(c.nation): gold=\(Int(c.gold)) culture=\(Int(c.totalCulture)) policies=\(c.policies.count) techs=\(c.techs.count) ww=\(g.vpWarWearinessPercent(c.id))% units=\(g.units(of: c.id).count) supply=\(g.unitSupply(c.id)) cities=\(cs.count) pop=\(cs.reduce(0) { $0 + $1.population }) happiness=\(g.happiness(of: c.id)) approval=\(g.vpApproval(civId: c.id).map(String.init) ?? "-") monopolies=\(g.vpMonopolies()[c.id].map { $0.global.sorted().joined(separator: "/") } ?? "-") corp=\(g.vpCorporation(of: c.id).map { "\($0.name) \(g.vpFranchiseCount($0, owner: c.id))/\(g.vpFranchiseLimit($0, owner: c.id))" } ?? "-") [\(rows)]")
                     }
                 }
                 if t == 20 && !g.civs.contains(where: { $0.isMajor && !g.cities(of: $0.id).isEmpty }) { print("VPTEST FAIL no major civ has founded a city by turn 20") }

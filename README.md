@@ -22,6 +22,12 @@ These are active only when a mod ships `jsons/VPNeeds.json`:
   - Each unit over the cap costs 5% production and 5% growth.
   - Growth drops 2.5% per approval point below 50.
 - **War weariness** (`VPWar.swift`): accumulates during long wars, halves in peace, and shows as Unhappiness.
+- **Instant yields** (`VPInstantYields.swift`): VP's yields on birth, border growth, techs, policies, buildings, great people, conquest and founding, scaled by era, read from `jsons/VPData.json`.
+- **Monopolies** (`VPMonopolies.swift`): over 50% of a resource is a Global Monopoly (tile and city yields, happiness, golden age length), over 25% of a strategic one a Strategic Monopoly (combat bonuses).
+- **Corporations** (`VPCorporations.swift`):
+  - A Headquarters needs the Corporations tech and a Global Monopoly on one of its resources; one per civ, and it grants a free Office.
+  - Only the founder can build Offices. Each Office earns its yield per Franchise, up to the Franchise limit.
+  - Franchises spread to nearby foreign cities from Office cities, plus VP's random spread (there are no international trade routes, see `GAPS.md`).
 
 ### VP data (`GameData/BundledMods/Vox Populi 4.22`)
 

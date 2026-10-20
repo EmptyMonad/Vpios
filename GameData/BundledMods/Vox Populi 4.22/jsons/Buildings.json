@@ -7,6 +7,7 @@
   "uniques": [
    "Indicates the capital city",
    "Comment [Provides 1 [Great Work of Art] or [Artifact] Slot]",
+   "Destroyed when the city is captured",
    "[+1 Science] per [3] population [in this city]"
   ],
   "civilopediaText": [
@@ -24,9 +25,6 @@
   "name": "Monument",
   "cost": 65,
   "hurryCostModifier": 40,
-  "uniques": [
-   "Destroyed when the city is captured"
-  ],
   "culture": 2
  },
  {
@@ -36,7 +34,6 @@
   "cost": 65,
   "hurryCostModifier": 40,
   "uniques": [
-   "Destroyed when the city is captured",
    "[+25]% [Faith] [in this city] <during a Golden Age>"
   ],
   "culture": 2,
@@ -163,6 +160,7 @@
   "maintenance": 2,
   "requiredBuilding": "Colosseum",
   "uniques": [
+   "Destroyed when the city is captured",
    "[+3 Culture] from [Ivory] tiles [in this city]"
   ]
  },
@@ -205,9 +203,6 @@
   "cityHealth": 100,
   "hurryCostModifier": 25,
   "requiredTech": "Masonry",
-  "uniques": [
-   "Destroyed when the city is captured"
-  ],
   "cost": 110,
   "maintenance": 1
  },
@@ -220,9 +215,6 @@
   "cityHealth": 125,
   "hurryCostModifier": 25,
   "requiredTech": "Masonry",
-  "uniques": [
-   "Destroyed when the city is captured"
-  ],
   "maintenance": 1,
   "science": 3,
   "greatPersonPoints": {
@@ -265,8 +257,7 @@
   "hurryCostModifier": 25,
   "maintenance": 1,
   "uniques": [
-   "New [Military] units start with [15] XP [in this city]",
-   "Destroyed when the city is captured"
+   "New [Military] units start with [15] XP [in this city]"
   ],
   "requiredTech": "Archery",
   "cost": 110,
@@ -280,7 +271,6 @@
   "maintenance": 4,
   "uniques": [
    "New [Military] units start with [15] XP [in this city]",
-   "Destroyed when the city is captured",
    "[+1 Production, +1 Gold] from [Aluminum] tiles [in this city]",
    "[+1 Production, +1 Gold] from [Coal] tiles [in this city]",
    "[+1 Production, +1 Gold] from [Horses] tiles [in this city]",
@@ -361,6 +351,7 @@
   "uniques": [
    "Only available <if [Colosseum] is constructed in all [non-[Puppeted]] cities>",
    "Cost increases by [30] per owned city",
+   "Destroyed when the city is captured",
    "[+2 Gold] from all [Colosseum] buildings",
    "Provides [2] [Horses]",
    "[+10]% [Gold] [in this city] <during We Love The King Day>",
@@ -376,7 +367,8 @@
   "hurryCostModifier": 50,
   "uniques": [
    "Removes extra unhappiness from annexed cities",
-   "Can only be built <in [Annexed] cities>"
+   "Can only be built <in [Annexed] cities>",
+   "Destroyed when the city is captured"
   ],
   "requiredTech": "Philosophy",
   "cost": 200
@@ -436,7 +428,6 @@
   "requiredTech": "Philosophy",
   "uniques": [
    "Only available <when religion is enabled>",
-   "Destroyed when the city is captured",
    "[+1 Culture, +1 Gold] from [Amber] tiles [in this city]",
    "[+1 Culture, +1 Gold] from [Incense] tiles [in this city]",
    "[+1 Culture, +1 Gold] from [Wine] tiles [in this city]"
@@ -489,6 +480,7 @@
   "uniques": [
    "Only available <if [Library] is constructed in all [non-[Puppeted]] cities>",
    "Cost increases by [30] per owned city",
+   "Destroyed when the city is captured",
    "[+20]% [Science] [in this city] <during a Golden Age>"
   ],
   "requiredTech": "Philosophy",
@@ -520,7 +512,6 @@
   "hurryCostModifier": 25,
   "uniques": [
    "Comment [Provides 1 [Great Work of Writing] Slot]",
-   "Destroyed when the city is captured",
    "[+1 Culture, +1 Gold] from [Dyes] tiles [in this city]",
    "[+2 Culture] from [Lapis Lazuli] tiles [in this city]",
    "[+1 Culture, +1 Gold] from [Silk] tiles [in this city]",
@@ -543,7 +534,8 @@
   "uniques": [
    "Comment [Provides 1 [Great Work of Writing] Slot]",
    "Only available <if [Monument] is constructed in all [non-[Puppeted]] cities>",
-   "Cost increases by [30] per owned city"
+   "Cost increases by [30] per owned city",
+   "Destroyed when the city is captured"
   ],
   "requiredTech": "Drama and Poetry",
   "civilopediaText": [
@@ -665,7 +657,8 @@
    "Comment [Provides 1 [Great Work of Writing] Slot]",
    "Only available <if [Barracks] is constructed in all [non-[Puppeted]] cities>",
    "All newly-trained [non-[Air]] units [in this city] receive the [Morale] promotion",
-   "Cost increases by [30] per owned city"
+   "Cost increases by [30] per owned city",
+   "Destroyed when the city is captured"
   ],
   "requiredTech": "Iron Working",
   "civilopediaText": [
@@ -754,6 +747,7 @@
    "Cost increases by [30] per owned city",
    "Only available <when religion is enabled>",
    "Can only be built <in [Holy] cities>",
+   "Destroyed when the city is captured",
    "[+1 Gold, +2 Faith] from all [Temple] buildings"
   ],
   "requiredTech": "Theology",
@@ -910,6 +904,7 @@
    "Comment [Provides 2 [Great Work of Writing] Slots]",
    "Only available <if [University] is constructed in all [non-[Puppeted]] cities>",
    "Cost increases by [30] per owned city",
+   "Destroyed when the city is captured",
    "Free [Great Scientist] appears"
   ],
   "requiredTech": "Education",
@@ -951,7 +946,6 @@
   "requiredBuilding": "Walls",
   "requiredTech": "Chivalry",
   "uniques": [
-   "Destroyed when the city is captured",
    "[+1 Production] from [Quarry] tiles [in this city]"
   ],
   "cost": 300,
@@ -977,6 +971,7 @@
   "uniques": [
    "Only available <if [Workshop] is constructed in all [non-[Puppeted]] cities>",
    "Cost increases by [30] per owned city",
+   "Destroyed when the city is captured",
    "Provides [2] [Iron]"
   ],
   "requiredTech": "Machinery",
@@ -1002,8 +997,7 @@
   "maintenance": 2,
   "requiredBuilding": "Barracks",
   "uniques": [
-   "New [Military] units start with [15] XP [in this city]",
-   "Destroyed when the city is captured"
+   "New [Military] units start with [15] XP [in this city]"
   ],
   "requiredTech": "Steel",
   "cost": 300,
@@ -1032,7 +1026,6 @@
   "requiredBuilding": "Amphitheater",
   "uniques": [
    "Comment [Provides 1 [Great Work of Music] Slot]",
-   "Destroyed when the city is captured",
    "[+33]% Great Person generation [in this city]"
   ],
   "civilopediaText": [
@@ -1055,6 +1048,7 @@
   "uniques": [
    "Comment [Provides 1 [Great Work of Music] Slot]",
    "Destroyed when the city is captured <hidden from users>",
+   "Destroyed when the city is captured",
    "[+3 Culture] from [Ivory] tiles [in this city]"
   ],
   "civilopediaText": [
@@ -1129,6 +1123,7 @@
   "cost": 200,
   "gold": 1,
   "uniques": [
+   "Destroyed when the city is captured",
    "[+1 Gold] per [3] population [in this city]",
    "[+1 Gold] from every [Scientist]",
    "[+1 Gold] from every [Merchant]",
@@ -1164,6 +1159,7 @@
   "cost": 1000,
   "culture": 2,
   "uniques": [
+   "Destroyed when the city is captured",
    "[+1 Culture] from [Forest] tiles [in this city]",
    "[+1 Culture] from [Jungle] tiles [in this city]"
   ]
@@ -1217,6 +1213,7 @@
    "Comment [Provides 3 [Great Work of Art] or [Artifact] Slots]",
    "Only available <if [Opera House] is constructed in all [non-[Puppeted]] cities>",
    "Cost increases by [30] per owned city",
+   "Destroyed when the city is captured",
    "[+1 Culture] per [4] population [in this city]"
   ],
   "requiredTech": "Architecture",
@@ -1317,9 +1314,6 @@
   "hurryCostModifier": 25,
   "requiredBuilding": "Bastion Fort",
   "requiredTech": "Combustion",
-  "uniques": [
-   "Destroyed when the city is captured"
-  ],
   "maintenance": 7
  },
  {
@@ -1341,7 +1335,6 @@
   "requiredBuilding": "Gallery",
   "uniques": [
    "Comment [Provides 2 [Great Work of Art] or [Artifact] Slots]",
-   "Destroyed when the city is captured",
    "[+1 Culture] per [4] population [in this city]"
   ],
   "civilopediaText": [
@@ -1451,7 +1444,6 @@
   "requiredBuilding": "Armory",
   "uniques": [
    "New [Military] units start with [15] XP [in this city]",
-   "Destroyed when the city is captured",
    "[+15]% Production when constructing [Land] units [in this city]"
   ],
   "requiredTech": "Military Science",
@@ -1539,7 +1531,10 @@
   "requiredBuilding": "Theatre",
   "maintenance": 8,
   "requiredTech": "Atomic Theory",
-  "cost": 2250
+  "cost": 2250,
+  "uniques": [
+   "Destroyed when the city is captured"
+  ]
  },
  {
   "name": "Broadcast Tower",
@@ -1588,7 +1583,8 @@
    "Promotes all spies [1] time(s)",
    "Gain an extra spy",
    "Only available <if [Police Station] is constructed in all [non-[Puppeted]] cities>",
-   "Cost increases by [30] per owned city"
+   "Cost increases by [30] per owned city",
+   "Destroyed when the city is captured"
   ],
   "requiredTech": "Computers",
   "requiredBuilding": "Police Station"
@@ -1601,7 +1597,6 @@
   "requiredBuilding": "Arsenal",
   "requiredTech": "Radar",
   "uniques": [
-   "Destroyed when the city is captured",
    "[+25]% Production when constructing [Air] units [in this city]"
   ],
   "cost": 2250,
@@ -1677,7 +1672,8 @@
   "maintenance": 8,
   "requiredTech": "Pharmaceuticals",
   "uniques": [
-   "[25]% Food is carried over after population increases [in this city]"
+   "[25]% Food is carried over after population increases [in this city]",
+   "Destroyed when the city is captured"
   ],
   "cost": 2250
  },
@@ -1688,7 +1684,8 @@
   "uniques": [
    "Enables nuclear weapon",
    "Triggers a global alert upon completion",
-   "Cannot be hurried"
+   "Cannot be hurried",
+   "Destroyed when the city is captured"
   ],
   "requiredTech": "Atomic Theory"
  },
@@ -1789,7 +1786,8 @@
    "Enables construction of Spaceship parts",
    "Triggers a global alert upon completion",
    "Only available <when [Scientific] Victory is enabled>",
-   "Cannot be hurried"
+   "Cannot be hurried",
+   "Destroyed when the city is captured"
   ],
   "requiredTech": "Rocketry",
   "civilopediaText": [
@@ -1897,7 +1895,7 @@
    "Can be purchased for [200] [Faith] [in all cities in which the majority religion is a major religion]",
    "Only available <when religion is enabled>",
    "Comment [Provides 1 [Great Work of Art] or [Artifact] Slot]",
-   "Destroyed when the city is captured",
+   "Never destroyed when the city is captured",
    "Unbuildable",
    "Can be purchased with [Faith] [in all cities]",
    "[+1 Gold] from [Farm] tiles [in this city]",
@@ -1921,7 +1919,6 @@
    "Unsellable",
    "Can be purchased for [150] [Faith] [in all cities in which the majority religion is a major religion]",
    "Only available <when religion is enabled>",
-   "Destroyed when the city is captured",
    "Only available <after adopting [Fealty]>",
    "Unbuildable",
    "Can be purchased with [Faith] [in all cities]"
@@ -1938,7 +1935,7 @@
    "Unsellable",
    "Can be purchased for [200] [Faith] [in all cities in which the majority religion is a major religion]",
    "Only available <when religion is enabled>",
-   "Destroyed when the city is captured",
+   "Never destroyed when the city is captured",
    "Unbuildable",
    "Can be purchased with [Faith] [in all cities]",
    "[+15]% [Culture] [in this city] <during a Golden Age>"
@@ -1954,7 +1951,7 @@
    "Unsellable",
    "Can be purchased for [200] [Faith] [in all cities in which the majority religion is a major religion]",
    "Only available <when religion is enabled>",
-   "Destroyed when the city is captured",
+   "Never destroyed when the city is captured",
    "Unbuildable",
    "Can be purchased with [Faith] [in all cities]"
   ],
@@ -2107,6 +2104,7 @@
   "hurryCostModifier": 25,
   "uniques": [
    "Comment [Provides 1 [Great Work of Writing] Slot]",
+   "Destroyed when the city is captured",
    "[+1 Science] per [2] population [in this city]",
    "[+3 Science] from all [Library] buildings",
    "[+20]% [Science] [in this city] <during a Golden Age>"
@@ -2241,7 +2239,6 @@
   "hurryCostModifier": 25,
   "maintenance": 1,
   "uniques": [
-   "Destroyed when the city is captured",
    "New [Military] units start with [15] XP [in this city]",
    "All newly-trained [{pre-[Renaissance era]} {Sword}] units [in this city] receive the [Buffalo Horns] promotion"
   ],
@@ -2835,7 +2832,8 @@
    "Comment [+100% [Tourism] from Great Works in this city]",
    "Cost increases by [30] per owned city",
    "Only available <if [Hotel] is constructed in all [non-[Puppeted]] cities>",
-   "Unavailable <when [Cultural] Victory is disabled>"
+   "Unavailable <when [Cultural] Victory is disabled>",
+   "Destroyed when the city is captured"
   ],
   "civilopediaText": [
    {
@@ -2849,7 +2847,8 @@
   "cost": 140,
   "isNationalWonder": true,
   "uniques": [
-   "Cost increases by [30] per owned city"
+   "Cost increases by [30] per owned city",
+   "Destroyed when the city is captured"
   ],
   "requiredTech": "Guilds"
  },
@@ -3792,6 +3791,7 @@
   "maintenance": 7,
   "production": 3,
   "uniques": [
+   "Destroyed when the city is captured",
    "Provides [1] [Iron]",
    "Provides [1] [Coal]",
    "Provides [1] [Oil]"
@@ -4034,6 +4034,7 @@
    "Civil Servant": 1
   },
   "uniques": [
+   "Destroyed when the city is captured",
    "Free [Emissary] appears",
    "Provides [1] [Paper]"
   ]
@@ -4049,6 +4050,7 @@
    "Civil Servant": 1
   },
   "uniques": [
+   "Destroyed when the city is captured",
    "Provides [1] [Paper]"
   ]
  },
@@ -4063,6 +4065,7 @@
    "Civil Servant": 1
   },
   "uniques": [
+   "Destroyed when the city is captured",
    "Provides [1] [Paper]"
   ]
  },
@@ -4075,7 +4078,10 @@
   "percentStatBonus": {
    "science": 5
   },
-  "requiredBuilding": "Public School"
+  "requiredBuilding": "Public School",
+  "uniques": [
+   "Destroyed when the city is captured"
+  ]
  },
  {
   "name": "International Finance Center",
@@ -4087,7 +4093,10 @@
    "food": 5,
    "gold": 5
   },
-  "requiredBuilding": "Stock Exchange"
+  "requiredBuilding": "Stock Exchange",
+  "uniques": [
+   "Destroyed when the city is captured"
+  ]
  },
  {
   "name": "Hall of Honor",
@@ -4098,7 +4107,10 @@
   "percentStatBonus": {
    "production": 5
   },
-  "requiredBuilding": "Military Academy"
+  "requiredBuilding": "Military Academy",
+  "uniques": [
+   "Destroyed when the city is captured"
+  ]
  },
  {
   "name": "Great Cothon",
@@ -4126,6 +4138,7 @@
   "uniqueTo": "England",
   "replaces": "Ironworks",
   "uniques": [
+   "Destroyed when the city is captured",
    "[+1 Culture] from all [Armory] buildings",
    "[+1 Culture] from all [Castle] buildings",
    "[+1 Culture] from all [Constabulary] buildings",
@@ -4144,7 +4157,10 @@
   "science": 1,
   "requiredBuilding": "Palace",
   "uniqueTo": "Venice",
-  "replaces": "National Epic"
+  "replaces": "National Epic",
+  "uniques": [
+   "Destroyed when the city is captured"
+  ]
  },
  {
   "name": "Independence Hall",
@@ -4156,6 +4172,7 @@
   "uniqueTo": "America",
   "replaces": "Hermitage",
   "uniques": [
+   "Destroyed when the city is captured",
    "[+1 Culture] per [4] population [in this city]"
   ]
  },
@@ -4171,7 +4188,10 @@
   "requiredBuilding": "National Epic",
   "specialistSlots": {
    "Engineer": 2
-  }
+  },
+  "uniques": [
+   "Destroyed when the city is captured"
+  ]
  },
  {
   "name": "Rialto District",
@@ -4181,7 +4201,10 @@
   "requiredBuilding": "National Epic",
   "specialistSlots": {
    "Merchant": 2
-  }
+  },
+  "uniques": [
+   "Destroyed when the city is captured"
+  ]
  },
  {
   "name": "Murano Glassworks",
@@ -4193,6 +4216,7 @@
    "Artist": 2
   },
   "uniques": [
+   "Destroyed when the city is captured",
    "[+2 Food] from [Trading post] tiles [in all cities]"
   ]
  },
@@ -4336,7 +4360,8 @@
   },
   "uniques": [
    "Unbuildable",
-   "Unsellable"
+   "Unsellable",
+   "Destroyed when the city is captured"
   ]
  },
  {
@@ -4349,6 +4374,7 @@
   "uniques": [
    "Unbuildable",
    "Unsellable",
+   "Destroyed when the city is captured",
    "[+2 Culture] from all [Garden] buildings",
    "[+2 Culture] from all [Bath] buildings",
    "[+2 Culture] from all [Monument] buildings"
@@ -4365,7 +4391,8 @@
   },
   "uniques": [
    "Unbuildable",
-   "Unsellable"
+   "Unsellable",
+   "Destroyed when the city is captured"
   ]
  },
  {
@@ -4377,7 +4404,8 @@
   },
   "uniques": [
    "Unbuildable",
-   "Unsellable"
+   "Unsellable",
+   "Destroyed when the city is captured"
   ]
  },
  {
@@ -4389,7 +4417,8 @@
   },
   "uniques": [
    "Unbuildable",
-   "Unsellable"
+   "Unsellable",
+   "Destroyed when the city is captured"
   ]
  },
  {
@@ -4402,6 +4431,7 @@
   "uniques": [
    "Unbuildable",
    "Unsellable",
+   "Destroyed when the city is captured",
    "[+1 Science] from all [Council] buildings",
    "[+1 Science] from all [Smokehouse] buildings",
    "[+1 Science] from all [Herbalist] buildings"
@@ -4413,6 +4443,7 @@
   "happiness": 1,
   "faith": 3,
   "uniques": [
+   "Never destroyed when the city is captured",
    "Unbuildable",
    "Only available <when religion is enabled>"
   ]
@@ -4423,6 +4454,7 @@
   "culture": 2,
   "faith": 4,
   "uniques": [
+   "Never destroyed when the city is captured",
    "[+1 Faith] from all [Great Work] buildings <in this city>",
    "Unbuildable",
    "Only available <when religion is enabled>"
@@ -4434,6 +4466,7 @@
   "food": 2,
   "faith": 3,
   "uniques": [
+   "Never destroyed when the city is captured",
    "Unbuildable",
    "Only available <when religion is enabled>"
   ]
@@ -4444,6 +4477,7 @@
   "production": 3,
   "faith": 2,
   "uniques": [
+   "Never destroyed when the city is captured",
    "[+10]% [Science] [in this city] <during We Love The King Day>",
    "Unbuildable",
    "Only available <when religion is enabled>"
@@ -4456,6 +4490,7 @@
   "gold": 3,
   "faith": 2,
   "uniques": [
+   "Never destroyed when the city is captured",
    "Unbuildable",
    "Only available <when religion is enabled>"
   ]
@@ -4465,6 +4500,7 @@
   "cost": 200,
   "faith": 2,
   "uniques": [
+   "Never destroyed when the city is captured",
    "New [Land] units start with [15] XP [in this city]",
    "New [Water] units start with [15] XP [in this city]",
    "New [Air] units start with [15] XP [in this city]",
@@ -4481,6 +4517,7 @@
    "food": 10
   },
   "uniques": [
+   "Never destroyed when the city is captured",
    "Unbuildable",
    "Only available <when religion is enabled>"
   ]
@@ -4491,6 +4528,7 @@
   "cost": 125,
   "faith": 5,
   "uniques": [
+   "Destroyed when the city is captured",
    "[+5 Faith] from [Holy site] tiles [in all cities]",
    "Unbuildable",
    "Only available <when religion is enabled>"
@@ -4507,6 +4545,7 @@
   "culture": 2,
   "faith": 2,
   "uniques": [
+   "Destroyed when the city is captured",
    "Unbuildable",
    "Only available <when religion is enabled>"
   ]
@@ -4517,6 +4556,7 @@
   "cost": 125,
   "faith": 5,
   "uniques": [
+   "Destroyed when the city is captured",
    "[+5 Production] from [Holy site] tiles [in all cities]",
    "Unbuildable",
    "Only available <when religion is enabled>"
@@ -4528,6 +4568,7 @@
   "cost": 125,
   "science": 4,
   "uniques": [
+   "Destroyed when the city is captured",
    "[+5 Science] from [Holy site] tiles [in all cities]",
    "Unbuildable",
    "Only available <when religion is enabled>"
@@ -4540,6 +4581,7 @@
   "gold": 6,
   "faith": 3,
   "uniques": [
+   "Destroyed when the city is captured",
    "[+5 Culture] from [Holy site] tiles [in all cities]",
    "Unbuildable",
    "Only available <when religion is enabled>"
@@ -4552,6 +4594,7 @@
   "culture": 5,
   "faith": 3,
   "uniques": [
+   "Destroyed when the city is captured",
    "[+5 Food] from [Holy site] tiles [in all cities]",
    "Unbuildable",
    "Only available <when religion is enabled>"
@@ -4564,6 +4607,7 @@
   "food": 5,
   "faith": 4,
   "uniques": [
+   "Destroyed when the city is captured",
    "[+5 Science] from [Holy site] tiles [in all cities]",
    "Unbuildable",
    "Only available <when religion is enabled>"
@@ -4575,6 +4619,7 @@
   "cost": 125,
   "faith": 4,
   "uniques": [
+   "Destroyed when the city is captured",
    "Unbuildable",
    "Only available <when religion is enabled>"
   ]
@@ -4585,9 +4630,273 @@
   "cost": 125,
   "faith": 10,
   "uniques": [
+   "Destroyed when the city is captured",
    "[+5 Gold] from [Holy site] tiles [in all cities]",
    "Unbuildable",
    "Only available <when religion is enabled>"
+  ]
+ },
+ {
+  "name": "Trader Sid's Headquarters",
+  "isWonder": true,
+  "cost": 1300,
+  "maintenance": 4,
+  "culture": 1,
+  "uniques": [
+   "Gain a free [Trader Sid's Office] [in this city]",
+   "[+3 Gold] from all [Market] buildings",
+   "[+3 Gold] from all [Caravansary] buildings",
+   "Unsellable"
+  ]
+ },
+ {
+  "name": "Centaurus Extractors Headquarters",
+  "isWonder": true,
+  "cost": 1300,
+  "maintenance": 4,
+  "culture": 1,
+  "uniques": [
+   "Gain a free [Centaurus Extractors Office] [in this city]",
+   "[+2 Production] from all [Harbor] buildings",
+   "[+2 Production] from all [Seaport] buildings",
+   "Unsellable"
+  ]
+ },
+ {
+  "name": "Hexxon Refineries Headquarters",
+  "isWonder": true,
+  "cost": 1300,
+  "maintenance": 4,
+  "culture": 1,
+  "uniques": [
+   "Gain a free [Hexxon Refineries Office] [in this city]",
+   "[+3 Production] from all [Refinery] buildings",
+   "[+3 Production] from all [Nuclear Plant] buildings",
+   "[+3 Production] from all [Hydro Plant] buildings",
+   "[+3 Production] from all [Solar Plant] buildings",
+   "[+3 Production] from all [Wind Power Plant] buildings",
+   "[+3 Production] from all [Tidal Power Plant] buildings",
+   "Unsellable"
+  ]
+ },
+ {
+  "name": "Giorgio Armeier Headquarters",
+  "isWonder": true,
+  "cost": 1300,
+  "maintenance": 4,
+  "culture": 1,
+  "uniques": [
+   "Gain a free [Giorgio Armeier Office] [in this city]",
+   "[+2 Culture] from all [Opera House] buildings",
+   "[+2 Culture] from all [Museum] buildings",
+   "[+2 Culture] from every [Artist]",
+   "Unsellable"
+  ]
+ },
+ {
+  "name": "Firaxite Materials Headquarters",
+  "isWonder": true,
+  "cost": 1300,
+  "maintenance": 4,
+  "culture": 1,
+  "uniques": [
+   "Gain a free [Firaxite Materials Office] [in this city]",
+   "[+3 Science] from all [University] buildings",
+   "[+3 Science] from all [Factory] buildings",
+   "Unsellable"
+  ]
+ },
+ {
+  "name": "TwoKay Foods Headquarters",
+  "isWonder": true,
+  "cost": 1300,
+  "maintenance": 4,
+  "culture": 1,
+  "uniques": [
+   "Gain a free [TwoKay Foods Office] [in this city]",
+   "[+3 Food] from all [Grocer] buildings",
+   "[+3 Food] from all [Agribusiness] buildings",
+   "[+3 Food] from all [Hospital] buildings",
+   "Unsellable"
+  ]
+ },
+ {
+  "name": "Civilized Jewelers Headquarters",
+  "isWonder": true,
+  "cost": 1300,
+  "maintenance": 4,
+  "culture": 1,
+  "uniques": [
+   "Gain a free [Civilized Jewelers Office] [in this city]",
+   "Unsellable"
+  ]
+ },
+ {
+  "name": "Trader Sid's Office",
+  "cost": 900,
+  "maintenance": 6,
+  "uniques": [
+   "Destroyed when the city is captured",
+   "Unsellable"
+  ]
+ },
+ {
+  "name": "Centaurus Extractors Office",
+  "cost": 900,
+  "maintenance": 6,
+  "uniques": [
+   "Destroyed when the city is captured",
+   "Unsellable",
+   "[+1 Production] from [Water] tiles [in this city]"
+  ]
+ },
+ {
+  "name": "Hexxon Refineries Office",
+  "cost": 900,
+  "maintenance": 6,
+  "uniques": [
+   "Destroyed when the city is captured",
+   "Unsellable"
+  ]
+ },
+ {
+  "name": "Giorgio Armeier Office",
+  "cost": 900,
+  "maintenance": 6,
+  "uniques": [
+   "Destroyed when the city is captured",
+   "Unsellable"
+  ]
+ },
+ {
+  "name": "Firaxite Materials Office",
+  "cost": 900,
+  "maintenance": 6,
+  "uniques": [
+   "Destroyed when the city is captured",
+   "Unsellable"
+  ]
+ },
+ {
+  "name": "TwoKay Foods Office",
+  "cost": 900,
+  "maintenance": 6,
+  "percentStatBonus": {
+   "food": 10
+  },
+  "uniques": [
+   "Destroyed when the city is captured",
+   "Unsellable"
+  ]
+ },
+ {
+  "name": "Civilized Jewelers Office",
+  "cost": 900,
+  "maintenance": 6,
+  "uniques": [
+   "Destroyed when the city is captured",
+   "Unsellable"
+  ]
+ },
+ {
+  "name": "Trader Sid's Franchise",
+  "cost": 1,
+  "maintenance": 1,
+  "uniques": [
+   "Destroyed when the city is captured",
+   "Unbuildable",
+   "Unsellable",
+   "[+1 Gold] from [Cocoa] tiles [in this city]",
+   "[+1 Gold] from [Salt] tiles [in this city]",
+   "[+1 Gold] from [Spices] tiles [in this city]",
+   "[+1 Gold] from [Sugar] tiles [in this city]",
+   "[+1 Gold] from [Tobacco] tiles [in this city]",
+   "[+1 Gold] from [Cloves] tiles [in this city]",
+   "[+1 Gold] from [Nutmeg] tiles [in this city]",
+   "[+1 Gold] from [Pepper] tiles [in this city]"
+  ]
+ },
+ {
+  "name": "Centaurus Extractors Franchise",
+  "cost": 1,
+  "maintenance": 1,
+  "uniques": [
+   "Destroyed when the city is captured",
+   "Unbuildable",
+   "Unsellable",
+   "[+1 Production] from [Whales] tiles [in this city]",
+   "[+1 Production] from [Crab] tiles [in this city]",
+   "[+1 Production] from [Ivory] tiles [in this city]",
+   "[+1 Production] from [Coral] tiles [in this city]"
+  ]
+ },
+ {
+  "name": "Hexxon Refineries Franchise",
+  "cost": 1,
+  "maintenance": 1,
+  "uniques": [
+   "Destroyed when the city is captured",
+   "Unbuildable",
+   "Unsellable",
+   "[+1 Production] from [Uranium] tiles [in this city]",
+   "[+1 Production] from [Incense] tiles [in this city]",
+   "[+1 Production] from [Perfume] tiles [in this city]"
+  ]
+ },
+ {
+  "name": "Giorgio Armeier Franchise",
+  "cost": 1,
+  "maintenance": 1,
+  "uniques": [
+   "Destroyed when the city is captured",
+   "Unbuildable",
+   "Unsellable",
+   "[+1 Culture] from [Silk] tiles [in this city]",
+   "[+1 Culture] from [Cotton] tiles [in this city]",
+   "[+1 Culture] from [Dyes] tiles [in this city]",
+   "[+1 Culture] from [Furs] tiles [in this city]",
+   "[+1 Culture] from [Lapis Lazuli] tiles [in this city]"
+  ]
+ },
+ {
+  "name": "Firaxite Materials Franchise",
+  "cost": 1,
+  "maintenance": 1,
+  "uniques": [
+   "Destroyed when the city is captured",
+   "Unbuildable",
+   "Unsellable",
+   "[+1 Science] from [Aluminum] tiles [in this city]",
+   "[+1 Science] from [Marble] tiles [in this city]",
+   "[+1 Science] from [Copper] tiles [in this city]",
+   "[+1 Science] from [Jade] tiles [in this city]",
+   "[+1 Science] from [Porcelain] tiles [in this city]"
+  ]
+ },
+ {
+  "name": "TwoKay Foods Franchise",
+  "cost": 1,
+  "maintenance": 1,
+  "uniques": [
+   "Destroyed when the city is captured",
+   "Unbuildable",
+   "Unsellable",
+   "[+1 Food] from [Wine] tiles [in this city]",
+   "[+1 Food] from [Truffles] tiles [in this city]",
+   "[+1 Food] from [Citrus] tiles [in this city]",
+   "[+1 Food] from [Olives] tiles [in this city]",
+   "[+1 Food] from [Coffee] tiles [in this city]",
+   "[+1 Food] from [Tea] tiles [in this city]"
+  ]
+ },
+ {
+  "name": "Civilized Jewelers Franchise",
+  "cost": 1,
+  "maintenance": 1,
+  "uniques": [
+   "Destroyed when the city is captured",
+   "Unbuildable",
+   "Unsellable"
   ]
  }
 ]

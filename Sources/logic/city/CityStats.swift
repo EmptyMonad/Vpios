@@ -481,6 +481,7 @@ final class CityStats {
         newBaseStatList["Tile yields"] = statsFromTiles
         newBaseStatList["Specialists"] = statsFromSpecialists
         newBaseStatList["Trade routes"] = getStatsFromTradeRoute()
+        if let f = state.vpFranchiseYields(city) { newBaseStatList["Franchises"] = f }   // VP: VP/VPCorporations.swift (nil without the VP mod)
         newBaseStatTree.setChild("Buildings", statsFromBuildings)
 
         for source in newBaseStatList.order { newBaseStatTree.addStats(newBaseStatList[source], source) }

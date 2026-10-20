@@ -355,6 +355,7 @@ extension GameState {
             && buildingMatchesFilter(b, unique.param(0), stateForConditionals) {
             out.append(rejection("CannotBeBuilt"))
         }
+        for (type, message) in vpCorporationRejections(b, civId: city.civId) { out.append(rejection(type, message)) }   // VP: VP/VPCorporations.swift
         return out
     }
 

@@ -250,6 +250,7 @@ extension GameState {
         turnAITime = 0; turnProcessTime = 0   // the PROFILE line covers one full round of AI turns
         diplomacyTurnDoneThisRound.removeAll()
         vpUpdateWarWeariness()   // VP: VP/VPWar.swift
+        vpSpreadFranchises()   // VP: VP/VPCorporations.swift
         vpUpdateMedians()   // VP: CvGame::DoUpdateGlobalMedians, once a round (no-op without the VP mod)
         turn += 1
     }

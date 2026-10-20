@@ -1,4 +1,12 @@
 
+## Corporations: engine approximations / not carried over
+
+- Franchises spread from Office cities to the nearest foreign city (4% a turn each) instead of on Trade Route completion (no international trade routes)
+- Trade route bonuses (NumFreeTradeRoutes, TradeRouteMod/CityYield, range/speed, invulnerable routes, vision) - no international trade routes
+- Tourism per franchise (TourismModNumFranchises), Building_ResourceQuantityPerXFranchises, GPRateModifierPerXFranchises
+- Corporation_UnitResourceProductionModifier (no unit filter for resource-using units)
+- CorporationNumFreeFranchiseAbovePopular (Infiltration)
+
 ## Policies: untranslated effects (Authority)
 
 - Militarism: Policy_YieldPerCityOverStrengthThreshold: 1 row(s)
@@ -250,27 +258,6 @@
 - Olympic Village
 - Un
 - Consulate
-- Trader Sid's Headquarters
-- Centaurus Extractors Headquarters
-- Hexxon Refineries Headquarters
-- Giorgio Armeier Headquarters
-- Firaxite Materials Headquarters
-- TwoKay Foods Headquarters
-- Civilized Jewelers Headquarters
-- Trader Sid's Office
-- Centaurus Extractors Office
-- Hexxon Refineries Office
-- Giorgio Armeier Office
-- Firaxite Materials Office
-- TwoKay Foods Office
-- Civilized Jewelers Office
-- Trader Sid's Franchise
-- Centaurus Extractors Franchise
-- Hexxon Refineries Franchise
-- Giorgio Armeier Franchise
-- Firaxite Materials Franchise
-- TwoKay Foods Franchise
-- Civilized Jewelers Franchise
 
 ## Building effect tables not translated (table: rows)
 
@@ -281,7 +268,6 @@
 - Building_HurryModifiers: 2
 - Building_HurryModifiersLocal: 2
 - Building_LocalResourceOrs: 5
-- Building_ResourceQuantityPerXFranchises: 2
 - Building_ResourceQuantityRequirements: 6
 - Building_SpecialistYieldChanges: 6
 - Building_ThemingBonuses: 13
@@ -301,7 +287,6 @@
 - Building_YieldFromYieldPercent: 3
 - Building_YieldFromYieldPercentGlobal: 3
 - Building_YieldPerAlly: 5
-- Building_YieldPerFranchise: 5
 - Building_YieldPerFriend: 2
 
 ## Resources not emitted (no terrain placement data)
@@ -590,5 +575,7 @@
 - Amphitheater: [+1 Culture, +1 Gold] from [Brazilwood] tiles [in this city]
 - Acropolis: [+1 Culture, +1 Gold] from [Brazilwood] tiles [in this city]
 - Seowon: [+1 Production, +1 Science] from [Embassy] tiles [in this city]
+- Hexxon Refineries Franchise: [+1 Production] from [Glass] tiles [in this city]
+- Hexxon Refineries Franchise: [+1 Production] from [Brazilwood] tiles [in this city]
 - Missionary Zeal: [Great Diplomat] is earned [+33]% faster <during a Golden Age>
 - Unity of the Prophets: [+2 Science, +2 Faith] from [Embassy] tiles [in all cities]

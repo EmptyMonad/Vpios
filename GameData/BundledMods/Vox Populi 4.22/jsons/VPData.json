@@ -16,6 +16,7 @@
   "Belief_YieldPerBorderGrowth",
   "Belief_YieldPerConstruction",
   "Building_InstantYield",
+  "Building_ResourceQuantityPerXFranchises",
   "Building_YieldFromBirth",
   "Building_YieldFromBirthRetroactive",
   "Building_YieldFromBorderGrowth",
@@ -28,6 +29,7 @@
   "Building_YieldFromUnitProduction",
   "Building_YieldFromVictory",
   "Building_YieldFromVictoryGlobal",
+  "Building_YieldPerFranchise",
   "Policy_ConquerorYield",
   "Policy_FounderYield",
   "Policy_YieldFromBirth",
@@ -18880,5 +18882,141 @@
     "PlacementOrder": 1
    }
   }
- }
+ },
+ "corporations": [
+  {
+   "name": "Trader Sid's, Inc.",
+   "hq": "Trader Sid's Headquarters",
+   "office": "Trader Sid's Office",
+   "franchise": "Trader Sid's Franchise",
+   "baseFranchises": 3,
+   "randomSpreadChance": 5,
+   "tourismModNumFranchises": 2,
+   "tradeRouteRangeMod": 100,
+   "monopolyOr": [
+    "Cocoa",
+    "Salt",
+    "Spices",
+    "Sugar",
+    "Tobacco",
+    "Cloves",
+    "Nutmeg",
+    "Pepper"
+   ],
+   "monopolyAnd": []
+  },
+  {
+   "name": "Centaurus Extractors, Inc.",
+   "hq": "Centaurus Extractors Headquarters",
+   "office": "Centaurus Extractors Office",
+   "franchise": "Centaurus Extractors Franchise",
+   "baseFranchises": 3,
+   "randomSpreadChance": 5,
+   "tourismModNumFranchises": 2,
+   "tradeRouteRangeMod": 100,
+   "monopolyOr": [
+    "Horses",
+    "Whales",
+    "Crab",
+    "Ivory",
+    "Coral"
+   ],
+   "monopolyAnd": []
+  },
+  {
+   "name": "Hexxon Refinery, Inc.",
+   "hq": "Hexxon Refineries Headquarters",
+   "office": "Hexxon Refineries Office",
+   "franchise": "Hexxon Refineries Franchise",
+   "baseFranchises": 3,
+   "randomSpreadChance": 5,
+   "tourismModNumFranchises": 2,
+   "tradeRouteRangeMod": 0,
+   "monopolyOr": [
+    "Coal",
+    "Oil",
+    "Uranium",
+    "Incense",
+    "Perfume",
+    "Glass",
+    "Brazilwood"
+   ],
+   "monopolyAnd": []
+  },
+  {
+   "name": "Giorgio Armeier, Inc.",
+   "hq": "Giorgio Armeier Headquarters",
+   "office": "Giorgio Armeier Office",
+   "franchise": "Giorgio Armeier Franchise",
+   "baseFranchises": 3,
+   "randomSpreadChance": 5,
+   "tourismModNumFranchises": 2,
+   "tradeRouteRangeMod": 0,
+   "monopolyOr": [
+    "Silk",
+    "Cotton",
+    "Dyes",
+    "Furs",
+    "Lapis Lazuli"
+   ],
+   "monopolyAnd": []
+  },
+  {
+   "name": "Firaxite Materials, Inc.",
+   "hq": "Firaxite Materials Headquarters",
+   "office": "Firaxite Materials Office",
+   "franchise": "Firaxite Materials Franchise",
+   "baseFranchises": 3,
+   "randomSpreadChance": 5,
+   "tourismModNumFranchises": 2,
+   "tradeRouteRangeMod": 0,
+   "monopolyOr": [
+    "Iron",
+    "Aluminum",
+    "Marble",
+    "Copper",
+    "Jade",
+    "Porcelain"
+   ],
+   "monopolyAnd": []
+  },
+  {
+   "name": "TwoKay Foods, Inc.",
+   "hq": "TwoKay Foods Headquarters",
+   "office": "TwoKay Foods Office",
+   "franchise": "TwoKay Foods Franchise",
+   "baseFranchises": 3,
+   "randomSpreadChance": 5,
+   "tourismModNumFranchises": 2,
+   "tradeRouteRangeMod": 0,
+   "monopolyOr": [
+    "Wine",
+    "Truffles",
+    "Citrus",
+    "Olives",
+    "Coffee",
+    "Tea"
+   ],
+   "monopolyAnd": []
+  },
+  {
+   "name": "Civilized Jewelers, Inc.",
+   "hq": "Civilized Jewelers Headquarters",
+   "office": "Civilized Jewelers Office",
+   "franchise": "Civilized Jewelers Franchise",
+   "baseFranchises": 3,
+   "randomSpreadChance": 5,
+   "tourismModNumFranchises": 2,
+   "tradeRouteRangeMod": 0,
+   "monopolyOr": [
+    "Gold Ore",
+    "Silver",
+    "Gems",
+    "Pearls",
+    "Amber",
+    "Jewelry"
+   ],
+   "monopolyAnd": []
+  }
+ ]
 }
