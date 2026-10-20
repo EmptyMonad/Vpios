@@ -40,6 +40,24 @@ jobs:
             -sdk iphonesimulator -destination 'generic/platform=iOS Simulator' \
             -derivedDataPath dd CODE_SIGNING_ALLOWED=NO -IDEBuildingContinueBuildingAfterErrors=YES \
             OTHER_SWIFT_FLAGS='$(inherited) -continue-building-after-errors' build 2>&1 | tee build.log
+      - name: Smoke test (simulator launch + screenshot)
+        id: smoke
+        if: steps.build.outcome == 'success'
+        continue-on-error: true
+        run: |
+          set -x
+          xcrun simctl list runtimes | tee smoke.log
+          DEV=$(xcrun simctl list devices available -j | python3 -c "import json,sys; d=json.load(sys.stdin)['devices']; ios=[k for k in d if 'iOS' in k]; ios.sort(); devs=[x for k in reversed(ios) for x in d[k] if 'iPhone' in x['name']]; print(devs[0]['udid'])")
+          echo "device $DEV" | tee -a smoke.log
+          xcrun simctl boot "$DEV"; xcrun simctl bootstatus "$DEV" -b
+          xcrun simctl install "$DEV" dd/Build/Products/Debug-iphonesimulator/VPiOS.app
+          xcrun simctl launch --console-pty "$DEV" com.emptymonad.vpios > app-console.log 2>&1 &
+          sleep 25
+          xcrun simctl io "$DEV" screenshot smoke-25s.png
+          if xcrun simctl spawn "$DEV" launchctl list | grep -q com.emptymonad.vpios; then echo "ALIVE after 25s" | tee -a smoke.log; else echo "NOT RUNNING after 25s" | tee -a smoke.log; fi
+          ls ~/Library/Logs/DiagnosticReports/ 2>/dev/null | grep -i vpios | tee -a smoke.log || true
+          for f in ~/Library/Logs/DiagnosticReports/*VPiOS*; do [ -f "$f" ] && head -c 20000 "$f" > crash.txt; done
+          tail -c 30000 app-console.log > app-console-tail.log
       - name: Build unsigned IPA
         if: steps.build.outcome == 'success'
         run: |
@@ -63,6 +81,7 @@ jobs:
           mkdir -p report
           { echo "commit $SHA"; echo "outcome $OUTCOME"; cat toolchain.txt; } > report/summary.txt
           cp jvmcheck.log report/ 2>/dev/null || true
+          cp smoke.log smoke-25s.png app-console-tail.log crash.txt report/ 2>/dev/null || true
           grep -E "^/.*: (error|fatal error):" build.log | sed "s#$GITHUB_WORKSPACE/##" | sort -u > report/errors.txt || true
           grep -cE ": error:" build.log >> report/summary.txt || true
           wc -l < report/errors.txt >> report/summary.txt
