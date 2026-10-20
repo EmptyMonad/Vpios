@@ -158,6 +158,19 @@ final class Ruleset {
         modOptionUniques(of: a).contains { $0.pattern == "Mod is incompatible with []" && modNameFilter(b, $0.param(0)) }
             || modOptionUniques(of: b).contains { $0.pattern == "Mod is incompatible with []" && modNameFilter(a, $0.param(0)) }
     }
+    /// The selected mods with each one after the selected mods its "Mod requires []" names; otherwise as given.
+    static func dependencyOrdered(_ mods: [String]) -> [String] {
+        var out: [String] = [], visiting = Set<String>()
+        func visit(_ m: String) {
+            guard !out.contains(m), visiting.insert(m).inserted else { return }
+            for u in modOptionUniques(of: m) where u.pattern == "Mod requires []" {
+                for other in mods where other != m && modNameFilter(other, u.param(0)) { visit(other) }
+            }
+            out.append(m)
+        }
+        mods.forEach(visit)
+        return out
+    }
     private static func modRequirementsMet(_ mod: String, others: [String]) -> Bool {
         for u in modOptionUniques(of: mod) where u.pattern == "Mod requires []" {
             if modNameFilter(baseRulesetName, u.param(0)) { continue }
@@ -207,7 +220,9 @@ final class Ruleset {
 
     init(named name: String, mods: [String] = []) throws {
         self.mods = mods
-        let modRoots = mods.map { Ruleset.modsDirectory.appendingPathComponent($0) }
+        // VP: a mod loads after the mods it requires, whatever order they were ticked in (the VP mod replaces what
+        // Civ V Brave New World adds, so it must come second)
+        let modRoots = Ruleset.dependencyOrdered(mods).map { Ruleset.modsDirectory.appendingPathComponent($0) }
         /// Unciv ModOptions.*ToRemove of each mod, applied while that mod is added (Ruleset.add).
         let modRemovals: [[String: [String]]] = modRoots.map { root in
             let candidates = [root.appendingPathComponent("jsons/ModOptions.json"), root.appendingPathComponent("jsons/Civ V - Vanilla/ModOptions.json"), root.appendingPathComponent("ModOptions.json")]

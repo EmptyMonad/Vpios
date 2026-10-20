@@ -7,6 +7,10 @@ import SwiftUI
 
 @main
 struct VPApp: App {
+    init() {
+        BundledMods.install()          // Civ V Brave New World + Vox Populi 4.22, ready in the mod list
+        VPSelfTest.runIfRequested()    // CI: -vpSelfTest <turns>
+    }
     var body: some Scene {
         WindowGroup {
             RootView()

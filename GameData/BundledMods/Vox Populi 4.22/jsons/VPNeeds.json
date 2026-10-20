@@ -1,0 +1,724 @@
+{
+ "version": 1,
+ "defines": {
+  "GROWTH_PENALTY_PER_UNIT_OVER_SUPPLY": 5,
+  "UNHAPPINESS_PER_POPULATION_FLOAT": 0.0,
+  "UNHAPPY_THRESHOLD": 50,
+  "GLOBAL_GROWTH_PENALTY_PER_UNHAPPY": 2.5,
+  "LOCAL_UNHAPPY_SETTLER_PRODUCTION_PENALTY": -10,
+  "LOCAL_UNHAPPY_COMBAT_UNIT_PRODUCTION_PENALTY": -10,
+  "GLOBAL_SETTLER_PRODUCTION_PENALTY_PER_UNHAPPY": 2.5,
+  "UNHAPPY_MAX_UNIT_PRODUCTION_PENALTY": -75,
+  "YIELD_MEDIAN_PERCENTILE": 50,
+  "YIELD_MEDIAN_MIN_POP_REQUIREMENT": 3,
+  "TECH_COUNT_MEDIAN_PERCENTILE": 50,
+  "DISTRESS_MEDIAN_BASE_MODIFIER": 100,
+  "DISTRESS_MEDIAN_RATE_CHANGE": 0.65,
+  "POVERTY_MEDIAN_BASE_MODIFIER": 100,
+  "POVERTY_MEDIAN_RATE_CHANGE": 0.65,
+  "ILLITERACY_MEDIAN_BASE_MODIFIER": 100,
+  "ILLITERACY_MEDIAN_RATE_CHANGE": 0.65,
+  "BOREDOM_MEDIAN_BASE_MODIFIER": 100,
+  "BOREDOM_MEDIAN_RATE_CHANGE": 0.65,
+  "UNHAPPINESS_PER_RELIGIOUS_MINORITY_POP": 0.5,
+  "CAPITAL_NEED_MODIFIER": 25,
+  "TECH_NEED_MODIFIER_PERCENT_RESEARCHED": 0,
+  "TECH_NEED_MODIFIER_PER_TECH_ABOVE_MEDIAN": 0,
+  "TECH_NEED_MODIFIER_PER_TECH_BELOW_MEDIAN": 0,
+  "CITY_SIZE_NEED_MODIFIER": 0,
+  "EMPIRE_SIZE_NEED_MODIFIER_CITIES": 500,
+  "EMPIRE_SIZE_NEED_MODIFIER_POP": 125,
+  "EMPIRE_SIZE_NEED_MODIFIER_CAP": 100000,
+  "UNHAPPINESS_PER_STARVING_POP": 1.0,
+  "UNHAPPINESS_PER_PILLAGED_TILE": 0.5,
+  "UNHAPPINESS_PER_ISOLATED_POP": 0.34,
+  "UNHAPPINESS_PER_SPECIALIST": 100,
+  "UNHAPPINESS_PER_X_PUPPET_CITIZENS": 4
+ },
+ "difficulties": {
+  "Settler": {
+   "happinessDefault": 9,
+   "happinessDefaultCapital": 3,
+   "aiHappinessDefault": 8,
+   "aiHappinessDefaultCapital": 2,
+   "populationUnhappinessMod": -30,
+   "aiPopulationUnhappinessMod": 0,
+   "empireSizeUnhappinessMod": 0,
+   "aiEmpireSizeUnhappinessMod": 0,
+   "extraHappinessPerLuxury": 1,
+   "aiExtraHappinessPerLuxury": 0
+  },
+  "Chieftain": {
+   "happinessDefault": 8,
+   "happinessDefaultCapital": 3,
+   "aiHappinessDefault": 8,
+   "aiHappinessDefaultCapital": 2,
+   "populationUnhappinessMod": -15,
+   "aiPopulationUnhappinessMod": 0,
+   "empireSizeUnhappinessMod": 0,
+   "aiEmpireSizeUnhappinessMod": 0,
+   "extraHappinessPerLuxury": 0,
+   "aiExtraHappinessPerLuxury": 0
+  },
+  "Warlord": {
+   "happinessDefault": 8,
+   "happinessDefaultCapital": 2,
+   "aiHappinessDefault": 8,
+   "aiHappinessDefaultCapital": 2,
+   "populationUnhappinessMod": 0,
+   "aiPopulationUnhappinessMod": 0,
+   "empireSizeUnhappinessMod": 0,
+   "aiEmpireSizeUnhappinessMod": 0,
+   "extraHappinessPerLuxury": 0,
+   "aiExtraHappinessPerLuxury": 0
+  },
+  "Prince": {
+   "happinessDefault": 7,
+   "happinessDefaultCapital": 2,
+   "aiHappinessDefault": 8,
+   "aiHappinessDefaultCapital": 2,
+   "populationUnhappinessMod": 0,
+   "aiPopulationUnhappinessMod": 0,
+   "empireSizeUnhappinessMod": 0,
+   "aiEmpireSizeUnhappinessMod": 0,
+   "extraHappinessPerLuxury": 0,
+   "aiExtraHappinessPerLuxury": 0
+  },
+  "King": {
+   "happinessDefault": 7,
+   "happinessDefaultCapital": 2,
+   "aiHappinessDefault": 8,
+   "aiHappinessDefaultCapital": 2,
+   "populationUnhappinessMod": 0,
+   "aiPopulationUnhappinessMod": 0,
+   "empireSizeUnhappinessMod": 0,
+   "aiEmpireSizeUnhappinessMod": 0,
+   "extraHappinessPerLuxury": 0,
+   "aiExtraHappinessPerLuxury": 0
+  },
+  "Emperor": {
+   "happinessDefault": 7,
+   "happinessDefaultCapital": 1,
+   "aiHappinessDefault": 8,
+   "aiHappinessDefaultCapital": 2,
+   "populationUnhappinessMod": 0,
+   "aiPopulationUnhappinessMod": 0,
+   "empireSizeUnhappinessMod": 0,
+   "aiEmpireSizeUnhappinessMod": 0,
+   "extraHappinessPerLuxury": 0,
+   "aiExtraHappinessPerLuxury": 0
+  },
+  "Immortal": {
+   "happinessDefault": 6,
+   "happinessDefaultCapital": 1,
+   "aiHappinessDefault": 8,
+   "aiHappinessDefaultCapital": 2,
+   "populationUnhappinessMod": 0,
+   "aiPopulationUnhappinessMod": 0,
+   "empireSizeUnhappinessMod": 0,
+   "aiEmpireSizeUnhappinessMod": 0,
+   "extraHappinessPerLuxury": 0,
+   "aiExtraHappinessPerLuxury": 0
+  },
+  "Deity": {
+   "happinessDefault": 5,
+   "happinessDefaultCapital": 1,
+   "aiHappinessDefault": 8,
+   "aiHappinessDefaultCapital": 2,
+   "populationUnhappinessMod": 0,
+   "aiPopulationUnhappinessMod": 0,
+   "empireSizeUnhappinessMod": 0,
+   "aiEmpireSizeUnhappinessMod": 0,
+   "extraHappinessPerLuxury": 0,
+   "aiExtraHappinessPerLuxury": 0
+  },
+  "AI default": {
+   "happinessDefault": 0,
+   "happinessDefaultCapital": 0,
+   "aiHappinessDefault": 0,
+   "aiHappinessDefaultCapital": 0,
+   "populationUnhappinessMod": 0,
+   "aiPopulationUnhappinessMod": 0,
+   "empireSizeUnhappinessMod": 0,
+   "aiEmpireSizeUnhappinessMod": 0,
+   "extraHappinessPerLuxury": 0,
+   "aiExtraHappinessPerLuxury": 0
+  }
+ },
+ "luxuryHappiness": {
+  "Furs": 2,
+  "Cotton": 2,
+  "Dyes": 2,
+  "Gems": 2,
+  "Gold Ore": 2,
+  "Silver": 2,
+  "Incense": 2,
+  "Ivory": 2,
+  "Silk": 2,
+  "Spices": 2,
+  "Wine": 2,
+  "Sugar": 2,
+  "Marble": 2,
+  "Whales": 2,
+  "Pearls": 2,
+  "Jewelry": 2,
+  "Porcelain": 2,
+  "Citrus": 2,
+  "Copper": 2,
+  "Crab": 2,
+  "Salt": 2,
+  "Truffles": 2,
+  "Cocoa": 2,
+  "Nutmeg": 2,
+  "Cloves": 2,
+  "Pepper": 2,
+  "Coffee": 2,
+  "Tea": 2,
+  "Tobacco": 2,
+  "Amber": 2,
+  "Jade": 2,
+  "Olives": 2,
+  "Perfume": 2,
+  "Coral": 2,
+  "Lapis Lazuli": 2,
+  "Glass": 2,
+  "Brazilwood": 2
+ },
+ "buildings": {
+  "Palace": {
+   "local": {
+    "noUnhappyFromXSpecialists": 1
+   }
+  },
+  "Temple of Artemis": {
+   "local": {
+    "noUnhappyFromXSpecialists": 2
+   }
+  },
+  "Library": {
+   "local": {
+    "illiteracyFlat": 1,
+    "noUnhappyFromXSpecialists": 1
+   }
+  },
+  "Circus": {
+   "local": {
+    "boredomFlat": 1
+   }
+  },
+  "Walls": {
+   "local": {
+    "empireSizeModReduction": -5
+   }
+  },
+  "Walls of Babylon": {
+   "local": {
+    "empireSizeModReduction": -5
+   }
+  },
+  "Barracks": {
+   "local": {
+    "distressFlat": 1
+   }
+  },
+  "Krepost": {
+   "local": {
+    "empireSizeModReduction": -5
+   }
+  },
+  "Statue of Zeus": {
+   "local": {
+    "distressFlat": 1
+   }
+  },
+  "Circus Maximus": {
+   "local": {
+    "boredomFlat": 1
+   }
+  },
+  "Colosseum": {
+   "local": {
+    "boredomFlat": 1
+   }
+  },
+  "Temple": {
+   "local": {
+    "religiousUnrestFlat": 1
+   }
+  },
+  "National College": {
+   "local": {
+    "noUnhappyFromXSpecialists": 1
+   },
+   "global": {
+    "illiteracyFlat": 1
+   }
+  },
+  "The Oracle": {
+   "local": {
+    "illiteracyFlat": 1
+   }
+  },
+  "Mint": {
+   "local": {
+    "povertyFlat": 1
+   }
+  },
+  "Aqueduct": {
+   "local": {
+    "povertyFlat": 1
+   }
+  },
+  "Garden": {
+   "local": {
+    "noUnhappyFromXSpecialists": 1
+   }
+  },
+  "Grand Temple": {
+   "local": {
+    "religiousUnrestFlat": 1
+   },
+   "global": {
+    "religiousUnrestFlat": 1
+   }
+  },
+  "Chichen Itza": {
+   "global": {
+    "empireSizeModReduction": -10
+   }
+  },
+  "University": {
+   "local": {
+    "illiteracyFlat": 1
+   }
+  },
+  "Wat": {
+   "local": {
+    "distressFlat": 1
+   }
+  },
+  "Oxford University": {
+   "local": {
+    "illiteracyFlat": 1
+   }
+  },
+  "Castle": {
+   "local": {
+    "empireSizeModReduction": -5
+   }
+  },
+  "Armory": {
+   "local": {
+    "distressFlat": 1
+   }
+  },
+  "Ceilidh Hall": {
+   "local": {
+    "boredomFlat": 1
+   }
+  },
+  "Satrap's Court": {
+   "local": {
+    "noOccupiedUnhappiness": 1
+   }
+  },
+  "Constabulary": {
+   "local": {
+    "distressFlat": 1
+   }
+  },
+  "Forbidden Palace": {
+   "local": {
+    "povertyFlat": 1
+   }
+  },
+  "Theatre": {
+   "local": {
+    "boredomFlat": 1
+   }
+  },
+  "Hermitage": {
+   "global": {
+    "boredomFlat": 1
+   }
+  },
+  "Porcelain Tower": {
+   "local": {
+    "illiteracyFlat": 1
+   }
+  },
+  "Coffee House": {
+   "local": {
+    "povertyFlat": 1
+   }
+  },
+  "Arsenal": {
+   "local": {
+    "empireSizeModReduction": -5
+   }
+  },
+  "Kremlin": {
+   "local": {
+    "distressFlat": 1
+   }
+  },
+  "Museum": {
+   "local": {
+    "boredomFlat": 1
+   }
+  },
+  "Public School": {
+   "local": {
+    "illiteracyFlat": 1
+   }
+  },
+  "Factory": {
+   "local": {
+    "noUnhappyFromXSpecialists": 1
+   }
+  },
+  "Big Ben": {
+   "local": {
+    "povertyFlat": 1
+   }
+  },
+  "Military Academy": {
+   "local": {
+    "distressFlat": 1
+   }
+  },
+  "Hospital": {
+   "local": {
+    "povertyFlat": 1,
+    "noUnhappyFromXSpecialists": 2
+   }
+  },
+  "Police Station": {
+   "local": {
+    "distressFlat": 1,
+    "povertyFlat": 1,
+    "illiteracyFlat": 1,
+    "boredomFlat": 1
+   }
+  },
+  "Broadcast Tower": {
+   "local": {
+    "boredomFlat": 1
+   }
+  },
+  "Military Base": {
+   "local": {
+    "distressFlat": 1,
+    "empireSizeModReduction": -5
+   }
+  },
+  "Research Lab": {
+   "local": {
+    "illiteracyFlat": 1
+   }
+  },
+  "Cathedral": {
+   "local": {
+    "povertyFlat": 1
+   }
+  },
+  "Mosque": {
+   "local": {
+    "illiteracyFlat": 1
+   }
+  },
+  "Pagoda": {
+   "local": {
+    "boredomFlat": 1,
+    "religiousUnrestFlat": 2
+   }
+  },
+  "Royal Library": {
+   "local": {
+    "noUnhappyFromXSpecialists": 1
+   },
+   "global": {
+    "illiteracyFlat": 1
+   }
+  },
+  "Ikanda": {
+   "local": {
+    "distressFlat": 1
+   }
+  },
+  "Candi": {
+   "local": {
+    "noUnhappyFromXSpecialists": 1
+   }
+  },
+  "Hanse": {
+   "local": {
+    "povertyFlat": 1
+   }
+  },
+  "Artists' Guild": {
+   "local": {
+    "noUnhappyFromXSpecialists": 1
+   }
+  },
+  "Musicians' Guild": {
+   "local": {
+    "noUnhappyFromXSpecialists": 1
+   }
+  },
+  "Writers' Guild": {
+   "local": {
+    "noUnhappyFromXSpecialists": 1
+   }
+  },
+  "Uffizi": {
+   "global": {
+    "noUnhappyFromXSpecialists": 1
+   }
+  },
+  "Parthenon": {
+   "local": {
+    "boredomFlat": 1
+   }
+  },
+  "Grocer": {
+   "local": {
+    "povertyFlat": 1
+   }
+  },
+  "Bastion Fort": {
+   "local": {
+    "empireSizeModReduction": -5
+   }
+  },
+  "Flavian Colosseum": {
+   "local": {
+    "boredomFlat": 1
+   }
+  },
+  "Dojo": {
+   "local": {
+    "distressFlat": 1
+   }
+  },
+  "Harappan Reservoir": {
+   "local": {
+    "povertyFlat": 1
+   }
+  },
+  "Seowon": {
+   "local": {
+    "illiteracyFlat": 1
+   }
+  },
+  "Skola": {
+   "local": {
+    "illiteracyFlat": 1
+   }
+  },
+  "Tetraconch": {
+   "local": {
+    "religiousUnrestFlat": 1
+   }
+  },
+  "Great Cothon": {
+   "local": {
+    "povertyFlat": 1
+   },
+   "global": {
+    "povertyFlat": 1
+   }
+  },
+  "Independence Hall": {
+   "global": {
+    "boredomFlat": 1
+   }
+  },
+  "Palace Gardens": {
+   "local": {
+    "noUnhappyFromXSpecialists": 2
+   }
+  },
+  "Stupa": {
+   "local": {
+    "illiteracyFlat": 1
+   }
+  },
+  "Church": {
+   "local": {
+    "boredomFlat": 1
+   }
+  },
+  "Mandir": {
+   "local": {
+    "povertyFlat": 1
+   }
+  },
+  "Synagogue": {
+   "local": {
+    "distressFlat": 1
+   }
+  },
+  "Order": {
+   "local": {
+    "distressFlat": 1
+   }
+  },
+  "Teocalli": {
+   "local": {
+    "distressFlat": 1
+   }
+  },
+  "Gurdwara": {
+   "local": {
+    "distressFlat": 1
+   }
+  },
+  "Mausoleum": {
+   "local": {
+    "religiousUnrestFlat": 1
+   }
+  },
+  "Celestial Throne": {
+   "local": {
+    "religiousUnrestFlat": 1
+   }
+  },
+  "Great Altar": {
+   "local": {
+    "religiousUnrestFlat": 1
+   }
+  },
+  "Chartarium": {
+   "local": {
+    "religiousUnrestFlat": 1
+   }
+  },
+  "Divine Court": {
+   "local": {
+    "religiousUnrestFlat": 1
+   }
+  },
+  "Sacred Garden": {
+   "local": {
+    "religiousUnrestFlat": 1
+   }
+  },
+  "Holy Council": {
+   "local": {
+    "religiousUnrestFlat": 1
+   }
+  },
+  "Apostolic Palace": {
+   "local": {
+    "religiousUnrestFlat": 1
+   }
+  },
+  "Grand Ossuary": {
+   "local": {
+    "religiousUnrestFlat": 1
+   }
+  },
+  "Giorgio Armeier Office": {
+   "local": {
+    "illiteracyFlat": 1,
+    "boredomFlat": 1
+   }
+  },
+  "TwoKay Foods Office": {
+   "global": {
+    "distressFlat": 1,
+    "povertyFlat": 1,
+    "illiteracyFlat": 1,
+    "boredomFlat": 1,
+    "religiousUnrestFlat": 1,
+    "empireSizeModReduction": -5
+   }
+  }
+ },
+ "policies": {
+  "Representation": {
+   "global": {
+    "distressFlat": 1,
+    "povertyFlat": 1,
+    "illiteracyFlat": 1,
+    "boredomFlat": 1
+   }
+  },
+  "Theocracy": {
+   "global": {
+    "boredomFlat": 1
+   }
+  },
+  "Free Thought": {
+   "global": {
+    "religiousUnrestFlat": 5
+   }
+  },
+  "Sovereignty": {
+   "global": {
+    "distressFlat": 1,
+    "povertyFlat": 1,
+    "illiteracyFlat": 1,
+    "boredomFlat": 1,
+    "religiousUnrestFlat": 1
+   }
+  },
+  "Rationalism Complete": {
+   "global": {
+    "distressFlat": 1,
+    "povertyFlat": 1,
+    "illiteracyFlat": 1,
+    "boredomFlat": 1,
+    "religiousUnrestFlat": 1
+   }
+  },
+  "Capitalism": {
+   "global": {
+    "noUnhappyFromXSpecialists": 2
+   }
+  },
+  "Fortified Borders": {
+   "global": {
+    "distressFlat": 2
+   }
+  },
+  "Academy of Sciences": {
+   "global": {
+    "illiteracyFlat": 2
+   }
+  },
+  "Fine Arts": {
+   "global": {
+    "noUnhappyFromXSpecialists": 1
+   }
+  },
+  "Caravans": {
+   "global": {
+    "povertyFlat": 2
+   }
+  },
+  "Open Society": {
+   "global": {
+    "boredomFlat": 2
+   }
+  },
+  "Peace, Land, Bread": {
+   "global": {
+    "povertyFlat": 2
+   }
+  }
+ },
+ "nations": {
+  "Brazil": {
+   "flags": {
+    "wltkdNeedsMod": -50
+   }
+  },
+  "Polynesia": {
+   "flags": {
+    "noConnectionUnhappiness": 1
+   }
+  }
+ }
+}

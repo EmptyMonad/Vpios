@@ -11,7 +11,7 @@ concurrency:
 jobs:
   ios:
     runs-on: macos-15
-    timeout-minutes: 60
+    timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4
       - name: Toolchain
@@ -58,6 +58,13 @@ jobs:
           ls ~/Library/Logs/DiagnosticReports/ 2>/dev/null | grep -i vpios | tee -a smoke.log || true
           for f in ~/Library/Logs/DiagnosticReports/*VPiOS*; do [ -f "$f" ] && head -c 20000 "$f" > crash.txt; done
           tail -c 30000 app-console.log > app-console-tail.log
+          # VP self-test: an all-AI G&K + BNW + VP game, happiness printed every 10 turns
+          xcrun simctl terminate "$DEV" com.emptymonad.vpios || true
+          xcrun simctl launch --console-pty "$DEV" com.emptymonad.vpios -vpSelfTest 80 > vptest-console.log 2>&1 &
+          for i in $(seq 1 90); do grep -q "VPTEST done\|VPTEST could not" vptest-console.log && break; sleep 10; done
+          grep "VPTEST" vptest-console.log > vptest.log || true
+          tail -c 20000 vptest-console.log > vptest-console-tail.log
+          for f in ~/Library/Logs/DiagnosticReports/*VPiOS*; do [ -f "$f" ] && head -c 20000 "$f" > crash.txt; done
       - name: Build unsigned IPA
         if: steps.build.outcome == 'success'
         run: |
@@ -81,7 +88,7 @@ jobs:
           mkdir -p report
           { echo "commit $SHA"; echo "outcome $OUTCOME"; cat toolchain.txt; } > report/summary.txt
           cp jvmcheck.log report/ 2>/dev/null || true
-          cp smoke.log smoke-25s.png app-console-tail.log crash.txt report/ 2>/dev/null || true
+          cp smoke.log smoke-25s.png app-console-tail.log crash.txt vptest.log vptest-console-tail.log report/ 2>/dev/null || true
           grep -E "^/.*: (error|fatal error):" build.log | sed "s#$GITHUB_WORKSPACE/##" | sort -u > report/errors.txt || true
           grep -cE ": error:" build.log >> report/summary.txt || true
           wc -l < report/errors.txt >> report/summary.txt

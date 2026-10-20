@@ -1,0 +1,4445 @@
+[
+ {
+  "name": "Palace",
+  "isNationalWonder": true,
+  "cityStrength": 4.0,
+  "cost": 1,
+  "uniques": [
+   "Indicates the capital city",
+   "Comment [Provides 1 [Great Work of Art] or [Artifact] Slot]",
+   "[+1 Science] per [3] population [in this city]"
+  ],
+  "civilopediaText": [
+   {
+    "text": "[Great Work of Art] Slot",
+    "link": "Building/[Palace] [Great Work of Art]"
+   }
+  ],
+  "production": 3,
+  "gold": 5,
+  "science": 6,
+  "culture": 1
+ },
+ {
+  "name": "Monument",
+  "cost": 65,
+  "hurryCostModifier": 40,
+  "uniques": [
+   "Destroyed when the city is captured"
+  ],
+  "culture": 2
+ },
+ {
+  "name": "Stele",
+  "replaces": "Monument",
+  "uniqueTo": "Ethiopia",
+  "cost": 65,
+  "hurryCostModifier": 40,
+  "uniques": [
+   "Destroyed when the city is captured"
+  ],
+  "culture": 2,
+  "faith": 2
+ },
+ {
+  "name": "Granary",
+  "maintenance": 1,
+  "hurryCostModifier": 25,
+  "uniques": [
+   "[+1 Food] from [Bananas] tiles [in this city]",
+   "[+1 Food] from [Maize] tiles [in this city]",
+   "[+1 Food] from [Rice] tiles [in this city]",
+   "[+1 Food] from [Wheat] tiles [in this city]"
+  ],
+  "requiredTech": "Pottery",
+  "cost": 65,
+  "food": 1
+ },
+ {
+  "name": "Shrine",
+  "cost": 65,
+  "requiredTech": "Agriculture",
+  "uniques": [
+   "Only available <when religion is enabled>"
+  ],
+  "faith": 2
+ },
+ {
+  "name": "Temple of Artemis",
+  "greatPersonPoints": {
+   "Great Engineer": 1
+  },
+  "isWonder": true,
+  "requiredTech": "Calendar",
+  "quote": "'It is not so much for its beauty that the forest makes a claim upon men's hearts, as for that subtle something, that quality of the air, that emanation from the old trees, that so wonderfully changes and renews a weary spirit.' - Robert Louis Stevenson",
+  "cost": 185,
+  "culture": 1
+ },
+ {
+  "name": "Stone Works",
+  "requiredNearbyImprovedResources": [
+   "Marble",
+   "Stone"
+  ],
+  "maintenance": 1,
+  "hurryCostModifier": 0,
+  "uniques": [
+   "Must not be on [Plains]",
+   "[+1 Gold, +1 Production] from [Jade] tiles [in this city]",
+   "[+1 Gold, +1 Production] from [Marble] tiles [in this city]",
+   "[+2 Gold] from [Salt] tiles [in this city]",
+   "[+2 Production] from [Stone] tiles [in this city]"
+  ],
+  "requiredTech": "Masonry",
+  "cost": 110,
+  "production": 1
+ },
+ {
+  "name": "Stonehenge",
+  "isWonder": true,
+  "greatPersonPoints": {
+   "Great Engineer": 1
+  },
+  "requiredTech": "The Wheel",
+  "quote": "'Time crumbles things; everything grows old and is forgotten under the power of time' - Aristotle",
+  "cost": 150,
+  "culture": 1,
+  "faith": 2
+ },
+ {
+  "name": "Library",
+  "hurryCostModifier": 25,
+  "maintenance": 1,
+  "requiredTech": "Writing",
+  "cost": 150,
+  "science": 2,
+  "requiredBuilding": "Council",
+  "specialistSlots": {
+   "Scientist": 1
+  }
+ },
+ {
+  "name": "The Great Library",
+  "cost": 200,
+  "greatPersonPoints": {
+   "Great Scientist": 1
+  },
+  "isWonder": true,
+  "requiredTech": "Writing",
+  "uniques": [
+   "Free Technology",
+   "Gain a free [Library] [in this city]",
+   "Comment [Provides 2 [Great Work of Writing] Slots]"
+  ],
+  "quote": "'Libraries are as the shrine where all the relics of the ancient saints, full of true virtue, and all that without delusion or imposture are preserved and reposed.' - Sir Francis Bacon",
+  "civilopediaText": [
+   {
+    "text": "[Great Work of Writing] Slot 1",
+    "link": "Building/[The Great Library] [Great Work of Writing] 1"
+   },
+   {
+    "text": "[Great Work of Writing] Slot 2",
+    "link": "Building/[The Great Library] [Great Work of Writing] 2"
+   },
+   {
+    "text": "Theming Bonus",
+    "link": "Building/[The Great Library] [Theming Bonus]"
+   }
+  ],
+  "culture": 1,
+  "science": 3
+ },
+ {
+  "name": "Circus",
+  "requiredNearbyImprovedResources": [
+   "Ivory",
+   "Horses"
+  ],
+  "happiness": 1,
+  "hurryCostModifier": 25,
+  "requiredTech": "Physics",
+  "cost": 300,
+  "maintenance": 2,
+  "requiredBuilding": "Colosseum",
+  "uniques": [
+   "[+3 Culture] from [Ivory] tiles [in this city]"
+  ]
+ },
+ {
+  "name": "Water Mill",
+  "maintenance": 1,
+  "hurryCostModifier": 25,
+  "uniques": [
+   "Must be on [River]",
+   "[+1 Production] per [4] population [in this city]"
+  ],
+  "requiredTech": "Construction",
+  "cost": 150,
+  "food": 2,
+  "production": 3
+ },
+ {
+  "name": "Floating Gardens",
+  "replaces": "Water Mill",
+  "uniqueTo": "Aztecs",
+  "uniques": [
+   "Must be next to [Fresh water]",
+   "[+1 Production] per [4] population [in this city]",
+   "[+1 Food] per [4] population [in this city]",
+   "[+2 Food] from [Lakes] tiles [in this city]",
+   "[+1 Food] from [River] tiles [in this city]"
+  ],
+  "hurryCostModifier": 25,
+  "maintenance": 1,
+  "requiredTech": "Construction",
+  "cost": 150,
+  "food": 3,
+  "production": 3,
+  "culture": 2
+ },
+ {
+  "name": "Walls",
+  "cityStrength": 6.0,
+  "cityHealth": 100,
+  "hurryCostModifier": 25,
+  "requiredTech": "Masonry",
+  "uniques": [
+   "Destroyed when the city is captured"
+  ],
+  "cost": 110,
+  "maintenance": 1
+ },
+ {
+  "name": "Walls of Babylon",
+  "replaces": "Walls",
+  "cost": 110,
+  "uniqueTo": "Babylon",
+  "cityStrength": 8.0,
+  "cityHealth": 125,
+  "hurryCostModifier": 25,
+  "requiredTech": "Masonry",
+  "uniques": [
+   "Destroyed when the city is captured"
+  ],
+  "maintenance": 1,
+  "science": 3,
+  "greatPersonPoints": {
+   "Great Scientist": 3
+  }
+ },
+ {
+  "name": "The Pyramids",
+  "greatPersonPoints": {
+   "Great Engineer": 1
+  },
+  "isWonder": true,
+  "uniques": [
+   "[2] free [Worker] units appear",
+   "Only available <after adopting [Liberty]>"
+  ],
+  "requiredTech": "Mining",
+  "quote": "'O, let not the pains of death which come upon thee enter into my body. I am the god Tem, and I am the foremost part of the sky, and the power which protecteth me is that which is with all the gods forever.' - The Book of the Dead, translated by Sir Ernest Alfred Wallis Budge",
+  "cost": 150,
+  "culture": 1
+ },
+ {
+  "name": "Mausoleum of Halicarnassus",
+  "greatPersonPoints": {
+   "Great Merchant": 1
+  },
+  "isWonder": true,
+  "requiredTech": "Masonry",
+  "uniques": [
+   "Gain [100] [Gold] <upon gaining a [Great Person] unit> <(modified by game speed)>"
+  ],
+  "quote": "'The whole earth is the tomb of heroic men and their story is not given only on stone over their clay but abides everywhere without visible symbol woven into the stuff of other men's lives.' - Pericles",
+  "cost": 185,
+  "culture": 2
+ },
+ {
+  "name": "Barracks",
+  "hurryCostModifier": 25,
+  "maintenance": 1,
+  "uniques": [
+   "New [Military] units start with [15] XP [in this city]",
+   "Destroyed when the city is captured"
+  ],
+  "requiredTech": "Archery",
+  "cost": 110,
+  "science": 1
+ },
+ {
+  "name": "Krepost",
+  "replaces": "Bastion Fort",
+  "uniqueTo": "Russia",
+  "hurryCostModifier": 25,
+  "maintenance": 4,
+  "uniques": [
+   "New [Military] units start with [15] XP [in this city]",
+   "Destroyed when the city is captured",
+   "[+1 Production, +1 Gold] from [Aluminum] tiles [in this city]",
+   "[+1 Production, +1 Gold] from [Coal] tiles [in this city]",
+   "[+1 Production, +1 Gold] from [Horses] tiles [in this city]",
+   "[+1 Production, +1 Gold] from [Iron] tiles [in this city]",
+   "[+1 Production, +1 Gold] from [Oil] tiles [in this city]",
+   "[+1 Production, +1 Gold] from [Tourism] tiles [in this city]",
+   "[+1 Production, +1 Gold] from [Trade Route] tiles [in this city]",
+   "[+1 Production, +1 Gold] from [Uranium] tiles [in this city]",
+   "[+1 Production, +1 Gold] from [Camp] tiles [in this city]",
+   "[+1 Production, +1 Gold] from [Mine] tiles [in this city]",
+   "[+1 Production, +1 Gold] from [Lumber mill] tiles [in this city]"
+  ],
+  "requiredTech": "Navigation",
+  "cost": 600,
+  "cityStrength": 12.0,
+  "production": 3,
+  "requiredBuilding": "Castle"
+ },
+ {
+  "name": "Statue of Zeus",
+  "isWonder": true,
+  "uniques": [
+   "Only available <after adopting [Honor]>"
+  ],
+  "requiredTech": "Bronze Working",
+  "quote": "'He spoke, the son of Kronos, and nodded his head with the dark brows, and the immortally anointed hair of the great god swept from his divine head, and all Olympos was shaken' - The Iliad",
+  "cost": 185,
+  "culture": 1,
+  "faith": 1
+ },
+ {
+  "name": "Lighthouse",
+  "cost": 150,
+  "hurryCostModifier": 25,
+  "maintenance": 1,
+  "uniques": [
+   "Must be next to [Coast]",
+   "[+1 Gold] from [Water] tiles [in this city]"
+  ],
+  "requiredTech": "Optics"
+ },
+ {
+  "name": "The Great Lighthouse",
+  "cost": 200,
+  "greatPersonPoints": {
+   "Great Merchant": 1
+  },
+  "isWonder": true,
+  "uniques": [
+   "Must be next to [Coast]",
+   "Gain a free [Lighthouse] [in this city]"
+  ],
+  "requiredTech": "Optics",
+  "quote": "'They that go down to the sea in ships, that do business in great waters; these see the works of the Lord, and his wonders in the deep.' - The Bible, Psalms 107:23-24",
+  "production": 2,
+  "culture": 1
+ },
+ {
+  "name": "Stable",
+  "maintenance": 2,
+  "requiredNearbyImprovedResources": [
+   "Horses",
+   "Sheep",
+   "Cattle"
+  ],
+  "hurryCostModifier": 25,
+  "uniques": [
+   "[+2 Production] from [Cattle] tiles [in this city]",
+   "[+2 Production] from [Horses] tiles [in this city]",
+   "[+2 Production] from [Sheep] tiles [in this city]"
+  ],
+  "requiredTech": "Chivalry",
+  "cost": 300,
+  "production": 3
+ },
+ {
+  "name": "Circus Maximus",
+  "cost": 80,
+  "happiness": 2,
+  "isNationalWonder": true,
+  "uniques": [
+   "Only available <if [Colosseum] is constructed in all [non-[Puppeted]] cities>",
+   "Cost increases by [30] per owned city",
+   "[+2 Gold] from all [Colosseum] buildings"
+  ],
+  "requiredTech": "Metal Casting",
+  "culture": 1,
+  "requiredBuilding": "Colosseum"
+ },
+ {
+  "name": "Courthouse",
+  "maintenance": 3,
+  "hurryCostModifier": 50,
+  "uniques": [
+   "Removes extra unhappiness from annexed cities",
+   "Can only be built <in [Annexed] cities>"
+  ],
+  "requiredTech": "Philosophy",
+  "cost": 200
+ },
+ {
+  "name": "Hanging Gardens",
+  "greatPersonPoints": {
+   "Great Artist": 1
+  },
+  "isWonder": true,
+  "requiredTech": "Mathematics",
+  "uniques": [
+   "Gain a free [Garden] [in this city]",
+   "Only available <after adopting [Tradition]>"
+  ],
+  "quote": "'I think that if ever a mortal heard the word of God it would be in a garden at the cool of the day.' - F. Frankfort Moore",
+  "cost": 200,
+  "food": 10,
+  "culture": 1
+ },
+ {
+  "name": "Colosseum",
+  "maintenance": 1,
+  "hurryCostModifier": 25,
+  "requiredTech": "Construction",
+  "cost": 150,
+  "culture": 1,
+  "uniques": [
+   "[+1 Food, +1 Gold] from [Olives] tiles [in this city]",
+   "[+1 Culture, +1 Gold] from [Perfume] tiles [in this city]",
+   "[+2 Production] from all [Barracks] buildings <in this city>",
+   "[+2 Production] from all [Forge] buildings <in this city>",
+   "[+2 Production] from all [Armory] buildings <in this city>"
+  ]
+ },
+ {
+  "name": "Terracotta Army",
+  "isWonder": true,
+  "requiredTech": "Construction",
+  "uniques": [
+   "Comment [Create a copy of each type of military unit you currently possess]",
+   "Triggers a [Terracotta Army - Melee] event <hidden from users>",
+   "Triggers a [Terracotta Army - Archery] event <hidden from users>",
+   "Triggers a [Terracotta Army - Mounted] event <hidden from users>",
+   "Triggers a [Terracotta Army - Siege] event <hidden from users>",
+   "Triggers a [Terracotta Army - Gunpowder] event <hidden from users>",
+   "Triggers a [Terracotta Army - Armored] event <hidden from users>"
+  ],
+  "quote": "'Regard your soldiers as your children, and they will follow you into the deepest valleys; look on them as your own beloved sons, and they will stand by you even unto death.' - Sun Tzu",
+  "cost": 200,
+  "culture": 1
+ },
+ {
+  "name": "Temple",
+  "requiredBuilding": "Shrine",
+  "maintenance": 1,
+  "hurryCostModifier": 25,
+  "requiredTech": "Philosophy",
+  "uniques": [
+   "Only available <when religion is enabled>",
+   "Destroyed when the city is captured",
+   "[+1 Culture, +1 Gold] from [Amber] tiles [in this city]",
+   "[+1 Culture, +1 Gold] from [Incense] tiles [in this city]",
+   "[+1 Culture, +1 Gold] from [Wine] tiles [in this city]"
+  ],
+  "cost": 200,
+  "faith": 3
+ },
+ {
+  "name": "Burial Tomb",
+  "replaces": "Caravansary",
+  "uniqueTo": "Egypt",
+  "uniques": [
+   "[+1 Culture, +1 Production] from [Cotton] tiles [in this city]",
+   "[+1 Gold, +1 Production] from [Furs] tiles [in this city]",
+   "[+2 Gold] from [Truffles] tiles [in this city]"
+  ],
+  "requiredBuilding": "Market",
+  "hurryCostModifier": 25,
+  "requiredTech": "Currency",
+  "cost": 200,
+  "gold": 1,
+  "faith": 1
+ },
+ {
+  "name": "Mud Pyramid Mosque",
+  "replaces": "Stone Works",
+  "uniqueTo": "Songhai",
+  "maintenance": 1,
+  "hurryCostModifier": 25,
+  "requiredTech": "Masonry",
+  "cost": 110,
+  "production": 1,
+  "culture": 1,
+  "uniques": [
+   "[+1 Gold, +1 Production] from [Jade] tiles [in this city]",
+   "[+1 Gold, +1 Production] from [Marble] tiles [in this city]",
+   "[+2 Gold] from [Salt] tiles [in this city]",
+   "[+2 Production] from [Stone] tiles [in this city]",
+   "[+1 Production] from [River] tiles [in this city]"
+  ]
+ },
+ {
+  "name": "National College",
+  "cost": 80,
+  "isNationalWonder": true,
+  "uniques": [
+   "Only available <if [Library] is constructed in all [non-[Puppeted]] cities>",
+   "Cost increases by [30] per owned city"
+  ],
+  "requiredTech": "Philosophy",
+  "science": 5,
+  "culture": 1,
+  "requiredBuilding": "Library",
+  "greatPersonPoints": {
+   "Great Scientist": 2
+  }
+ },
+ {
+  "name": "The Oracle",
+  "greatPersonPoints": {
+   "Great Scientist": 1
+  },
+  "isWonder": true,
+  "uniques": [
+   "Free Social Policy"
+  ],
+  "requiredTech": "Philosophy",
+  "quote": "'The ancient Oracle said that I was the wisest of all the Greeks. It is because I alone, of all the Greeks, know that I know nothing' - Socrates",
+  "cost": 250,
+  "science": 1,
+  "culture": 1
+ },
+ {
+  "name": "Amphitheater",
+  "requiredBuilding": "Monument",
+  "hurryCostModifier": 25,
+  "uniques": [
+   "Comment [Provides 1 [Great Work of Writing] Slot]",
+   "Destroyed when the city is captured",
+   "[+1 Culture, +1 Gold] from [Dyes] tiles [in this city]",
+   "[+2 Culture] from [Lapis Lazuli] tiles [in this city]",
+   "[+1 Culture, +1 Gold] from [Silk] tiles [in this city]"
+  ],
+  "requiredTech": "Drama and Poetry",
+  "civilopediaText": [
+   {
+    "text": "[Great Work of Writing] Slot",
+    "link": "Building/[Amphitheater] [Great Work of Writing]"
+   }
+  ],
+  "cost": 200,
+  "culture": 2
+ },
+ {
+  "name": "National Epic",
+  "cost": 80,
+  "isNationalWonder": true,
+  "uniques": [
+   "Comment [Provides 1 [Great Work of Writing] Slot]",
+   "Only available <if [Monument] is constructed in all [non-[Puppeted]] cities>",
+   "Cost increases by [30] per owned city"
+  ],
+  "requiredTech": "Drama and Poetry",
+  "civilopediaText": [
+   {
+    "text": "[Great Work of Writing] Slot",
+    "link": "Building/[National Epic] [Great Work of Writing]"
+   }
+  ],
+  "culture": 1,
+  "requiredBuilding": "Monument"
+ },
+ {
+  "name": "Market",
+  "specialistSlots": {
+   "Merchant": 1
+  },
+  "hurryCostModifier": 25,
+  "requiredTech": "Horseback Riding",
+  "cost": 110,
+  "gold": 3,
+  "uniques": [
+   "[+1 Food, +1 Production] from [Spices] tiles [in this city]",
+   "[+1 Food, +1 Gold] from [Sugar] tiles [in this city]"
+  ]
+ },
+ {
+  "name": "Bazaar",
+  "replaces": "Market",
+  "uniqueTo": "Arabia",
+  "specialistSlots": {
+   "Merchant": 1
+  },
+  "hurryCostModifier": 25,
+  "uniques": [
+   "Provides 1 extra copy of each improved luxury resource near this City",
+   "[+1 Food, +1 Production] from [Spices] tiles [in this city]",
+   "[+1 Food, +1 Gold] from [Sugar] tiles [in this city]"
+  ],
+  "requiredTech": "Horseback Riding",
+  "cost": 110,
+  "gold": 3,
+  "science": 2,
+  "faith": 2
+ },
+ {
+  "name": "Mint",
+  "requiredNearbyImprovedResources": [
+   "Gold Ore",
+   "Silver"
+  ],
+  "hurryCostModifier": 25,
+  "uniques": [
+   "[+2 Gold] from [Bananas] tiles [in this city]",
+   "[+1 Gold, +2 Production] from [Coffee] tiles [in this city]",
+   "[+2 Gold, +1 Production] from [Tea] tiles [in this city]",
+   "[+3 Gold] from [Tobacco] tiles [in this city]"
+  ],
+  "requiredTech": "Guilds",
+  "cost": 350,
+  "culture": 2,
+  "requiredBuilding": "Market",
+  "specialistSlots": {
+   "Merchant": 1
+  }
+ },
+ {
+  "name": "Petra",
+  "isWonder": true,
+  "greatPersonPoints": {
+   "Great Engineer": 1
+  },
+  "uniques": [
+   "Must be next to [Desert]",
+   "Instantly provides [1] [Trade Route]",
+   "Instantly provides [1] [Trade Route] <for [Double the normal number of Trade Routes available] Civilizations> <hidden from users>",
+   "Free [Caravan] appears",
+   "[+1 Gold] from [Desert] tiles [in this city]"
+  ],
+  "requiredTech": "Horseback Riding",
+  "quote": "'...who drinks the water I shall give him, says the Lord, will have a spring inside him welling up for eternal life. Let them bring me to your holy mountain in the place where you dwell. Across the desert and through the mountain to the Canyon of the Crescent Moon...' - Indiana Jones",
+  "cost": 185,
+  "culture": 2
+ },
+ {
+  "name": "Aqueduct",
+  "maintenance": 1,
+  "hurryCostModifier": 0,
+  "uniques": [
+   "[40]% Food is carried over after population increases [in this city]",
+   "[+2 Food] from [Oasis] tiles [in this city]",
+   "[+2 Food] from [Lakes] tiles [in this city]"
+  ],
+  "requiredTech": "Engineering",
+  "cost": 200,
+  "food": 1,
+  "requiredBuilding": "Granary"
+ },
+ {
+  "name": "Great Wall",
+  "greatPersonPoints": {
+   "Great Engineer": 1
+  },
+  "isWonder": true,
+  "uniques": [
+   "Enemy [Land] units must spend [1] extra movement points when inside your territory <before discovering [Dynamite]> <Suppress warning [*contains a conditional on a unit movement unique*]>",
+   "Gain a free [Walls] [in this city]",
+   "Free [Great General] appears"
+  ],
+  "requiredTech": "Engineering",
+  "quote": "'The art of war teaches us to rely not on the likelihood of the enemy's not attacking, but rather on the fact that we have made our position unassailable.' - Sun Tzu",
+  "cost": 250,
+  "culture": 1
+ },
+ {
+  "name": "Heroic Epic",
+  "cost": 60,
+  "isNationalWonder": true,
+  "uniques": [
+   "Comment [Provides 1 [Great Work of Writing] Slot]",
+   "Only available <if [Barracks] is constructed in all [non-[Puppeted]] cities>",
+   "All newly-trained [non-[Air]] units [in this city] receive the [Morale] promotion",
+   "Cost increases by [30] per owned city"
+  ],
+  "requiredTech": "Iron Working",
+  "civilopediaText": [
+   {
+    "text": "[Great Work of Writing] Slot",
+    "link": "Building/[Heroic Epic] [Great Work of Writing]"
+   }
+  ],
+  "culture": 1,
+  "requiredBuilding": "Barracks"
+ },
+ {
+  "name": "Colossus",
+  "cost": 200,
+  "greatPersonPoints": {
+   "Great Merchant": 1
+  },
+  "isWonder": true,
+  "uniques": [
+   "Must be next to [Coast]",
+   "Instantly provides [1] [Trade Route]",
+   "Instantly provides [1] [Trade Route] <for [Double the normal number of Trade Routes available] Civilizations> <hidden from users>",
+   "Free [Cargo Ship] appears"
+  ],
+  "requiredTech": "Iron Working",
+  "quote": "'Why man, he doth bestride the narrow world like a colossus, and we petty men walk under his huge legs, and peep about to find ourselves dishonorable graves.' - William Shakespeare, Julius Caesar",
+  "gold": 5,
+  "culture": 1
+ },
+ {
+  "name": "Garden",
+  "uniques": [
+   "Must be next to [Fresh water]",
+   "[+1 Food, +1 Gold] from [Citrus] tiles [in this city]",
+   "[+1 Culture, +1 Faith] from [Cloves] tiles [in this city]",
+   "[+1 Food, +1 Gold] from [Cocoa] tiles [in this city]",
+   "[+1 Culture, +1 Production] from [Nutmeg] tiles [in this city]",
+   "[+1 Faith, +1 Gold] from [Pepper] tiles [in this city]",
+   "[+2 Gold] from [Oasis] tiles [in this city]"
+  ],
+  "hurryCostModifier": 25,
+  "maintenance": 3,
+  "requiredTech": "Theology",
+  "cost": 300,
+  "requiredBuilding": "Aqueduct"
+ },
+ {
+  "name": "Hagia Sophia",
+  "isWonder": true,
+  "uniques": [
+   "Gain a free [Temple] [in this city]",
+   "Free [Great Prophet] appears",
+   "Only available <when religion is enabled>"
+  ],
+  "requiredTech": "Theology",
+  "quote": "'For it soars to a height to match the sky, and as if surging up from among the other buildings it stands on high and looks down upon the remainder of the city, adorning it, because it is a part of it, but glorying in its own beauty' - Procopius, De Aedificis",
+  "cost": 400,
+  "culture": 2,
+  "faith": 1
+ },
+ {
+  "name": "Great Mosque of Djenne",
+  "greatPersonPoints": {
+   "Great Engineer": 1
+  },
+  "isWonder": true,
+  "uniques": [
+   "Gain a free [Mosque] [in this city]",
+   "Only available <after adopting [Piety]>",
+   "Only available <when religion is enabled>",
+   "All newly-trained [Missionary] units [in this city] receive the [Devout] promotion",
+   "All newly-trained [Great Prophet] units [in this city] receive the [Devout] promotion"
+  ],
+  "requiredTech": "Education",
+  "quote": "'With the magnificence of eternity before us, let time, with all its fluctuations, dwindle into its own littleness.' - Thomas Chalmers",
+  "cost": 400,
+  "science": 1,
+  "culture": 1,
+  "faith": 1
+ },
+ {
+  "name": "Grand Temple",
+  "cost": 120,
+  "uniques": [
+   "Only available <if [Temple] is constructed in all [non-[Puppeted]] cities>",
+   "Cost increases by [30] per owned city",
+   "Only available <when religion is enabled>",
+   "Can only be built <in [Holy] cities>",
+   "[+1 Gold, +2 Faith] from all [Temple] buildings"
+  ],
+  "requiredTech": "Theology",
+  "isNationalWonder": true,
+  "faith": 6,
+  "requiredBuilding": "Temple"
+ },
+ {
+  "name": "Chichen Itza",
+  "greatPersonPoints": {
+   "Great Engineer": 1
+  },
+  "isWonder": true,
+  "requiredTech": "Astronomy",
+  "quote": "'The katun is established at Chichen Itza. The settlement of the Itza shall take place there. The quetzal shall come, the green bird shall come. Ah Kantenal shall come. It is the word of God. The Itza shall come.' - The Books of Chilam Balam",
+  "cost": 800,
+  "culture": 1
+ },
+ {
+  "name": "Machu Picchu",
+  "greatPersonPoints": {
+   "Great Merchant": 1
+  },
+  "isWonder": true,
+  "uniques": [
+   "Must have an owned [Mountain] within [2] tiles"
+  ],
+  "requiredTech": "Physics",
+  "quote": "'Few romances can ever surpass that of the granite citadel on top of the beetling precipices of Machu Picchu, the crown of Inca Land.' - Hiram Bingham",
+  "cost": 400,
+  "gold": 5,
+  "culture": 1,
+  "faith": 2
+ },
+ {
+  "name": "Workshop",
+  "maintenance": 2,
+  "specialistSlots": {
+   "Engineer": 1
+  },
+  "hurryCostModifier": 25,
+  "requiredTech": "Civil Service",
+  "cost": 350,
+  "production": 2,
+  "requiredBuilding": "Forge",
+  "uniques": [
+   "[+1 Production] per [4] population [in this city]",
+   "[+1 Production] from [Forest] tiles [in this city]"
+  ]
+ },
+ {
+  "name": "Longhouse",
+  "replaces": "Herbalist",
+  "uniqueTo": "Iroquois",
+  "cost": 65,
+  "maintenance": 1,
+  "hurryCostModifier": 25,
+  "uniques": [
+   "[+1 Production, +1 Food] from [Marsh] tiles [in this city]",
+   "[+1 Food, +1 Production] from [Forest] tiles [in this city]",
+   "[+1 Food, +1 Production] from [Jungle] tiles [in this city]",
+   "[+1 Production, +1 Food] from [Plantation] tiles [in this city]"
+  ],
+  "requiredTech": "Calendar",
+  "food": 2,
+  "culture": 1
+ },
+ {
+  "name": "Forge",
+  "maintenance": 1,
+  "hurryCostModifier": 25,
+  "requiredNearbyImprovedResources": [
+   "Iron"
+  ],
+  "requiredTech": "Bronze Working",
+  "uniques": [
+   "[+2 Gold] from [Copper] tiles [in this city]",
+   "[+1 Gold, +1 Production] from [Iron] tiles [in this city]",
+   "[+1 Production] from [Mine] tiles [in this city]"
+  ],
+  "cost": 110,
+  "science": 1,
+  "specialistSlots": {
+   "Engineer": 1
+  }
+ },
+ {
+  "name": "Harbor",
+  "cost": 350,
+  "maintenance": 2,
+  "hurryCostModifier": 25,
+  "uniques": [
+   "Connects trade routes over water",
+   "All newly-trained [Cargo Ship] units [in this city] receive the [[Harbor] ability] promotion",
+   "Must be next to [Coast]",
+   "[+1 Food] from [Water] tiles [in this city]",
+   "[+15]% Production when constructing [Water] units [in this city]"
+  ],
+  "requiredTech": "Compass",
+  "civilopediaText": [
+   {
+    "text": "[Harbor] ability",
+    "link": "Promotion/[Harbor] ability"
+   }
+  ],
+  "gold": 1,
+  "requiredBuilding": "Lighthouse"
+ },
+ {
+  "name": "University",
+  "maintenance": 2,
+  "hurryCostModifier": 15,
+  "specialistSlots": {
+   "Scientist": 1
+  },
+  "requiredBuilding": "Library",
+  "uniques": [
+   "[+1 Science] from [Snow] tiles [in this city]"
+  ],
+  "requiredTech": "Education",
+  "cost": 300,
+  "science": 3
+ },
+ {
+  "name": "Wat",
+  "replaces": "Constabulary",
+  "uniqueTo": "Siam",
+  "maintenance": 2,
+  "hurryCostModifier": 15,
+  "specialistSlots": {
+   "Scientist": 1
+  },
+  "uniques": [
+   "[+3 Science] from all [Shrine] buildings <in this city>",
+   "[+3 Science] from all [Temple] buildings <in this city>"
+  ],
+  "requiredTech": "Theology",
+  "cost": 300,
+  "science": 2,
+  "culture": 1,
+  "faith": 1
+ },
+ {
+  "name": "Oxford University",
+  "cost": 120,
+  "isNationalWonder": true,
+  "uniques": [
+   "Free Technology",
+   "Comment [Provides 2 [Great Work of Writing] Slots]",
+   "Only available <if [University] is constructed in all [non-[Puppeted]] cities>",
+   "Cost increases by [30] per owned city",
+   "Free [Great Scientist] appears"
+  ],
+  "requiredTech": "Education",
+  "civilopediaText": [
+   {
+    "text": "[Great Work of Writing] Slot 1",
+    "link": "Building/[Oxford University] [Great Work of Writing] 1"
+   },
+   {
+    "text": "[Great Work of Writing] Slot 2",
+    "link": "Building/[Oxford University] [Great Work of Writing] 2"
+   },
+   {
+    "text": "Theming Bonus",
+    "link": "Building/[Oxford University] [Theming Bonus]"
+   }
+  ],
+  "science": 3,
+  "culture": 3,
+  "requiredBuilding": "University"
+ },
+ {
+  "name": "Angkor Wat",
+  "greatPersonPoints": {
+   "Great Engineer": 1
+  },
+  "isWonder": true,
+  "requiredTech": "Currency",
+  "quote": "'The temple is like no other building in the world. It has towers and decoration and all the refinements which the human genius can conceive of.' - Antonio da Magdalena",
+  "cost": 250,
+  "culture": 1,
+  "faith": 1
+ },
+ {
+  "name": "Castle",
+  "cityStrength": 8.0,
+  "cityHealth": 25,
+  "hurryCostModifier": 25,
+  "requiredBuilding": "Walls",
+  "requiredTech": "Chivalry",
+  "uniques": [
+   "Destroyed when the city is captured",
+   "[+1 Production] from [Quarry] tiles [in this city]"
+  ],
+  "cost": 300,
+  "maintenance": 2
+ },
+ {
+  "name": "Alhambra",
+  "isWonder": true,
+  "uniques": [
+   "All newly-trained [relevant] units [in this city] receive the [Drill I] promotion",
+   "Gain a free [Castle] [in this city]"
+  ],
+  "requiredTech": "Chivalry",
+  "quote": "'Justice is an unassailable fortress, built on the brow of a mountain which cannot be overthrown by the violence of torrents, nor demolished by the force of armies.' - Joseph Addison",
+  "cost": 400,
+  "culture": 1
+ },
+ {
+  "name": "Ironworks",
+  "cost": 140,
+  "isNationalWonder": true,
+  "uniques": [
+   "Only available <if [Workshop] is constructed in all [non-[Puppeted]] cities>",
+   "Cost increases by [30] per owned city"
+  ],
+  "requiredTech": "Machinery",
+  "production": 10,
+  "requiredBuilding": "Forge"
+ },
+ {
+  "name": "Notre Dame",
+  "happiness": 1,
+  "greatPersonPoints": {
+   "Great Merchant": 1
+  },
+  "isWonder": true,
+  "requiredTech": "Machinery",
+  "quote": "'Architecture has recorded the great ideas of the human race. Not only every religious symbol, but every human thought has its page in that vast book.' - Victor Hugo",
+  "cost": 500,
+  "culture": 1,
+  "faith": 4
+ },
+ {
+  "name": "Armory",
+  "hurryCostModifier": 25,
+  "maintenance": 2,
+  "requiredBuilding": "Barracks",
+  "uniques": [
+   "New [Military] units start with [15] XP [in this city]",
+   "Destroyed when the city is captured"
+  ],
+  "requiredTech": "Steel",
+  "cost": 300,
+  "science": 2
+ },
+ {
+  "name": "Observatory",
+  "maintenance": 4,
+  "hurryCostModifier": 15,
+  "uniques": [
+   "Must be next to [Mountain]"
+  ],
+  "requiredTech": "Astronomy",
+  "cost": 500,
+  "science": 6,
+  "specialistSlots": {
+   "Scientist": 2
+  }
+ },
+ {
+  "name": "Opera House",
+  "cost": 600,
+  "requiredTech": "Acoustics",
+  "requiredBuilding": "Amphitheater",
+  "uniques": [
+   "Comment [Provides 1 [Great Work of Music] Slot]",
+   "Destroyed when the city is captured"
+  ],
+  "civilopediaText": [
+   {
+    "text": "[Great Work of Music] Slot",
+    "link": "Building/[Opera House] [Great Work of Music]"
+   }
+  ],
+  "culture": 3
+ },
+ {
+  "name": "Ceilidh Hall",
+  "replaces": "Circus",
+  "uniqueTo": "Celts",
+  "happiness": 1,
+  "hurryCostModifier": 10,
+  "requiredBuilding": "Colosseum",
+  "maintenance": 2,
+  "requiredTech": "Physics",
+  "uniques": [
+   "Comment [Provides 1 [Great Work of Music] Slot]",
+   "Destroyed when the city is captured <hidden from users>",
+   "[+3 Culture] from [Ivory] tiles [in this city]"
+  ],
+  "civilopediaText": [
+   {
+    "text": "[Great Work of Music] Slot",
+    "link": "Building/[Ceilidh Hall] [Great Work of Music]"
+   }
+  ],
+  "cost": 300,
+  "culture": 4,
+  "faith": 2,
+  "specialistSlots": {
+   "Artist": 1
+  }
+ },
+ {
+  "name": "Sistine Chapel",
+  "cost": 900,
+  "isWonder": true,
+  "greatPersonPoints": {
+   "Great Artist": 2
+  },
+  "uniques": [
+   "Comment [Provides 2 [Great Work of Art] or [Artifact] Slots]"
+  ],
+  "requiredTech": "Acoustics",
+  "quote": "'I live and love in God's peculiar light.' - Michelangelo Buonarroti",
+  "civilopediaText": [
+   {
+    "text": "[Great Work of Art] Slot 1",
+    "link": "Building/[Sistine Chapel] [Great Work of Art] 1"
+   },
+   {
+    "text": "[Great Work of Art] Slot 2",
+    "link": "Building/[Sistine Chapel] [Great Work of Art] 2"
+   },
+   {
+    "text": "Theming Bonus",
+    "link": "Building/[Sistine Chapel] [Theming Bonus]"
+   }
+  ],
+  "culture": 1
+ },
+ {
+  "name": "Bank",
+  "specialistSlots": {
+   "Merchant": 1
+  },
+  "hurryCostModifier": 15,
+  "requiredBuilding": "Market",
+  "requiredTech": "Banking",
+  "cost": 500,
+  "gold": 2,
+  "uniques": [
+   "[+2 Culture, +1 Gold] from [Gems] tiles [in this city]",
+   "[+3 Gold] from [Gold Ore] tiles [in this city]",
+   "[+1 Culture, +1 Gold, +1 Production] from [Silver] tiles [in this city]",
+   "[+3 Gold] from all [Caravansary] buildings <in this city>",
+   "[+3 Gold] from all [Mint] buildings <in this city>"
+  ]
+ },
+ {
+  "name": "Satrap's Court",
+  "replaces": "Courthouse",
+  "uniqueTo": "Persia",
+  "specialistSlots": {
+   "Merchant": 1
+  },
+  "happiness": 1,
+  "hurryCostModifier": 15,
+  "requiredTech": "Philosophy",
+  "cost": 200,
+  "gold": 1,
+  "uniques": [
+   "[+1 Gold] per [3] population [in this city]",
+   "[+1 Gold] from every [Scientist]",
+   "[+1 Gold] from every [Merchant]",
+   "[+1 Gold] from every [Engineer]"
+  ]
+ },
+ {
+  "name": "Constabulary",
+  "cost": 500,
+  "maintenance": 4,
+  "hurryCostModifier": 10,
+  "uniques": [
+   "Only available <when espionage is enabled>"
+  ],
+  "requiredTech": "Banking"
+ },
+ {
+  "name": "Forbidden Palace",
+  "isWonder": true,
+  "uniques": [
+   "Only available <after adopting [Patronage]>"
+  ],
+  "requiredTech": "Civil Service",
+  "quote": "'Most of us can, as we choose, make of this world either a palace or a prison' - John Lubbock",
+  "cost": 500,
+  "culture": 1
+ },
+ {
+  "name": "Theatre",
+  "requiredBuilding": "Circus",
+  "maintenance": 5,
+  "requiredTech": "Scientific Theory",
+  "cost": 1000,
+  "culture": 2,
+  "uniques": [
+   "[+1 Culture] from [Forest] tiles [in this city]",
+   "[+1 Culture] from [Jungle] tiles [in this city]"
+  ]
+ },
+ {
+  "name": "Leaning Tower of Pisa",
+  "isWonder": true,
+  "greatPersonPoints": {
+   "Great Artist": 1
+  },
+  "uniques": [
+   "Free Great Person"
+  ],
+  "requiredTech": "Chemistry",
+  "quote": "'Don't clap too hard - it's a very old building.' - John Osbourne",
+  "cost": 800,
+  "culture": 1
+ },
+ {
+  "name": "Himeji Castle",
+  "isWonder": true,
+  "greatPersonPoints": {
+   "Great Engineer": 2
+  },
+  "uniques": [
+   "Gain a free [Castle] [in this city]"
+  ],
+  "requiredTech": "Gunpowder",
+  "quote": "'Bushido is realized in the presence of death. This means choosing death whenever there is a choice between life and death. There is no other reasoning.' - Yamamoto Tsunetomo",
+  "cost": 800,
+  "culture": 1
+ },
+ {
+  "name": "Seaport",
+  "hurryCostModifier": 25,
+  "maintenance": 5,
+  "requiredBuilding": "Harbor",
+  "uniques": [
+   "Must be next to [Coast]",
+   "[+1 Production, +1 Gold] from [Water] tiles [in this city]"
+  ],
+  "requiredTech": "Steam Power",
+  "cost": 1000
+ },
+ {
+  "name": "Hermitage",
+  "cost": 240,
+  "isNationalWonder": true,
+  "uniques": [
+   "Comment [Provides 3 [Great Work of Art] or [Artifact] Slots]",
+   "Only available <if [Opera House] is constructed in all [non-[Puppeted]] cities>",
+   "Cost increases by [30] per owned city",
+   "Provides [5] [Tourism] <after adopting [Religious Art]>",
+   "[+1 Culture] per [4] population [in this city]"
+  ],
+  "requiredTech": "Architecture",
+  "civilopediaText": [
+   {
+    "text": "[Great Work of Art] Slot 1",
+    "link": "Building/[Hermitage] [Great Work of Art] 1"
+   },
+   {
+    "text": "[Great Work of Art] Slot 2",
+    "link": "Building/[Hermitage] [Great Work of Art] 2"
+   },
+   {
+    "text": "[Great Work of Art] Slot 3",
+    "link": "Building/[Hermitage] [Great Work of Art] 3"
+   },
+   {
+    "text": "Theming Bonus",
+    "link": "Building/[Hermitage] [Theming Bonus]"
+   }
+  ],
+  "culture": 2,
+  "requiredBuilding": "Gallery"
+ },
+ {
+  "name": "Taj Mahal",
+  "greatPersonPoints": {
+   "Great Artist": 2
+  },
+  "isWonder": true,
+  "uniques": [
+   "Empire enters golden age"
+  ],
+  "requiredTech": "Architecture",
+  "quote": "'The Taj Mahal rises above the banks of the river like a solitary tear suspended on the cheek of time.' - Rabindranath Tagore",
+  "cost": 900,
+  "culture": 2
+ },
+ {
+  "name": "Porcelain Tower",
+  "greatPersonPoints": {
+   "Great Scientist": 2
+  },
+  "isWonder": true,
+  "uniques": [
+   "Free [Great Scientist] appears",
+   "Science gained from research agreements [+50]%",
+   "Only available <after adopting [Rationalism]>"
+  ],
+  "requiredTech": "Architecture",
+  "quote": "'Things always seem fairer when we look back at them, and it is out of that inaccessible tower of the past that Longing leans and beckons.' - James Russell Lowell",
+  "cost": 900,
+  "culture": 1,
+  "percentStatBonus": {
+   "science": 10
+  }
+ },
+ {
+  "name": "Windmill",
+  "specialistSlots": {
+   "Engineer": 1
+  },
+  "hurryCostModifier": 25,
+  "maintenance": 4,
+  "uniques": [
+   "Must not be on [Hill]",
+   "[+2 Production, +2 Gold] from [Marsh] tiles [in this city]",
+   "[+2 Production, +2 Gold] from [Lakes] tiles [in this city]",
+   "[+1 Food] from all [Granary] buildings <in this city>",
+   "[+1 Food] from all [Grocer] buildings <in this city>"
+  ],
+  "requiredTech": "Economics",
+  "cost": 600,
+  "production": 3
+ },
+ {
+  "name": "Coffee House",
+  "replaces": "Grocer",
+  "uniqueTo": "Austria",
+  "specialistSlots": {
+   "Merchant": 1
+  },
+  "hurryCostModifier": 25,
+  "maintenance": 4,
+  "uniques": [
+   "[+1 Food] per [5] population [in this city]"
+  ],
+  "requiredTech": "Chemistry",
+  "cost": 500,
+  "happiness": 1,
+  "food": 3,
+  "requiredBuilding": "Aqueduct"
+ },
+ {
+  "name": "Arsenal",
+  "cost": 1800,
+  "cityStrength": 12.0,
+  "cityHealth": 300,
+  "hurryCostModifier": 25,
+  "requiredBuilding": "Bastion Fort",
+  "requiredTech": "Combustion",
+  "uniques": [
+   "Destroyed when the city is captured"
+  ],
+  "maintenance": 7
+ },
+ {
+  "name": "Kremlin",
+  "isWonder": true,
+  "uniques": [
+   "Free Social Policy",
+   "Only available <after adopting [Order]>"
+  ],
+  "requiredTech": "Replaceable Parts",
+  "quote": "'The Law is a fortress on a hill that armies cannot take or floods wash away.' - The Prophet Muhammed",
+  "cost": 1600,
+  "culture": 1
+ },
+ {
+  "name": "Museum",
+  "cost": 1250,
+  "maintenance": 6,
+  "requiredTech": "Archaeology",
+  "requiredBuilding": "Gallery",
+  "uniques": [
+   "Comment [Provides 2 [Great Work of Art] or [Artifact] Slots]",
+   "Destroyed when the city is captured",
+   "[+1 Culture] per [4] population [in this city]"
+  ],
+  "civilopediaText": [
+   {
+    "text": "[Great Work of Art] Slot 1",
+    "link": "Building/[Museum] [Great Work of Art] 1"
+   },
+   {
+    "text": "[Great Work of Art] Slot 2",
+    "link": "Building/[Museum] [Great Work of Art] 2"
+   },
+   {
+    "text": "Theming Bonus",
+    "link": "Building/[Museum] [Theming Bonus]"
+   }
+  ]
+ },
+ {
+  "name": "The Louvre",
+  "cost": 1250,
+  "isWonder": true,
+  "uniques": [
+   "Free [Great Artist] appears",
+   "Comment [Provides 4 [Great Work of Art] or [Artifact] Slots]",
+   "Only available <after adopting [Exploration]>",
+   "Free [Archaeologist] appears",
+   "Free [Archaeologist] appears"
+  ],
+  "requiredTech": "Archaeology",
+  "quote": "'Every genuine work of art has as much reason for being as the earth and the sun' - Ralph Waldo Emerson",
+  "civilopediaText": [
+   {
+    "text": "[Great Work of Art] Slot 1",
+    "link": "Building/[The Louvre] [Great Work of Art] 1"
+   },
+   {
+    "text": "[Great Work of Art] Slot 2",
+    "link": "Building/[The Louvre] [Great Work of Art] 2"
+   },
+   {
+    "text": "[Great Work of Art] Slot 3",
+    "link": "Building/[The Louvre] [Great Work of Art] 3"
+   },
+   {
+    "text": "[Great Work of Art] Slot 4",
+    "link": "Building/[The Louvre] [Great Work of Art] 4"
+   },
+   {
+    "text": "Theming Bonus",
+    "link": "Building/[The Louvre] [Theming Bonus]"
+   }
+  ],
+  "culture": 2
+ },
+ {
+  "name": "Public School",
+  "specialistSlots": {
+   "Scientist": 1
+  },
+  "requiredBuilding": "University",
+  "maintenance": 5,
+  "hurryCostModifier": 0,
+  "requiredTech": "Scientific Theory",
+  "cost": 1000,
+  "science": 3
+ },
+ {
+  "name": "Factory",
+  "cost": 1250,
+  "specialistSlots": {
+   "Engineer": 1
+  },
+  "requiredBuilding": "Workshop",
+  "maintenance": 6,
+  "hurryCostModifier": 0,
+  "requiredResource": "Coal",
+  "requiredTech": "Industrialization",
+  "production": 5,
+  "uniques": [
+   "[+1 Production] per [4] population [in this city]",
+   "[+2 Production, +2 Science] from [Coal] tiles [in this city]",
+   "[+2 Production] from [Manufactory] tiles [in this city]",
+   "[+2 Production] from all [Factory] buildings"
+  ]
+ },
+ {
+  "name": "Big Ben",
+  "greatPersonPoints": {
+   "Great Merchant": 2
+  },
+  "isWonder": true,
+  "uniques": [
+   "[Gold] cost of purchasing items in cities [-15]%",
+   "Only available <after adopting [Commerce]>",
+   "Free [Great Merchant] appears"
+  ],
+  "requiredTech": "Industrialization",
+  "quote": "'To achieve great things, two things are needed: a plan, and not quite enough time.' - Leonard Bernstein",
+  "cost": 1250,
+  "gold": 4,
+  "culture": 1
+ },
+ {
+  "name": "Military Academy",
+  "hurryCostModifier": 0,
+  "maintenance": 6,
+  "requiredBuilding": "Armory",
+  "uniques": [
+   "New [Military] units start with [15] XP [in this city]",
+   "Destroyed when the city is captured",
+   "[+15]% Production when constructing [Land] units [in this city]"
+  ],
+  "requiredTech": "Military Science",
+  "cost": 1250,
+  "science": 1
+ },
+ {
+  "name": "Brandenburg Gate",
+  "greatPersonPoints": {
+   "Great Scientist": 2
+  },
+  "isWonder": true,
+  "uniques": [
+   "Free [Great General] appears",
+   "New [Military] units start with [15] XP [in this city]"
+  ],
+  "requiredTech": "Military Science",
+  "quote": "'Pale Death beats equally at the poor man's gate and at the palaces of kings.' - Horace",
+  "cost": 1250,
+  "culture": 1
+ },
+ {
+  "name": "Hospital",
+  "requiredBuilding": "Grocer",
+  "maintenance": 7,
+  "hurryCostModifier": 0,
+  "requiredTech": "Biology",
+  "cost": 1800,
+  "uniques": [
+   "[+1 Food] from every [Civil Servant]",
+   "[+2 Science] from every [Scientist]",
+   "[+2 Production] from every [Engineer]",
+   "[+2 Gold] from every [Merchant]"
+  ]
+ },
+ {
+  "name": "Stock Exchange",
+  "specialistSlots": {
+   "Merchant": 1
+  },
+  "hurryCostModifier": 15,
+  "requiredBuilding": "Bank",
+  "requiredTech": "Electricity",
+  "cost": 1800,
+  "gold": 3,
+  "uniques": [
+   "[+1 Gold] per [2] population [in this city]",
+   "[+2 Gold] from [Customs house] tiles [in this city]",
+   "[+2 Gold] from [Trading post] tiles [in this city]"
+  ]
+ },
+ {
+  "name": "Hydro Plant",
+  "requiredResource": "Aluminum",
+  "hurryCostModifier": 0,
+  "maintenance": 10,
+  "uniques": [
+   "Must be on [River]",
+   "[+3 Food, +3 Production, +3 Science] from [Lakes] tiles [in this city]",
+   "[+3 Food, +3 Production, +3 Science] from [River] tiles [in this city]"
+  ],
+  "requiredTech": "Ecology",
+  "cost": 2500,
+  "production": 10,
+  "percentStatBonus": {
+   "production": 15
+  }
+ },
+ {
+  "name": "Police Station",
+  "cost": 2250,
+  "maintenance": 8,
+  "hurryCostModifier": 10,
+  "uniques": [
+   "Only available <when espionage is enabled>"
+  ],
+  "requiredBuilding": "Constabulary",
+  "requiredTech": "Electronics"
+ },
+ {
+  "name": "Stadium",
+  "requiredBuilding": "Theatre",
+  "maintenance": 8,
+  "requiredTech": "Atomic Theory",
+  "cost": 2250
+ },
+ {
+  "name": "Broadcast Tower",
+  "cost": 2000,
+  "requiredBuilding": "Opera House",
+  "maintenance": 7,
+  "requiredTech": "Radio",
+  "uniques": [
+   "Comment [Provides 1 [Great Work of Music] Slot]",
+   "Destroyed when the city is captured <hidden from users>",
+   "[+1 Culture] per [2] population [in this city]"
+  ],
+  "civilopediaText": [
+   {
+    "text": "[Great Work of Music] Slot",
+    "link": "Building/[Broadcast Tower] [Great Work of Music]"
+   },
+   {
+    "text": "Media Culture",
+    "link": "Policy/Media Culture"
+   }
+  ]
+ },
+ {
+  "name": "Eiffel Tower",
+  "happiness": 5,
+  "greatPersonPoints": {
+   "Great Merchant": 2
+  },
+  "isWonder": true,
+  "uniques": [
+   "Provides [12] [Tourism]"
+  ],
+  "requiredTech": "Dynamite",
+  "quote": "'We live only to discover beauty, all else is a form of waiting' - Kahlil Gibran",
+  "cost": 1250,
+  "culture": 1
+ },
+ {
+  "name": "National Intelligence Agency",
+  "cost": 900,
+  "isNationalWonder": true,
+  "uniques": [
+   "Only available <when espionage is enabled>",
+   "New spies start with [1] level(s)",
+   "Promotes all spies [1] time(s)",
+   "Gain an extra spy",
+   "Only available <if [Police Station] is constructed in all [non-[Puppeted]] cities>",
+   "Cost increases by [30] per owned city"
+  ],
+  "requiredTech": "Computers",
+  "requiredBuilding": "Police Station"
+ },
+ {
+  "name": "Military Base",
+  "cityStrength": 24.0,
+  "cityHealth": 200,
+  "hurryCostModifier": 25,
+  "requiredBuilding": "Arsenal",
+  "requiredTech": "Radar",
+  "uniques": [
+   "Destroyed when the city is captured",
+   "[+25]% Production when constructing [Air] units [in this city]"
+  ],
+  "cost": 2250,
+  "maintenance": 8
+ },
+ {
+  "name": "Statue of Liberty",
+  "isWonder": true,
+  "greatPersonPoints": {
+   "Great Engineer": 2
+  },
+  "uniques": [
+   "Free Social Policy",
+   "Only available <after adopting [Freedom]>"
+  ],
+  "requiredTech": "Biology",
+  "quote": "'Give me your tired, your poor, your huddled masses yearning to breathe free, the wretched refuse of your teeming shore. Send these, the homeless, tempest-tossed to me, I lift my lamp beside the golden door!' - Emma Lazarus",
+  "cost": 1600,
+  "culture": 1
+ },
+ {
+  "name": "Neuschwanstein",
+  "greatPersonPoints": {
+   "Great Merchant": 1
+  },
+  "isWonder": true,
+  "uniques": [
+   "Must have an owned [{non-[Natural Wonder]} {Mountain}] within [2] tiles"
+  ],
+  "requiredTech": "Railroads",
+  "quote": "'...the location is one of the most beautiful to be found, holy and unapproachable, a worthy temple for the divine friend who has brought salvation and true blessing to the world.' - King Ludwig II of Bavaria",
+  "cost": 1000,
+  "gold": 6,
+  "culture": 4
+ },
+ {
+  "name": "Research Lab",
+  "specialistSlots": {
+   "Scientist": 1
+  },
+  "requiredBuilding": "Public School",
+  "maintenance": 7,
+  "requiredTech": "Plastics",
+  "cost": 2000,
+  "science": 4,
+  "uniques": [
+   "[+4 Science] from [Aluminum] tiles [in this city]",
+   "[+4 Science] from [Oil] tiles [in this city]",
+   "[+4 Science] from [Uranium] tiles [in this city]",
+   "[+4 Science] from [Academy] tiles [in this city]",
+   "[+4 Science] from all [Hospital] buildings <in this city>",
+   "[+4 Science] from all [Medical Lab] buildings <in this city>",
+   "[+4 Science] from all [Factory] buildings <in this city>"
+  ]
+ },
+ {
+  "name": "Cristo Redentor",
+  "isWonder": true,
+  "greatPersonPoints": {
+   "Great Artist": 2
+  },
+  "uniques": [
+   "[+2 Culture] from all [Hotel] buildings"
+  ],
+  "requiredTech": "Plastics",
+  "quote": "'Come to me, all who labor and are heavy burdened, and I will give you rest.' - New Testament, Matthew 11:28",
+  "cost": 1700,
+  "culture": 5
+ },
+ {
+  "name": "Medical Lab",
+  "requiredBuilding": "Hospital",
+  "maintenance": 8,
+  "requiredTech": "Pharmaceuticals",
+  "uniques": [
+   "[25]% Food is carried over after population increases [in this city]"
+  ],
+  "cost": 2250
+ },
+ {
+  "name": "Manhattan Project",
+  "cost": 900,
+  "isNationalWonder": true,
+  "uniques": [
+   "Enables nuclear weapon",
+   "Triggers a global alert upon completion",
+   "Cannot be hurried"
+  ],
+  "requiredTech": "Atomic Theory"
+ },
+ {
+  "name": "Pentagon",
+  "isWonder": true,
+  "greatPersonPoints": {
+   "Great Engineer": 2
+  },
+  "uniques": [
+   "[+50]% Production when constructing [Air] units [in this city]",
+   "Free [Jet Fighter] appears",
+   "Free [Jet Fighter] appears"
+  ],
+  "requiredTech": "Combined Arms",
+  "quote": "'In preparing for battle I have always found that plans are useless, but planning is indispensable.' - Dwight D. Eisenhower",
+  "cost": 1900,
+  "culture": 1
+ },
+ {
+  "name": "Solar Plant",
+  "percentStatBonus": {
+   "production": 15
+  },
+  "maintenance": 10,
+  "requiredTech": "Ecology",
+  "uniques": [
+   "Must be next to [Desert]",
+   "Only available <in cities without a [Nuclear Plant]>",
+   "[+1 Production, +1 Science] from [Grassland] tiles [in this city]",
+   "[+1 Production, +1 Science] from [Plains] tiles [in this city]",
+   "[+1 Production, +1 Science] from [Tundra] tiles [in this city]",
+   "[+1 Production, +1 Science] from [Snow] tiles [in this city]",
+   "[+3 Production, +3 Science] from [Desert] tiles [in this city]"
+  ],
+  "cost": 2250,
+  "production": 10
+ },
+ {
+  "name": "Recycling Center",
+  "maintenance": 8,
+  "requiredTech": "Electronics",
+  "uniques": [
+   "Provides [2] [Aluminum]",
+   "Limited to [5] per Civilization"
+  ],
+  "cost": 2250
+ },
+ {
+  "name": "Sydney Opera House",
+  "isWonder": true,
+  "cost": 2300,
+  "uniques": [
+   "Free Social Policy",
+   "Comment [Provides 2 [Great Work of Music] Slots]",
+   "Must be next to [Coast]"
+  ],
+  "requiredTech": "Satellites",
+  "quote": "'Those who lose dreaming are lost.' - Australian Aboriginal saying",
+  "civilopediaText": [
+   {
+    "text": "[Great Work of Music] Slot 1",
+    "link": "Building/[Sydney Opera House] [Great Work of Music] 1"
+   },
+   {
+    "text": "[Great Work of Music] Slot 2",
+    "link": "Building/[Sydney Opera House] [Great Work of Music] 2"
+   },
+   {
+    "text": "Theming Bonus",
+    "link": "Building/[Sydney Opera House] [Theming Bonus]"
+   }
+  ],
+  "culture": 1
+ },
+ {
+  "name": "Nuclear Plant",
+  "percentStatBonus": {
+   "production": 33
+  },
+  "maintenance": 10,
+  "requiredResource": "Uranium",
+  "requiredTech": "Ecology",
+  "uniques": [
+   "Only available <in cities without a [Solar Plant]>",
+   "[+1 Production, +1 Gold, +1 Science, +1 Culture] from every [Civil Servant]"
+  ],
+  "cost": 2500,
+  "production": 20
+ },
+ {
+  "name": "Apollo Program",
+  "cost": 900,
+  "isNationalWonder": true,
+  "uniques": [
+   "Enables construction of Spaceship parts",
+   "Triggers a global alert upon completion",
+   "Only available <when [Scientific] Victory is enabled>",
+   "Cannot be hurried"
+  ],
+  "requiredTech": "Rocketry",
+  "civilopediaText": [
+   {
+    "text": "Once you have completed the Apollo Program, you can start constructing spaceship parts in your cities (with the relevant technologies) to win a Scientific Victory!"
+   }
+  ]
+ },
+ {
+  "name": "Great Firewall",
+  "isWonder": true,
+  "uniques": [
+   "Comment [Negates [Tourism] bonus from other players discovering [The Internet]]",
+   "[+10 Science] from all [Research Lab] buildings"
+  ],
+  "requiredTech": "The Internet",
+  "quote": "'Distrust and caution are the parents of security.' - Benjamin Franklin",
+  "civilopediaText": [
+   {
+    "text": "The Internet",
+    "link": "Technology/The Internet"
+   },
+   {
+    "text": "Tourism",
+    "link": "Resource/Tourism"
+   }
+  ],
+  "cost": 3000,
+  "culture": 1
+ },
+ {
+  "name": "CN Tower",
+  "isWonder": true,
+  "greatPersonPoints": {
+   "Great Merchant": 1
+  },
+  "uniques": [
+   "Gain a free [Broadcast Tower] [in all cities]"
+  ],
+  "requiredTech": "Telecommunications",
+  "quote": "'Nothing travels faster than light with the possible exception of bad news, which obeys its own special rules.' - Douglas Adams",
+  "cost": 2300,
+  "culture": 1
+ },
+ {
+  "name": "Bomb Shelter",
+  "cost": 2250,
+  "maintenance": 8,
+  "requiredTech": "Nuclear Fission",
+  "uniques": [
+   "Population loss from nuclear attacks [-75]% [in this city]",
+   "Damage to garrison from nuclear attacks [-75]% [in this city]",
+   "Only available <when nuclear weapons are enabled> <hidden from users>"
+  ],
+  "cityStrength": 5.0
+ },
+ {
+  "name": "Hubble Space Telescope",
+  "isWonder": true,
+  "greatPersonPoints": {
+   "Great Scientist": 1
+  },
+  "uniques": [
+   "[2] free [Great Scientist] units appear",
+   "Gain a free [Spaceship Factory] [in this city]"
+  ],
+  "requiredTech": "Robotics",
+  "quote": "'The wonder is, not that the field of stars is so vast, but that man has measured it.' - Anatole France",
+  "cost": 3000,
+  "culture": 1
+ },
+ {
+  "name": "Spaceship Factory",
+  "maintenance": 10,
+  "requiredResource": "Aluminum",
+  "cost": 2750,
+  "requiredBuilding": "Factory",
+  "requiredTech": "Robotics",
+  "production": 3,
+  "percentStatBonus": {
+   "science": 25
+  }
+ },
+ {
+  "name": "United Nations",
+  "isWonder": true,
+  "greatPersonPoints": {
+   "Great Merchant": 2
+  },
+  "requiredTech": "Globalization",
+  "uniques": [
+   "Triggers voting for the Diplomatic Victory",
+   "Only available <when [Diplomatic] Victory is enabled>",
+   "Triggers a global alert upon completion"
+  ],
+  "quote": "'More than ever before in human history, we share a common destiny. We can master it only if we face it together. And that is why we have the United Nations.' - Kofi Annan",
+  "cost": 3250
+ },
+ {
+  "name": "Cathedral",
+  "uniques": [
+   "Unbuildable",
+   "Unsellable",
+   "Can be purchased for [200] [Faith] [in all cities in which the majority religion is a major religion]",
+   "Only available <when religion is enabled>",
+   "Comment [Provides 1 [Great Work of Art] or [Artifact] Slot]",
+   "Only available <after adopting [Cathedrals]>",
+   "Provides [2] [Tourism] <after adopting [Sacred Sites]>",
+   "Destroyed when the city is captured",
+   "Unbuildable",
+   "Can be purchased with [Faith] [in all cities]",
+   "[+1 Gold] from [Farm] tiles [in this city]",
+   "[+1 Gold] from [Pasture] tiles [in this city]",
+   "[+1 Gold] from [Quarry] tiles [in this city]"
+  ],
+  "civilopediaText": [
+   {
+    "text": "[Great Work of Art] Slot",
+    "link": "Building/[Cathedral] [Great Work of Art]"
+   }
+  ],
+  "cost": 200,
+  "gold": 2,
+  "faith": 2
+ },
+ {
+  "name": "Monastery",
+  "uniques": [
+   "Unbuildable",
+   "Unsellable",
+   "Can be purchased for [150] [Faith] [in all cities in which the majority religion is a major religion]",
+   "Only available <after adopting [Monasteries]>",
+   "Only available <when religion is enabled>",
+   "Destroyed when the city is captured",
+   "Provides [2] [Tourism] <after adopting [Sacred Sites]>",
+   "Unbuildable",
+   "Can be purchased with [Faith] [in all cities]"
+  ],
+  "cost": 200,
+  "food": 3,
+  "science": 3,
+  "faith": 2
+ },
+ {
+  "name": "Mosque",
+  "uniques": [
+   "Unbuildable",
+   "Unsellable",
+   "Can be purchased for [200] [Faith] [in all cities in which the majority religion is a major religion]",
+   "Only available <after adopting [Mosques]>",
+   "Only available <when religion is enabled>",
+   "Provides [2] [Tourism] <after adopting [Sacred Sites]>",
+   "Destroyed when the city is captured",
+   "Unbuildable",
+   "Can be purchased with [Faith] [in all cities]"
+  ],
+  "cost": 200,
+  "science": 2,
+  "faith": 3
+ },
+ {
+  "name": "Pagoda",
+  "uniques": [
+   "Unbuildable",
+   "Unsellable",
+   "Can be purchased for [200] [Faith] [in all cities in which the majority religion is a major religion]",
+   "Only available <when religion is enabled>",
+   "Only available <after adopting [Pagodas]>",
+   "Provides [2] [Tourism] <after adopting [Sacred Sites]>",
+   "Destroyed when the city is captured",
+   "Unbuildable",
+   "Can be purchased with [Faith] [in all cities]"
+  ],
+  "cost": 200,
+  "faith": 2
+ },
+ {
+  "name": "[Palace] [Great Work of Art]",
+  "cost": 1,
+  "uniques": [
+   "Great Work",
+   "Unavailable <without [Artifact]> <without [Great Work of Art]> <hidden from users>",
+   "Unavailable <when number of [Artifact] is less than [1]> <when number of [Great Work of Art] is less than [1]> <hidden from users>",
+   "Instantly consumes [1] [Artifact] <when number of [Artifact] is more than [0]> <when number of [Great Work of Art] is less than [1]> <hidden from users>",
+   "Instantly consumes [1] [Great Work of Art] <when number of [Artifact] is less than [1]> <when number of [Great Work of Art] is more than [0]> <hidden from users>",
+   "Instantly consumes [1] [Artifact] <when number of [Artifact] is more than [0]> <when number of [Great Work of Art] is more than [0]> <hidden from users>",
+   "Provides [2] [Tourism]",
+   "Provides [1] [Tourism] <in cities with a [Airport]> <hidden from users>",
+   "Provides [1] [Tourism] <in cities with a [Hotel]> <hidden from users>",
+   "Provides [2] [Tourism] <in cities with a [National Visitor Center]> <hidden from users>",
+   "Never destroyed when the city is captured <hidden from users>",
+   "Unsellable <hidden from users>",
+   "Only available <in cities with a [Palace]> <hidden from users>",
+   "Automatically built in all cities where it is buildable <hidden from users>"
+  ],
+  "civilopediaText": [
+   {
+    "text": "Great Works",
+    "link": "Tutorial/Great Works"
+   },
+   {
+    "text": "Requires at least one of the following:"
+   },
+   {
+    "text": "Great Work of Art",
+    "link": "Resource/Great Work of Art"
+   },
+   {
+    "text": "Artifact",
+    "link": "Resource/Artifact"
+   }
+  ]
+ },
+ {
+  "name": "Airport",
+  "cost": 2250,
+  "maintenance": 8,
+  "uniques": [
+   "Comment [Allows airlifting to other cities with [Airport]s]",
+   "Can carry [4] extra [Air] units <in this city>",
+   "[50]% of [Culture] from every [Wonder] in the city added to [Tourism]",
+   "[50]% of [Culture] from every [Improvement] in the city added to [Tourism]",
+   "Comment [+50% [Tourism] from Great Works in this city]"
+  ],
+  "requiredTech": "Rocketry"
+ },
+ {
+  "name": "Caravansary",
+  "cost": 200,
+  "uniques": [
+   "All newly-trained [Caravan] units [in this city] receive the [[Caravansary] ability] promotion",
+   "[+1 Culture, +1 Production] from [Cotton] tiles [in this city]",
+   "[+1 Gold, +1 Production] from [Furs] tiles [in this city]",
+   "[+2 Gold] from [Truffles] tiles [in this city]"
+  ],
+  "requiredTech": "Currency",
+  "civilopediaText": [
+   {
+    "text": "[Caravansary] ability",
+    "link": "Promotion/[Caravansary] ability"
+   }
+  ],
+  "gold": 1,
+  "requiredBuilding": "Market"
+ },
+ {
+  "name": "Hotel",
+  "cost": 1000,
+  "maintenance": 5,
+  "uniques": [
+   "[50]% of [Culture] from every [Wonder] in the city added to [Tourism]",
+   "[50]% of [Culture] from every [Improvement] in the city added to [Tourism]",
+   "Comment [+50% [Tourism] from Great Works in this city]",
+   "Unavailable <when [Cultural] Victory is disabled>"
+  ],
+  "requiredTech": "Railroads"
+ },
+ {
+  "name": "Cloves",
+  "uniqueTo": "Indonesia",
+  "cost": 1,
+  "uniques": [
+   "Provides [2] [Cloves]",
+   "Only available <in cities without a [Palace]> <hidden from users>",
+   "Only available <in cities without a [Nutmeg]> <hidden from users>",
+   "Only available <in cities without a [Pepper]> <hidden from users>",
+   "Automatically built in all cities where it is buildable <hidden from users>",
+   "Must be next to [Coast]",
+   "Only available <on foreign continents>",
+   "Limited to [1] per Civilization <hidden from users>",
+   "Will not be displayed in Civilopedia",
+   "Never destroyed when the city is captured <hidden from users>",
+   "Unsellable <hidden from users>"
+  ]
+ },
+ {
+  "name": "Nutmeg",
+  "uniqueTo": "Indonesia",
+  "cost": 1,
+  "uniques": [
+   "Provides [2] [Nutmeg]",
+   "Only available <in cities without a [Palace]> <hidden from users>",
+   "Only available <in cities without a [Cloves]> <hidden from users>",
+   "Only available <in cities without a [Pepper]> <hidden from users>",
+   "Automatically built in all cities where it is buildable <hidden from users>",
+   "Must be next to [Coast]",
+   "Only available <on foreign continents>",
+   "Limited to [1] per Civilization <hidden from users>",
+   "Will not be displayed in Civilopedia",
+   "Never destroyed when the city is captured <hidden from users>",
+   "Unsellable <hidden from users>"
+  ]
+ },
+ {
+  "name": "Pepper",
+  "uniqueTo": "Indonesia",
+  "cost": 1,
+  "uniques": [
+   "Provides [2] [Pepper]",
+   "Only available <in cities without a [Palace]> <hidden from users>",
+   "Only available <in cities without a [Nutmeg]> <hidden from users>",
+   "Only available <in cities without a [Cloves]> <hidden from users>",
+   "Automatically built in all cities where it is buildable <hidden from users>",
+   "Must be next to [Coast]",
+   "Only available <on foreign continents>",
+   "Limited to [1] per Civilization <hidden from users>",
+   "Will not be displayed in Civilopedia",
+   "Never destroyed when the city is captured <hidden from users>",
+   "Unsellable <hidden from users>"
+  ]
+ },
+ {
+  "name": "Royal Library",
+  "replaces": "National College",
+  "uniqueTo": "Assyria",
+  "hurryCostModifier": 25,
+  "uniques": [
+   "Comment [Provides 1 [Great Work of Writing] Slot]",
+   "[+1 Science] per [2] population [in this city]",
+   "[+3 Science] from all [Library] buildings"
+  ],
+  "requiredTech": "Writing",
+  "civilopediaText": [
+   {
+    "text": "[Great Work of Writing] Slot",
+    "link": "Building/[Royal Library] [Great Work of Writing]"
+   }
+  ],
+  "isNationalWonder": true,
+  "cost": 80,
+  "science": 5,
+  "culture": 3,
+  "greatPersonPoints": {
+   "Great Scientist": 2
+  }
+ },
+ {
+  "name": "[Royal Library] [Great Work of Writing]",
+  "cost": 1,
+  "uniques": [
+   "Great Work",
+   "Instantly consumes [1] [Great Work of Writing]",
+   "Unavailable <without [Great Work of Writing]> <hidden from users>",
+   "Provides [2] [Tourism]",
+   "Provides [1] [Tourism] <in cities with a [Airport]> <hidden from users>",
+   "Provides [1] [Tourism] <in cities with a [Hotel]> <hidden from users>",
+   "Provides [2] [Tourism] <in cities with a [National Visitor Center]> <hidden from users>",
+   "Never destroyed when the city is captured <hidden from users>",
+   "Unsellable <hidden from users>",
+   "Automatically built in all cities where it is buildable <hidden from users>",
+   "Only available <in cities with a [Royal Library]> <hidden from users>",
+   "New [Military] units start with [10] XP [in this city]"
+  ],
+  "civilopediaText": [
+   {
+    "text": "Great Works",
+    "link": "Tutorial/Great Works"
+   }
+  ]
+ },
+ {
+  "name": "[Amphitheater] [Great Work of Writing]",
+  "cost": 1,
+  "uniques": [
+   "Great Work",
+   "Instantly consumes [1] [Great Work of Writing]",
+   "Unavailable <without [Great Work of Writing]> <hidden from users>",
+   "Provides [2] [Tourism]",
+   "Provides [1] [Tourism] <in cities with a [Airport]> <hidden from users>",
+   "Provides [1] [Tourism] <in cities with a [Hotel]> <hidden from users>",
+   "Provides [2] [Tourism] <in cities with a [National Visitor Center]> <hidden from users>",
+   "Never destroyed when the city is captured <hidden from users>",
+   "Unsellable <hidden from users>",
+   "Only available <in cities with a [Amphitheater]> <hidden from users>",
+   "Automatically built in all cities where it is buildable <hidden from users>"
+  ],
+  "civilopediaText": [
+   {
+    "text": "Great Works",
+    "link": "Tutorial/Great Works"
+   }
+  ]
+ },
+ {
+  "name": "[Cathedral] [Great Work of Art]",
+  "cost": 1,
+  "uniques": [
+   "Great Work",
+   "Unavailable <without [Artifact]> <without [Great Work of Art]> <hidden from users>",
+   "Unavailable <when number of [Artifact] is less than [1]> <when number of [Great Work of Art] is less than [1]> <hidden from users>",
+   "Instantly consumes [1] [Artifact] <when number of [Artifact] is more than [0]> <when number of [Great Work of Art] is less than [1]> <hidden from users>",
+   "Instantly consumes [1] [Great Work of Art] <when number of [Artifact] is less than [1]> <when number of [Great Work of Art] is more than [0]> <hidden from users>",
+   "Instantly consumes [1] [Artifact] <when number of [Artifact] is more than [0]> <when number of [Great Work of Art] is more than [0]> <hidden from users>",
+   "Provides [2] [Tourism]",
+   "Provides [1] [Tourism] <in cities with a [Airport]> <hidden from users>",
+   "Provides [1] [Tourism] <in cities with a [Hotel]> <hidden from users>",
+   "Provides [2] [Tourism] <in cities with a [National Visitor Center]> <hidden from users>",
+   "Never destroyed when the city is captured <hidden from users>",
+   "Unsellable <hidden from users>",
+   "Only available <in cities with a [Cathedral]> <hidden from users>",
+   "Automatically built in all cities where it is buildable <hidden from users>"
+  ],
+  "civilopediaText": [
+   {
+    "text": "Great Works",
+    "link": "Tutorial/Great Works"
+   },
+   {
+    "text": "Requires at least one of the following:"
+   },
+   {
+    "text": "Great Work of Art",
+    "link": "Resource/Great Work of Art"
+   },
+   {
+    "text": "Artifact",
+    "link": "Resource/Artifact"
+   }
+  ]
+ },
+ {
+  "name": "Ducal Stable",
+  "replaces": "Stable",
+  "uniqueTo": "Poland",
+  "cost": 300,
+  "maintenance": 2,
+  "requiredNearbyImprovedResources": [
+   "Horses",
+   "Sheep",
+   "Cattle"
+  ],
+  "hurryCostModifier": 25,
+  "uniques": [
+   "New [Mounted] units start with [15] XP [in this city]",
+   "[+3 Production, +3 Gold] from [Cattle] tiles [in this city]",
+   "[+3 Production, +3 Gold] from [Horses] tiles [in this city]",
+   "[+3 Production, +3 Gold] from [Sheep] tiles [in this city]"
+  ],
+  "requiredTech": "Chivalry",
+  "production": 3
+ },
+ {
+  "name": "Ikanda",
+  "replaces": "Barracks",
+  "uniqueTo": "Zulu",
+  "cost": 110,
+  "hurryCostModifier": 25,
+  "maintenance": 1,
+  "uniques": [
+   "Destroyed when the city is captured",
+   "New [Military] units start with [15] XP [in this city]",
+   "All newly-trained [{pre-[Renaissance era]} {Sword}] units [in this city] receive the [Buffalo Horns] promotion"
+  ],
+  "requiredTech": "Bronze Working",
+  "civilopediaText": [
+   {
+    "text": "Buffalo Horns",
+    "link": "Promotion/Buffalo Horns"
+   }
+  ],
+  "science": 1,
+  "culture": 1
+ },
+ {
+  "name": "Candi",
+  "replaces": "Garden",
+  "uniqueTo": "Indonesia",
+  "cost": 300,
+  "uniques": [
+   "[+1 Food, +1 Gold] from [Citrus] tiles [in this city]",
+   "[+1 Culture, +1 Faith] from [Cloves] tiles [in this city]",
+   "[+1 Food, +1 Gold] from [Cocoa] tiles [in this city]",
+   "[+1 Culture, +1 Production] from [Nutmeg] tiles [in this city]",
+   "[+1 Faith, +1 Gold] from [Pepper] tiles [in this city]",
+   "[+2 Gold] from [Oasis] tiles [in this city]"
+  ],
+  "hurryCostModifier": 25,
+  "maintenance": 2,
+  "requiredTech": "Theology",
+  "culture": 3,
+  "faith": 2,
+  "requiredBuilding": "Aqueduct"
+ },
+ {
+  "name": "Hanse",
+  "replaces": "Mint",
+  "uniqueTo": "Germany",
+  "specialistSlots": {
+   "Merchant": 1
+  },
+  "hurryCostModifier": 15,
+  "uniques": [
+   "[+2 Gold] from [Bananas] tiles [in this city]",
+   "[+1 Gold, +2 Production] from [Coffee] tiles [in this city]",
+   "[+2 Gold, +1 Production] from [Tea] tiles [in this city]",
+   "[+3 Gold] from [Tobacco] tiles [in this city]"
+  ],
+  "requiredBuilding": "Market",
+  "requiredTech": "Guilds",
+  "cost": 350,
+  "culture": 3,
+  "gold": 5
+ },
+ {
+  "name": "Broadway",
+  "cost": 1700,
+  "isWonder": true,
+  "uniques": [
+   "Free [Great Musician] appears",
+   "Comment [Provides 3 [Great Work of Music] Slots]"
+  ],
+  "requiredTech": "Radio",
+  "quote": "'Broadway is a main artery of New York cultural life - the hardened artery' - Walter Winchell",
+  "civilopediaText": [
+   {
+    "text": "[Great Work of Music] Slot 1",
+    "link": "Building/[Broadway] [Great Work of Music] 1"
+   },
+   {
+    "text": "[Great Work of Music] Slot 2",
+    "link": "Building/[Broadway] [Great Work of Music] 2"
+   },
+   {
+    "text": "[Great Work of Music] Slot 3",
+    "link": "Building/[Broadway] [Great Work of Music] 3"
+   },
+   {
+    "text": "Theming Bonus",
+    "link": "Building/[Broadway] [Theming Bonus]"
+   }
+  ],
+  "culture": 2
+ },
+ {
+  "name": "[Broadway] [Theming Bonus]",
+  "cost": 1,
+  "uniques": [
+   "Only available <in cities with a [Broadway]> <hidden from users>",
+   "Only available <in cities with a [[Broadway] [Great Work of Music] 1]> <hidden from users>",
+   "Only available <in cities with a [[Broadway] [Great Work of Music] 2]> <hidden from users>",
+   "Only available <in cities with a [[Broadway] [Great Work of Music] 3]> <hidden from users>",
+   "Unsellable <hidden from users>",
+   "Never destroyed when the city is captured <hidden from users>",
+   "Automatically built in all cities where it is buildable <hidden from users>",
+   "Provides [3] [Tourism]",
+   "Provides [3] [Tourism] <in [Capital] cities> <for [City of Light] Civilizations> <hidden from users>",
+   "Provides [3] [Tourism] <after adopting [Aesthetics Complete]> <hidden from users>"
+  ],
+  "civilopediaText": [
+   {
+    "text": "Great Works",
+    "link": "Tutorial/Great Works"
+   }
+  ]
+ },
+ {
+  "name": "[Broadway] [Great Work of Music] 1",
+  "cost": 1,
+  "uniques": [
+   "Great Work",
+   "Instantly consumes [1] [Great Work of Music]",
+   "Unavailable <without [Great Work of Music]> <hidden from users>",
+   "Provides [2] [Tourism]",
+   "Provides [1] [Tourism] <in cities with a [Airport]> <hidden from users>",
+   "Provides [1] [Tourism] <in cities with a [Hotel]> <hidden from users>",
+   "Provides [2] [Tourism] <in cities with a [National Visitor Center]> <hidden from users>",
+   "Never destroyed when the city is captured <hidden from users>",
+   "Unsellable <hidden from users>",
+   "Only available <in cities with a [Broadway]> <hidden from users>",
+   "Automatically built in all cities where it is buildable <hidden from users>"
+  ],
+  "civilopediaText": [
+   {
+    "text": "Great Works",
+    "link": "Tutorial/Great Works"
+   }
+  ]
+ },
+ {
+  "name": "[Broadway] [Great Work of Music] 2",
+  "cost": 1,
+  "uniques": [
+   "Great Work",
+   "Instantly consumes [1] [Great Work of Music]",
+   "Unavailable <without [Great Work of Music]> <hidden from users>",
+   "Provides [2] [Tourism]",
+   "Provides [1] [Tourism] <in cities with a [Airport]> <hidden from users>",
+   "Provides [1] [Tourism] <in cities with a [Hotel]> <hidden from users>",
+   "Provides [2] [Tourism] <in cities with a [National Visitor Center]> <hidden from users>",
+   "Never destroyed when the city is captured <hidden from users>",
+   "Unsellable <hidden from users>",
+   "Only available <in cities with a [Broadway]> <hidden from users>",
+   "Automatically built in all cities where it is buildable <hidden from users>"
+  ],
+  "civilopediaText": [
+   {
+    "text": "Great Works",
+    "link": "Tutorial/Great Works"
+   }
+  ]
+ },
+ {
+  "name": "[Broadway] [Great Work of Music] 3",
+  "cost": 1,
+  "uniques": [
+   "Great Work",
+   "Instantly consumes [1] [Great Work of Music]",
+   "Unavailable <without [Great Work of Music]> <hidden from users>",
+   "Provides [2] [Tourism]",
+   "Provides [1] [Tourism] <in cities with a [Airport]> <hidden from users>",
+   "Provides [1] [Tourism] <in cities with a [Hotel]> <hidden from users>",
+   "Provides [2] [Tourism] <in cities with a [National Visitor Center]> <hidden from users>",
+   "Never destroyed when the city is captured <hidden from users>",
+   "Unsellable <hidden from users>",
+   "Only available <in cities with a [Broadway]> <hidden from users>",
+   "Automatically built in all cities where it is buildable <hidden from users>"
+  ],
+  "civilopediaText": [
+   {
+    "text": "Great Works",
+    "link": "Tutorial/Great Works"
+   }
+  ]
+ },
+ {
+  "name": "[Sydney Opera House] [Theming Bonus]",
+  "cost": 1,
+  "uniques": [
+   "Only available <in cities with a [Sydney Opera House]> <hidden from users>",
+   "Only available <in cities with a [[Sydney Opera House] [Great Work of Music] 1]> <hidden from users>",
+   "Only available <in cities with a [[Sydney Opera House] [Great Work of Music] 2]> <hidden from users>",
+   "Unsellable <hidden from users>",
+   "Never destroyed when the city is captured <hidden from users>",
+   "Automatically built in all cities where it is buildable <hidden from users>",
+   "Provides [2] [Tourism]",
+   "Provides [2] [Tourism] <in [Capital] cities> <for [City of Light] Civilizations> <hidden from users>",
+   "Provides [2] [Tourism] <after adopting [Aesthetics Complete]> <hidden from users>"
+  ],
+  "civilopediaText": [
+   {
+    "text": "Great Works",
+    "link": "Tutorial/Great Works"
+   }
+  ]
+ },
+ {
+  "name": "[Sydney Opera House] [Great Work of Music] 1",
+  "cost": 1,
+  "uniques": [
+   "Great Work",
+   "Instantly consumes [1] [Great Work of Music]",
+   "Unavailable <without [Great Work of Music]> <hidden from users>",
+   "Provides [2] [Tourism]",
+   "Provides [1] [Tourism] <in cities with a [Airport]> <hidden from users>",
+   "Provides [1] [Tourism] <in cities with a [Hotel]> <hidden from users>",
+   "Provides [2] [Tourism] <in cities with a [National Visitor Center]> <hidden from users>",
+   "Never destroyed when the city is captured <hidden from users>",
+   "Unsellable <hidden from users>",
+   "Only available <in cities with a [Sydney Opera House]> <hidden from users>",
+   "Automatically built in all cities where it is buildable <hidden from users>"
+  ],
+  "civilopediaText": [
+   {
+    "text": "Great Works",
+    "link": "Tutorial/Great Works"
+   }
+  ]
+ },
+ {
+  "name": "[Sydney Opera House] [Great Work of Music] 2",
+  "cost": 1,
+  "uniques": [
+   "Great Work",
+   "Instantly consumes [1] [Great Work of Music]",
+   "Unavailable <without [Great Work of Music]> <hidden from users>",
+   "Provides [2] [Tourism]",
+   "Provides [1] [Tourism] <in cities with a [Airport]> <hidden from users>",
+   "Provides [1] [Tourism] <in cities with a [Hotel]> <hidden from users>",
+   "Provides [2] [Tourism] <in cities with a [National Visitor Center]> <hidden from users>",
+   "Never destroyed when the city is captured <hidden from users>",
+   "Unsellable <hidden from users>",
+   "Only available <in cities with a [Sydney Opera House]> <hidden from users>",
+   "Automatically built in all cities where it is buildable <hidden from users>"
+  ],
+  "civilopediaText": [
+   {
+    "text": "Great Works",
+    "link": "Tutorial/Great Works"
+   }
+  ]
+ },
+ {
+  "name": "Globe Theatre",
+  "cost": 800,
+  "isWonder": true,
+  "uniques": [
+   "Free [Great Writer] appears",
+   "Comment [Provides 2 [Great Work of Writing] Slots]"
+  ],
+  "requiredTech": "Printing Press",
+  "quote": "'Totus mundus agit histrionem' - Inscription above main entrance to the Globe Theatre",
+  "civilopediaText": [
+   {
+    "text": "[Great Work of Writing] Slot 1",
+    "link": "Building/[Globe Theatre] [Great Work of Writing] 1"
+   },
+   {
+    "text": "[Great Work of Writing] Slot 2",
+    "link": "Building/[Globe Theatre] [Great Work of Writing] 2"
+   },
+   {
+    "text": "Theming Bonus",
+    "link": "Building/[Globe Theatre] [Theming Bonus]"
+   }
+  ]
+ },
+ {
+  "name": "[Globe Theatre] [Theming Bonus]",
+  "cost": 1,
+  "uniques": [
+   "Only available <in cities with a [Globe Theatre]> <hidden from users>",
+   "Only available <in cities with a [[Globe Theatre] [Great Work of Writing] 1]> <hidden from users>",
+   "Only available <in cities with a [[Globe Theatre] [Great Work of Writing] 2]> <hidden from users>",
+   "Unsellable <hidden from users>",
+   "Never destroyed when the city is captured <hidden from users>",
+   "Automatically built in all cities where it is buildable <hidden from users>",
+   "Provides [2] [Tourism]",
+   "Provides [2] [Tourism] <in [Capital] cities> <for [City of Light] Civilizations> <hidden from users>",
+   "Provides [2] [Tourism] <after adopting [Aesthetics Complete]> <hidden from users>"
+  ],
+  "civilopediaText": [
+   {
+    "text": "Great Works",
+    "link": "Tutorial/Great Works"
+   }
+  ]
+ },
+ {
+  "name": "[Globe Theatre] [Great Work of Writing] 1",
+  "cost": 1,
+  "uniques": [
+   "Great Work",
+   "Instantly consumes [1] [Great Work of Writing]",
+   "Unavailable <without [Great Work of Writing]> <hidden from users>",
+   "Provides [2] [Tourism]",
+   "Provides [1] [Tourism] <in cities with a [Airport]> <hidden from users>",
+   "Provides [1] [Tourism] <in cities with a [Hotel]> <hidden from users>",
+   "Provides [2] [Tourism] <in cities with a [National Visitor Center]> <hidden from users>",
+   "Never destroyed when the city is captured <hidden from users>",
+   "Unsellable <hidden from users>",
+   "Only available <in cities with a [Globe Theatre]> <hidden from users>",
+   "Automatically built in all cities where it is buildable <hidden from users>"
+  ],
+  "civilopediaText": [
+   {
+    "text": "Great Works",
+    "link": "Tutorial/Great Works"
+   }
+  ]
+ },
+ {
+  "name": "[Globe Theatre] [Great Work of Writing] 2",
+  "cost": 1,
+  "uniques": [
+   "Great Work",
+   "Instantly consumes [1] [Great Work of Writing]",
+   "Unavailable <without [Great Work of Writing]> <hidden from users>",
+   "Provides [2] [Tourism]",
+   "Provides [1] [Tourism] <in cities with a [Airport]> <hidden from users>",
+   "Provides [1] [Tourism] <in cities with a [Hotel]> <hidden from users>",
+   "Provides [2] [Tourism] <in cities with a [National Visitor Center]> <hidden from users>",
+   "Never destroyed when the city is captured <hidden from users>",
+   "Unsellable <hidden from users>",
+   "Only available <in cities with a [Globe Theatre]> <hidden from users>",
+   "Automatically built in all cities where it is buildable <hidden from users>"
+  ],
+  "civilopediaText": [
+   {
+    "text": "Great Works",
+    "link": "Tutorial/Great Works"
+   }
+  ]
+ },
+ {
+  "name": "[The Louvre] [Theming Bonus]",
+  "cost": 1,
+  "uniques": [
+   "Only available <in cities with a [The Louvre]> <hidden from users>",
+   "Only available <in cities with a [[The Louvre] [Great Work of Art] 1]> <hidden from users>",
+   "Only available <in cities with a [[The Louvre] [Great Work of Art] 2]> <hidden from users>",
+   "Only available <in cities with a [[The Louvre] [Great Work of Art] 3]> <hidden from users>",
+   "Only available <in cities with a [[The Louvre] [Great Work of Art] 4]> <hidden from users>",
+   "Unsellable <hidden from users>",
+   "Never destroyed when the city is captured <hidden from users>",
+   "Automatically built in all cities where it is buildable <hidden from users>",
+   "Provides [4] [Tourism]",
+   "Provides [4] [Tourism] <in [Capital] cities> <for [City of Light] Civilizations> <hidden from users>",
+   "Provides [4] [Tourism] <after adopting [Aesthetics Complete]> <hidden from users>"
+  ],
+  "civilopediaText": [
+   {
+    "text": "Great Works",
+    "link": "Tutorial/Great Works"
+   }
+  ]
+ },
+ {
+  "name": "[The Louvre] [Great Work of Art] 1",
+  "cost": 1,
+  "uniques": [
+   "Great Work",
+   "Unavailable <without [Artifact]> <without [Great Work of Art]> <hidden from users>",
+   "Unavailable <when number of [Artifact] is less than [1]> <when number of [Great Work of Art] is less than [1]> <hidden from users>",
+   "Instantly consumes [1] [Artifact] <when number of [Artifact] is more than [0]> <when number of [Great Work of Art] is less than [1]> <hidden from users>",
+   "Instantly consumes [1] [Great Work of Art] <when number of [Artifact] is less than [1]> <when number of [Great Work of Art] is more than [0]> <hidden from users>",
+   "Instantly consumes [1] [Artifact] <when number of [Artifact] is more than [0]> <when number of [Great Work of Art] is more than [0]> <hidden from users>",
+   "Provides [2] [Tourism]",
+   "Provides [1] [Tourism] <in cities with a [Airport]> <hidden from users>",
+   "Provides [1] [Tourism] <in cities with a [Hotel]> <hidden from users>",
+   "Provides [2] [Tourism] <in cities with a [National Visitor Center]> <hidden from users>",
+   "Never destroyed when the city is captured <hidden from users>",
+   "Unsellable <hidden from users>",
+   "Only available <in cities with a [The Louvre]> <hidden from users>",
+   "Automatically built in all cities where it is buildable <hidden from users>"
+  ],
+  "civilopediaText": [
+   {
+    "text": "Great Works",
+    "link": "Tutorial/Great Works"
+   },
+   {
+    "text": "Requires at least one of the following:"
+   },
+   {
+    "text": "Great Work of Art",
+    "link": "Resource/Great Work of Art"
+   },
+   {
+    "text": "Artifact",
+    "link": "Resource/Artifact"
+   }
+  ]
+ },
+ {
+  "name": "[The Louvre] [Great Work of Art] 2",
+  "cost": 1,
+  "uniques": [
+   "Great Work",
+   "Unavailable <without [Artifact]> <without [Great Work of Art]> <hidden from users>",
+   "Unavailable <when number of [Artifact] is less than [1]> <when number of [Great Work of Art] is less than [1]> <hidden from users>",
+   "Instantly consumes [1] [Artifact] <when number of [Artifact] is more than [0]> <when number of [Great Work of Art] is less than [1]> <hidden from users>",
+   "Instantly consumes [1] [Great Work of Art] <when number of [Artifact] is less than [1]> <when number of [Great Work of Art] is more than [0]> <hidden from users>",
+   "Instantly consumes [1] [Artifact] <when number of [Artifact] is more than [0]> <when number of [Great Work of Art] is more than [0]> <hidden from users>",
+   "Provides [2] [Tourism]",
+   "Provides [1] [Tourism] <in cities with a [Airport]> <hidden from users>",
+   "Provides [1] [Tourism] <in cities with a [Hotel]> <hidden from users>",
+   "Provides [2] [Tourism] <in cities with a [National Visitor Center]> <hidden from users>",
+   "Never destroyed when the city is captured <hidden from users>",
+   "Unsellable <hidden from users>",
+   "Only available <in cities with a [The Louvre]> <hidden from users>",
+   "Automatically built in all cities where it is buildable <hidden from users>"
+  ],
+  "civilopediaText": [
+   {
+    "text": "Great Works",
+    "link": "Tutorial/Great Works"
+   },
+   {
+    "text": "Requires at least one of the following:"
+   },
+   {
+    "text": "Great Work of Art",
+    "link": "Resource/Great Work of Art"
+   },
+   {
+    "text": "Artifact",
+    "link": "Resource/Artifact"
+   }
+  ]
+ },
+ {
+  "name": "[The Louvre] [Great Work of Art] 3",
+  "cost": 1,
+  "uniques": [
+   "Great Work",
+   "Unavailable <without [Artifact]> <without [Great Work of Art]> <hidden from users>",
+   "Unavailable <when number of [Artifact] is less than [1]> <when number of [Great Work of Art] is less than [1]> <hidden from users>",
+   "Instantly consumes [1] [Artifact] <when number of [Artifact] is more than [0]> <when number of [Great Work of Art] is less than [1]> <hidden from users>",
+   "Instantly consumes [1] [Great Work of Art] <when number of [Artifact] is less than [1]> <when number of [Great Work of Art] is more than [0]> <hidden from users>",
+   "Instantly consumes [1] [Artifact] <when number of [Artifact] is more than [0]> <when number of [Great Work of Art] is more than [0]> <hidden from users>",
+   "Provides [2] [Tourism]",
+   "Provides [1] [Tourism] <in cities with a [Airport]> <hidden from users>",
+   "Provides [1] [Tourism] <in cities with a [Hotel]> <hidden from users>",
+   "Provides [2] [Tourism] <in cities with a [National Visitor Center]> <hidden from users>",
+   "Never destroyed when the city is captured <hidden from users>",
+   "Unsellable <hidden from users>",
+   "Only available <in cities with a [The Louvre]> <hidden from users>",
+   "Automatically built in all cities where it is buildable <hidden from users>"
+  ],
+  "civilopediaText": [
+   {
+    "text": "Great Works",
+    "link": "Tutorial/Great Works"
+   },
+   {
+    "text": "Requires at least one of the following:"
+   },
+   {
+    "text": "Great Work of Art",
+    "link": "Resource/Great Work of Art"
+   },
+   {
+    "text": "Artifact",
+    "link": "Resource/Artifact"
+   }
+  ]
+ },
+ {
+  "name": "[The Louvre] [Great Work of Art] 4",
+  "cost": 1,
+  "uniques": [
+   "Great Work",
+   "Unavailable <without [Artifact]> <without [Great Work of Art]> <hidden from users>",
+   "Unavailable <when number of [Artifact] is less than [1]> <when number of [Great Work of Art] is less than [1]> <hidden from users>",
+   "Instantly consumes [1] [Artifact] <when number of [Artifact] is more than [0]> <when number of [Great Work of Art] is less than [1]> <hidden from users>",
+   "Instantly consumes [1] [Great Work of Art] <when number of [Artifact] is less than [1]> <when number of [Great Work of Art] is more than [0]> <hidden from users>",
+   "Instantly consumes [1] [Artifact] <when number of [Artifact] is more than [0]> <when number of [Great Work of Art] is more than [0]> <hidden from users>",
+   "Provides [2] [Tourism]",
+   "Provides [1] [Tourism] <in cities with a [Airport]> <hidden from users>",
+   "Provides [1] [Tourism] <in cities with a [Hotel]> <hidden from users>",
+   "Provides [2] [Tourism] <in cities with a [National Visitor Center]> <hidden from users>",
+   "Never destroyed when the city is captured <hidden from users>",
+   "Unsellable <hidden from users>",
+   "Only available <in cities with a [The Louvre]> <hidden from users>",
+   "Automatically built in all cities where it is buildable <hidden from users>"
+  ],
+  "civilopediaText": [
+   {
+    "text": "Great Works",
+    "link": "Tutorial/Great Works"
+   },
+   {
+    "text": "Requires at least one of the following:"
+   },
+   {
+    "text": "Great Work of Art",
+    "link": "Resource/Great Work of Art"
+   },
+   {
+    "text": "Artifact",
+    "link": "Resource/Artifact"
+   }
+  ]
+ },
+ {
+  "name": "Red Fort",
+  "cost": 900,
+  "cityStrength": 6.0,
+  "greatPersonPoints": {
+   "Great Scientist": 1
+  },
+  "isWonder": true,
+  "uniques": [
+   "Free [Great Engineer] appears"
+  ],
+  "requiredTech": "Metallurgy",
+  "quote": "'When we build, let us think that we build forever.' – John Ruskin",
+  "cityHealth": 100,
+  "culture": 1
+ },
+ {
+  "name": "Borobudur",
+  "isWonder": true,
+  "uniques": [
+   "[3] free [Missionary] units appear",
+   "Can only be built <in [Holy] cities>",
+   "Only available <when religion is enabled>"
+  ],
+  "requiredTech": "Theology",
+  "quote": "'When you realize how perfect everything is, you will tilt your head back and laugh at the sky.' – Gautama Buddha",
+  "cost": 400,
+  "culture": 1,
+  "faith": 5
+ },
+ {
+  "name": "Artists' Guild",
+  "cost": 350,
+  "maintenance": 2,
+  "isNationalWonder": true,
+  "greatPersonPoints": {
+   "Great Artist": 4
+  },
+  "specialistSlots": {
+   "Artist": 2
+  },
+  "requiredTech": "Guilds",
+  "uniques": [
+   "Destroyed when the city is captured"
+  ]
+ },
+ {
+  "name": "Musicians' Guild",
+  "cost": 600,
+  "maintenance": 4,
+  "isNationalWonder": true,
+  "greatPersonPoints": {
+   "Great Artist": 5
+  },
+  "specialistSlots": {
+   "Artist": 2
+  },
+  "requiredTech": "Acoustics",
+  "uniques": [
+   "Destroyed when the city is captured"
+  ]
+ },
+ {
+  "name": "Writers' Guild",
+  "cost": 200,
+  "maintenance": 1,
+  "isNationalWonder": true,
+  "greatPersonPoints": {
+   "Great Artist": 3
+  },
+  "specialistSlots": {
+   "Artist": 2
+  },
+  "requiredTech": "Drama and Poetry",
+  "uniques": [
+   "Destroyed when the city is captured"
+  ]
+ },
+ {
+  "name": "National Visitor Center",
+  "cost": 1000,
+  "isNationalWonder": true,
+  "requiredTech": "Telecommunications",
+  "uniques": [
+   "[100]% of [Culture] from every [Wonder] in the city added to [Tourism]",
+   "[100]% of [Culture] from every [Improvement] in the city added to [Tourism]",
+   "Comment [+100% [Tourism] from Great Works in this city]",
+   "Cost increases by [30] per owned city",
+   "Only available <if [Hotel] is constructed in all [non-[Puppeted]] cities>",
+   "Unavailable <when [Cultural] Victory is disabled>"
+  ],
+  "civilopediaText": [
+   {
+    "text": "Great Works",
+    "link": "Tutorial/Great Works"
+   }
+  ]
+ },
+ {
+  "name": "East India Company",
+  "cost": 140,
+  "isNationalWonder": true,
+  "uniques": [
+   "Cost increases by [30] per owned city"
+  ],
+  "requiredTech": "Guilds"
+ },
+ {
+  "name": "Uffizi",
+  "cost": 900,
+  "specialistSlots": {
+   "Artist": 2
+  },
+  "isWonder": true,
+  "uniques": [
+   "Free [Great Artist] appears",
+   "Comment [Provides 3 [Great Work of Art] or [Artifact] Slots]",
+   "Only available <after adopting [Aesthetics]>"
+  ],
+  "requiredTech": "Economics",
+  "quote": "'The painter is not simply someone who looks and who sees. Above all, the artist is someone who exposes a personal vision by rendering it visible.' - Marcel Parquet",
+  "civilopediaText": [
+   {
+    "text": "[Great Work of Art] Slot 1",
+    "link": "Building/[Uffizi] [Great Work of Art] 1"
+   },
+   {
+    "text": "[Great Work of Art] Slot 2",
+    "link": "Building/[Uffizi] [Great Work of Art] 2"
+   },
+   {
+    "text": "[Great Work of Art] Slot 3",
+    "link": "Building/[Uffizi] [Great Work of Art] 3"
+   },
+   {
+    "text": "Theming Bonus",
+    "link": "Building/[Uffizi] [Theming Bonus]"
+   }
+  ],
+  "culture": 2
+ },
+ {
+  "name": "[Uffizi] [Theming Bonus]",
+  "cost": 1,
+  "uniques": [
+   "Only available <in cities with a [Uffizi]> <hidden from users>",
+   "Only available <in cities with a [[Uffizi] [Great Work of Art] 1]> <hidden from users>",
+   "Only available <in cities with a [[Uffizi] [Great Work of Art] 2]> <hidden from users>",
+   "Only available <in cities with a [[Uffizi] [Great Work of Art] 3]> <hidden from users>",
+   "Unsellable <hidden from users>",
+   "Never destroyed when the city is captured <hidden from users>",
+   "Automatically built in all cities where it is buildable <hidden from users>",
+   "Provides [3] [Tourism]",
+   "Provides [3] [Tourism] <in [Capital] cities> <for [City of Light] Civilizations> <hidden from users>",
+   "Provides [3] [Tourism] <after adopting [Aesthetics Complete]> <hidden from users>"
+  ],
+  "civilopediaText": [
+   {
+    "text": "Great Works",
+    "link": "Tutorial/Great Works"
+   }
+  ]
+ },
+ {
+  "name": "[Uffizi] [Great Work of Art] 1",
+  "cost": 1,
+  "uniques": [
+   "Great Work",
+   "Unavailable <without [Artifact]> <without [Great Work of Art]> <hidden from users>",
+   "Unavailable <when number of [Artifact] is less than [1]> <when number of [Great Work of Art] is less than [1]> <hidden from users>",
+   "Instantly consumes [1] [Artifact] <when number of [Artifact] is more than [0]> <when number of [Great Work of Art] is less than [1]> <hidden from users>",
+   "Instantly consumes [1] [Great Work of Art] <when number of [Artifact] is less than [1]> <when number of [Great Work of Art] is more than [0]> <hidden from users>",
+   "Instantly consumes [1] [Artifact] <when number of [Artifact] is more than [0]> <when number of [Great Work of Art] is more than [0]> <hidden from users>",
+   "Provides [2] [Tourism]",
+   "Provides [1] [Tourism] <in cities with a [Airport]> <hidden from users>",
+   "Provides [1] [Tourism] <in cities with a [Hotel]> <hidden from users>",
+   "Provides [2] [Tourism] <in cities with a [National Visitor Center]> <hidden from users>",
+   "Never destroyed when the city is captured <hidden from users>",
+   "Unsellable <hidden from users>",
+   "Only available <in cities with a [Uffizi]> <hidden from users>",
+   "Automatically built in all cities where it is buildable <hidden from users>"
+  ],
+  "civilopediaText": [
+   {
+    "text": "Great Works",
+    "link": "Tutorial/Great Works"
+   },
+   {
+    "text": "Requires at least one of the following:"
+   },
+   {
+    "text": "Great Work of Art",
+    "link": "Resource/Great Work of Art"
+   },
+   {
+    "text": "Artifact",
+    "link": "Resource/Artifact"
+   }
+  ]
+ },
+ {
+  "name": "[Uffizi] [Great Work of Art] 2",
+  "cost": 1,
+  "uniques": [
+   "Great Work",
+   "Unavailable <without [Artifact]> <without [Great Work of Art]> <hidden from users>",
+   "Unavailable <when number of [Artifact] is less than [1]> <when number of [Great Work of Art] is less than [1]> <hidden from users>",
+   "Instantly consumes [1] [Artifact] <when number of [Artifact] is more than [0]> <when number of [Great Work of Art] is less than [1]> <hidden from users>",
+   "Instantly consumes [1] [Great Work of Art] <when number of [Artifact] is less than [1]> <when number of [Great Work of Art] is more than [0]> <hidden from users>",
+   "Instantly consumes [1] [Artifact] <when number of [Artifact] is more than [0]> <when number of [Great Work of Art] is more than [0]> <hidden from users>",
+   "Provides [2] [Tourism]",
+   "Provides [1] [Tourism] <in cities with a [Airport]> <hidden from users>",
+   "Provides [1] [Tourism] <in cities with a [Hotel]> <hidden from users>",
+   "Provides [2] [Tourism] <in cities with a [National Visitor Center]> <hidden from users>",
+   "Never destroyed when the city is captured <hidden from users>",
+   "Unsellable <hidden from users>",
+   "Only available <in cities with a [Uffizi]> <hidden from users>",
+   "Automatically built in all cities where it is buildable <hidden from users>"
+  ],
+  "civilopediaText": [
+   {
+    "text": "Great Works",
+    "link": "Tutorial/Great Works"
+   },
+   {
+    "text": "Requires at least one of the following:"
+   },
+   {
+    "text": "Great Work of Art",
+    "link": "Resource/Great Work of Art"
+   },
+   {
+    "text": "Artifact",
+    "link": "Resource/Artifact"
+   }
+  ]
+ },
+ {
+  "name": "[Uffizi] [Great Work of Art] 3",
+  "cost": 1,
+  "uniques": [
+   "Great Work",
+   "Unavailable <without [Artifact]> <without [Great Work of Art]> <hidden from users>",
+   "Unavailable <when number of [Artifact] is less than [1]> <when number of [Great Work of Art] is less than [1]> <hidden from users>",
+   "Instantly consumes [1] [Artifact] <when number of [Artifact] is more than [0]> <when number of [Great Work of Art] is less than [1]> <hidden from users>",
+   "Instantly consumes [1] [Great Work of Art] <when number of [Artifact] is less than [1]> <when number of [Great Work of Art] is more than [0]> <hidden from users>",
+   "Instantly consumes [1] [Artifact] <when number of [Artifact] is more than [0]> <when number of [Great Work of Art] is more than [0]> <hidden from users>",
+   "Provides [2] [Tourism]",
+   "Provides [1] [Tourism] <in cities with a [Airport]> <hidden from users>",
+   "Provides [1] [Tourism] <in cities with a [Hotel]> <hidden from users>",
+   "Provides [2] [Tourism] <in cities with a [National Visitor Center]> <hidden from users>",
+   "Never destroyed when the city is captured <hidden from users>",
+   "Unsellable <hidden from users>",
+   "Only available <in cities with a [Uffizi]> <hidden from users>",
+   "Automatically built in all cities where it is buildable <hidden from users>"
+  ],
+  "civilopediaText": [
+   {
+    "text": "Great Works",
+    "link": "Tutorial/Great Works"
+   },
+   {
+    "text": "Requires at least one of the following:"
+   },
+   {
+    "text": "Great Work of Art",
+    "link": "Resource/Great Work of Art"
+   },
+   {
+    "text": "Artifact",
+    "link": "Resource/Artifact"
+   }
+  ]
+ },
+ {
+  "name": "Prora",
+  "cost": 1700,
+  "happiness": 2,
+  "isWonder": true,
+  "uniques": [
+   "Free Social Policy",
+   "Must be next to [Coast]",
+   "Only available <after adopting [Autocracy]>"
+  ],
+  "requiredTech": "Flight",
+  "quote": "'This loss (of freedom) means the fading from human life of values infinitely precious to it. There only remain ironbound conditions of employment and trivial amusements for leisure.' - A.N. Whitehead"
+ },
+ {
+  "name": "Parthenon",
+  "cost": 250,
+  "isWonder": true,
+  "uniques": [
+   "Comment [Provides 1 [Great Work of Art] or [Artifact] Slots]",
+   "Gain a free [[Parthenon] [Great Work of Art]] [in this city]",
+   "[+1 Science, +1 Culture] from all [Amphitheater] buildings"
+  ],
+  "requiredTech": "Drama and Poetry",
+  "quote": "'Earth proudly wears the Parthenon as the best gem upon her zone.' - Ralph Waldo Emerson",
+  "civilopediaText": [
+   {
+    "text": "[Great Work of Art] Slot",
+    "link": "Building/[Parthenon] [Great Work of Art]"
+   }
+  ],
+  "culture": 2
+ },
+ {
+  "name": "[Parthenon] [Great Work of Art]",
+  "cost": 1,
+  "uniques": [
+   "Great Work",
+   "Provides [2] [Tourism]",
+   "Provides [1] [Tourism] <in cities with a [Airport]> <hidden from users>",
+   "Provides [1] [Tourism] <in cities with a [Hotel]> <hidden from users>",
+   "Provides [2] [Tourism] <in cities with a [National Visitor Center]> <hidden from users>",
+   "Never destroyed when the city is captured <hidden from users>",
+   "Unsellable <hidden from users>",
+   "Only available <in cities with a [Parthenon]> <hidden from users>",
+   "Automatically built in all cities where it is buildable <hidden from users>"
+  ],
+  "civilopediaText": [
+   {
+    "text": "Great Works",
+    "link": "Tutorial/Great Works"
+   }
+  ]
+ },
+ {
+  "name": "[Sistine Chapel] [Theming Bonus]",
+  "cost": 1,
+  "uniques": [
+   "Only available <in cities with a [Sistine Chapel]> <hidden from users>",
+   "Only available <in cities with a [[Sistine Chapel] [Great Work of Art] 1]> <hidden from users>",
+   "Only available <in cities with a [[Sistine Chapel] [Great Work of Art] 2]> <hidden from users>",
+   "Unsellable <hidden from users>",
+   "Never destroyed when the city is captured <hidden from users>",
+   "Automatically built in all cities where it is buildable <hidden from users>",
+   "Provides [2] [Tourism]",
+   "Provides [2] [Tourism] <in [Capital] cities> <for [City of Light] Civilizations> <hidden from users>",
+   "Provides [2] [Tourism] <after adopting [Aesthetics Complete]> <hidden from users>"
+  ],
+  "civilopediaText": [
+   {
+    "text": "Great Works",
+    "link": "Tutorial/Great Works"
+   }
+  ]
+ },
+ {
+  "name": "[Sistine Chapel] [Great Work of Art] 1",
+  "cost": 1,
+  "uniques": [
+   "Great Work",
+   "Unavailable <without [Artifact]> <without [Great Work of Art]> <hidden from users>",
+   "Unavailable <when number of [Artifact] is less than [1]> <when number of [Great Work of Art] is less than [1]> <hidden from users>",
+   "Instantly consumes [1] [Artifact] <when number of [Artifact] is more than [0]> <when number of [Great Work of Art] is less than [1]> <hidden from users>",
+   "Instantly consumes [1] [Great Work of Art] <when number of [Artifact] is less than [1]> <when number of [Great Work of Art] is more than [0]> <hidden from users>",
+   "Instantly consumes [1] [Artifact] <when number of [Artifact] is more than [0]> <when number of [Great Work of Art] is more than [0]> <hidden from users>",
+   "Provides [2] [Tourism]",
+   "Provides [1] [Tourism] <in cities with a [Airport]> <hidden from users>",
+   "Provides [1] [Tourism] <in cities with a [Hotel]> <hidden from users>",
+   "Provides [2] [Tourism] <in cities with a [National Visitor Center]> <hidden from users>",
+   "Never destroyed when the city is captured <hidden from users>",
+   "Unsellable <hidden from users>",
+   "Only available <in cities with a [Sistine Chapel]> <hidden from users>",
+   "Automatically built in all cities where it is buildable <hidden from users>"
+  ],
+  "civilopediaText": [
+   {
+    "text": "Great Works",
+    "link": "Tutorial/Great Works"
+   },
+   {
+    "text": "Requires at least one of the following:"
+   },
+   {
+    "text": "Great Work of Art",
+    "link": "Resource/Great Work of Art"
+   },
+   {
+    "text": "Artifact",
+    "link": "Resource/Artifact"
+   }
+  ]
+ },
+ {
+  "name": "[Sistine Chapel] [Great Work of Art] 2",
+  "cost": 1,
+  "uniques": [
+   "Great Work",
+   "Unavailable <without [Artifact]> <without [Great Work of Art]> <hidden from users>",
+   "Unavailable <when number of [Artifact] is less than [1]> <when number of [Great Work of Art] is less than [1]> <hidden from users>",
+   "Instantly consumes [1] [Artifact] <when number of [Artifact] is more than [0]> <when number of [Great Work of Art] is less than [1]> <hidden from users>",
+   "Instantly consumes [1] [Great Work of Art] <when number of [Artifact] is less than [1]> <when number of [Great Work of Art] is more than [0]> <hidden from users>",
+   "Instantly consumes [1] [Artifact] <when number of [Artifact] is more than [0]> <when number of [Great Work of Art] is more than [0]> <hidden from users>",
+   "Provides [2] [Tourism]",
+   "Provides [1] [Tourism] <in cities with a [Airport]> <hidden from users>",
+   "Provides [1] [Tourism] <in cities with a [Hotel]> <hidden from users>",
+   "Provides [2] [Tourism] <in cities with a [National Visitor Center]> <hidden from users>",
+   "Never destroyed when the city is captured <hidden from users>",
+   "Unsellable <hidden from users>",
+   "Only available <in cities with a [Sistine Chapel]> <hidden from users>",
+   "Automatically built in all cities where it is buildable <hidden from users>"
+  ],
+  "civilopediaText": [
+   {
+    "text": "Great Works",
+    "link": "Tutorial/Great Works"
+   },
+   {
+    "text": "Requires at least one of the following:"
+   },
+   {
+    "text": "Great Work of Art",
+    "link": "Resource/Great Work of Art"
+   },
+   {
+    "text": "Artifact",
+    "link": "Resource/Artifact"
+   }
+  ]
+ },
+ {
+  "name": "International Space Station",
+  "cost": 2300,
+  "isWonder": true,
+  "requiredTech": "Satellites",
+  "quote": "'Building one Space Station for everyone was and is insane; we should have built a dozen.' - Larry Niven",
+  "culture": 1
+ },
+ {
+  "name": "[Museum] [Theming Bonus]",
+  "cost": 1,
+  "uniques": [
+   "Only available <in cities with a [Museum]> <hidden from users>",
+   "Only available <in cities with a [[Museum] [Great Work of Art] 1]> <hidden from users>",
+   "Only available <in cities with a [[Museum] [Great Work of Art] 2]> <hidden from users>",
+   "Unsellable <hidden from users>",
+   "Never destroyed when the city is captured <hidden from users>",
+   "Automatically built in all cities where it is buildable <hidden from users>",
+   "Provides [2] [Tourism]",
+   "Provides [2] [Tourism] <in [Capital] cities> <for [City of Light] Civilizations> <hidden from users>",
+   "Provides [2] [Tourism] <after adopting [Aesthetics Complete]> <hidden from users>"
+  ],
+  "civilopediaText": [
+   {
+    "text": "Great Works",
+    "link": "Tutorial/Great Works"
+   }
+  ]
+ },
+ {
+  "name": "[Museum] [Great Work of Art] 1",
+  "cost": 1,
+  "uniques": [
+   "Great Work",
+   "Unavailable <without [Artifact]> <without [Great Work of Art]> <hidden from users>",
+   "Unavailable <when number of [Artifact] is less than [1]> <when number of [Great Work of Art] is less than [1]> <hidden from users>",
+   "Instantly consumes [1] [Artifact] <when number of [Artifact] is more than [0]> <when number of [Great Work of Art] is less than [1]> <hidden from users>",
+   "Instantly consumes [1] [Great Work of Art] <when number of [Artifact] is less than [1]> <when number of [Great Work of Art] is more than [0]> <hidden from users>",
+   "Instantly consumes [1] [Artifact] <when number of [Artifact] is more than [0]> <when number of [Great Work of Art] is more than [0]> <hidden from users>",
+   "Provides [2] [Tourism]",
+   "Provides [1] [Tourism] <in cities with a [Airport]> <hidden from users>",
+   "Provides [1] [Tourism] <in cities with a [Hotel]> <hidden from users>",
+   "Provides [2] [Tourism] <in cities with a [National Visitor Center]> <hidden from users>",
+   "Never destroyed when the city is captured <hidden from users>",
+   "Unsellable <hidden from users>",
+   "Only available <in cities with a [Museum]> <hidden from users>",
+   "Automatically built in all cities where it is buildable <hidden from users>"
+  ],
+  "civilopediaText": [
+   {
+    "text": "Great Works",
+    "link": "Tutorial/Great Works"
+   },
+   {
+    "text": "Requires at least one of the following:"
+   },
+   {
+    "text": "Great Work of Art",
+    "link": "Resource/Great Work of Art"
+   },
+   {
+    "text": "Artifact",
+    "link": "Resource/Artifact"
+   }
+  ]
+ },
+ {
+  "name": "[Museum] [Great Work of Art] 2",
+  "cost": 1,
+  "uniques": [
+   "Great Work",
+   "Unavailable <without [Artifact]> <without [Great Work of Art]> <hidden from users>",
+   "Unavailable <when number of [Artifact] is less than [1]> <when number of [Great Work of Art] is less than [1]> <hidden from users>",
+   "Instantly consumes [1] [Artifact] <when number of [Artifact] is more than [0]> <when number of [Great Work of Art] is less than [1]> <hidden from users>",
+   "Instantly consumes [1] [Great Work of Art] <when number of [Artifact] is less than [1]> <when number of [Great Work of Art] is more than [0]> <hidden from users>",
+   "Instantly consumes [1] [Artifact] <when number of [Artifact] is more than [0]> <when number of [Great Work of Art] is more than [0]> <hidden from users>",
+   "Provides [2] [Tourism]",
+   "Provides [1] [Tourism] <in cities with a [Airport]> <hidden from users>",
+   "Provides [1] [Tourism] <in cities with a [Hotel]> <hidden from users>",
+   "Provides [2] [Tourism] <in cities with a [National Visitor Center]> <hidden from users>",
+   "Never destroyed when the city is captured <hidden from users>",
+   "Unsellable <hidden from users>",
+   "Only available <in cities with a [Museum]> <hidden from users>",
+   "Automatically built in all cities where it is buildable <hidden from users>"
+  ],
+  "civilopediaText": [
+   {
+    "text": "Great Works",
+    "link": "Tutorial/Great Works"
+   },
+   {
+    "text": "Requires at least one of the following:"
+   },
+   {
+    "text": "Great Work of Art",
+    "link": "Resource/Great Work of Art"
+   },
+   {
+    "text": "Artifact",
+    "link": "Resource/Artifact"
+   }
+  ]
+ },
+ {
+  "name": "[Opera House] [Great Work of Music]",
+  "cost": 1,
+  "uniques": [
+   "Great Work",
+   "Instantly consumes [1] [Great Work of Music]",
+   "Unavailable <without [Great Work of Music]> <hidden from users>",
+   "Provides [2] [Tourism]",
+   "Provides [1] [Tourism] <in cities with a [Airport]> <hidden from users>",
+   "Provides [1] [Tourism] <in cities with a [Hotel]> <hidden from users>",
+   "Provides [2] [Tourism] <in cities with a [National Visitor Center]> <hidden from users>",
+   "Never destroyed when the city is captured <hidden from users>",
+   "Unsellable <hidden from users>",
+   "Only available <in cities with a [Opera House]> <hidden from users>",
+   "Automatically built in all cities where it is buildable <hidden from users>"
+  ],
+  "civilopediaText": [
+   {
+    "text": "Great Works",
+    "link": "Tutorial/Great Works"
+   }
+  ]
+ },
+ {
+  "name": "[Broadcast Tower] [Great Work of Music]",
+  "cost": 1,
+  "uniques": [
+   "Great Work",
+   "Instantly consumes [1] [Great Work of Music]",
+   "Unavailable <without [Great Work of Music]> <hidden from users>",
+   "Provides [2] [Tourism]",
+   "Provides [1] [Tourism] <in cities with a [Airport]> <hidden from users>",
+   "Provides [1] [Tourism] <in cities with a [Hotel]> <hidden from users>",
+   "Provides [2] [Tourism] <in cities with a [National Visitor Center]> <hidden from users>",
+   "Never destroyed when the city is captured <hidden from users>",
+   "Unsellable <hidden from users>",
+   "Only available <in cities with a [Broadcast Tower]> <hidden from users>",
+   "Automatically built in all cities where it is buildable <hidden from users>"
+  ],
+  "civilopediaText": [
+   {
+    "text": "Great Works",
+    "link": "Tutorial/Great Works"
+   }
+  ]
+ },
+ {
+  "name": "[National Epic] [Great Work of Writing]",
+  "cost": 1,
+  "uniques": [
+   "Great Work",
+   "Instantly consumes [1] [Great Work of Writing]",
+   "Unavailable <without [Great Work of Writing]> <hidden from users>",
+   "Provides [2] [Tourism]",
+   "Provides [1] [Tourism] <in cities with a [Airport]> <hidden from users>",
+   "Provides [1] [Tourism] <in cities with a [Hotel]> <hidden from users>",
+   "Provides [2] [Tourism] <in cities with a [National Visitor Center]> <hidden from users>",
+   "Never destroyed when the city is captured <hidden from users>",
+   "Unsellable <hidden from users>",
+   "Only available <in cities with a [National Epic]> <hidden from users>",
+   "Automatically built in all cities where it is buildable <hidden from users>"
+  ],
+  "civilopediaText": [
+   {
+    "text": "Great Works",
+    "link": "Tutorial/Great Works"
+   }
+  ]
+ },
+ {
+  "name": "[Heroic Epic] [Great Work of Writing]",
+  "cost": 1,
+  "uniques": [
+   "Great Work",
+   "Instantly consumes [1] [Great Work of Writing]",
+   "Unavailable <without [Great Work of Writing]> <hidden from users>",
+   "Provides [2] [Tourism]",
+   "Provides [1] [Tourism] <in cities with a [Airport]> <hidden from users>",
+   "Provides [1] [Tourism] <in cities with a [Hotel]> <hidden from users>",
+   "Provides [2] [Tourism] <in cities with a [National Visitor Center]> <hidden from users>",
+   "Never destroyed when the city is captured <hidden from users>",
+   "Unsellable <hidden from users>",
+   "Only available <in cities with a [Heroic Epic]> <hidden from users>",
+   "Automatically built in all cities where it is buildable <hidden from users>"
+  ],
+  "civilopediaText": [
+   {
+    "text": "Great Works",
+    "link": "Tutorial/Great Works"
+   }
+  ]
+ },
+ {
+  "name": "[The Great Library] [Theming Bonus]",
+  "cost": 1,
+  "uniques": [
+   "Only available <in cities with a [The Great Library]> <hidden from users>",
+   "Only available <in cities with a [[The Great Library] [Great Work of Writing] 1]> <hidden from users>",
+   "Only available <in cities with a [[The Great Library] [Great Work of Writing] 2]> <hidden from users>",
+   "Unsellable <hidden from users>",
+   "Never destroyed when the city is captured <hidden from users>",
+   "Automatically built in all cities where it is buildable <hidden from users>",
+   "Provides [2] [Tourism]",
+   "Provides [2] [Tourism] <in [Capital] cities> <for [City of Light] Civilizations> <hidden from users>",
+   "Provides [2] [Tourism] <after adopting [Aesthetics Complete]> <hidden from users>"
+  ],
+  "civilopediaText": [
+   {
+    "text": "Great Works",
+    "link": "Tutorial/Great Works"
+   }
+  ]
+ },
+ {
+  "name": "[The Great Library] [Great Work of Writing] 1",
+  "cost": 1,
+  "uniques": [
+   "Great Work",
+   "Instantly consumes [1] [Great Work of Writing]",
+   "Unavailable <without [Great Work of Writing]> <hidden from users>",
+   "Provides [2] [Tourism]",
+   "Provides [1] [Tourism] <in cities with a [Airport]> <hidden from users>",
+   "Provides [1] [Tourism] <in cities with a [Hotel]> <hidden from users>",
+   "Provides [2] [Tourism] <in cities with a [National Visitor Center]> <hidden from users>",
+   "Never destroyed when the city is captured <hidden from users>",
+   "Unsellable <hidden from users>",
+   "Only available <in cities with a [The Great Library]> <hidden from users>",
+   "Automatically built in all cities where it is buildable <hidden from users>"
+  ],
+  "civilopediaText": [
+   {
+    "text": "Great Works",
+    "link": "Tutorial/Great Works"
+   }
+  ]
+ },
+ {
+  "name": "[The Great Library] [Great Work of Writing] 2",
+  "cost": 1,
+  "uniques": [
+   "Great Work",
+   "Instantly consumes [1] [Great Work of Writing]",
+   "Unavailable <without [Great Work of Writing]> <hidden from users>",
+   "Provides [2] [Tourism]",
+   "Provides [1] [Tourism] <in cities with a [Airport]> <hidden from users>",
+   "Provides [1] [Tourism] <in cities with a [Hotel]> <hidden from users>",
+   "Provides [2] [Tourism] <in cities with a [National Visitor Center]> <hidden from users>",
+   "Never destroyed when the city is captured <hidden from users>",
+   "Unsellable <hidden from users>",
+   "Only available <in cities with a [The Great Library]> <hidden from users>",
+   "Automatically built in all cities where it is buildable <hidden from users>"
+  ],
+  "civilopediaText": [
+   {
+    "text": "Great Works",
+    "link": "Tutorial/Great Works"
+   }
+  ]
+ },
+ {
+  "name": "[Oxford University] [Theming Bonus]",
+  "cost": 1,
+  "uniques": [
+   "Only available <in cities with a [Oxford University]> <hidden from users>",
+   "Only available <in cities with a [[Oxford University] [Great Work of Writing] 1]> <hidden from users>",
+   "Only available <in cities with a [[Oxford University] [Great Work of Writing] 2]> <hidden from users>",
+   "Unsellable <hidden from users>",
+   "Never destroyed when the city is captured <hidden from users>",
+   "Automatically built in all cities where it is buildable <hidden from users>",
+   "Provides [2] [Tourism]",
+   "Provides [2] [Tourism] <in [Capital] cities> <for [City of Light] Civilizations> <hidden from users>",
+   "Provides [2] [Tourism] <after adopting [Aesthetics Complete]> <hidden from users>"
+  ],
+  "civilopediaText": [
+   {
+    "text": "Great Works",
+    "link": "Tutorial/Great Works"
+   }
+  ]
+ },
+ {
+  "name": "[Oxford University] [Great Work of Writing] 1",
+  "cost": 1,
+  "uniques": [
+   "Great Work",
+   "Instantly consumes [1] [Great Work of Writing]",
+   "Unavailable <without [Great Work of Writing]> <hidden from users>",
+   "Provides [2] [Tourism]",
+   "Provides [1] [Tourism] <in cities with a [Airport]> <hidden from users>",
+   "Provides [1] [Tourism] <in cities with a [Hotel]> <hidden from users>",
+   "Provides [2] [Tourism] <in cities with a [National Visitor Center]> <hidden from users>",
+   "Never destroyed when the city is captured <hidden from users>",
+   "Unsellable <hidden from users>",
+   "Only available <in cities with a [Oxford University]> <hidden from users>",
+   "Automatically built in all cities where it is buildable <hidden from users>"
+  ],
+  "civilopediaText": [
+   {
+    "text": "Great Works",
+    "link": "Tutorial/Great Works"
+   }
+  ]
+ },
+ {
+  "name": "[Oxford University] [Great Work of Writing] 2",
+  "cost": 1,
+  "uniques": [
+   "Great Work",
+   "Instantly consumes [1] [Great Work of Writing]",
+   "Unavailable <without [Great Work of Writing]> <hidden from users>",
+   "Provides [2] [Tourism]",
+   "Provides [1] [Tourism] <in cities with a [Airport]> <hidden from users>",
+   "Provides [1] [Tourism] <in cities with a [Hotel]> <hidden from users>",
+   "Provides [2] [Tourism] <in cities with a [National Visitor Center]> <hidden from users>",
+   "Never destroyed when the city is captured <hidden from users>",
+   "Unsellable <hidden from users>",
+   "Only available <in cities with a [Oxford University]> <hidden from users>",
+   "Automatically built in all cities where it is buildable <hidden from users>"
+  ],
+  "civilopediaText": [
+   {
+    "text": "Great Works",
+    "link": "Tutorial/Great Works"
+   }
+  ]
+ },
+ {
+  "name": "[Hermitage] [Theming Bonus]",
+  "cost": 1,
+  "uniques": [
+   "Only available <in cities with a [Hermitage]> <hidden from users>",
+   "Only available <in cities with a [[Hermitage] [Great Work of Art] 1]> <hidden from users>",
+   "Only available <in cities with a [[Hermitage] [Great Work of Art] 2]> <hidden from users>",
+   "Only available <in cities with a [[Hermitage] [Great Work of Art] 3]> <hidden from users>",
+   "Unsellable <hidden from users>",
+   "Never destroyed when the city is captured <hidden from users>",
+   "Automatically built in all cities where it is buildable <hidden from users>",
+   "Provides [3] [Tourism]",
+   "Provides [3] [Tourism] <in [Capital] cities> <for [City of Light] Civilizations> <hidden from users>",
+   "Provides [3] [Tourism] <after adopting [Aesthetics Complete]> <hidden from users>"
+  ],
+  "civilopediaText": [
+   {
+    "text": "Great Works",
+    "link": "Tutorial/Great Works"
+   }
+  ]
+ },
+ {
+  "name": "[Hermitage] [Great Work of Art] 1",
+  "cost": 1,
+  "uniques": [
+   "Great Work",
+   "Unavailable <without [Artifact]> <without [Great Work of Art]> <hidden from users>",
+   "Unavailable <when number of [Artifact] is less than [1]> <when number of [Great Work of Art] is less than [1]> <hidden from users>",
+   "Instantly consumes [1] [Artifact] <when number of [Artifact] is more than [0]> <when number of [Great Work of Art] is less than [1]> <hidden from users>",
+   "Instantly consumes [1] [Great Work of Art] <when number of [Artifact] is less than [1]> <when number of [Great Work of Art] is more than [0]> <hidden from users>",
+   "Instantly consumes [1] [Artifact] <when number of [Artifact] is more than [0]> <when number of [Great Work of Art] is more than [0]> <hidden from users>",
+   "Provides [2] [Tourism]",
+   "Provides [1] [Tourism] <in cities with a [Airport]> <hidden from users>",
+   "Provides [1] [Tourism] <in cities with a [Hotel]> <hidden from users>",
+   "Provides [2] [Tourism] <in cities with a [National Visitor Center]> <hidden from users>",
+   "Never destroyed when the city is captured <hidden from users>",
+   "Unsellable <hidden from users>",
+   "Only available <in cities with a [Hermitage]> <hidden from users>",
+   "Automatically built in all cities where it is buildable <hidden from users>"
+  ],
+  "civilopediaText": [
+   {
+    "text": "Great Works",
+    "link": "Tutorial/Great Works"
+   },
+   {
+    "text": "Requires at least one of the following:"
+   },
+   {
+    "text": "Great Work of Art",
+    "link": "Resource/Great Work of Art"
+   },
+   {
+    "text": "Artifact",
+    "link": "Resource/Artifact"
+   }
+  ]
+ },
+ {
+  "name": "[Hermitage] [Great Work of Art] 2",
+  "cost": 1,
+  "uniques": [
+   "Great Work",
+   "Unavailable <without [Artifact]> <without [Great Work of Art]> <hidden from users>",
+   "Unavailable <when number of [Artifact] is less than [1]> <when number of [Great Work of Art] is less than [1]> <hidden from users>",
+   "Instantly consumes [1] [Artifact] <when number of [Artifact] is more than [0]> <when number of [Great Work of Art] is less than [1]> <hidden from users>",
+   "Instantly consumes [1] [Great Work of Art] <when number of [Artifact] is less than [1]> <when number of [Great Work of Art] is more than [0]> <hidden from users>",
+   "Instantly consumes [1] [Artifact] <when number of [Artifact] is more than [0]> <when number of [Great Work of Art] is more than [0]> <hidden from users>",
+   "Provides [2] [Tourism]",
+   "Provides [1] [Tourism] <in cities with a [Airport]> <hidden from users>",
+   "Provides [1] [Tourism] <in cities with a [Hotel]> <hidden from users>",
+   "Provides [2] [Tourism] <in cities with a [National Visitor Center]> <hidden from users>",
+   "Never destroyed when the city is captured <hidden from users>",
+   "Unsellable <hidden from users>",
+   "Only available <in cities with a [Hermitage]> <hidden from users>",
+   "Automatically built in all cities where it is buildable <hidden from users>"
+  ],
+  "civilopediaText": [
+   {
+    "text": "Great Works",
+    "link": "Tutorial/Great Works"
+   },
+   {
+    "text": "Requires at least one of the following:"
+   },
+   {
+    "text": "Great Work of Art",
+    "link": "Resource/Great Work of Art"
+   },
+   {
+    "text": "Artifact",
+    "link": "Resource/Artifact"
+   }
+  ]
+ },
+ {
+  "name": "[Hermitage] [Great Work of Art] 3",
+  "cost": 1,
+  "uniques": [
+   "Great Work",
+   "Unavailable <without [Artifact]> <without [Great Work of Art]> <hidden from users>",
+   "Unavailable <when number of [Artifact] is less than [1]> <when number of [Great Work of Art] is less than [1]> <hidden from users>",
+   "Instantly consumes [1] [Artifact] <when number of [Artifact] is more than [0]> <when number of [Great Work of Art] is less than [1]> <hidden from users>",
+   "Instantly consumes [1] [Great Work of Art] <when number of [Artifact] is less than [1]> <when number of [Great Work of Art] is more than [0]> <hidden from users>",
+   "Instantly consumes [1] [Artifact] <when number of [Artifact] is more than [0]> <when number of [Great Work of Art] is more than [0]> <hidden from users>",
+   "Provides [2] [Tourism]",
+   "Provides [1] [Tourism] <in cities with a [Airport]> <hidden from users>",
+   "Provides [1] [Tourism] <in cities with a [Hotel]> <hidden from users>",
+   "Provides [2] [Tourism] <in cities with a [National Visitor Center]> <hidden from users>",
+   "Never destroyed when the city is captured <hidden from users>",
+   "Unsellable <hidden from users>",
+   "Only available <in cities with a [Hermitage]> <hidden from users>",
+   "Automatically built in all cities where it is buildable <hidden from users>"
+  ],
+  "civilopediaText": [
+   {
+    "text": "Great Works",
+    "link": "Tutorial/Great Works"
+   },
+   {
+    "text": "Requires at least one of the following:"
+   },
+   {
+    "text": "Great Work of Art",
+    "link": "Resource/Great Work of Art"
+   },
+   {
+    "text": "Artifact",
+    "link": "Resource/Artifact"
+   }
+  ]
+ },
+ {
+  "name": "Ideology",
+  "cost": 1,
+  "uniques": [
+   "Comment [Choose an [Ideology] upon reaching the [Modern era], or owning 3 [Factory] buildings]",
+   "Automatically built in all cities where it is buildable",
+   "Triggers a [Ideology] event <hidden from users>",
+   "Moves to new capital when capital changes <hidden from users>",
+   "Unsellable <hidden from users>",
+   "Unavailable <before the [Modern era]> <when number of [[Factory] Buildings] is less than [3]> <hidden from users>",
+   "Only available <in cities with a [Palace]> <hidden from users>",
+   "Limited to [1] per Civilization <hidden from users>",
+   "Unavailable <after adopting [Freedom]> <hidden from users>",
+   "Unavailable <after adopting [Order]> <hidden from users>",
+   "Unavailable <after adopting [Autocracy]> <hidden from users>"
+  ],
+  "civilopediaText": [
+   {
+    "text": "Autocracy",
+    "link": "Policy/Autocracy"
+   },
+   {
+    "text": "Freedom",
+    "link": "Policy/Freedom"
+   },
+   {
+    "text": "Order",
+    "link": "Policy/Order"
+   },
+   {
+    "separator": true
+   },
+   {
+    "text": "Requires at least one of the following:"
+   },
+   {
+    "text": "Modern era",
+    "link": "Era/Modern era"
+   },
+   {
+    "text": "Requires a [Factory] in at least [3] of [your] cities",
+    "link": "Building/Factory"
+   }
+  ]
+ },
+ {
+  "name": "Cultural Revolution",
+  "cost": 1,
+  "uniques": [
+   "Moves to new capital when capital changes <hidden from users>",
+   "Unsellable <hidden from users>",
+   "Only available <in cities with a [Palace]> <hidden from users>",
+   "Only available <after adopting [Cultural Revolution]>",
+   "Automatically built in all cities where it is buildable <hidden from users>",
+   "Will not be displayed in Civilopedia",
+   "Moves to new capital when capital changes <hidden from users>"
+  ]
+ },
+ {
+  "name": "Bath",
+  "cost": 200,
+  "requiredTech": "Metal Casting",
+  "maintenance": 1,
+  "culture": 2,
+  "uniques": [
+   "[+1 Gold, +1 Culture] from all [Amphitheater] buildings <in this city>",
+   "[+1 Gold, +1 Culture] from all [Temple] buildings <in this city>",
+   "[+1 Gold, +1 Culture] from all [Garden] buildings <in this city>"
+  ]
+ },
+ {
+  "name": "Herbalist",
+  "cost": 65,
+  "requiredTech": "Calendar",
+  "maintenance": 1,
+  "food": 1,
+  "uniques": [
+   "[+1 Production] from [Marsh] tiles [in this city]",
+   "[+1 Production] from [Plantation] tiles [in this city]"
+  ]
+ },
+ {
+  "name": "Well",
+  "cost": 65,
+  "requiredTech": "Mining",
+  "maintenance": 1,
+  "food": 1,
+  "production": 2,
+  "uniques": [
+   "[+1 Production] per [5] population [in this city]"
+  ]
+ },
+ {
+  "name": "Council",
+  "cost": 65,
+  "requiredTech": "The Wheel",
+  "science": 1
+ },
+ {
+  "name": "Smokehouse",
+  "cost": 65,
+  "requiredTech": "Trapping",
+  "maintenance": 1,
+  "uniques": [
+   "[+1 Food] from [Bison] tiles [in this city]",
+   "[+1 Food] from [Deer] tiles [in this city]",
+   "[+1 Production] from [Camp] tiles [in this city]"
+  ]
+ },
+ {
+  "name": "Grocer",
+  "cost": 500,
+  "requiredTech": "Chemistry",
+  "maintenance": 4,
+  "happiness": 1,
+  "requiredBuilding": "Aqueduct",
+  "uniques": [
+   "[+1 Food] per [5] population [in this city]"
+  ]
+ },
+ {
+  "name": "Wind Power Plant",
+  "cost": 2500,
+  "requiredTech": "Ecology",
+  "maintenance": 10,
+  "production": 10,
+  "percentStatBonus": {
+   "production": 15
+  },
+  "uniques": [
+   "[+1 Production, +1 Science, +1 Culture] from [Grassland] tiles [in this city]",
+   "[+1 Production, +1 Science, +1 Culture] from [Plains] tiles [in this city]",
+   "[+1 Production, +1 Science, +1 Culture] from [Tundra] tiles [in this city]",
+   "[+1 Production, +1 Science, +1 Culture] from [Snow] tiles [in this city]",
+   "[+1 Production, +1 Science, +1 Culture] from [Desert] tiles [in this city]",
+   "[+1 Production, +1 Science, +1 Culture] from [Water] tiles [in this city]",
+   "[+1 Production, +1 Science, +1 Culture] from [Lakes] tiles [in this city]"
+  ]
+ },
+ {
+  "name": "Tidal Power Plant",
+  "cost": 2500,
+  "requiredTech": "Ecology",
+  "maintenance": 10,
+  "production": 10,
+  "percentStatBonus": {
+   "production": 15
+  },
+  "uniques": [
+   "[+2 Food, +2 Production, +2 Gold, +2 Science] from [Water] tiles [in this city]"
+  ]
+ },
+ {
+  "name": "Agribusiness",
+  "cost": 1250,
+  "requiredTech": "Fertilizer",
+  "food": 5,
+  "requiredBuilding": "Grocer",
+  "uniques": [
+   "[+2 Production, +2 Gold] from [Farm] tiles [in this city]",
+   "[+2 Production, +2 Gold] from [Pasture] tiles [in this city]"
+  ]
+ },
+ {
+  "name": "Refinery",
+  "cost": 2000,
+  "requiredTech": "Plastics",
+  "maintenance": 7,
+  "production": 3
+ },
+ {
+  "name": "Bastion Fort",
+  "cost": 600,
+  "requiredTech": "Navigation",
+  "maintenance": 4,
+  "cityStrength": 10.0,
+  "requiredBuilding": "Castle"
+ },
+ {
+  "name": "Mine Field",
+  "cost": 1600,
+  "requiredTech": "Ballistics",
+  "maintenance": 7
+ },
+ {
+  "name": "Interpretive Center",
+  "cost": 2250,
+  "requiredTech": "Telecommunications",
+  "maintenance": 10,
+  "happiness": 2
+ },
+ {
+  "name": "Coaling Station",
+  "cost": 1000,
+  "requiredTech": "Railroads",
+  "maintenance": 5,
+  "percentStatBonus": {
+   "production": 20,
+   "gold": 10
+  },
+  "specialistSlots": {
+   "Engineer": 1
+  }
+ },
+ {
+  "name": "Gallery",
+  "cost": 600,
+  "requiredTech": "Architecture",
+  "culture": 2,
+  "requiredBuilding": "Amphitheater"
+ },
+ {
+  "name": "Chancery",
+  "cost": 300,
+  "requiredTech": "Education",
+  "maintenance": 3,
+  "specialistSlots": {
+   "Civil Servant": 1
+  }
+ },
+ {
+  "name": "Wire Service",
+  "cost": 1800,
+  "requiredTech": "Replaceable Parts",
+  "maintenance": 7,
+  "requiredBuilding": "Chancery",
+  "specialistSlots": {
+   "Civil Servant": 2
+  }
+ },
+ {
+  "name": "Siege Foundry",
+  "cost": 110,
+  "requiredTech": "Bronze Working",
+  "maintenance": 1,
+  "science": 1,
+  "production": 3,
+  "specialistSlots": {
+   "Engineer": 1
+  },
+  "uniqueTo": "The Ottomans",
+  "replaces": "Forge",
+  "uniques": [
+   "[+2 Gold] from [Copper] tiles [in this city]",
+   "[+1 Gold, +1 Production] from [Iron] tiles [in this city]",
+   "[+1 Production] from [Mine] tiles [in this city]",
+   "[+50]% Production when constructing [Siege] units [in this city]"
+  ]
+ },
+ {
+  "name": "Flavian Colosseum",
+  "cost": 150,
+  "requiredTech": "Construction",
+  "maintenance": 1,
+  "culture": 3,
+  "production": 3,
+  "uniqueTo": "Rome",
+  "replaces": "Colosseum",
+  "uniques": [
+   "[+1 Food, +1 Gold] from [Olives] tiles [in this city]",
+   "[+1 Culture, +1 Gold] from [Perfume] tiles [in this city]",
+   "[+2 Production] from all [Barracks] buildings <in this city>",
+   "[+2 Production] from all [Forge] buildings <in this city>",
+   "[+2 Production] from all [Armory] buildings <in this city>"
+  ]
+ },
+ {
+  "name": "Acropolis",
+  "cost": 200,
+  "requiredTech": "Drama and Poetry",
+  "cityStrength": 3.0,
+  "culture": 3,
+  "requiredBuilding": "Monument",
+  "uniqueTo": "Greece",
+  "replaces": "Amphitheater",
+  "uniques": [
+   "[+1 Culture, +1 Gold] from [Dyes] tiles [in this city]",
+   "[+2 Culture] from [Lapis Lazuli] tiles [in this city]",
+   "[+1 Culture, +1 Gold] from [Silk] tiles [in this city]"
+  ]
+ },
+ {
+  "name": "Dojo",
+  "cost": 300,
+  "requiredTech": "Steel",
+  "maintenance": 2,
+  "science": 5,
+  "culture": 3,
+  "requiredBuilding": "Barracks",
+  "uniqueTo": "Japan",
+  "replaces": "Armory"
+ },
+ {
+  "name": "Harappan Reservoir",
+  "cost": 200,
+  "requiredTech": "Engineering",
+  "maintenance": 1,
+  "food": 3,
+  "production": 3,
+  "requiredBuilding": "Granary",
+  "uniqueTo": "India",
+  "replaces": "Aqueduct",
+  "uniques": [
+   "[+2 Food] from [Oasis] tiles [in this city]",
+   "[+1 Food, +1 Production] from [Farm] tiles [in this city]",
+   "[+2 Food] from [Lakes] tiles [in this city]"
+  ]
+ },
+ {
+  "name": "Ger",
+  "cost": 65,
+  "requiredTech": "Trapping",
+  "maintenance": 1,
+  "faith": 1,
+  "uniqueTo": "Mongolia",
+  "replaces": "Smokehouse",
+  "uniques": [
+   "[+1 Food] from [Bison] tiles [in this city]",
+   "[+1 Food] from [Deer] tiles [in this city]",
+   "[+1 Production] from [Camp] tiles [in this city]",
+   "[+1 Production] from [Pasture] tiles [in this city]"
+  ]
+ },
+ {
+  "name": "Seowon",
+  "cost": 300,
+  "requiredTech": "Education",
+  "maintenance": 2,
+  "science": 3,
+  "culture": 2,
+  "requiredBuilding": "Library",
+  "specialistSlots": {
+   "Scientist": 1
+  },
+  "uniqueTo": "Korea",
+  "replaces": "University",
+  "uniques": [
+   "[+1 Science] from [Snow] tiles [in this city]",
+   "[+1 Science] from [Jungle] tiles [in this city]"
+  ]
+ },
+ {
+  "name": "Runestone",
+  "cost": 150,
+  "requiredTech": "Optics",
+  "maintenance": 1,
+  "culture": 2,
+  "uniqueTo": "Denmark",
+  "replaces": "Lighthouse",
+  "uniques": [
+   "[+1 Gold] from [Water] tiles [in this city]",
+   "[+25]% Production when constructing [Sword] units [in this city]",
+   "[+25]% Production when constructing [Gunpowder] units [in this city]",
+   "[+25]% Production when constructing [Melee Water] units [in this city]"
+  ]
+ },
+ {
+  "name": "Skola",
+  "cost": 800,
+  "requiredTech": "Scientific Theory",
+  "maintenance": 4,
+  "science": 3,
+  "requiredBuilding": "University",
+  "specialistSlots": {
+   "Scientist": 2
+  },
+  "uniqueTo": "Sweden",
+  "replaces": "Public School",
+  "uniques": [
+   "[+3 Science] per [2] population [in this city]",
+   "[+1 Culture] per [2] population [in this city]"
+  ]
+ },
+ {
+  "name": "Tetraconch",
+  "cost": 200,
+  "requiredTech": "Philosophy",
+  "faith": 3,
+  "culture": 2,
+  "requiredBuilding": "Shrine",
+  "uniqueTo": "Byzantium",
+  "replaces": "Temple",
+  "uniques": [
+   "[+1 Faith] per [3] population [in this city]",
+   "[+1 Culture, +1 Gold] from [Amber] tiles [in this city]",
+   "[+1 Culture, +1 Gold] from [Incense] tiles [in this city]",
+   "[+1 Culture, +1 Gold] from [Wine] tiles [in this city]"
+  ]
+ },
+ {
+  "name": "Scrivener's Office",
+  "isNationalWonder": true,
+  "cost": 60,
+  "requiredTech": "Writing",
+  "culture": 1,
+  "specialistSlots": {
+   "Civil Servant": 1
+  },
+  "uniques": [
+   "Free [Emissary] appears"
+  ]
+ },
+ {
+  "name": "Printing Press",
+  "isNationalWonder": true,
+  "cost": 200,
+  "requiredTech": "Printing Press",
+  "culture": 1,
+  "requiredBuilding": "Chancery",
+  "specialistSlots": {
+   "Civil Servant": 1
+  }
+ },
+ {
+  "name": "Foreign Bureau",
+  "isNationalWonder": true,
+  "cost": 800,
+  "requiredTech": "Radio",
+  "culture": 1,
+  "requiredBuilding": "Wire Service",
+  "specialistSlots": {
+   "Civil Servant": 1
+  }
+ },
+ {
+  "name": "Palace of Culture and Science",
+  "isNationalWonder": true,
+  "cost": 800,
+  "requiredTech": "Plastics",
+  "culture": 4,
+  "percentStatBonus": {
+   "science": 5
+  },
+  "requiredBuilding": "Public School"
+ },
+ {
+  "name": "International Finance Center",
+  "isNationalWonder": true,
+  "cost": 800,
+  "requiredTech": "Biology",
+  "culture": 4,
+  "percentStatBonus": {
+   "food": 5,
+   "gold": 5
+  },
+  "requiredBuilding": "Stock Exchange"
+ },
+ {
+  "name": "Hall of Honor",
+  "isNationalWonder": true,
+  "cost": 800,
+  "requiredTech": "Ballistics",
+  "culture": 4,
+  "percentStatBonus": {
+   "production": 5
+  },
+  "requiredBuilding": "Military Academy"
+ },
+ {
+  "name": "Great Cothon",
+  "cost": 140,
+  "requiredTech": "Currency",
+  "maintenance": 1,
+  "gold": 4,
+  "uniqueTo": "Carthage",
+  "uniques": [
+   "[+2 Culture] from all [Lighthouse] buildings",
+   "[+3 Production] from all [Harbor] buildings"
+  ]
+ },
+ {
+  "name": "White Tower",
+  "isNationalWonder": true,
+  "cost": 140,
+  "requiredTech": "Machinery",
+  "cityStrength": 3.0,
+  "production": 10,
+  "gold": 2,
+  "science": 2,
+  "culture": 2,
+  "requiredBuilding": "Forge",
+  "uniqueTo": "England",
+  "replaces": "Ironworks",
+  "uniques": [
+   "[+1 Culture] from all [Armory] buildings",
+   "[+1 Culture] from all [Castle] buildings",
+   "[+1 Culture] from all [Constabulary] buildings"
+  ]
+ },
+ {
+  "name": "Piazza San Marco",
+  "isNationalWonder": true,
+  "cost": 80,
+  "requiredTech": "Writing",
+  "culture": 1,
+  "food": 2,
+  "production": 2,
+  "gold": 2,
+  "science": 1,
+  "requiredBuilding": "Palace",
+  "uniqueTo": "Venice",
+  "replaces": "National Epic"
+ },
+ {
+  "name": "Independence Hall",
+  "isNationalWonder": true,
+  "cost": 240,
+  "requiredTech": "Architecture",
+  "culture": 2,
+  "requiredBuilding": "Gallery",
+  "uniqueTo": "America",
+  "replaces": "Hermitage",
+  "uniques": [
+   "[+1 Culture] per [4] population [in this city]"
+  ]
+ },
+ {
+  "name": "Arsenale di Venezia",
+  "isNationalWonder": true,
+  "cost": 140,
+  "requiredTech": "Guilds",
+  "cityStrength": 3.0,
+  "percentStatBonus": {
+   "production": 15
+  },
+  "requiredBuilding": "National Epic",
+  "specialistSlots": {
+   "Engineer": 2
+  }
+ },
+ {
+  "name": "Rialto District",
+  "isNationalWonder": true,
+  "cost": 140,
+  "requiredTech": "Guilds",
+  "requiredBuilding": "National Epic",
+  "specialistSlots": {
+   "Merchant": 2
+  }
+ },
+ {
+  "name": "Murano Glassworks",
+  "isNationalWonder": true,
+  "cost": 140,
+  "requiredTech": "Guilds",
+  "requiredBuilding": "National Epic",
+  "specialistSlots": {
+   "Artist": 2
+  }
+ },
+ {
+  "name": "Smithsonian Institute",
+  "isWonder": true,
+  "cost": 1250,
+  "requiredTech": "Archaeology",
+  "maintenance": 6,
+  "science": 2,
+  "culture": 2,
+  "greatPersonPoints": {
+   "Great Scientist": 2
+  },
+  "uniques": [
+   "[+5 Science, +5 Culture] from all [Museum] buildings",
+   "[+5 Science, +5 Culture] from all [Research Lab] buildings"
+  ]
+ },
+ {
+  "name": "West Point",
+  "isWonder": true,
+  "cost": 1250,
+  "requiredTech": "Military Science",
+  "maintenance": 6,
+  "cityStrength": 5.0,
+  "production": 2,
+  "science": 2,
+  "uniques": [
+   "[+5 Production, +5 Science] from all [Military Academy] buildings",
+   "[+5 Production, +5 Science] from all [Arsenal] buildings"
+  ]
+ },
+ {
+  "name": "Slater Mill",
+  "isWonder": true,
+  "cost": 1250,
+  "requiredTech": "Industrialization",
+  "maintenance": 6,
+  "production": 2,
+  "gold": 2,
+  "greatPersonPoints": {
+   "Great Engineer": 2
+  },
+  "uniques": [
+   "[+5 Production, +5 Gold] from all [Factory] buildings",
+   "[+5 Production, +5 Gold] from all [Stock Exchange] buildings"
+  ]
+ },
+ {
+  "name": "Roman Forum",
+  "isWonder": true,
+  "cost": 200,
+  "requiredTech": "Mathematics",
+  "culture": 1,
+  "uniques": [
+   "Free [Great Diplomat] appears"
+  ]
+ },
+ {
+  "name": "Karlstejn",
+  "isWonder": true,
+  "cost": 500,
+  "requiredTech": "Guilds",
+  "culture": 3,
+  "faith": 4
+ },
+ {
+  "name": "Summer Palace",
+  "isWonder": true,
+  "cost": 900,
+  "requiredTech": "Acoustics",
+  "culture": 1,
+  "uniques": [
+   "[+3 Gold, +1 Culture] from all [Chancery] buildings"
+  ]
+ },
+ {
+  "name": "Soho Foundry",
+  "isWonder": true,
+  "cost": 1000,
+  "requiredTech": "Steam Power",
+  "production": 5,
+  "culture": 1,
+  "greatPersonPoints": {
+   "Great Engineer": 1
+  }
+ },
+ {
+  "name": "The Motherland Calls",
+  "isWonder": true,
+  "cost": 2150,
+  "requiredTech": "Electronics",
+  "culture": 1
+ },
+ {
+  "name": "Bletchley Park",
+  "isWonder": true,
+  "cost": 2150,
+  "requiredTech": "Computers",
+  "science": 5,
+  "culture": 1
+ },
+ {
+  "name": "Empire State Building",
+  "isWonder": true,
+  "cost": 1600,
+  "requiredTech": "Electricity",
+  "culture": 1
+ },
+ {
+  "name": "CERN",
+  "isWonder": true,
+  "cost": 3250,
+  "requiredTech": "Particle Physics",
+  "science": 10,
+  "culture": 1
+ },
+ {
+  "name": "Stupa",
+  "cost": 200,
+  "happiness": 1,
+  "faith": 3,
+  "uniques": [
+   "Unbuildable",
+   "Only available <when religion is enabled>"
+  ]
+ },
+ {
+  "name": "Church",
+  "cost": 200,
+  "culture": 2,
+  "faith": 4,
+  "uniques": [
+   "Unbuildable",
+   "Only available <when religion is enabled>"
+  ]
+ },
+ {
+  "name": "Mandir",
+  "cost": 200,
+  "food": 2,
+  "faith": 3,
+  "uniques": [
+   "Unbuildable",
+   "Only available <when religion is enabled>"
+  ]
+ },
+ {
+  "name": "Synagogue",
+  "cost": 200,
+  "production": 3,
+  "faith": 2,
+  "uniques": [
+   "Unbuildable",
+   "Only available <when religion is enabled>"
+  ]
+ },
+ {
+  "name": "Order",
+  "cost": 200,
+  "cityStrength": 3.0,
+  "gold": 3,
+  "faith": 2,
+  "uniques": [
+   "Unbuildable",
+   "Only available <when religion is enabled>"
+  ]
+ },
+ {
+  "name": "Teocalli",
+  "cost": 200,
+  "faith": 2,
+  "uniques": [
+   "Unbuildable",
+   "Only available <when religion is enabled>"
+  ]
+ },
+ {
+  "name": "Gurdwara",
+  "cost": 200,
+  "food": 3,
+  "faith": 2,
+  "percentStatBonus": {
+   "food": 10
+  },
+  "uniques": [
+   "Unbuildable",
+   "Only available <when religion is enabled>"
+  ]
+ },
+ {
+  "name": "Mausoleum",
+  "isNationalWonder": true,
+  "cost": 125,
+  "faith": 5,
+  "uniques": [
+   "Unbuildable",
+   "Only available <when religion is enabled>"
+  ]
+ },
+ {
+  "name": "Celestial Throne",
+  "isNationalWonder": true,
+  "cost": 125,
+  "food": 2,
+  "production": 2,
+  "gold": 2,
+  "science": 2,
+  "culture": 2,
+  "faith": 2,
+  "uniques": [
+   "Unbuildable",
+   "Only available <when religion is enabled>"
+  ]
+ },
+ {
+  "name": "Great Altar",
+  "isNationalWonder": true,
+  "cost": 125,
+  "faith": 5,
+  "uniques": [
+   "Unbuildable",
+   "Only available <when religion is enabled>"
+  ]
+ },
+ {
+  "name": "Chartarium",
+  "isNationalWonder": true,
+  "cost": 125,
+  "science": 4,
+  "uniques": [
+   "Unbuildable",
+   "Only available <when religion is enabled>"
+  ]
+ },
+ {
+  "name": "Divine Court",
+  "isNationalWonder": true,
+  "cost": 125,
+  "gold": 6,
+  "faith": 3,
+  "uniques": [
+   "Unbuildable",
+   "Only available <when religion is enabled>"
+  ]
+ },
+ {
+  "name": "Sacred Garden",
+  "isNationalWonder": true,
+  "cost": 125,
+  "culture": 5,
+  "faith": 3,
+  "uniques": [
+   "Unbuildable",
+   "Only available <when religion is enabled>"
+  ]
+ },
+ {
+  "name": "Holy Council",
+  "isNationalWonder": true,
+  "cost": 125,
+  "food": 5,
+  "faith": 4,
+  "uniques": [
+   "Unbuildable",
+   "Only available <when religion is enabled>"
+  ]
+ },
+ {
+  "name": "Apostolic Palace",
+  "isNationalWonder": true,
+  "cost": 125,
+  "faith": 4,
+  "uniques": [
+   "Unbuildable",
+   "Only available <when religion is enabled>"
+  ]
+ },
+ {
+  "name": "Grand Ossuary",
+  "isNationalWonder": true,
+  "cost": 125,
+  "faith": 10,
+  "uniques": [
+   "Unbuildable",
+   "Only available <when religion is enabled>"
+  ]
+ }
+]

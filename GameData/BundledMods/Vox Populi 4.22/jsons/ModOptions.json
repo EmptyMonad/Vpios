@@ -1,0 +1,20 @@
+{
+ "isBaseRuleset": false,
+ "author": "EmptyMonad (generated from Vox Populi 4.22)",
+ "techsToRemove": [
+  "All"
+ ],
+ "unitsToRemove": [
+  "All"
+ ],
+ "buildingsToRemove": [
+  "All"
+ ],
+ "topics": [
+  "unciv-mod-rulesets"
+ ],
+ "uniques": [
+  "Mod requires [Civ V - Gods & Kings]",
+  "Mod requires [Civ V Brave New World]"
+ ]
+}
