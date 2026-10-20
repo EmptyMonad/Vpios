@@ -1,8 +1,8 @@
-commit 7ed177a8c50efcccf9cdca255ae49ac9b82a0ce9
-outcome failure
+commit ba0bcfd7a5b7fb6fca644176ecc51c3bac070624
+outcome success
 Xcode 26.3
 Build version 17C529
 Apple Swift version 6.2.4 (swiftlang-6.2.4.1.4 clang-1700.6.4.2)
 Target: arm64-apple-macosx15.0
-2
-       1
+0
+       0
