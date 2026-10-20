@@ -193,6 +193,7 @@ extension GameState {
         }
         // Unciv: TriggerUponFoundingCity - the civ's uniques (cities included), then the settler's own
         triggerConditionalUniques(civId: civId, cityId: cityId, unitId: unitId, triggerText: "due to founding a city") { $0.pattern == "upon founding a city" }
+        vpInstantYield(.founded, civId: civId, cityId: cityId)   // VP
         return cityId
     }
 }

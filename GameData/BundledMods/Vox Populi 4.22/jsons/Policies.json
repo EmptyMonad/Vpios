@@ -148,7 +148,6 @@
     "uniques": [
      "[+1 Food] [in all cities]",
      "[+1 Science] [in capital]",
-     "Gain [50] [Culture] <upon expending a [Great Person] unit>",
      "Gain a free [State Treasury] [in capital]"
     ],
     "requires": [
@@ -210,9 +209,7 @@
    "Domination": 10,
    "Scientific": 5
   },
-  "uniques": [
-   "Gain [15] [Culture] <upon discovering [All] technology>"
-  ],
+  "uniques": [],
   "civilopediaText": [
    {
     "text": "Progress is best for civilizations which desire robust infrastructure and scientific advancement."
@@ -255,7 +252,6 @@
      "[+25]% Production when constructing [Worker] units [in all cities]",
      "[+25]% Production when constructing [Cargo Ship] units [in all cities]",
      "[+25]% Production when constructing [Caravan] units [in all cities]",
-     "Gain [15] [Culture] <upon discovering [All] technology>",
      "All newly-trained [Worker] units [in all cities] receive the [Faster Worker] promotion",
      "[Worker] units gain the [Faster Worker] promotion"
     ],
@@ -277,7 +273,6 @@
     "column": 4,
     "uniques": [
      "[+2 Gold] [in all cities]",
-     "Gain [15] [Culture] <upon discovering [All] technology>",
      "[-20]% construction time for [All] improvements"
     ],
     "civilopediaText": [
@@ -297,8 +292,6 @@
     "row": 2,
     "column": 1,
     "uniques": [
-     "Gain [10] [Culture] <upon constructing [Buildings] [in all cities]>",
-     "Gain [15] [Culture] <upon discovering [All] technology>",
      "[+15]% Production when constructing [All] buildings [in all cities]"
     ],
     "requires": [
@@ -318,7 +311,6 @@
     "row": 2,
     "column": 3,
     "uniques": [
-     "Gain [15] [Culture] <upon discovering [All] technology>",
      "[+1 Happiness] [in all cities]",
      "[+1 Happiness] per [15] population [in all cities]",
      "Comment [-1 Unhappiness from Distress in all cities]",
@@ -344,8 +336,7 @@
     "column": 5,
     "uniques": [
      "[+3 Food] [in all cities]",
-     "[+3 Science] from each Trade Route",
-     "Gain [15] [Culture] <upon discovering [All] technology>"
+     "[+3 Science] from each Trade Route"
     ],
     "requires": [
      "Liberty"
@@ -362,7 +353,6 @@
    {
     "name": "Progress Complete",
     "uniques": [
-     "Gain [15] [Culture] <upon discovering [All] technology>",
      "Get the leader title of [Consul [leaderName]]"
     ]
    }
@@ -429,10 +419,6 @@
     "column": 2,
     "uniques": [
      "Earn [10]% of killed [Military] unit's [Strength] as [Science]",
-     "Gain [40] [Science] <upon conquering a city>",
-     "Gain [40] [Culture] <upon conquering a city>",
-     "Gain [40] [Science] <upon founding a city>",
-     "Gain [40] [Culture] <upon founding a city>",
      "Earn [10]% of killed [Military] unit's [Strength] as [Culture]"
     ],
     "civilopediaText": [
@@ -1038,7 +1024,6 @@
     "column": 4,
     "uniques": [
      "[+1 Science] [in all cities]",
-     "Gain [250] [Gold] <upon constructing [World Wonder]>",
      "Free Great Person"
     ],
     "requires": [
@@ -1231,7 +1216,6 @@
      "[+3]% [Culture] [in all cities] <in cities with a [Bank]>",
      "[+3]% [Culture] [in all cities] <in cities with a [Stock Exchange]>",
      "[+3]% [Science] [in all cities] <in cities with a [Stock Exchange]>",
-     "Gain [10] [Science] <upon constructing [Buildings] [in all cities]>",
      "[Gold] cost of purchasing items in cities [-5]%"
     ],
     "requires": [
@@ -1375,7 +1359,6 @@
      "[+5]% Production when constructing [Siege] units [in all cities]",
      "[+5]% Production when constructing [Submarine] units [in all cities]",
      "[+5]% Production when constructing [Sword] units [in all cities]",
-     "Gain [75] [Gold] <upon conquering a city>",
      "[-5]% Gold cost of upgrading"
     ],
     "civilopediaText": [
@@ -2650,19 +2633,17 @@
    {
     "name": "Spaceflight Pioneers",
     "uniques": [
-     "Gain [100] [Science] <upon expending a [Great Person] unit>",
+     "Comment [[Great Engineer]s can finish [spaceship parts]]",
+     "[+15]% Production when constructing [Spaceship part] units [in your cities]",
+     "Free [Great Engineer] appears",
+     "Free [Great Scientist] appears",
      "Instantly consumes [1] [Level 2 Policy] <hidden from users>",
      "Only available <when above [1] [Level 2 Policy]> <hidden from users>",
      "[-100]% weight to this choice for AI decisions <when [Scientific] Victory is disabled>",
      "[+30]% weight to this choice for AI decisions"
     ],
     "row": 3,
-    "column": 7,
-    "civilopediaText": [
-     {
-      "text": "Spaceflight Pioneers: Gain a free Great Engineer and Great Scientist. May finish Spaceship parts with Great Engineers, and expending a Great Person grants 100 Science, scaling with Era. Hurrying Production with Great Engineers 50% more effective."
-     }
-    ]
+    "column": 7
    },
    {
     "name": "Order Complete",

@@ -65,6 +65,7 @@ extension GameState {
     /// the unit is spent. Reliquary pays faith and the Mausoleum of Halicarnassus gold; only gold was being paid,
     /// and only from the great-person action, so founding a religion never triggered either.
     func triggerUponExpending(_ unit: Unit) {
+        if unit.def.isGreatPerson { vpInstantYield(.gpExpended(unit.name), civId: unit.civId, cityId: nil) }   // VP
         // `matches` is handed each CONDITIONAL of a unique, not the unique: asking it for its own conditional found
         // nothing, so no "<upon expending a [..] unit>" ever fired (the Mausoleum's 100 gold per great person).
         triggerConditionalUniques(civId: unit.civId, unitId: unit.id, triggerText: "due to expending our [\(unit.name)]") { c in

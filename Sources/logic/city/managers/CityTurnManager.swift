@@ -219,6 +219,7 @@ extension GameState {
                     for u in cityUniques(city) where u.pattern == "[]% Food is carried over after population increases []" && scopeIncludes(u, city: city) { carry += u.double(0) }
                     cities[idx].foodStored += (needed * min(95, carry) / 100).rounded(.towardZero)   // Unciv caps carry-over at 95%, truncated
                     addPopulation(cityIndex: idx, 1)   // Unciv addPopulation(1) with the religion pressure update
+                    vpInstantYield(.birth, civId: civId, cityId: cities[idx].id)   // VP: VP/VPInstantYields.swift
                     cities[idx].shouldReassignPopulation = true   // Unciv CityPopulationManager.nextTurn, after addPopulation(1)
                     notify(civId, "[\(city.name)] has grown!", category: .Cities, icons: ["Growth"], coord: city.coord)
                 }

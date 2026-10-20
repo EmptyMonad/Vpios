@@ -28,7 +28,6 @@
   "type": "Pantheon",
   "uniques": [
    "[+1 Food, +1 Faith] from every [Shrine]",
-   "Gain [8] [Faith] <upon constructing [Buildings] [in all cities]>",
    "[+25]% growth [in this city]"
   ]
  },
@@ -295,8 +294,6 @@
   "name": "Ceremonial Burial",
   "type": "Founder",
   "uniques": [
-   "Gain [10] [Culture] <upon expending a [Great Person] unit>",
-   "Gain [10] [Faith] <upon expending a [Great Person] unit>",
    "Gain a free [Mausoleum] [in holy cities]",
    "Gain a free [Mausoleum] [in holy cities]"
   ]
@@ -321,7 +318,6 @@
   "name": "Interfaith Dialogue",
   "type": "Founder",
   "uniques": [
-   "Gain [100] [Faith] <upon conquering a city>",
    "Gain a free [Great Altar] [in holy cities]",
    "Gain a free [Great Altar] [in holy cities]"
   ]
@@ -354,8 +350,6 @@
   "name": "Tithe",
   "type": "Founder",
   "uniques": [
-   "Gain [2] [Culture] <upon discovering [All] technology>",
-   "Gain [2] [Faith] <upon discovering [All] technology>",
    "Gain a free [Chartarium] [in holy cities]",
    "Gain a free [Chartarium] [in holy cities]"
   ]
@@ -422,8 +416,7 @@
    "[Great Artist] is earned [+33]% faster <during a Golden Age>",
    "[Great Musician] is earned [+33]% faster <during a Golden Age>",
    "[Great Writer] is earned [+33]% faster <during a Golden Age>",
-   "[Great Prophet] is earned [+33]% faster <during a Golden Age>",
-   "[Great Diplomat] is earned [+33]% faster <during a Golden Age>"
+   "[Great Prophet] is earned [+33]% faster <during a Golden Age>"
   ]
  },
  {
@@ -495,8 +488,6 @@
   "name": "Evangelism",
   "type": "Enhancer",
   "uniques": [
-   "Gain [50] [Gold] <upon conquering a city>",
-   "Gain [50] [Culture] <upon conquering a city>",
    "[+20]% Strength <for [All] units> <when fighting in [Enemy Land] tiles>"
   ]
  },
@@ -560,36 +551,9 @@
   "name": "To the Glory of God",
   "type": "Enhancer",
   "uniques": [
-   "Gain [3] [Gold] <upon expending a [Great General] unit>",
-   "Gain [3] [Science] <upon expending a [Great General] unit>",
-   "Gain [3] [Culture] <upon expending a [Great General] unit>",
-   "Gain [3] [Gold] <upon expending a [Great Admiral] unit>",
-   "Gain [3] [Science] <upon expending a [Great Admiral] unit>",
-   "Gain [3] [Culture] <upon expending a [Great Admiral] unit>",
-   "Gain [3] [Gold] <upon expending a [Great Engineer] unit>",
-   "Gain [3] [Science] <upon expending a [Great Engineer] unit>",
-   "Gain [3] [Culture] <upon expending a [Great Engineer] unit>",
-   "Gain [3] [Gold] <upon expending a [Great Scientist] unit>",
-   "Gain [3] [Science] <upon expending a [Great Scientist] unit>",
-   "Gain [3] [Culture] <upon expending a [Great Scientist] unit>",
-   "Gain [3] [Gold] <upon expending a [Great Merchant] unit>",
-   "Gain [3] [Science] <upon expending a [Great Merchant] unit>",
-   "Gain [3] [Culture] <upon expending a [Great Merchant] unit>",
-   "Gain [3] [Gold] <upon expending a [Great Artist] unit>",
-   "Gain [3] [Science] <upon expending a [Great Artist] unit>",
-   "Gain [3] [Culture] <upon expending a [Great Artist] unit>",
-   "Gain [3] [Gold] <upon expending a [Great Musician] unit>",
-   "Gain [3] [Science] <upon expending a [Great Musician] unit>",
-   "Gain [3] [Culture] <upon expending a [Great Musician] unit>",
-   "Gain [3] [Gold] <upon expending a [Great Writer] unit>",
-   "Gain [3] [Science] <upon expending a [Great Writer] unit>",
-   "Gain [3] [Culture] <upon expending a [Great Writer] unit>",
-   "Gain [3] [Gold] <upon expending a [Great Prophet] unit>",
-   "Gain [3] [Science] <upon expending a [Great Prophet] unit>",
-   "Gain [3] [Culture] <upon expending a [Great Prophet] unit>",
-   "Gain [3] [Gold] <upon expending a [Great Diplomat] unit>",
-   "Gain [3] [Science] <upon expending a [Great Diplomat] unit>",
-   "Gain [3] [Culture] <upon expending a [Great Diplomat] unit>"
+   "Only available <after adopting [Fiefdoms]>",
+   "May buy [Great Person] units for [1000] [Faith] [in all cities in which the majority religion is a major religion] at an increasing price ([500]) <starting from the [Industrial era]>",
+   "[+50]% weight to this choice for AI decisions"
   ]
  },
  {
@@ -618,7 +582,6 @@
   "type": "Enhancer",
   "uniques": [
    "[+2 Science, +2 Faith] from [Landmark] tiles [in all cities]",
-   "[+2 Science, +2 Faith] from [Embassy] tiles [in all cities]",
    "[+2 Culture] from every [Great Work]"
   ]
  },

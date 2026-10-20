@@ -339,6 +339,7 @@ extension GameState {
         // Unciv addTechnology: the tech's own triggerable uniques, then TriggerUponResearch
         if let def = rs.techs[tech] { triggerUniques(def.uniqueObjects, civId: civId, cityId: nil, triggerText: "due to researching [\(tech)]", sourceTech: tech) }
         triggerConditionalUniques(civId: civId, cityId: nil, triggerText: "due to researching [\(tech)]") { $0.pattern == "upon discovering [] technology" && $0.param(0) == tech }
+        if isNew { vpInstantYield(.tech, civId: civId, cityId: nil) }   // VP: VP/VPInstantYields.swift
         // Unciv TechManager.addTechnology → notifyExploredResources for every resource this tech reveals (within 5 tiles of a city).
         // rs.resources bir Dictionary: values sırası süreç başına rastgele. Unciv ruleset.tileResources
         // (Resources.json sırası) üzerinde yürüdüğü için rs.resourcesInOrder kullanıyoruz.

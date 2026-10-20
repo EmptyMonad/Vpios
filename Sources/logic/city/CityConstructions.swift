@@ -276,6 +276,7 @@ extension GameState {
         switch p {
         case .building(let name):
             addBuilding(cityIndex: ci, name)   // Building.construct
+            vpInstantYield(.construction(name), civId: cities[ci].civId, cityId: cities[ci].id)   // VP
         case .unit(let name):
             guard let def = rs.units[name], let spawned = spawnUnit(name, civId: civId, at: cities[ci].coord), let ui = unitIndex(spawned.id) else { return false }   // nothing built - no pay
             units[ui].charges = def.spreadCharges   // religion already set by spawnUnit (Unciv addUnit rule)
@@ -585,6 +586,7 @@ extension GameState {
         switch p {
         case .building(let name):
             addBuilding(cityIndex: ci, name)   // Building.construct
+            vpInstantYield(.construction(name), civId: cities[ci].civId, cityId: cities[ci].id)   // VP
         case .unit(let name):
             guard let spawned = spawnUnit(name, civId: civId, at: cities[ci].coord), let ui = unitIndex(spawned.id) else { return false }   // nothing built - no pay
             if !settings.godMode, rs.units[name]?.canMoveImmediatelyOnceBought != true { units[ui].movementLeft = 0 }
@@ -732,6 +734,7 @@ extension GameState {
             // Unciv completeConstruction: `construction.construct(this)` → Building.construct → addBuilding, then the
             // queue bookkeeping and the notifications.
             addBuilding(cityIndex: ci, name)
+            vpInstantYield(.construction(name), civId: cities[ci].civId, cityId: cities[ci].id)   // VP
             if let def = rs.buildings[name], let cityNow = self.city(cityId) {
                 // Unciv completeConstruction: a wonder is announced to every civilization of the game in its order - the
                 // builder too, under Production, the others under General - with the building's icon alone; any other

@@ -196,6 +196,7 @@ extension GameState {
         destroyBuildingsOnCapture(cityIndex: ci, rng: &tileBasedRandom)
 
         moveToCiv(cityId: cityId, newCiv: receivingCiv)
+        vpInstantYield(.conquest, civId: receivingCiv, cityId: cityId)   // VP
 
         // Unciv Battle.destroyIfDefeated(conqueredCiv, conqueringCiv)
         if let lost = civ(conqueredCiv), lost.isAlive, isDefeated(lost) { eliminate(civId: conqueredCiv, by: conqueringCiv, at: cities[ci].coord) }

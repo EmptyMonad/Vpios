@@ -1,17 +1,6 @@
 
-## Policies: untranslated effects (Progress opener)
-
-- Policy_YieldFromBirthCapital: 1 row(s)
-- Policy_YieldFromTechRetroactive: 1 row(s)
-- Policy_YieldFromBirthCapitalRetroactive: 1 row(s)
-
-## Policies: untranslated effects (Progress Complete)
-
-- Policy_YieldFromBirth: 1 row(s)
-
 ## Policies: untranslated effects (Authority)
 
-- Imperium: Policy_YieldFromBorderGrowth: 2 row(s)
 - Militarism: Policy_YieldPerCityOverStrengthThreshold: 1 row(s)
 - Militarism: HappinessPerCityOverStrengthThreshold = 1
 - Tribute: Policy_YieldFromMinorDemand: 1 row(s)
@@ -21,7 +10,6 @@
 ## Policies: untranslated effects (Authority Complete)
 
 - Policy_YieldFromMinorDemand: 1 row(s)
-- Policy_YieldFromBorderGrowth: 2 row(s)
 
 ## Policies: untranslated effects (Fealty)
 
@@ -128,6 +116,7 @@
 - Universal Healthcare (Order)
 - Party Leadership
 - Cultural Revolution
+- Spaceflight Pioneers
 
 ## Policies: untranslated effects (Freedom)
 
@@ -152,7 +141,6 @@
 - Resettlement: NoPartisans = 1
 - Dictatorship of the Proletariat: LessHappyTourismModifier = 25
 - Iron Curtain: InternalTradeRouteYieldModifier = 200
-- Spaceflight Pioneers: GreatEngineerHurryModifier = 50
 
 ## Policy tile effects dropped (improvement not in ruleset)
 
@@ -323,7 +311,6 @@
 - Building_HurryModifiers: 2
 - Building_HurryModifiersLocal: 2
 - Building_ImprovementYieldChangesGlobal: 26
-- Building_InstantYield: 7
 - Building_LocalResourceOrs: 5
 - Building_ResourceQuantity: 13
 - Building_ResourceQuantityPerXFranchises: 2
@@ -339,26 +326,14 @@
 - Building_YieldChangeWorldWonderGlobal: 6
 - Building_YieldChangesPerPopInEmpire: 1
 - Building_YieldChangesPerReligion: 3
-- Building_YieldFromBirth: 4
-- Building_YieldFromBirthRetroactive: 1
-- Building_YieldFromBorderGrowth: 4
 - Building_YieldFromCombatExperienceTimes100: 2
-- Building_YieldFromConstruction: 4
-- Building_YieldFromDeath: 3
-- Building_YieldFromGPExpend: 2
 - Building_YieldFromInternalTR: 7
 - Building_YieldFromPillage: 1
 - Building_YieldFromPillageGlobal: 1
-- Building_YieldFromPolicyUnlock: 2
 - Building_YieldFromProcessModifier: 10
-- Building_YieldFromPurchase: 1
 - Building_YieldFromSpyAttack: 4
 - Building_YieldFromSpyDefenseOrID: 4
 - Building_YieldFromSpyRigElection: 4
-- Building_YieldFromTech: 2
-- Building_YieldFromUnitProduction: 2
-- Building_YieldFromVictory: 3
-- Building_YieldFromVictoryGlobal: 4
 - Building_YieldFromYieldPercent: 3
 - Building_YieldFromYieldPercentGlobal: 3
 - Building_YieldPerAlly: 5
@@ -546,19 +521,13 @@
 
 ## Beliefs: untranslated effects (Pantheon)
 
-- Fertility Rites: Belief_YieldPerConstruction: YIELD_FOOD 8
 - Goddess of Festivals: Belief_YieldPerLux: 3 row(s)
 - Messenger of the Gods: Belief_GreatPersonPoints: 1 row(s)
 - Messenger of the Gods: Belief_YieldPerActiveTR: 2 row(s)
 - Monument to the Gods: Belief_GreatPersonPoints: 2 row(s)
-- Religious Settlements: Belief_YieldPerBorderGrowth: 2 row(s)
-- Tears of the Gods: Belief_YieldFromKnownPantheons: 4 row(s)
-- Dagda, the All-Father: Belief_YieldPerBirth: 3 row(s)
-- Epona, the Great Mare: Belief_YieldPerBorderGrowth: 4 row(s)
 - Morrigan, the Harbinger: Belief_YieldFromPillageGlobal: 3 row(s)
 - Nuada, the Silver-Handed: Belief_YieldPerActiveTR: 3 row(s)
 - Nuada, the Silver-Handed: Belief_YieldPerLux: 3 row(s)
-- Nuada, the Silver-Handed: Belief_YieldFromWLTKD: 2 row(s)
 - Ogma, the Learned: Belief_GreatPersonPoints: 2 row(s)
 - Rhiannon, the Sovereign: Belief_YieldPerFollowingCity: {'Culture': 2}
 
@@ -573,24 +542,10 @@
 - Feed the World: Belief_MaxYieldPerFollower: 1 row(s)
 - Feed the World: Belief_MaxYieldPerFollowerPercent: 1 row(s)
 - Liturgical Drama: Belief_YieldPerScience: 1 row(s)
-- Liturgical Drama: Belief_YieldFromFaithPurchase: 2 row(s)
 - Peace Gardens: Belief_YieldPerGPT: 1 row(s)
-- Peace Gardens: Belief_YieldFromFaithPurchase: 2 row(s)
 - Religious Community: Belief_MaxYieldPerFollower: 1 row(s)
 - Religious Community: Belief_MaxYieldPerFollowerPercent: 1 row(s)
 - Cooperation: Belief_TradeRouteYieldChange: 4 row(s)
-
-## Beliefs: untranslated effects (Founder)
-
-- Church Property: Belief_YieldFromPolicyUnlock: 3 row(s)
-- Interfaith Dialogue: Belief_YieldFromConquest: YIELD_GOLDEN_AGE_POINTS 100
-- Interfaith Dialogue: Belief_YieldFromConquest: YIELD_GREAT_GENERAL_POINTS 25
-- Interfaith Dialogue: Belief_YieldFromConquest: YIELD_GREAT_ADMIRAL_POINTS 25
-- Papal Primacy: Belief_YieldFromConversion: 2 row(s)
-- Pilgrimage: Belief_YieldFromSpread: 1 row(s)
-- Pilgrimage: Belief_YieldFromForeignSpread: 1 row(s)
-- Tithe: Belief_YieldFromTechUnlock: YIELD_GOLDEN_AGE_POINTS 2
-- World Church: Belief_YieldFromWLTKD: 3 row(s)
 
 ## Beliefs: untranslated effects (Enhancer)
 
@@ -672,3 +627,11 @@
 - The Ottomans: Kanuni
 - Shoshone: TRAIT_GREAT_EXPANSE
 - Venice: TRAIT_SUPER_CITY_STATE
+
+## Uniques dropped by Unciv's validator (unknown resource/improvement/filter)
+
+- Amphitheater: [+1 Culture, +1 Gold] from [Brazilwood] tiles [in this city]
+- Acropolis: [+1 Culture, +1 Gold] from [Brazilwood] tiles [in this city]
+- Seowon: [+1 Production, +1 Science] from [Embassy] tiles [in this city]
+- Missionary Zeal: [Great Diplomat] is earned [+33]% faster <during a Golden Age>
+- Unity of the Prophets: [+2 Science, +2 Faith] from [Embassy] tiles [in all cities]

@@ -147,6 +147,7 @@ extension GameState {
             }
             triggerUniques(def.uniqueObjects, civId: civId, cityId: nil, triggerText: "due to adopting [\(p)]", sourcePolicy: p)
             triggerConditionalUniques(civId: civId, triggerText: "due to adopting [\(p)]") { $0.pattern == "upon adopting []" && $0.param(0) == p }   // Unciv PolicyManager.adopt
+            vpInstantYield(.policy, civId: civId, cityId: nil)   // VP
             updateCivResources(civId)   // Unciv PolicyManager.kt:279 - AFTER both trigger passes, not before them
             return true
         }

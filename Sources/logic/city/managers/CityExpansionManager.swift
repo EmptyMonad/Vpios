@@ -133,6 +133,7 @@ extension GameState {
         guard let ci = cityIndex(cityId), let tile = chooseNewTileToOwn(cities[ci]) else { return }
         cities[ci].expansionCulture -= expansionCost(for: cities[ci])
         takeOwnership(cityId: cityId, tile)
+        vpInstantYield(.borders, civId: cities[ci].civId, cityId: cityId)   // VP
         notify(cities[ci].civId, "[\(cities[ci].name)] has expanded its borders!", category: .Cities, icons: ["Culture"], actions: [.location(tile), .location(cities[ci].coord)])   // LocationAction(location, city.location)
     }
 }

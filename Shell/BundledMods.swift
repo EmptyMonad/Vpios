@@ -47,7 +47,7 @@ enum VPSelfTest {
             s.players = (0..<5).map { _ in PlayerSetup(chosenCiv: "Random", isHuman: false) }
             let g: GameState
             do { g = try GameState.newGame(settings: s) } catch { print("VPTEST could not start: \(error)"); exit(2) }
-            print("VPTEST start mods=\(Ruleset.shared.mods) vpNeeds=\(g.vpNeeds != nil) buildings=\(Ruleset.shared.buildings.count) units=\(Ruleset.shared.units.count)")
+            print("VPTEST start mods=\(Ruleset.shared.mods) vpNeeds=\(g.vpNeeds != nil) vpData=\(g.vpData != nil) buildings=\(Ruleset.shared.buildings.count) units=\(Ruleset.shared.units.count)")
             let t0 = Date()
             for t in 1...turns {
                 g.endTurn()
@@ -57,7 +57,7 @@ enum VPSelfTest {
                         let h = g.happinessBreakdown(c.id)
                         let rows = h.rows.map { "\($0.0)=\(Int($0.1))" }.joined(separator: ",")
                         let cs = g.cities(of: c.id)
-                        print("VPTEST   \(c.nation): units=\(g.units(of: c.id).count) supply=\(g.unitSupply(c.id)) cities=\(cs.count) pop=\(cs.reduce(0) { $0 + $1.population }) happiness=\(g.happiness(of: c.id)) approval=\(g.vpApproval(civId: c.id).map(String.init) ?? "-") [\(rows)]")
+                        print("VPTEST   \(c.nation): gold=\(Int(c.gold)) culture=\(Int(c.totalCulture)) policies=\(c.policies.count) techs=\(c.techs.count) ww=\(g.vpWarWearinessPercent(c.id))% units=\(g.units(of: c.id).count) supply=\(g.unitSupply(c.id)) cities=\(cs.count) pop=\(cs.reduce(0) { $0 + $1.population }) happiness=\(g.happiness(of: c.id)) approval=\(g.vpApproval(civId: c.id).map(String.init) ?? "-") [\(rows)]")
                     }
                 }
                 if t == 20 && !g.civs.contains(where: { $0.isMajor && !g.cities(of: $0.id).isEmpty }) { print("VPTEST FAIL no major civ has founded a city by turn 20") }
