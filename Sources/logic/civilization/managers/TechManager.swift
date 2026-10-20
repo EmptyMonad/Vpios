@@ -109,6 +109,7 @@ extension GameState {
         for u in civUniques(civ.id) where u.pattern == "Each city founded increases Science cost of Technologies []% less than normal" && conditionalsHold(u, ctx) { cityModifier *= 1 - Float(u.double(0)) / 100 }
         for u in civUniques(civ.id) where u.pattern == "[]% Science cost of researching new Technologies" && conditionalsHold(u, ctx) { techCost *= 1 + Float(u.double(0)) / 100 }   // Unciv LessTechCost: params[0].toPercent()
         techCost *= 1 + cityModifier
+        techCost *= Float(vpLeagueTechCostFactor(tech.name, civ.id))   // VP: World Congress (Scholars in Residence)
         return Double(Int(techCost))   // Unciv techCost.toInt()
     }
 

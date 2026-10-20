@@ -29,7 +29,7 @@ extension GameState {
             if vpNeeds != nil {   // VP: each luxury's own Happiness (CvPlayer::GetBonusHappinessFromLuxuriesFlat)
                 let lux = Set(civResourceSupply(civId).keys.filter { rs.resources[$0]?.resourceType == "Luxury" })
                 let uniqueExtra = Double(perLux - Float(4.0 + diff.extraHappinessPerLuxury))   // "[n] Happiness from each type of luxury resource"
-                h.add("Luxury resources", Double(vpLuxuryHappiness(civId: civId, luxuries: lux) ?? 0) + uniqueExtra * Double(lux.filter { (vpNeeds?.luxuryHappiness[$0] ?? 0) > 0 }.count))
+                h.add("Luxury resources", Double(vpLuxuryHappiness(civId: civId, luxuries: lux) ?? 0) + uniqueExtra * Double(lux.subtracting(vpBannedLuxuries).filter { (vpNeeds?.luxuryHappiness[$0] ?? 0) > 0 }.count))
                 h.add("Monopolies", Double(vpMonopolyHappiness(civId)))   // VP: MonopolyHappiness of global monopolies
                 perLux = 0   // the city-state and traded-luxury rows below are Unciv's, not VP's
             } else {
@@ -329,6 +329,7 @@ extension GameState {
         var cost: Float = 0.5 * numberOfUnitsToPayFor * (1 + gameProgress)
         cost = Float(pow(Double(cost), Double(1 + gameProgress / 3)))   // Kotlin Float.pow goes through Double
         if civ(civId)?.isPlayer == false { cost *= Float(difficulty.aiUnitMaintenanceModifier) }
+        cost *= Float(1 + vpLeagueUpkeepPercent(civId) / 100)   // VP: World Congress (Global Peace Accords / Casus Belli)
         return Double(Int(cost))
     }
 

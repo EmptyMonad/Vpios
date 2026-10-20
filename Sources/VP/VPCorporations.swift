@@ -115,7 +115,7 @@ extension GameState {
     }
 
     private func vpCanHostFranchise(_ city: City, _ c: VPCorporation, owner: Int, corps: [VPCorporation]) -> Bool {
-        guard city.civId != owner, let host = civ(city.civId), !host.isBarbarian else { return false }
+        guard city.civId != owner, let host = civ(city.civId), !host.isBarbarian, !vpLeagueBlocksFranchise(in: city) else { return false }
         return !corps.contains { city.buildings.contains($0.franchise) || city.buildings.contains($0.office) }
     }
 

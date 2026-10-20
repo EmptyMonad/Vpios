@@ -304,7 +304,8 @@ extension GameState {
         guard let vp = vpNeeds else { return nil }
         let (d, human) = vpDifficulty(vp, civId: civId)
         let extra = human ? d.extraHappinessPerLuxury : d.aiExtraHappinessPerLuxury
-        return luxuries.reduce(0) { acc, r in
+        let banned = vpBannedLuxuries   // World Congress: Ban Luxury
+        return luxuries.subtracting(banned).reduce(0) { acc, r in
             let base = vp.luxuryHappiness[r] ?? 0
             return base > 0 ? acc + base + extra : acc
         }

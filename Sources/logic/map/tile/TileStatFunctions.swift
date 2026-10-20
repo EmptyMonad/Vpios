@@ -120,6 +120,7 @@ extension GameState {
 
         if let c = observing, GameState.toStats(list).gold != 0, c.isInGoldenAge { list.append(("Golden Age", Stats(gold: 1))) }
         if let m = vpMonopolyTileYield(tile, civId: civId) { list.append(("Monopoly", m)) }   // VP: VP/VPMonopolies.swift
+        if let w = vpLeagueTileYield(tile) { list.append(("World Congress", w)) }   // VP: VP/VPLeague.swift
 
         return list.filter { !$0.1.isEmpty }
     }

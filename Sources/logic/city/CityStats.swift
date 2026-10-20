@@ -483,6 +483,7 @@ final class CityStats {
         newBaseStatList["Trade routes"] = getStatsFromTradeRoute()
         if let f = state.vpFranchiseYields(city) { newBaseStatList["Franchises"] = f }   // VP: VP/VPCorporations.swift (nil without the VP mod)
         if let v = state.vpBuildingYields(city) { newBaseStatList["VP buildings"] = v }   // VP: VP/VPBuildingYields.swift
+        if let w = state.vpLeagueCityYields(city) { newBaseStatList["World Congress"] = w }   // VP: VP/VPLeague.swift
         newBaseStatTree.setChild("Buildings", statsFromBuildings)
 
         for source in newBaseStatList.order { newBaseStatTree.addStats(newBaseStatList[source], source) }
@@ -499,6 +500,7 @@ final class CityStats {
         newStatsBonusTree.addStats(getStatPercentBonusesFromPuppetCity(), "Puppet City")
         newStatsBonusTree.addStats(getStatPercentBonusesFromUnitSupply(), "Unit Supply")
         newStatsBonusTree.addStats(state.vpMonopolyCityPercent(city.civId), "Monopolies")   // VP: VP/VPMonopolies.swift
+        if let w = state.vpLeagueCityPercent(city) { newStatsBonusTree.addStats(w, "World Congress") }   // VP: VP/VPLeague.swift
         newStatsBonusTree.add(getStatsPercentBonusesFromUniquesBySource(currentConstruction))
         // Unciv Building.getStatPercentageBonuses: the building's own percentStatBonus PLUS the city's
         // "[amount]% [stat] from every [buildingFilter]" for the buildings that match it.

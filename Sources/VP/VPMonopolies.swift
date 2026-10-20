@@ -43,12 +43,13 @@ extension GameState {
         let globalPct = Int(vpNeeds?.define("GLOBAL_RESOURCE_MONOPOLY_THRESHOLD", 50) ?? 50)
         let strategicPct = Int(vpNeeds?.define("STRATEGIC_RESOURCE_MONOPOLY_THRESHOLD", 25) ?? 25)
         var out: [Int: VPMonopolyState] = [:]
+        let banned = vpBannedLuxuries   // World Congress: Ban Luxury
         for (civId, counts) in mine where civ(civId)?.isMajor == true {
             var s = VPMonopolyState()
             for (r, n) in counts {
                 guard let all = total[r], all > 0 else { continue }
                 let pct = n * 100 / all
-                if pct > globalPct { s.global.insert(r) }
+                if pct > globalPct && !banned.contains(r) { s.global.insert(r) }
                 if rs.resources[r]?.resourceType == "Strategic" && pct > strategicPct { s.strategic.insert(r) }
             }
             if !s.global.isEmpty || !s.strategic.isEmpty { out[civId] = s }

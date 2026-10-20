@@ -7,6 +7,13 @@
 - Corporation_UnitResourceProductionModifier (no unit filter for resource-using units)
 - CorporationNumFreeFranchiseAbovePopular (Infiltration)
 
+## World Congress: engine approximations / not carried over
+
+- Base BNW resolution and session data is not in the VP database: sessions, delegates and resolutions follow BNW's documented rules with VP's changes (intervals 20/15/10, 3 proposers, VP texts)
+- Delegates are spent across all proposals; no vote trading, no relation changes from votes, host elections go to the civ with the most delegates
+- Not carried over: international projects (World's Fair, ISS, Treasure Fleet, Wargames, United Nations), Global Hegemony (Unciv's own UN vote remains), Sanctions, Cold War, Travel Ban, Passport System, Spaceflight Regulations, Global Liberation, Holy City tourism, ideology public opinion
+- Endowment for the Arts / World Science Initiative use a flat 33% instead of 'up to 33%'; Cultural Heritage Sites lacks +1 Science per Great Work
+
 ## Policies: untranslated effects (Authority)
 
 - Militarism: Policy_YieldPerCityOverStrengthThreshold: 1 row(s)

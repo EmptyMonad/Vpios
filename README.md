@@ -28,6 +28,10 @@ These are active only when a mod ships `jsons/VPNeeds.json`:
   - A Headquarters needs the Corporations tech and a Global Monopoly on one of its resources; one per civ, and it grants a free Office.
   - Only the founder can build Offices. Each Office earns its yield per Franchise, up to the Franchise limit.
   - Franchises spread to nearby foreign cities from Office cities, plus VP's random spread (there are no international trade routes, see `GAPS.md`).
+- **World Congress** (`VPLeague.swift`, `UI/VPCongressView.swift`, 🏛 in the top bar):
+  - Founded once a civ with Printing Press has met everyone. It moves through Renaissance, Industrial, Modern and UN eras, and delegates and session intervals change with each.
+  - The host and the two largest delegations propose each session; every member spends its delegates as Yea or Nay.
+  - 15 VP resolutions take effect in the engine, among them Ban Luxury, the Arts and Science funding resolutions, Global Peace Accords, Casus Belli, the Heritage Sites resolutions, Historical Landmarks, Scholars in Residence, World Religion and World Ideology, and the City-State ones (Sphere of Influence, Open Door, Decolonization). Projects and Global Hegemony are not included yet.
 - **Building tables with no Unciv unique** (`VPBuildingYields.swift`): yields per City-State ally/friend, per World Wonder, per religion and per citizen of the empire; yield-to-yield conversions; Aqueduct-style yields on growth; mutually exclusive buildings.
 
 ### VP data (`GameData/BundledMods/Vox Populi 4.22`)

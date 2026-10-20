@@ -198,6 +198,7 @@ final class GameController: ObservableObject {
     @Published var cityPickTile: PickTileForImprovement? = nil
     @Published var showVotePicker = false         // Unciv DiplomaticVotePickerScreen
     @Published var showVoteResult = false         // Unciv DiplomaticVoteResultScreen
+    @Published var showCongress = false           // VP: UI/VPCongressView.swift
     @Published var cityTile: HexCoord? = nil       // Unciv CityScreenTileTable: tile picked on the city map
     @Published var connectRoadMode = false { didSet { if !connectRoadMode { roadOverlay = nil } } }        // Unciv "Connect road": next tapped tile is the road target
     @Published var unitActionPage = 0             // Unciv UnitActionsTable paging ("Show more" / "Back")
@@ -365,7 +366,7 @@ final class GameController: ObservableObject {
         // screens pushed over it (the VictoryScreen of a finished game among them)
         if state.outcome != nil || showCity || showTech || showDiplomacy || showPolicies || showPromotions || showVictory || showCivilopedia
             || showReligion || showEspionage || showOverview || showChat || showMultiplayerStatus || showDevConsole || showGreatPersonPicker
-            || showImprovementPicker || showFoundReligion || showEnhanceReligion || showFreeBeliefs || showVotePicker || showVoteResult
+            || showImprovementPicker || showFoundReligion || showEnhanceReligion || showFreeBeliefs || showVotePicker || showVoteResult || showCongress
             || foreignCityInfo != nil { return true }
         // Not the next turn: Unciv's keys answer while it runs "so the user can explore their world" (KeyboardPanningListener,
         // the global shortcuts, the AutoPlay button's). The ones that load, quick-load or start a game refuse it themselves
@@ -380,7 +381,7 @@ final class GameController: ObservableObject {
     var screenPushedOverWorld: Bool {
         showCity || showTech || showDiplomacy || showPolicies || showPromotions || showVictory || showCivilopedia || showReligion
             || showEspionage || showOverview || showGreatPersonPicker || showImprovementPicker || showFoundReligion
-            || showEnhanceReligion || showFreeBeliefs || showVotePicker || showVoteResult || !viewScreensPushed.isEmpty
+            || showEnhanceReligion || showFreeBeliefs || showVotePicker || showVoteResult || showCongress || !viewScreensPushed.isEmpty
     }
     /// The screens the views present themselves, reported here: GameView's save, load and new game, the top bar's overview.
     var viewScreensPushed: Set<String> = []
@@ -2343,7 +2344,7 @@ final class GameController: ObservableObject {
         showGreatPersonPicker = false; showMayaCalendar = false; foreignCityInfo = nil
         showImprovementPicker = false; showDetailedStats = false; showGPPBreakdown = false
         showRenameCity = false; showRenameUnit = false; showUpgradeMenu = false
-        showVotePicker = false; showVoteResult = false
+        showVotePicker = false; showVoteResult = false; showCongress = false
         showFoundReligion = false; showEnhanceReligion = false; showFreeBeliefs = false
         showMenu = false; showAutoPlayMenu = false; showNextTurnMenu = false; confirmNextTurn = false
         confirmPillage = nil; confirmDisband = nil; confirmBreakPromise = nil; confirmAnnihilation = nil; pendingAnnihilation = nil

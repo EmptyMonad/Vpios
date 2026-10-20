@@ -126,6 +126,7 @@ struct GameView: View {
         .overlay { if controller.showRenameCity, !controller.showCity, let c = controller.selectedCity { RenamePopup(title: L("Please enter a new name for your city"), initial: c.name, onDone: { n in if let n { controller.renameCity(n) }; controller.showRenameCity = false }).zIndex(12) } }
         .overlay { if controller.showVotePicker { DiplomaticVotePickerView(controller: controller).zIndex(12) } }
         .overlay { if controller.showVoteResult { DiplomaticVoteResultView(controller: controller).zIndex(12) } }
+        .overlay { if controller.showCongress { VPCongressView(controller: controller).zIndex(12) } }   // VP
         .modifier(OnlineWorldPopups(controller: controller, onQuit: onQuit))
         .animation(.easeInOut(duration: 0.25), value: controller.showCity)
         .animation(UserSettings.animateUnitActionsMenu ? .easeOut(duration: 0.2) : nil, value: controller.selectedUnitId)
@@ -716,6 +717,7 @@ struct TopBar<Menu: View>: View {
                         Button { controller.showTech = true } label: { stat("🔬", GameView.rateLabel(science), color: Theme.cream) }
                         Button { overviewTab = "Resources" } label: { stat(happy >= 0 ? "😊" : "😠", (s.vpCachedApproval(civ.id).map { "\($0)%" } ?? "\(happy)") + (civ.isInGoldenAge ? "    " + L("GOLDEN AGE") + "(\(civ.goldenAgeTurns))" : " (\(Int(civ.goldenAgePoints))/\(Int(s.goldenAgeThreshold(civ))))"), color: happy < 0 ? Theme.danger : Theme.cream) }
                         Button { controller.showPolicies = true } label: { stat("🎵", "\(GameView.rateLabel(culture)) (\(policyTurns))", color: Theme.cream) }
+                        if s.vpLeague.founded { Button { controller.showCongress = true } label: { stat("🏛", "\(s.vpLeagueTurnsToSession())" + (s.vpLeague.pendingProposers.contains(civ.id) ? " ✎" : ""), color: Theme.cream) } }   // VP: World Congress
                         if s.religionEnabled { Button { overviewTab = "Religion" } label: { stat("🕊", "\(Int(civ.faithStored)) (\(GameView.rateLabel(s.faithForNextTurn(civ.id))))", color: Theme.cream) } }   // Unciv: statsForNextTurn.faith
                         else { Text(L("Religion: Off")).font(.system(size: 10, weight: .semibold)).foregroundStyle(Theme.creamDim) }   // Unciv WorldScreenTopBarStats
                     }

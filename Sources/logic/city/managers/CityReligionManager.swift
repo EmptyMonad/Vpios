@@ -181,6 +181,7 @@ extension GameState {
         func applies(_ u: Unique) -> Bool { u.pattern == "[]% Natural religion spread" || (u.pattern == "[]% Natural religion spread []" && cityMatchesFilter(u.param(1), city: target, viewer: target.civId)) }
         for u in cityUniquesCivFirst(source) where applies(u) && conditionalsHold(u, ctx) { pressure *= Float(Stats.toPercent(u.double(0))) }
         if let owner = religionOwner(religion) { for u in founderUniques(for: owner.id) where applies(u) && conditionalsHold(u, UniqueContext(civId: owner.id)) { pressure *= Float(Stats.toPercent(u.double(0))) } }
+        pressure *= Float(vpLeagueReligionPressure(religion))   // VP: World Religion spreads 25% faster
         return Int(pressure)
     }
 

@@ -53,6 +53,8 @@ enum VPSelfTest {
                 g.endTurn()
                 if t % 10 == 0 || g.outcome != nil {
                     print("VPTEST turn \(g.turn) \(Int(Date().timeIntervalSince(t0)))s medians=\(g.vpMedians)")
+                    let lg = g.vpLeague
+                    print("VPTEST   congress founded=\(lg.founded) host=\(lg.host.flatMap { g.civ($0)?.nation } ?? "-") era=\(lg.era) next=\(lg.nextSession) active=[\(lg.active.map { g.vpEntryTitle($0) }.joined(separator: "; "))] proposals=[\(lg.proposals.map { g.vpEntryTitle($0) }.joined(separator: "; "))] delegates=[\(g.vpLeagueMembers().map { "\($0.nation)=\(g.vpDelegates($0.id).0)" }.joined(separator: ","))] last=[\(lg.lastResults.joined(separator: "; "))]")
                     for c in g.civs where c.isMajor && c.isAlive {
                         let h = g.happinessBreakdown(c.id)
                         let rows = h.rows.map { "\($0.0)=\(Int($0.1))" }.joined(separator: ",")
@@ -60,6 +62,7 @@ enum VPSelfTest {
                         print("VPTEST   \(c.nation): gold=\(Int(c.gold)) culture=\(Int(c.totalCulture)) policies=\(c.policies.count) techs=\(c.techs.count) ww=\(g.vpWarWearinessPercent(c.id))% units=\(g.units(of: c.id).count) supply=\(g.unitSupply(c.id)) cities=\(cs.count) pop=\(cs.reduce(0) { $0 + $1.population }) happiness=\(g.happiness(of: c.id)) approval=\(g.vpApproval(civId: c.id).map(String.init) ?? "-") monopolies=\(g.vpMonopolies()[c.id].map { $0.global.sorted().joined(separator: "/") } ?? "-") corp=\(g.vpCorporation(of: c.id).map { "\($0.name) \(g.vpFranchiseCount($0, owner: c.id))/\(g.vpFranchiseLimit($0, owner: c.id))" } ?? "-") [\(rows)]")
                     }
                 }
+                if t == 25 { g.vpLeagueDebugFound() }   // exercise the World Congress: sessions at turns 45, 65
                 if t == 20 && !g.civs.contains(where: { $0.isMajor && !g.cities(of: $0.id).isEmpty }) { print("VPTEST FAIL no major civ has founded a city by turn 20") }
                 if g.outcome != nil { break }
             }

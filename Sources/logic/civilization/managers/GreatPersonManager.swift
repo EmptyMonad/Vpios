@@ -32,7 +32,7 @@ extension GameState {
             let allGP = Int(civPercent(civId, pattern: "[]% Great Person generation []", city: city, filterParamIndex: 1, filterMatches: { self.cityMatchesFilter($0, city: city, viewer: civId) })) + Int(friendshipGreatPersonBoost(civId))
             let ctx = UniqueContext(civId: civId, city: city)
             for (gp, pts) in base {
-                var bonus = allGP
+                var bonus = allGP + vpLeagueGPBonus(civId, gp)   // VP: World Congress funding
                 for u in civUniques(civId) where u.pattern == "[] is earned []% faster" && u.param(0) == gp && conditionalsHold(u, ctx) { bonus += u.int(1) }
                 var fixed = pts * 1000
                 fixed += fixed * bonus / 100
