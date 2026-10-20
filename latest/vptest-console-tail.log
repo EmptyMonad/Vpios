@@ -1,51 +1,43 @@
 VPTEST start mods=["Civ V Brave New World", "Vox Populi 4.22"] vpNeeds=true buildings=262 units=171
-VPTEST turn 11 30s medians=VPMedians(basicNeeds: 476, gold: 199, science: 319, culture: 32)
+VPTEST turn 11 35s medians=VPMedians(basicNeeds: 476, gold: 199, science: 319, culture: 32)
 VPTEST   The Huns: units=1 supply=12 cities=1 pop=3 happiness=7 approval=100 [Base happiness=10,Poverty=-1,Illiteracy=-1,Boredom=-1]
 VPTEST   The Maya: units=1 supply=12 cities=1 pop=3 happiness=7 approval=100 [Base happiness=10,Poverty=-1,Illiteracy=-1,Boredom=-1]
 VPTEST   Arabia: units=1 supply=12 cities=1 pop=2 happiness=9 approval=100 [Base happiness=10,Famine=-2,Natural Wonders=1]
 VPTEST   Byzantium: units=1 supply=12 cities=1 pop=3 happiness=7 approval=100 [Base happiness=10,Poverty=-1,Illiteracy=-1,Famine=-1]
 VPTEST   Austria: units=1 supply=12 cities=1 pop=2 happiness=8 approval=100 [Base happiness=10,Famine=-2]
-VPTEST turn 21 62s medians=VPMedians(basicNeeds: 537, gold: 150, science: 260, culture: 100)
+VPTEST turn 21 76s medians=VPMedians(basicNeeds: 537, gold: 150, science: 260, culture: 100)
 VPTEST   The Huns: units=2 supply=12 cities=1 pop=4 happiness=6 approval=100 [Base happiness=10,Poverty=-2,Illiteracy=-1,Boredom=-1]
 VPTEST   The Maya: units=1 supply=13 cities=1 pop=6 happiness=6 approval=100 [Base happiness=10,Poverty=-4,Illiteracy=-2,Buildings=2]
-VPTEST   Arabia: units=3 supply=12 cities=1 pop=5 happiness=8 approval=100 [Base happiness=10,Poverty=-2,Illiteracy=-1,Boredom=-1,Distress=-1,Buildings=2,Natural Wonders=1]
+VPTEST   Arabia: units=2 supply=12 cities=1 pop=5 happiness=8 approval=100 [Base happiness=10,Poverty=-3,Illiteracy=-1,Boredom=-1,Buildings=2,Natural Wonders=1]
 VPTEST   Byzantium: units=3 supply=13 cities=1 pop=6 happiness=6 approval=100 [Base happiness=10,Poverty=-4,Illiteracy=-2,Buildings=2]
 VPTEST   Austria: units=2 supply=12 cities=1 pop=2 happiness=8 approval=100 [Base happiness=10,Famine=-2]
-VPTEST turn 31 104s medians=VPMedians(basicNeeds: 530, gold: 114, science: 229, culture: 87)
-VPTEST   The Huns: units=2 supply=13 cities=1 pop=6 happiness=4 approval=83 [Base happiness=10,Illiteracy=-2,Boredom=-4]
-VPTEST   The Maya: units=3 supply=13 cities=1 pop=8 happiness=4 approval=75 [Base happiness=10,Poverty=-5,Illiteracy=-2,Boredom=-1,Buildings=2]
-VPTEST   Arabia: units=5 supply=13 cities=1 pop=8 happiness=6 approval=87 [Base happiness=10,Poverty=-2,Illiteracy=-2,Boredom=-2,Distress=-2,Buildings=2,Natural Wonders=2]
-VPTEST   Byzantium: units=5 supply=13 cities=1 pop=8 happiness=8 approval=100 [Base happiness=10,Luxury resources=2,Poverty=-4,Illiteracy=-2,Boredom=-2,Buildings=2,Natural Wonders=2]
-VPTEST   Austria: units=4 supply=12 cities=1 pop=3 happiness=8 approval=100 [Base happiness=10,Boredom=-1,Famine=-2,Natural Wonders=1]
-VPTEST turn 41 167s medians=VPMedians(basicNeeds: 514, gold: 128, science: 272, culture: 77)
-VPTEST   The Huns: units=4 supply=13 cities=1 pop=8 happiness=5 approval=81 [Base happiness=10,Luxury resources=2,Poverty=-1,Illiteracy=-4,Boredom=-3,Natural Wonders=1]
-VPTEST   The Maya: units=4 supply=13 cities=1 pop=9 happiness=6 approval=87 [Base happiness=10,Luxury resources=2,Poverty=-2,Illiteracy=-2,Boredom=-2,Distress=-2,Buildings=2]
-VPTEST   Arabia: units=5 supply=13 cities=1 pop=11 happiness=5 approval=72 [Base happiness=10,Luxury resources=2,Poverty=-4,Illiteracy=-4,Boredom=-3,Buildings=2,Natural Wonders=2]
-VPTEST   Byzantium: units=9 supply=13 cities=1 pop=9 happiness=10 approval=100 [Base happiness=10,Luxury resources=4,Poverty=-5,Illiteracy=-1,Boredom=-3,Buildings=2,Natural Wonders=3]
-VPTEST   Austria: units=5 supply=12 cities=1 pop=4 happiness=8 approval=100 [Base happiness=10,Famine=-4,Policies=1,Natural Wonders=1]
-VPTEST turn 51 260s medians=VPMedians(basicNeeds: 569, gold: 169, science: 297, culture: 86)
-VPTEST   The Huns: units=4 supply=12 cities=1 pop=10 happiness=8 approval=90 [Base happiness=10,Luxury resources=6,Poverty=-7,Illiteracy=-3,Natural Wonders=2]
-VPTEST   The Maya: units=5 supply=12 cities=1 pop=11 happiness=8 approval=100 [Base happiness=10,Luxury resources=2,Poverty=-3,Distress=-4,Buildings=2,Natural Wonders=1]
-VPTEST   Arabia: units=7 supply=13 cities=1 pop=13 happiness=7 approval=76 [Base happiness=10,Luxury resources=6,Poverty=-10,Boredom=-1,Famine=-2,Buildings=2,Natural Wonders=2]
-VPTEST   Byzantium: units=11 supply=12 cities=1 pop=11 happiness=16 approval=100 [Base happiness=10,Luxury resources=4,Poverty=-5,Distress=-1,Buildings=3,City-States=2,Natural Wonders=3]
-VPTEST   Austria: units=5 supply=12 cities=1 pop=5 happiness=13 approval=100 [Base happiness=10,Luxury resources=4,Illiteracy=-1,Boredom=-1,Famine=-3,Policies=1,Natural Wonders=3]
-VPTEST turn 61 375s medians=VPMedians(basicNeeds: 594, gold: 203, science: 291, culture: 98)
-VPTEST   The Huns: units=5 supply=13 cities=1 pop=12 happiness=8 approval=83 [Base happiness=10,Luxury resources=6,Poverty=-3,Illiteracy=-6,Boredom=-3,City-States=2,Natural Wonders=2]
-VPTEST   The Maya: units=5 supply=12 cities=1 pop=12 happiness=17 approval=100 [Base happiness=10,Luxury resources=4,Religious Unrest=-1,Buildings=2,Natural Wonders=2]
-VPTEST   Arabia: units=9 supply=13 cities=1 pop=16 happiness=9 approval=78 [Base happiness=10,Luxury resources=10,Religious Unrest=-1,Poverty=-13,Illiteracy=-2,Buildings=3,Natural Wonders=2]
-VPTEST   Byzantium: units=13 supply=13 cities=1 pop=13 happiness=24 approval=100 [Base happiness=10,Luxury resources=6,Poverty=-5,Buildings=6,City-States=4,Natural Wonders=3]
-VPTEST   Austria: units=9 supply=12 cities=1 pop=6 happiness=14 approval=100 [Base happiness=10,Luxury resources=6,Poverty=-2,Illiteracy=-2,Boredom=-2,Policies=1,Natural Wonders=3]
-VPTEST turn 71 527s medians=VPMedians(basicNeeds: 617, gold: 198, science: 330, culture: 134)
-VPTEST   The Huns: units=9 supply=13 cities=1 pop=13 happiness=7 approval=76 [Base happiness=10,Luxury resources=6,Poverty=-9,Illiteracy=-4,City-States=2,Natural Wonders=2]
-VPTEST   The Maya: units=7 supply=13 cities=1 pop=15 happiness=22 approval=100 [Base happiness=10,Luxury resources=10,Religious Unrest=-1,Poverty=-1,Illiteracy=-3,Distress=-3,Buildings=6,City-States=2,Natural Wonders=2]
-VPTEST   Arabia: units=10 supply=13 cities=1 pop=19 happiness=15 approval=96 [Base happiness=10,Luxury resources=12,Religious Unrest=-1,Poverty=-7,Boredom=-2,Distress=-6,Buildings=4,City-States=3,Natural Wonders=2]
-VPTEST   Byzantium: units=14 supply=13 cities=1 pop=15 happiness=22 approval=100 [Base happiness=10,Luxury resources=6,Poverty=-3,Illiteracy=-2,Buildings=6,City-States=2,Natural Wonders=3]
-VPTEST   Austria: units=10 supply=12 cities=1 pop=7 happiness=14 approval=100 [Base happiness=10,Luxury resources=6,Illiteracy=-1,Boredom=-3,Distress=-2,Policies=1,Natural Wonders=3]
-VPTEST turn 81 703s medians=VPMedians(basicNeeds: 568, gold: 200, science: 341, culture: 138)
-VPTEST   The Huns: units=11 supply=13 cities=1 pop=14 happiness=4 approval=63 [Base happiness=10,Luxury resources=6,Poverty=-10,Illiteracy=-4,Urbanization=-1,Natural Wonders=3]
-VPTEST   The Maya: units=7 supply=12 cities=1 pop=17 happiness=15 approval=94 [Base happiness=10,Luxury resources=10,Religious Unrest=-1,Poverty=-7,Illiteracy=-2,Boredom=-2,Famine=-5,Buildings=7,City-States=3,Natural Wonders=2]
-VPTEST   Arabia: units=12 supply=13 cities=1 pop=23 happiness=18 approval=100 [Base happiness=10,Luxury resources=16,Religious Unrest=-1,Poverty=-8,Boredom=-3,Distress=-5,Buildings=4,City-States=3,Natural Wonders=2]
-VPTEST   Byzantium: units=14 supply=12 cities=1 pop=17 happiness=27 approval=100 [Base happiness=10,Luxury resources=8,Illiteracy=-2,Buildings=8,Natural Wonders=3]
-VPTEST   Austria: units=10 supply=12 cities=1 pop=8 happiness=12 approval=100 [Base happiness=10,Luxury resources=6,Poverty=-3,Illiteracy=-2,Boredom=-3,Policies=1,Natural Wonders=3]
-VPTEST done
-com.emptymonad.vpios: 11197
+VPTEST turn 31 127s medians=VPMedians(basicNeeds: 571, gold: 117, science: 242, culture: 100)
+VPTEST   The Huns: units=3 supply=12 cities=1 pop=5 happiness=5 approval=100 [Base happiness=10,Poverty=-1,Illiteracy=-2,Boredom=-2]
+VPTEST   The Maya: units=2 supply=13 cities=1 pop=8 happiness=3 approval=66 [Base happiness=10,Poverty=-5,Illiteracy=-3,Urbanization=-1,Buildings=2]
+VPTEST   Arabia: units=2 supply=12 cities=2 pop=9 happiness=4 approval=72 [Base happiness=10,Poverty=-5,Illiteracy=-1,Boredom=-2,Buildings=2,Isolation=-1,Natural Wonders=1]
+VPTEST   Byzantium: units=5 supply=13 cities=1 pop=7 happiness=8 approval=100 [Base happiness=10,Luxury resources=2,Poverty=-2,Illiteracy=-2,Distress=-2,Urbanization=-1,Buildings=2,Natural Wonders=1]
+VPTEST   Austria: units=2 supply=12 cities=1 pop=3 happiness=8 approval=100 [Base happiness=10,Boredom=-1,Distress=-1]
+VPTEST turn 41 206s medians=VPMedians(basicNeeds: 610, gold: 104, science: 233, culture: 56)
+VPTEST   The Huns: units=1 supply=12 cities=2 pop=8 happiness=2 approval=62 [Base happiness=10,Poverty=-3,Illiteracy=-3,Boredom=-2]
+VPTEST   The Maya: units=3 supply=13 cities=2 pop=12 happiness=3 approval=63 [Base happiness=10,Luxury resources=2,Poverty=-5,Illiteracy=-2,Distress=-3,Buildings=2,Isolation=-1]
+VPTEST   Arabia: units=5 supply=12 cities=2 pop=12 happiness=3 approval=62 [Base happiness=10,Luxury resources=2,Poverty=-8,Illiteracy=-2,Famine=-1,Buildings=2,Isolation=-1,Natural Wonders=1]
+VPTEST   Byzantium: units=5 supply=13 cities=4 pop=17 happiness=2 approval=55 [Base happiness=10,Luxury resources=6,Poverty=-10,Illiteracy=-4,Boredom=-1,Buildings=2,Isolation=-2,Natural Wonders=1]
+VPTEST   Austria: units=2 supply=11 cities=2 pop=5 happiness=8 approval=100 [Base happiness=10,Distress=-1,Poverty=-1,Illiteracy=-1,Natural Wonders=1]
+VPTEST turn 51 361s medians=VPMedians(basicNeeds: 570, gold: 56, science: 100, culture: 35)
+VPTEST   The Huns: units=2 supply=11 cities=2 pop=11 happiness=2 approval=62 [Base happiness=10,Boredom=-1,Distress=-4,Isolation=-1,Religious Unrest=-1,Illiteracy=-1]
+VPTEST   The Maya: units=4 supply=12 cities=3 pop=19 happiness=4 approval=66 [Base happiness=10,Luxury resources=4,Distress=-4,Buildings=2,Isolation=-2,Poverty=-6]
+VPTEST   Arabia: units=7 supply=12 cities=4 pop=23 happiness=4 approval=61 [Base happiness=10,Luxury resources=6,Religious Unrest=-2,Distress=-4,Buildings=2,Isolation=-4,Poverty=-6,Boredom=-1,City-States=2,Natural Wonders=1]
+VPTEST   Byzantium: units=7 supply=13 cities=5 pop=29 happiness=-2 approval=45 [Base happiness=10,Luxury resources=6,Religious Unrest=-1,Distress=-1,Buildings=2,Isolation=-5,Poverty=-10,Illiteracy=-4,Natural Wonders=1]
+VPTEST   Austria: units=3 supply=11 cities=3 pop=9 happiness=6 approval=83 [Base happiness=10,Luxury resources=2,Famine=-2,Distress=-2,Isolation=-1,Poverty=-1,Illiteracy=-2,Boredom=-1,City-States=2,Natural Wonders=1]
+VPTEST turn 61 561s medians=VPMedians(basicNeeds: 543, gold: 96, science: 133, culture: 40)
+VPTEST   The Huns: units=3 supply=12 cities=2 pop=14 happiness=6 approval=80 [Base happiness=10,Luxury resources=4,Poverty=-2,Boredom=-3,Famine=-4,Policies=2,Isolation=-1]
+VPTEST   The Maya: units=5 supply=12 cities=3 pop=24 happiness=7 approval=73 [Base happiness=10,Luxury resources=8,Religious Unrest=-1,Distress=-3,Buildings=2,Isolation=-3,Poverty=-4,Illiteracy=-2,Boredom=-2,City-States=2]
+VPTEST   Arabia: units=10 supply=13 cities=4 pop=31 happiness=3 approval=56 [Base happiness=10,Luxury resources=12,Religious Unrest=-1,Distress=-5,Buildings=2,Isolation=-4,Poverty=-14,City-States=2,Natural Wonders=1]
+VPTEST   Byzantium: units=7 supply=13 cities=5 pop=36 happiness=-11 approval=32 [Base happiness=10,Luxury resources=8,Religious Unrest=-1,Poverty=-21,Distress=-4,Buildings=2,Isolation=-6,Natural Wonders=1]
+VPTEST   Austria: units=8 supply=11 cities=4 pop=16 happiness=7 approval=75 [Base happiness=10,Luxury resources=8,Pillaged Tiles=-1,Distress=-3,Isolation=-3,Poverty=-3,Illiteracy=-4,City-States=2,Natural Wonders=1]
+VPTEST turn 71 853s medians=VPMedians(basicNeeds: 581, gold: 100, science: 142, culture: 55)
+VPTEST   The Huns: units=4 supply=12 cities=3 pop=18 happiness=6 approval=73 [Base happiness=10,Luxury resources=6,Boredom=-3,Distress=-4,Policies=3,Isolation=-2,Poverty=-4]
+VPTEST   The Maya: units=6 supply=12 cities=3 pop=31 happiness=5 approval=63 [Base happiness=10,Luxury resources=8,Religious Unrest=-1,Distress=-1,Buildings=2,Isolation=-4,Poverty=-9,Illiteracy=-2,Urbanization=-1,City-States=3]
+VPTEST   Arabia: units=11 supply=14 cities=4 pop=38 happiness=-5 approval=41 [Base happiness=10,Luxury resources=12,Religious Unrest=-1,Distress=-4,Buildings=2,Isolation=-7,Poverty=-11,Boredom=-3,Urbanization=-2,Illiteracy=-2,Natural Wonders=1]
+VPTEST   Byzantium: units=10 supply=14 cities=5 pop=42 happiness=-11 approval=32 [Base happiness=10,Luxury resources=8,Religious Unrest=-1,Poverty=-19,Distress=-3,Buildings=2,Isolation=-9,Natural Wonders=1]
+VPTEST   Austria: units=12 supply=12 cities=4 pop=20 happiness=3 approval=58 [Base happiness=10,Luxury resources=8,Boredom=-3,Distress=-2,Isolation=-3,Poverty=-3,Illiteracy=-6,Natural Wonders=2]
