@@ -36,7 +36,8 @@
   "cost": 65,
   "hurryCostModifier": 40,
   "uniques": [
-   "Destroyed when the city is captured"
+   "Destroyed when the city is captured",
+   "[+25]% [Faith] [in this city] <during a Golden Age>"
   ],
   "culture": 2,
   "faith": 2
@@ -187,7 +188,8 @@
    "[+1 Production] per [4] population [in this city]",
    "[+1 Food] per [4] population [in this city]",
    "[+2 Food] from [Lakes] tiles [in this city]",
-   "[+1 Food] from [River] tiles [in this city]"
+   "[+1 Food] from [River] tiles [in this city]",
+   "[+10]% [Food] [in this city] <during a Golden Age>"
   ],
   "hurryCostModifier": 25,
   "maintenance": 1,
@@ -249,7 +251,10 @@
   "isWonder": true,
   "requiredTech": "Masonry",
   "uniques": [
-   "Gain [100] [Gold] <upon gaining a [Great Person] unit> <(modified by game speed)>"
+   "Gain [100] [Gold] <upon gaining a [Great Person] unit> <(modified by game speed)>",
+   "[+10]% [Production] [in this city] <during We Love The King Day>",
+   "[+10]% [Gold] [in this city] <during We Love The King Day>",
+   "[+10]% [Science] [in this city] <during We Love The King Day>"
   ],
   "quote": "'The whole earth is the tomb of heroic men and their story is not given only on stone over their clay but abides everywhere without visible symbol woven into the stuff of other men's lives.' - Pericles",
   "cost": 185,
@@ -356,7 +361,10 @@
   "uniques": [
    "Only available <if [Colosseum] is constructed in all [non-[Puppeted]] cities>",
    "Cost increases by [30] per owned city",
-   "[+2 Gold] from all [Colosseum] buildings"
+   "[+2 Gold] from all [Colosseum] buildings",
+   "Provides [2] [Horses]",
+   "[+10]% [Gold] [in this city] <during We Love The King Day>",
+   "[+10]% [Culture] [in this city] <during We Love The King Day>"
   ],
   "requiredTech": "Metal Casting",
   "culture": 1,
@@ -443,7 +451,11 @@
   "uniques": [
    "[+1 Culture, +1 Production] from [Cotton] tiles [in this city]",
    "[+1 Gold, +1 Production] from [Furs] tiles [in this city]",
-   "[+2 Gold] from [Truffles] tiles [in this city]"
+   "[+2 Gold] from [Truffles] tiles [in this city]",
+   "[+2 Food] [in this city] <for every [3] [Worked [Desert] Tiles in this city]>",
+   "[+2 Gold] [in this city] <for every [3] [Worked [Desert] Tiles in this city]>",
+   "[+2 Food] [in this city] <for every [3] [Worked [Tundra] Tiles in this city]>",
+   "[+2 Gold] [in this city] <for every [3] [Worked [Tundra] Tiles in this city]>"
   ],
   "requiredBuilding": "Market",
   "hurryCostModifier": 25,
@@ -476,7 +488,8 @@
   "isNationalWonder": true,
   "uniques": [
    "Only available <if [Library] is constructed in all [non-[Puppeted]] cities>",
-   "Cost increases by [30] per owned city"
+   "Cost increases by [30] per owned city",
+   "[+20]% [Science] [in this city] <during a Golden Age>"
   ],
   "requiredTech": "Philosophy",
   "science": 5,
@@ -510,7 +523,8 @@
    "Destroyed when the city is captured",
    "[+1 Culture, +1 Gold] from [Dyes] tiles [in this city]",
    "[+2 Culture] from [Lapis Lazuli] tiles [in this city]",
-   "[+1 Culture, +1 Gold] from [Silk] tiles [in this city]"
+   "[+1 Culture, +1 Gold] from [Silk] tiles [in this city]",
+   "[+33]% Great Person generation [in this city]"
   ],
   "requiredTech": "Drama and Poetry",
   "civilopediaText": [
@@ -765,7 +779,11 @@
   },
   "isWonder": true,
   "uniques": [
-   "Must have an owned [Mountain] within [2] tiles"
+   "Must have an owned [Mountain] within [2] tiles",
+   "[+1 Food] [in this city] <for every [1] [Worked [Mountain] Tiles in this city]>",
+   "[+1 Production] [in this city] <for every [1] [Worked [Mountain] Tiles in this city]>",
+   "[+1 Culture] [in this city] <for every [1] [Worked [Mountain] Tiles in this city]>",
+   "[+1 Faith] [in this city] <for every [1] [Worked [Mountain] Tiles in this city]>"
   ],
   "requiredTech": "Physics",
   "quote": "'Few romances can ever surpass that of the granite citadel on top of the beetling precipices of Machu Picchu, the crown of Inca Land.' - Hiram Bingham",
@@ -836,7 +854,8 @@
    "All newly-trained [Cargo Ship] units [in this city] receive the [[Harbor] ability] promotion",
    "Must be next to [Coast]",
    "[+1 Food] from [Water] tiles [in this city]",
-   "[+15]% Production when constructing [Water] units [in this city]"
+   "[+15]% Production when constructing [Water] units [in this city]",
+   "[+1 Production] from [Water resource] tiles [in this city]"
   ],
   "requiredTech": "Compass",
   "civilopediaText": [
@@ -957,7 +976,8 @@
   "isNationalWonder": true,
   "uniques": [
    "Only available <if [Workshop] is constructed in all [non-[Puppeted]] cities>",
-   "Cost increases by [30] per owned city"
+   "Cost increases by [30] per owned city",
+   "Provides [2] [Iron]"
   ],
   "requiredTech": "Machinery",
   "production": 10,
@@ -995,7 +1015,8 @@
   "hurryCostModifier": 15,
   "uniques": [
    "Must be next to [Mountain]",
-   "Only available <after adopting [Scientific Revolution]>"
+   "Only available <after adopting [Scientific Revolution]>",
+   "[+1 Science] [in this city] <for every [1] [Worked [Mountain] Tiles in this city]>"
   ],
   "requiredTech": "Astronomy",
   "cost": 500,
@@ -1011,7 +1032,8 @@
   "requiredBuilding": "Amphitheater",
   "uniques": [
    "Comment [Provides 1 [Great Work of Music] Slot]",
-   "Destroyed when the city is captured"
+   "Destroyed when the city is captured",
+   "[+33]% Great Person generation [in this city]"
   ],
   "civilopediaText": [
    {
@@ -1181,7 +1203,8 @@
   "requiredBuilding": "Harbor",
   "uniques": [
    "Must be next to [Coast]",
-   "[+1 Production, +1 Gold] from [Water] tiles [in this city]"
+   "[+1 Production, +1 Gold] from [Water] tiles [in this city]",
+   "[+2 Production, +2 Gold] from [Water resource] tiles [in this city]"
   ],
   "requiredTech": "Steam Power",
   "cost": 1000
@@ -1443,7 +1466,10 @@
   "isWonder": true,
   "uniques": [
    "Free [Great General] appears",
-   "New [Military] units start with [15] XP [in this city]"
+   "New [Military] units start with [15] XP [in this city]",
+   "New [Land] units start with [15] XP [in all cities]",
+   "New [Water] units start with [15] XP [in all cities]",
+   "New [Air] units start with [15] XP [in all cities]"
   ],
   "requiredTech": "Military Science",
   "quote": "'Pale Death beats equally at the poor man's gate and at the palaces of kings.' - Horace",
@@ -1627,7 +1653,8 @@
    "[+4 Science] from [Academy] tiles [in this city]",
    "[+4 Science] from all [Hospital] buildings <in this city>",
    "[+4 Science] from all [Medical Lab] buildings <in this city>",
-   "[+4 Science] from all [Factory] buildings <in this city>"
+   "[+4 Science] from all [Factory] buildings <in this city>",
+   "[+33]% Great Person generation [in this city]"
   ]
  },
  {
@@ -1675,7 +1702,8 @@
    "Only available <after adopting [Imperialism Complete]>",
    "[+50]% Production when constructing [Air] units [in this city]",
    "Free [Jet Fighter] appears",
-   "Free [Jet Fighter] appears"
+   "Free [Jet Fighter] appears",
+   "New [Air] units start with [20] XP [in this city]"
   ],
   "requiredTech": "Combined Arms",
   "quote": "'In preparing for battle I have always found that plans are useless, but planning is indispensable.' - Dwight D. Eisenhower",
@@ -1799,7 +1827,8 @@
    "Great Merchant": 1
   },
   "uniques": [
-   "Gain a free [Broadcast Tower] [in all cities]"
+   "Gain a free [Broadcast Tower] [in all cities]",
+   "[+2 Gold] from all [Great Work] buildings"
   ],
   "requiredTech": "Telecommunications",
   "quote": "'Nothing travels faster than light with the possible exception of bad news, which obeys its own special rules.' - Douglas Adams",
@@ -1911,7 +1940,8 @@
    "Only available <when religion is enabled>",
    "Destroyed when the city is captured",
    "Unbuildable",
-   "Can be purchased with [Faith] [in all cities]"
+   "Can be purchased with [Faith] [in all cities]",
+   "[+15]% [Culture] [in this city] <during a Golden Age>"
   ],
   "cost": 200,
   "science": 2,
@@ -1988,7 +2018,11 @@
    "All newly-trained [Caravan] units [in this city] receive the [[Caravansary] ability] promotion",
    "[+1 Culture, +1 Production] from [Cotton] tiles [in this city]",
    "[+1 Gold, +1 Production] from [Furs] tiles [in this city]",
-   "[+2 Gold] from [Truffles] tiles [in this city]"
+   "[+2 Gold] from [Truffles] tiles [in this city]",
+   "[+1 Food] [in this city] <for every [2] [Worked [Desert] Tiles in this city]>",
+   "[+1 Gold] [in this city] <for every [2] [Worked [Desert] Tiles in this city]>",
+   "[+1 Food] [in this city] <for every [2] [Worked [Tundra] Tiles in this city]>",
+   "[+1 Gold] [in this city] <for every [2] [Worked [Tundra] Tiles in this city]>"
   ],
   "requiredTech": "Currency",
   "civilopediaText": [
@@ -2074,7 +2108,8 @@
   "uniques": [
    "Comment [Provides 1 [Great Work of Writing] Slot]",
    "[+1 Science] per [2] population [in this city]",
-   "[+3 Science] from all [Library] buildings"
+   "[+3 Science] from all [Library] buildings",
+   "[+20]% [Science] [in this city] <during a Golden Age>"
   ],
   "requiredTech": "Writing",
   "civilopediaText": [
@@ -2191,7 +2226,9 @@
    "New [Mounted] units start with [15] XP [in this city]",
    "[+3 Production, +3 Gold] from [Cattle] tiles [in this city]",
    "[+3 Production, +3 Gold] from [Horses] tiles [in this city]",
-   "[+3 Production, +3 Gold] from [Sheep] tiles [in this city]"
+   "[+3 Production, +3 Gold] from [Sheep] tiles [in this city]",
+   "Provides [1] [Horses]",
+   "New [Mounted] units start with [15] XP [in this city]"
   ],
   "requiredTech": "Chivalry",
   "production": 3
@@ -2229,7 +2266,9 @@
    "[+1 Food, +1 Gold] from [Cocoa] tiles [in this city]",
    "[+1 Culture, +1 Production] from [Nutmeg] tiles [in this city]",
    "[+1 Faith, +1 Gold] from [Pepper] tiles [in this city]",
-   "[+2 Gold] from [Oasis] tiles [in this city]"
+   "[+2 Gold] from [Oasis] tiles [in this city]",
+   "[+15]% [Culture] [in this city] <during We Love The King Day>",
+   "[+15]% [Faith] [in this city] <during We Love The King Day>"
   ],
   "hurryCostModifier": 25,
   "maintenance": 2,
@@ -2823,7 +2862,8 @@
   "isWonder": true,
   "uniques": [
    "Free [Great Artist] appears",
-   "Comment [Provides 3 [Great Work of Art] or [Artifact] Slots]"
+   "Comment [Provides 3 [Great Work of Art] or [Artifact] Slots]",
+   "[+1 Culture] from all [Great Work] buildings"
   ],
   "requiredTech": "Economics",
   "quote": "'The painter is not simply someone who looks and who sees. Above all, the artist is someone who exposes a personal vision by rendering it visible.' - Marcel Parquet",
@@ -3646,7 +3686,8 @@
   "uniques": [
    "[+1 Gold, +1 Culture] from all [Amphitheater] buildings <in this city>",
    "[+1 Gold, +1 Culture] from all [Temple] buildings <in this city>",
-   "[+1 Gold, +1 Culture] from all [Garden] buildings <in this city>"
+   "[+1 Gold, +1 Culture] from all [Garden] buildings <in this city>",
+   "[+10]% [Culture] [in this city] <during a Golden Age>"
   ]
  },
  {
@@ -3657,7 +3698,9 @@
   "food": 1,
   "uniques": [
    "[+1 Production] from [Marsh] tiles [in this city]",
-   "[+1 Production] from [Plantation] tiles [in this city]"
+   "[+1 Production] from [Plantation] tiles [in this city]",
+   "[+1 Food] [in this city] <for every [2] [Worked [Forest] Tiles in this city]>",
+   "[+1 Food] [in this city] <for every [2] [Worked [Jungle] Tiles in this city]>"
   ]
  },
  {
@@ -3747,7 +3790,12 @@
   "cost": 2000,
   "requiredTech": "Plastics",
   "maintenance": 7,
-  "production": 3
+  "production": 3,
+  "uniques": [
+   "Provides [1] [Iron]",
+   "Provides [1] [Coal]",
+   "Provides [1] [Oil]"
+  ]
  },
  {
   "name": "Bastion Fort",
@@ -3768,7 +3816,10 @@
   "cost": 2250,
   "requiredTech": "Telecommunications",
   "maintenance": 10,
-  "happiness": 2
+  "happiness": 2,
+  "uniques": [
+   "[+1 Culture] from [Landmark] tiles [in all cities]"
+  ]
  },
  {
   "name": "Coaling Station",
@@ -3788,7 +3839,10 @@
   "cost": 600,
   "requiredTech": "Architecture",
   "culture": 2,
-  "requiredBuilding": "Amphitheater"
+  "requiredBuilding": "Amphitheater",
+  "uniques": [
+   "[+33]% Great Person generation [in this city]"
+  ]
  },
  {
   "name": "Chancery",
@@ -3857,7 +3911,8 @@
   "uniques": [
    "[+1 Culture, +1 Gold] from [Dyes] tiles [in this city]",
    "[+2 Culture] from [Lapis Lazuli] tiles [in this city]",
-   "[+1 Culture, +1 Gold] from [Silk] tiles [in this city]"
+   "[+1 Culture, +1 Gold] from [Silk] tiles [in this city]",
+   "[+33]% Great Person generation [in this city]"
   ]
  },
  {
@@ -3917,7 +3972,8 @@
   "replaces": "University",
   "uniques": [
    "[+1 Science] from [Snow] tiles [in this city]",
-   "[+1 Science] from [Jungle] tiles [in this city]"
+   "[+1 Science] from [Jungle] tiles [in this city]",
+   "[+1 Production, +1 Science] from all [Great Work] buildings <in this city>"
   ]
  },
  {
@@ -3978,7 +4034,8 @@
    "Civil Servant": 1
   },
   "uniques": [
-   "Free [Emissary] appears"
+   "Free [Emissary] appears",
+   "Provides [1] [Paper]"
   ]
  },
  {
@@ -3990,7 +4047,10 @@
   "requiredBuilding": "Chancery",
   "specialistSlots": {
    "Civil Servant": 1
-  }
+  },
+  "uniques": [
+   "Provides [1] [Paper]"
+  ]
  },
  {
   "name": "Foreign Bureau",
@@ -4001,7 +4061,10 @@
   "requiredBuilding": "Wire Service",
   "specialistSlots": {
    "Civil Servant": 1
-  }
+  },
+  "uniques": [
+   "Provides [1] [Paper]"
+  ]
  },
  {
   "name": "Palace of Culture and Science",
@@ -4065,7 +4128,8 @@
   "uniques": [
    "[+1 Culture] from all [Armory] buildings",
    "[+1 Culture] from all [Castle] buildings",
-   "[+1 Culture] from all [Constabulary] buildings"
+   "[+1 Culture] from all [Constabulary] buildings",
+   "Provides [2] [Iron]"
   ]
  },
  {
@@ -4127,7 +4191,10 @@
   "requiredBuilding": "National Epic",
   "specialistSlots": {
    "Artist": 2
-  }
+  },
+  "uniques": [
+   "[+2 Food] from [Trading post] tiles [in all cities]"
+  ]
  },
  {
   "name": "Smithsonian Institute",
@@ -4142,7 +4209,9 @@
   },
   "uniques": [
    "[+5 Science, +5 Culture] from all [Museum] buildings",
-   "[+5 Science, +5 Culture] from all [Research Lab] buildings"
+   "[+5 Science, +5 Culture] from all [Research Lab] buildings",
+   "[+5 Science] from [Landmark] tiles [in all cities]",
+   "[+1 Science] from all [Great Work] buildings"
   ]
  },
  {
@@ -4182,7 +4251,8 @@
   "requiredTech": "Mathematics",
   "culture": 1,
   "uniques": [
-   "Free [Great Diplomat] appears"
+   "Free [Great Diplomat] appears",
+   "Provides [1] [Paper]"
   ]
  },
  {
@@ -4200,7 +4270,8 @@
   "requiredTech": "Acoustics",
   "culture": 1,
   "uniques": [
-   "[+3 Gold, +1 Culture] from all [Chancery] buildings"
+   "[+3 Gold, +1 Culture] from all [Chancery] buildings",
+   "Provides [1] [Paper]"
   ]
  },
  {
@@ -4212,7 +4283,10 @@
   "culture": 1,
   "greatPersonPoints": {
    "Great Engineer": 1
-  }
+  },
+  "uniques": [
+   "Provides [4] [Coal]"
+  ]
  },
  {
   "name": "The Motherland Calls",
@@ -4349,6 +4423,7 @@
   "culture": 2,
   "faith": 4,
   "uniques": [
+   "[+1 Faith] from all [Great Work] buildings <in this city>",
    "Unbuildable",
    "Only available <when religion is enabled>"
   ]
@@ -4369,6 +4444,7 @@
   "production": 3,
   "faith": 2,
   "uniques": [
+   "[+10]% [Science] [in this city] <during We Love The King Day>",
    "Unbuildable",
    "Only available <when religion is enabled>"
   ]
@@ -4389,6 +4465,9 @@
   "cost": 200,
   "faith": 2,
   "uniques": [
+   "New [Land] units start with [15] XP [in this city]",
+   "New [Water] units start with [15] XP [in this city]",
+   "New [Air] units start with [15] XP [in this city]",
    "Unbuildable",
    "Only available <when religion is enabled>"
   ]
@@ -4412,6 +4491,7 @@
   "cost": 125,
   "faith": 5,
   "uniques": [
+   "[+5 Faith] from [Holy site] tiles [in all cities]",
    "Unbuildable",
    "Only available <when religion is enabled>"
   ]
@@ -4437,6 +4517,7 @@
   "cost": 125,
   "faith": 5,
   "uniques": [
+   "[+5 Production] from [Holy site] tiles [in all cities]",
    "Unbuildable",
    "Only available <when religion is enabled>"
   ]
@@ -4447,6 +4528,7 @@
   "cost": 125,
   "science": 4,
   "uniques": [
+   "[+5 Science] from [Holy site] tiles [in all cities]",
    "Unbuildable",
    "Only available <when religion is enabled>"
   ]
@@ -4458,6 +4540,7 @@
   "gold": 6,
   "faith": 3,
   "uniques": [
+   "[+5 Culture] from [Holy site] tiles [in all cities]",
    "Unbuildable",
    "Only available <when religion is enabled>"
   ]
@@ -4469,6 +4552,7 @@
   "culture": 5,
   "faith": 3,
   "uniques": [
+   "[+5 Food] from [Holy site] tiles [in all cities]",
    "Unbuildable",
    "Only available <when religion is enabled>"
   ]
@@ -4480,6 +4564,7 @@
   "food": 5,
   "faith": 4,
   "uniques": [
+   "[+5 Science] from [Holy site] tiles [in all cities]",
    "Unbuildable",
    "Only available <when religion is enabled>"
   ]
@@ -4500,6 +4585,7 @@
   "cost": 125,
   "faith": 10,
   "uniques": [
+   "[+5 Gold] from [Holy site] tiles [in all cities]",
    "Unbuildable",
    "Only available <when religion is enabled>"
   ]

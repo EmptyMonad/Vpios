@@ -1515,5 +1515,14 @@
    "food": -1,
    "production": 1
   }
+ },
+ {
+  "name": "Paper",
+  "resourceType": "Strategic",
+  "revealedBy": "Writing",
+  "terrainsCanBeFoundOn": [],
+  "uniques": [
+   "Doesn't generate naturally"
+  ]
  }
 ]

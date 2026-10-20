@@ -302,27 +302,16 @@
 - Building_ClassNeededAnywhere: 3
 - Building_ClassNeededNowhere: 6
 - Building_DomainFreeExperiencePerGreatWorkGlobal: 3
-- Building_DomainFreeExperiences: 7
-- Building_DomainFreeExperiencesGlobal: 3
-- Building_GoldenAgeYieldMod: 6
-- Building_GreatWorkYieldChanges: 4
-- Building_GreatWorkYieldChangesLocal: 7
 - Building_GrowthExtraYield: 4
 - Building_HurryModifiers: 2
 - Building_HurryModifiersLocal: 2
-- Building_ImprovementYieldChangesGlobal: 26
 - Building_LocalResourceOrs: 5
-- Building_ResourceQuantity: 13
 - Building_ResourceQuantityPerXFranchises: 2
 - Building_ResourceQuantityRequirements: 6
-- Building_SeaResourceYieldChanges: 3
 - Building_SpecialistYieldChanges: 6
-- Building_SpecificGreatPersonRateModifier: 5
 - Building_ThemingBonuses: 13
 - Building_ThemingYieldBonus: 25
-- Building_UnitCombatFreeExperiences: 1
 - Building_UnitCombatProductionModifiersGlobal: 1
-- Building_WLTKDYieldMod: 8
 - Building_YieldChangeWorldWonderGlobal: 6
 - Building_YieldChangesPerPopInEmpire: 1
 - Building_YieldChangesPerReligion: 3
@@ -339,14 +328,11 @@
 - Building_YieldPerAlly: 5
 - Building_YieldPerFranchise: 5
 - Building_YieldPerFriend: 2
-- Building_YieldPerXFeatureTimes100: 2
-- Building_YieldPerXTerrainTimes100: 13
 
 ## Resources not emitted (no terrain placement data)
 
 - Glass
 - Brazilwood
-- Paper
 
 ## New VP improvements not emitted (civ-unique / Great Person tile improvements)
 
@@ -575,10 +561,6 @@
 
 ## Uniques dropped (reference something this ruleset lacks)
 
-- Emissary: requires resource Paper
-- Envoy: requires resource Paper
-- Diplomat: Consumes [2] [Paper]
-- Ambassador: Consumes [2] [Paper]
 - Heroic Epic: Free [Writer] appears
 
 ## Civ abilities: VP text shown, partly implemented

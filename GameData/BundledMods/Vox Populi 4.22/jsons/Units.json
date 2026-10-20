@@ -3460,6 +3460,7 @@
   "requiredTech": "Writing",
   "obsoleteTech": "Civil Service",
   "upgradesTo": "Envoy",
+  "requiredResource": "Paper",
   "uniques": [
    "Can undertake a trade mission with City-State, giving a large sum of gold and [40] Influence",
    "[-100]% Gold from Great Merchant trade missions <hidden from users>"
@@ -3476,6 +3477,7 @@
   "requiredTech": "Civil Service",
   "obsoleteTech": "Industrialization",
   "upgradesTo": "Diplomat",
+  "requiredResource": "Paper",
   "uniques": [
    "Can undertake a trade mission with City-State, giving a large sum of gold and [50] Influence",
    "[-100]% Gold from Great Merchant trade missions <hidden from users>"
@@ -3493,6 +3495,7 @@
   "obsoleteTech": "Atomic Theory",
   "upgradesTo": "Ambassador",
   "uniques": [
+   "Consumes [2] [Paper]",
    "Can undertake a trade mission with City-State, giving a large sum of gold and [60] Influence",
    "[-100]% Gold from Great Merchant trade missions <hidden from users>"
   ],
@@ -3507,6 +3510,7 @@
   "cost": 100,
   "requiredTech": "Atomic Theory",
   "uniques": [
+   "Consumes [2] [Paper]",
    "Can undertake a trade mission with City-State, giving a large sum of gold and [70] Influence",
    "[-100]% Gold from Great Merchant trade missions <hidden from users>"
   ],
