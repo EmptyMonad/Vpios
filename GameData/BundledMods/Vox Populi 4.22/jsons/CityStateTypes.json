@@ -1,0 +1,109 @@
+[
+ {
+  "name": "Mercantile",
+  "friendBonusUniques": [
+   "[+1 Gold] <before the [Medieval era]>",
+   "[+2 Gold] <starting from the [Medieval era]> <before the [Renaissance era]>",
+   "[+3 Gold] <starting from the [Renaissance era]> <before the [Industrial era]>",
+   "[+4 Gold] <starting from the [Industrial era]>"
+  ],
+  "allyBonusUniques": [
+   "[+3 Gold] <before the [Classical era]>",
+   "[+4 Gold] <starting from the [Classical era]> <before the [Medieval era]>",
+   "[+6 Gold] <starting from the [Medieval era]> <before the [Renaissance era]>",
+   "[+8 Gold] <starting from the [Renaissance era]> <before the [Industrial era]>",
+   "[+10 Gold] <starting from the [Industrial era]>",
+   "Provides a unique luxury"
+  ],
+  "color": [
+   255,
+   216,
+   0
+  ]
+ },
+ {
+  "name": "Militaristic",
+  "friendBonusUniques": [
+   "[+1 Science] <before the [Classical era]>",
+   "[+2 Science] <starting from the [Classical era]> <before the [Medieval era]>",
+   "[+4 Science] <starting from the [Medieval era]> <before the [Renaissance era]>",
+   "[+6 Science] <starting from the [Renaissance era]> <before the [Industrial era]>",
+   "[+10 Science] <starting from the [Industrial era]>",
+   "Provides military units every ≈[20] turns"
+  ],
+  "allyBonusUniques": [
+   "[+4 Science] <before the [Classical era]>",
+   "[+6 Science] <starting from the [Classical era]> <before the [Medieval era]>",
+   "[+10 Science] <starting from the [Medieval era]> <before the [Renaissance era]>",
+   "[+14 Science] <starting from the [Renaissance era]> <before the [Industrial era]>",
+   "[+20 Science] <starting from the [Industrial era]>",
+   "Provides military units every ≈[17] turns"
+  ],
+  "color": [
+   255,
+   0,
+   0
+  ]
+ },
+ {
+  "name": "Cultured",
+  "friendBonusUniques": [
+   "[+1 Culture] <before the [Medieval era]>",
+   "[+4 Culture] <starting from the [Medieval era]> <before the [Industrial era]>",
+   "[+10 Culture] <starting from the [Industrial era]>"
+  ],
+  "allyBonusUniques": [
+   "[+3 Culture] <before the [Medieval era]>",
+   "[+10 Culture] <starting from the [Medieval era]> <before the [Industrial era]>",
+   "[+22 Culture] <starting from the [Industrial era]>"
+  ],
+  "color": [
+   139,
+   96,
+   255
+  ]
+ },
+ {
+  "name": "Religious",
+  "friendBonusUniques": [
+   "[+1 Faith] <before the [Classical era]>",
+   "[+2 Faith] <starting from the [Classical era]> <before the [Medieval era]>",
+   "[+7 Faith] <starting from the [Medieval era]> <before the [Renaissance era]>",
+   "[+9 Faith] <starting from the [Renaissance era]> <before the [Industrial era]>",
+   "[+12 Faith] <starting from the [Industrial era]>"
+  ],
+  "allyBonusUniques": [
+   "[+3 Faith] <before the [Classical era]>",
+   "[+5 Faith] <starting from the [Classical era]> <before the [Medieval era]>",
+   "[+14 Faith] <starting from the [Medieval era]> <before the [Renaissance era]>",
+   "[+18 Faith] <starting from the [Renaissance era]> <before the [Industrial era]>",
+   "[+24 Faith] <starting from the [Industrial era]>"
+  ],
+  "color": [
+   255,
+   255,
+   255
+  ]
+ },
+ {
+  "name": "Maritime",
+  "friendBonusUniques": [
+   "[+3 Food] [in capital] <before the [Renaissance era]>",
+   "[+6 Food] [in capital] <starting from the [Renaissance era]>",
+   "[+1 Food] [in all cities]"
+  ],
+  "allyBonusUniques": [
+   "[+5 Food] [in capital] <before the [Renaissance era]>",
+   "[+8 Food] [in capital] <starting from the [Renaissance era]>",
+   "[+3 Food] [in all cities]"
+  ],
+  "uniques": [
+   "Start bias [Coast]"
+  ],
+  "color": [
+   56,
+   255,
+   112
+  ]
+ }
+]
