@@ -125,8 +125,7 @@ struct GameView: View {
         // Unciv CityPresenter: tapping the selected city's name on the world screen opens CityRenamePopup (the city screen has its own)
         .overlay { if controller.showRenameCity, !controller.showCity, let c = controller.selectedCity { RenamePopup(title: L("Please enter a new name for your city"), initial: c.name, onDone: { n in if let n { controller.renameCity(n) }; controller.showRenameCity = false }).zIndex(12) } }
         .overlay { if controller.showVotePicker { DiplomaticVotePickerView(controller: controller).zIndex(12) } }
-        .overlay { if controller.showVoteResult { DiplomaticVoteResultView(controller: controller).zIndex(12) } }
-        .overlay { if controller.showCongress { VPCongressView(controller: controller).zIndex(12) } }   // VP
+        .overlay { if controller.showVoteResult { DiplomaticVoteResultView(controller: controller).zIndex(12) } else if controller.showCongress { VPCongressView(controller: controller).zIndex(12) } }   // VP: the Congress shares this overlay (one more modifier is too much for the type checker)
         .modifier(OnlineWorldPopups(controller: controller, onQuit: onQuit))
         .animation(.easeInOut(duration: 0.25), value: controller.showCity)
         .animation(UserSettings.animateUnitActionsMenu ? .easeOut(duration: 0.2) : nil, value: controller.selectedUnitId)
