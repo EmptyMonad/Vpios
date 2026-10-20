@@ -3408,6 +3408,9 @@
   "requiredTech": "Banking",
   "obsoleteTech": "Railroads",
   "upgradesTo": "Colonist",
+  "uniques": [
+   "Founds a new city"
+  ],
   "promotions": [
    "Defensive Embarkation"
   ]
@@ -3417,6 +3420,9 @@
   "unitType": "Civilian",
   "movement": 4,
   "requiredTech": "Railroads",
+  "uniques": [
+   "Founds a new city"
+  ],
   "promotions": [
    "Defensive Embarkation",
    "Ocean Movement"
@@ -3430,6 +3436,10 @@
   "requiredTech": "Writing",
   "obsoleteTech": "Civil Service",
   "upgradesTo": "Envoy",
+  "uniques": [
+   "Can undertake a trade mission with City-State, giving a large sum of gold and [40] Influence",
+   "[-100]% Gold from Great Merchant trade missions <hidden from users>"
+  ],
   "promotions": [
    "Initiate"
   ]
@@ -3442,6 +3452,10 @@
   "requiredTech": "Civil Service",
   "obsoleteTech": "Industrialization",
   "upgradesTo": "Diplomat",
+  "uniques": [
+   "Can undertake a trade mission with City-State, giving a large sum of gold and [50] Influence",
+   "[-100]% Gold from Great Merchant trade missions <hidden from users>"
+  ],
   "promotions": [
    "Adept"
   ]
@@ -3454,6 +3468,10 @@
   "requiredTech": "Industrialization",
   "obsoleteTech": "Atomic Theory",
   "upgradesTo": "Ambassador",
+  "uniques": [
+   "Can undertake a trade mission with City-State, giving a large sum of gold and [60] Influence",
+   "[-100]% Gold from Great Merchant trade missions <hidden from users>"
+  ],
   "promotions": [
    "Professional"
   ]
@@ -3464,6 +3482,10 @@
   "movement": 4,
   "cost": 100,
   "requiredTech": "Atomic Theory",
+  "uniques": [
+   "Can undertake a trade mission with City-State, giving a large sum of gold and [70] Influence",
+   "[-100]% Gold from Great Merchant trade missions <hidden from users>"
+  ],
   "promotions": [
    "Plenipotentiary"
   ]
@@ -3472,6 +3494,10 @@
   "name": "Great Diplomat",
   "unitType": "Civilian",
   "movement": 5,
+  "uniques": [
+   "Can undertake a trade mission with City-State, giving a large sum of gold and [100] Influence",
+   "[-100]% Gold from Great Merchant trade missions <hidden from users>"
+  ],
   "promotions": [
    "Master Diplomat"
   ]
