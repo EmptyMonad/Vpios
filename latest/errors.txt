@@ -1,1 +1,0 @@
-Sources/UI/GameView.swift:51:25: error: the compiler is unable to type-check this expression in reasonable time; try breaking up the expression into distinct sub-expressions

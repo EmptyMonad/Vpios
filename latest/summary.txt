@@ -1,8 +1,8 @@
-commit a16f6e11c0f204a31a5be8a099800b5247014309
-outcome failure
-Xcode 16.4
-Build version 16F6
-Apple Swift version 6.1.2 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
+commit 564f7ee66adb28bfed410e8f311c0bb72f7dcc7a
+outcome cancelled
+Xcode 26.3
+Build version 17C529
+Apple Swift version 6.2.4 (swiftlang-6.2.4.1.4 clang-1700.6.4.2)
 Target: arm64-apple-macosx15.0
-2
-       1
+0
+       0
