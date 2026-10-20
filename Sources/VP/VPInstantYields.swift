@@ -44,6 +44,7 @@ extension GameState {
             if isCapital { vpSum(civLevel, "Policy_YieldFromBirthCapital", into: &y, scale: era) }
             vpSum(cityBuildings, "Building_YieldFromBirth", into: &y, scale: era)
             vpSum(o.beliefs, "Belief_YieldPerBirth", into: &y, scale: era)
+            if let city { for (k, v) in vpGrowthExtraYield(city) { y[k, default: 0] += v } }   // VPBuildingYields.swift
         case .borders:
             vpSum(civLevel, "Policy_YieldFromBorderGrowth", into: &y, scale: era)
             vpSum(cityBuildings, "Building_YieldFromBorderGrowth", into: &y, scale: era)

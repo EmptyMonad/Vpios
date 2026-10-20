@@ -76,8 +76,11 @@
  {
   "name": "Stone Works",
   "requiredNearbyImprovedResources": [
-   "Marble",
-   "Stone"
+   "Salt",
+   "Lapis Lazuli",
+   "Amber",
+   "Jade",
+   "Uranium"
   ],
   "maintenance": 1,
   "hurryCostModifier": 0,
@@ -1144,7 +1147,8 @@
   "name": "Forbidden Palace",
   "isWonder": true,
   "uniques": [
-   "Only available <after adopting [Progress Complete]>"
+   "Only available <after adopting [Progress Complete]>",
+   "[Gold] cost of purchasing items in cities [-15]%"
   ],
   "requiredTech": "Civil Service",
   "quote": "'Most of us can, as we choose, make of this world either a palace or a prison' - John Lubbock",
@@ -1495,7 +1499,8 @@
   "uniques": [
    "[+1 Gold] per [2] population [in this city]",
    "[+2 Gold] from [Customs house] tiles [in this city]",
-   "[+2 Gold] from [Trading post] tiles [in this city]"
+   "[+2 Gold] from [Trading post] tiles [in this city]",
+   "[Gold] cost of purchasing items in cities [-20]% <in this city>"
   ]
  },
  {
@@ -1721,7 +1726,8 @@
    "[+1 Production, +1 Science] from [Plains] tiles [in this city]",
    "[+1 Production, +1 Science] from [Tundra] tiles [in this city]",
    "[+1 Production, +1 Science] from [Snow] tiles [in this city]",
-   "[+3 Production, +3 Science] from [Desert] tiles [in this city]"
+   "[+3 Production, +3 Science] from [Desert] tiles [in this city]",
+   "Consumes [1] [Aluminum]"
   ],
   "cost": 2250,
   "production": 10
@@ -3757,7 +3763,8 @@
    "[+1 Production, +1 Science, +1 Culture] from [Snow] tiles [in this city]",
    "[+1 Production, +1 Science, +1 Culture] from [Desert] tiles [in this city]",
    "[+1 Production, +1 Science, +1 Culture] from [Water] tiles [in this city]",
-   "[+1 Production, +1 Science, +1 Culture] from [Lakes] tiles [in this city]"
+   "[+1 Production, +1 Science, +1 Culture] from [Lakes] tiles [in this city]",
+   "Consumes [1] [Aluminum]"
   ]
  },
  {
@@ -3770,7 +3777,8 @@
    "production": 15
   },
   "uniques": [
-   "[+2 Food, +2 Production, +2 Gold, +2 Science] from [Water] tiles [in this city]"
+   "[+2 Food, +2 Production, +2 Gold, +2 Science] from [Water] tiles [in this city]",
+   "Consumes [1] [Aluminum]"
   ]
  },
  {
@@ -3781,7 +3789,8 @@
   "requiredBuilding": "Grocer",
   "uniques": [
    "[+2 Production, +2 Gold] from [Farm] tiles [in this city]",
-   "[+2 Production, +2 Gold] from [Pasture] tiles [in this city]"
+   "[+2 Production, +2 Gold] from [Pasture] tiles [in this city]",
+   "Consumes [2] [Horses]"
   ]
  },
  {
@@ -3809,7 +3818,10 @@
   "name": "Mine Field",
   "cost": 1600,
   "requiredTech": "Ballistics",
-  "maintenance": 7
+  "maintenance": 7,
+  "uniques": [
+   "Consumes [1] [Iron]"
+  ]
  },
  {
   "name": "Interpretive Center",
@@ -3832,7 +3844,10 @@
   },
   "specialistSlots": {
    "Engineer": 1
-  }
+  },
+  "uniques": [
+   "Consumes [1] [Coal]"
+  ]
  },
  {
   "name": "Gallery",
@@ -4203,7 +4218,9 @@
    "Merchant": 2
   },
   "uniques": [
-   "Destroyed when the city is captured"
+   "Destroyed when the city is captured",
+   "[Gold] cost of purchasing items in cities [-10]%",
+   "[Gold] cost of purchasing items in cities [-5]% <in this city>"
   ]
  },
  {
@@ -4327,7 +4344,8 @@
   "science": 5,
   "culture": 1,
   "uniques": [
-   "Only available <after adopting [Rationalism Complete]>"
+   "Only available <after adopting [Rationalism Complete]>",
+   "[+1 Science] from every [Scientist]"
   ]
  },
  {

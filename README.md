@@ -28,6 +28,7 @@ These are active only when a mod ships `jsons/VPNeeds.json`:
   - A Headquarters needs the Corporations tech and a Global Monopoly on one of its resources; one per civ, and it grants a free Office.
   - Only the founder can build Offices. Each Office earns its yield per Franchise, up to the Franchise limit.
   - Franchises spread to nearby foreign cities from Office cities, plus VP's random spread (there are no international trade routes, see `GAPS.md`).
+- **Building tables with no Unciv unique** (`VPBuildingYields.swift`): yields per City-State ally/friend, per World Wonder, per religion and per citizen of the empire; yield-to-yield conversions; Aqueduct-style yields on growth; mutually exclusive buildings.
 
 ### VP data (`GameData/BundledMods/Vox Populi 4.22`)
 

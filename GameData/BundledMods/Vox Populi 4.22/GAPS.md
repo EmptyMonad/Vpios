@@ -261,21 +261,9 @@
 
 ## Building effect tables not translated (table: rows)
 
-- Building_ClassNeededAnywhere: 3
-- Building_ClassNeededNowhere: 6
 - Building_DomainFreeExperiencePerGreatWorkGlobal: 3
-- Building_GrowthExtraYield: 4
-- Building_HurryModifiers: 2
-- Building_HurryModifiersLocal: 2
-- Building_LocalResourceOrs: 5
-- Building_ResourceQuantityRequirements: 6
-- Building_SpecialistYieldChanges: 6
 - Building_ThemingBonuses: 13
 - Building_ThemingYieldBonus: 25
-- Building_UnitCombatProductionModifiersGlobal: 1
-- Building_YieldChangeWorldWonderGlobal: 6
-- Building_YieldChangesPerPopInEmpire: 1
-- Building_YieldChangesPerReligion: 3
 - Building_YieldFromCombatExperienceTimes100: 2
 - Building_YieldFromInternalTR: 7
 - Building_YieldFromPillage: 1
@@ -284,10 +272,6 @@
 - Building_YieldFromSpyAttack: 4
 - Building_YieldFromSpyDefenseOrID: 4
 - Building_YieldFromSpyRigElection: 4
-- Building_YieldFromYieldPercent: 3
-- Building_YieldFromYieldPercentGlobal: 3
-- Building_YieldPerAlly: 5
-- Building_YieldPerFriend: 2
 
 ## Resources not emitted (no terrain placement data)
 
