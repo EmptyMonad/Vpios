@@ -1,0 +1,115 @@
+{
+ "_comment": "Unciv keys a language's Unciv translation file leaves empty, filled for the screens that show them; read by L10n.fallback after Unciv's own entries. Unciv's .properties files are not edited.",
+ "Afrikaans": {
+  "Personalities": "Persoonlikhede",
+  "Great People": "Groot Mense"
+ },
+ "Bangla": {
+  "Personalities": "ব্যক্তিত্বসমূহ",
+  "Great People": "মহান ব্যক্তিরা"
+ },
+ "Belarusian": {
+  "Personalities": "Індывідуальнасці",
+  "Great People": "Вялікія асобы"
+ },
+ "Bosnian": {
+  "Personalities": "Ličnosti",
+  "Great People": "Velike ličnosti"
+ },
+ "Bulgarian": {
+  "Personalities": "Личности",
+  "Great People": "Велики личности"
+ },
+ "Croatian": {
+  "Personalities": "Osobnosti"
+ },
+ "Czech": {
+  "Personalities": "Osobnosti"
+ },
+ "Dutch": {
+  "Personalities": "Persoonlijkheden"
+ },
+ "Esperanto": {
+  "Personalities": "Personecoj"
+ },
+ "Filipino": {
+  "Personalities": "Mga Personalidad"
+ },
+ "Finnish": {
+  "Personalities": "Luonteet",
+  "Great People": "Suurmiehet"
+ },
+ "Galician": {
+  "Personalities": "Personalidades"
+ },
+ "Greek": {
+  "Personalities": "Προσωπικότητες",
+  "Great People": "Μεγάλες προσωπικότητες"
+ },
+ "Hindi": {
+  "Personalities": "व्यक्तित्व",
+  "Great People": "महान व्यक्ति"
+ },
+ "Korean": {
+  "Personalities": "성향"
+ },
+ "Latin": {
+  "Personalities": "Personae"
+ },
+ "Lithuanian": {
+  "Personalities": "Charakteriai"
+ },
+ "Malay": {
+  "Personalities": "Personaliti"
+ },
+ "Maltese": {
+  "Personalities": "Personalitajiet"
+ },
+ "Norwegian": {
+  "Personalities": "Personlegdomar"
+ },
+ "Persian_(Pinglish-DIN)": {
+  "Personalities": "Šaxsiyathā",
+  "Great People": "Ensānhā-ye bozorg"
+ },
+ "Persian_(Pinglish-UN)": {
+  "Personalities": "Shakhsiat-haa"
+ },
+ "Polish": {
+  "Personalities": "Usposobienia"
+ },
+ "Portuguese": {
+  "Personalities": "Personalidades"
+ },
+ "Romanian": {
+  "Personalities": "Personalități",
+  "Great People": "Personalități marcante"
+ },
+ "Rusyn": {
+  "Personalities": "Характеры"
+ },
+ "Spanish": {
+  "Personalities": "Personalidades"
+ },
+ "Thai": {
+  "Personalities": "บุคลิกภาพ",
+  "Great People": "บุคคลผู้ยิ่งใหญ่"
+ },
+ "Toki_Pona": {
+  "Personalities": "nasin pilin"
+ },
+ "Traditional_Chinese": {
+  "Personalities": "個性"
+ },
+ "Turkish": {
+  "Personalities": "Kişilikler",
+  "Great People": "Harika Kişiler"
+ },
+ "Ukrainian": {
+  "Personalities": "Характери"
+ },
+ "Zulu": {
+  "Personalities": "Izinhlobo zobuntu",
+  "Great People": "Abantu Abakhulu"
+ }
+}

@@ -1,0 +1,62 @@
+name: build
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: build-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  ios:
+    runs-on: macos-15
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Toolchain
+        run: |
+          brew install xcodegen >/dev/null
+          xcodebuild -version | tee toolchain.txt
+          swift --version | tee -a toolchain.txt
+      - name: Generate project
+        run: xcodegen generate --spec project.yml
+      - name: Build (simulator, unsigned)
+        id: build
+        continue-on-error: true
+        run: |
+          set -o pipefail
+          xcodebuild -project VPiOS.xcodeproj -scheme VPiOS -configuration Debug \
+            -sdk iphonesimulator -destination 'generic/platform=iOS Simulator' \
+            -derivedDataPath dd CODE_SIGNING_ALLOWED=NO build 2>&1 | tee build.log
+      - name: Build unsigned IPA
+        if: steps.build.outcome == 'success'
+        run: |
+          set -o pipefail
+          xcodebuild -project VPiOS.xcodeproj -scheme VPiOS -configuration Release \
+            -sdk iphoneos -destination 'generic/platform=iOS' -derivedDataPath ddr \
+            CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO build 2>&1 | tail -20
+          mkdir -p Payload && cp -R ddr/Build/Products/Release-iphoneos/VPiOS.app Payload/
+          zip -qry VPiOS-unsigned.ipa Payload
+      - uses: actions/upload-artifact@v4
+        if: steps.build.outcome == 'success'
+        with:
+          name: VPiOS-unsigned-ipa
+          path: VPiOS-unsigned.ipa
+      - name: Publish build report to ci-logs branch
+        if: always()
+        env:
+          SHA: ${{ github.sha }}
+          OUTCOME: ${{ steps.build.outcome }}
+        run: |
+          mkdir -p report
+          { echo "commit $SHA"; echo "outcome $OUTCOME"; cat toolchain.txt; } > report/summary.txt
+          grep -E "^/.*: (error|fatal error):" build.log | sed "s#$GITHUB_WORKSPACE/##" | sort -u > report/errors.txt || true
+          grep -cE ": error:" build.log >> report/summary.txt || true
+          wc -l < report/errors.txt >> report/summary.txt
+          tail -c 200000 build.log | sed "s#$GITHUB_WORKSPACE/##g" > report/build-tail.log
+          git config --global user.name "vpios-ci"; git config --global user.email "ci@users.noreply.github.com"
+          git clone --quiet --depth 1 --branch ci-logs "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" logs 2>/dev/null \
+            || { git init -q logs && git -C logs checkout -q -b ci-logs && git -C logs remote add origin "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git"; }
+          rm -rf logs/latest && mkdir -p logs/latest && cp report/* logs/latest/
+          git -C logs add -A && git -C logs commit -qm "build $SHA: $OUTCOME" && git -C logs push -q origin ci-logs
