@@ -1,37 +1,26 @@
 # Vox Populi 4.22 for Unciv
 
-An **extension mod for the Civ V – Gods & Kings ruleset** that carries over Vox Populi 4.22's data-layer changes: the tech tree, units, buildings, promotions, resources and improvement yields.
-- Techs, units and buildings replace G&K's wholesale, via `techsToRemove`, `unitsToRemove` and `buildingsToRemove: ["All"]`.
-- Everything else merges with G&K by name.
-- It's packaged as an extension because the Unciv 4X iOS port only accepts its own bundled base rulesets.
+An **extension mod on Civ V – Gods & Kings + Civ V Brave New World** ([RobLoach/Civ-V-Brave-New-World](https://github.com/RobLoach/Civ-V-Brave-New-World)) carrying over Vox Populi 4.22's game data: tech tree, units, buildings, promotions, resources, improvement yields, the nine classic social policy trees and the beliefs.
 
-Generated mechanically from the VP source (`LoneGazebo/Community-Patch-DLL`, tag `Release-4.22-TRUE`), and checked three ways:
-- **Unciv 4.22.12 validator, run on G&K + this mod:** 0 errors, 1 harmless warning (Foreign Legion's auto-upgrade timing).
-- **AI simulation:** a 250-turn, 4-civ game on G&K + this mod runs to completion.
-- **iOS port coverage:** every unique and conditional pattern in the mod is one that the Unciv 4X Swift port matches on. The port is a translation of Unciv 4.22.1.
+- Techs, units and buildings replace the base ones wholesale (`techsToRemove`, `unitsToRemove`, `buildingsToRemove: ["All"]`); BNW's Great Work slots are kept.
+- The policy branches take VP's names (Progress, Authority, Fealty, Statecraft, Artistry, Industry, Imperialism); BNW's ideologies stay.
+- `jsons/VPNeeds.json` carries VP's needs-based happiness and military supply numbers. Desktop Unciv ignores it; the VPiOS build (EmptyMonad/Vpios) runs VP's happiness and supply rules from it.
 
-## What's in it
+Generated mechanically from the VP source (`LoneGazebo/Community-Patch-DLL`, tag `Release-4.22-TRUE`) and checked with:
+- **Unciv 4.22.12's validator** on G&K + BNW + this mod: 0 errors.
+- **A 150-turn all-AI simulation** on G&K + BNW + this mod.
+- **iOS coverage:** every unique pattern the mod uses is one the Unciv 4X Swift port matches on (BNW's own Great Work markers aside).
 
-| | Count | Source |
-|---|---|---|
-| Techs | 82 | VP costs, prerequisites and grid layout; adds BNW's Internet; Pharmaceuticals stands in for Penicillin |
-| Units | 151 | VP stats, costs, tech gates, upgrade lines, resource needs, free promotions; 25 new VP units |
-| Buildings | 187 | VP costs, maintenance, yields, % bonuses, specialists and prerequisites, plus resource, terrain, feature, improvement, per-population and building-class yield effects; 67 new VP buildings |
-| Promotions | 289 | VP combat modifiers mapped to Unciv uniques |
-| Resources | 46 | VP yields; 11 new VP luxuries placed on VP terrains |
-| Specialists | 5 | adds VP's Civil Servant |
+## Not carried over
 
-## What isn't
+GAPS.md lists everything. In short:
+- **Civ abilities (traits):** still BNW's. VP_RULES.md has VP's text.
+- **Ideology tenets:** still BNW's.
+- **Policy and belief effects that need engine work:** City-State influence, World Congress, tourism modifiers, golden-age points from happiness, and similar. These are listed per policy in GAPS.md, and each policy's civilopedia entry shows VP's full text.
+- **Corporations and their buildings.**
+- **Art:** new VP units and buildings use Unciv's placeholder icons. Renamed policies reuse the icon of the policy they replace.
 
-GAPS.md has the full list. VP_RULES.md has VP's own rules text for the policies, beliefs and civ traits that still need translating.
+## Install
 
-- **Engine mechanics:** VP's needs-based happiness, City-State Diplomacy, corporations, vassalage, World Congress changes and AI. These live in VP's C++ game core, so no mod can carry them over.
-- **Policies, beliefs and civ abilities:** these still use G&K's versions. VP_RULES.md is the spec for translating them.
-- **BNW-only content missing from Unciv's G&K ruleset:** Bison, Cocoa and Brazilwood; Great Writers, Great Musicians and Archaeologists; Brazil and Venice as major civs. It's dropped wherever it was referenced.
-- **Art:** new VP units and buildings have none, so Unciv shows its default placeholder icon.
-
-## Install (Unciv 4X on iPhone, or any Unciv build)
-
-1. Put this folder in a public GitHub repo, with `jsons/` at the repo root.
-2. In Unciv, open **Mods → Download mod from URL**, paste the repo URL and download it. Optionally, add the GitHub topic `unciv-mod` to the repo so it also appears in the in-game mod browser.
-3. Start a new game with **Civ V – Gods & Kings** as the base ruleset, then enable **Vox Populi 4.22** under mods.
+1. Install **Civ V Brave New World** and this mod, either from the in-game mod browser or with **Download mod from URL**. The VPiOS build ships with both.
+2. Start a new game on **Civ V – Gods & Kings** with both mods enabled.

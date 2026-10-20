@@ -26,6 +26,9 @@ struct VPNeedsData: Decodable {
         var happinessDefault = 0, happinessDefaultCapital = 0, aiHappinessDefault = 0, aiHappinessDefaultCapital = 0
         var populationUnhappinessMod = 0, aiPopulationUnhappinessMod = 0, empireSizeUnhappinessMod = 0, aiEmpireSizeUnhappinessMod = 0
         var extraHappinessPerLuxury = 0, aiExtraHappinessPerLuxury = 0
+        var unitSupplyBase = 0, unitSupplyPerCity = 0, unitSupplyPopulationPercent = 0, unitSupplyPerEraFlat = 0, unitSupplyPerEraModifier = 0, unitSupplyBonusPercent = 0
+        var aiUnitSupplyBase = 0, aiUnitSupplyPerCity = 0, aiUnitSupplyPopulationPercent = 0, aiUnitSupplyPerEraFlat = 0, aiUnitSupplyPerEraModifier = 0, aiUnitSupplyBonusPercent = 0
+        var cityStateUnitSupplyBase = 0, cityStateUnitSupplyPerCity = 0, cityStateUnitSupplyPopulationPercent = 0
     }
     var version: Int
     var defines: [String: Double]
@@ -34,6 +37,7 @@ struct VPNeedsData: Decodable {
     var buildings: [String: Entry]
     var policies: [String: Entry]
     var nations: [String: Entry]
+    var eraSupplyBase: [String: Int]? = nil
 
     func define(_ name: String, _ fallback: Double) -> Double { defines[name] ?? fallback }
 

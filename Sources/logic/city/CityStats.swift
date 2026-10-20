@@ -175,11 +175,14 @@ final class CityStats {
     /// Unciv getGrowthBonus: "[amount]% growth [cityFilter]", by source.
     func getGrowthBonus(_ totalFood: Double) -> StatMap {
         var growthSources = StatMap()
+        let vpGrowth = state.vpGrowthModifiers(city.civId)   // VP: supply and approval growth penalties (VP/VPSupply.swift)
         for unique in matching("[]% growth []", "[]% growth") {
             if unique.pattern == "[]% growth []" && !matchesFilter(unique.param(1)) { continue }
+            if vpGrowth != nil && unique.conditionals.contains(where: { $0.params.contains("Happiness") }) { continue }   // VP's own approval penalty replaces these
             // Unciv: `Stats(food = unique.params[0].toFloat() / 100f * totalFood)` - Float throughout.
             growthSources.add(unique.sourceNameForUser, Stats(food: Stats.f32(Stats.f32(Stats.f32(unique.double(0)) / 100) * totalFood)))
         }
+        for (k, pct) in vpGrowth ?? [] { growthSources.add(k, Stats(food: Stats.f32(Stats.f32(pct / 100) * totalFood))) }
         return growthSources
     }
 

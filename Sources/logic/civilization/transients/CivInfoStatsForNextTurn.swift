@@ -170,6 +170,7 @@ extension GameState {
     /// AI major `(supply * (1f + aiUnitSupplyModifier)).toInt()` in Float. The uniques are read with the civ's
     /// conditionals.
     func unitSupply(_ civId: Int) -> Int {
+        if let vp = vpUnitSupply(civId) { return vp }   // VP: VP/VPSupply.swift
         guard let civ = civ(civId) else { return 0 }
         let myCities = cities(of: civId)
         let ctx = UniqueContext(civId: civId)
@@ -193,9 +194,9 @@ extension GameState {
         return cities(of: civId).count * (difficulty(for: civId).unitSupplyPerCity + civUniques(civId).filter { $0.pattern == "[] Unit Supply per city" && conditionalsHold($0, ctx) }.reduce(0) { $0 + $1.int(0) })
     }
 
-    func unitSupplyDeficit(_ civId: Int) -> Int { max(0, units(of: civId).count - unitSupply(civId)) }
+    func unitSupplyDeficit(_ civId: Int) -> Int { vpUnitsOutOfSupply(civId) ?? max(0, units(of: civId).count - unitSupply(civId)) }
 
-    func unitSupplyProductionPenalty(_ civId: Int) -> Double { min(Double(unitSupplyDeficit(civId)) * 10, 70) }
+    func unitSupplyProductionPenalty(_ civId: Int) -> Double { vpSupplyProductionPenalty(civId) ?? min(Double(unitSupplyDeficit(civId)) * 10, 70) }
 
     // MARK: golden age
 
