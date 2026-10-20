@@ -115,8 +115,8 @@ extension View {
     }
 
     /// A screen presented full-size on its own virtual canvas.
-    func stageSheet<C: View>(isPresented: Binding<Bool>, @ViewBuilder content: @escaping () -> C) -> some View {
-        fullScreenCover(isPresented: isPresented) { VirtualCanvas { content() } }
+    func stageSheet<C: View>(isPresented: Binding<Bool>, onDismiss: (() -> Void)? = nil, @ViewBuilder content: @escaping () -> C) -> some View {
+        fullScreenCover(isPresented: isPresented, onDismiss: onDismiss) { VirtualCanvas { content() } }
     }
 
     /// The store build's "coming soon" overlay on entry points it hasn't opened; everything is open here.
