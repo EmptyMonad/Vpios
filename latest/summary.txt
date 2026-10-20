@@ -1,5 +1,5 @@
-commit 564f7ee66adb28bfed410e8f311c0bb72f7dcc7a
-outcome cancelled
+commit 1b250b581943530028705b4e611166b1939bc836
+outcome success
 Xcode 26.3
 Build version 17C529
 Apple Swift version 6.2.4 (swiftlang-6.2.4.1.4 clang-1700.6.4.2)
