@@ -10,6 +10,15 @@
  "buildingsToRemove": [
   "All"
  ],
+ "policyBranchesToRemove": [
+  "Liberty",
+  "Honor",
+  "Piety",
+  "Patronage",
+  "Aesthetics",
+  "Commerce",
+  "Exploration"
+ ],
  "topics": [
   "unciv-mod-rulesets"
  ],

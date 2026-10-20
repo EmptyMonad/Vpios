@@ -816,8 +816,7 @@
   "uniques": [
    "Unbuildable",
    "[+50]% Strength <vs [Mounted] units>",
-   "Can move immediately once bought",
-   "Only available <after adopting [Mercenary Army]>"
+   "Can move immediately once bought"
   ],
   "promotions": [
    "Discipline",
@@ -2604,7 +2603,6 @@
   "uniques": [
    "May Paradrop to [{your} {Coastal} {City center}] tiles up to [25] tiles away <in [City center] tiles>",
    "[+15]% Strength bonus for [{Military} {Water}] units within [2] tiles",
-   "[2] Movement <after adopting [Navigation School]>",
    "Can be earned through combat <for [Water] units>",
    "Is part of Great Person group [Admiral]",
    "Great Person - [War]",

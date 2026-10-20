@@ -1463,6 +1463,12 @@
   ]
  },
  {
+  "name": "Naval Tradition",
+  "uniques": [
+   "[+1] Movement"
+  ]
+ },
+ {
   "name": "Only Defensive"
  },
  {
@@ -2274,6 +2280,42 @@
   "unitTypes": [
    "Submarine"
   ]
+ },
+ {
+  "name": "Faster Worker",
+  "uniques": [
+   "[+1] Movement"
+  ]
+ },
+ {
+  "name": "Endurance",
+  "uniques": [
+   "Heals [15] damage if it kills a unit"
+  ]
+ },
+ {
+  "name": "Conscription",
+  "uniques": [
+   "[+10]% Strength"
+  ]
+ },
+ {
+  "name": "Imperialism",
+  "uniques": [
+   "[+1] Sight"
+  ]
+ },
+ {
+  "name": "Faster General",
+  "uniques": [
+   "[+1] Movement"
+  ]
+ },
+ {
+  "name": "Regimental Traditions"
+ },
+ {
+  "name": "Banzai!"
  },
  {
   "name": "Brute Force"

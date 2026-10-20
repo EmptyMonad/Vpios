@@ -1138,13 +1138,13 @@
   ],
   "civilopediaText": [
    {
-    "text": "[Hidden Antiquity Site]s can be dug up by [Archaeologist]s for chance of a [Great Work of Writing] or a Cultural Renaissance. They are revealed by completing the [Exploration] Policy tree."
+    "text": "[Hidden Antiquity Site]s can be dug up by [Archaeologist]s for chance of a [Great Work of Writing] or a Cultural Renaissance. They are revealed by completing the [Imperialism] Policy tree."
    },
    {
     "separator": true
    },
    {
-    "text": "Requires [Exploration Complete]",
+    "text": "Requires [Imperialism Complete]",
     "link": "Policy/Exploration Complete"
    },
    {

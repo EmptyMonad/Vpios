@@ -234,8 +234,7 @@
   },
   "isWonder": true,
   "uniques": [
-   "[2] free [Worker] units appear",
-   "Only available <after adopting [Liberty]>"
+   "[2] free [Worker] units appear"
   ],
   "requiredTech": "Mining",
   "quote": "'O, let not the pains of death which come upon thee enter into my body. I am the god Tem, and I am the foremost part of the sky, and the power which protecteth me is that which is with all the gods forever.' - The Book of the Dead, translated by Sir Ernest Alfred Wallis Budge",
@@ -298,9 +297,6 @@
  {
   "name": "Statue of Zeus",
   "isWonder": true,
-  "uniques": [
-   "Only available <after adopting [Honor]>"
-  ],
   "requiredTech": "Bronze Working",
   "quote": "'He spoke, the son of Kronos, and nodded his head with the dark brows, and the immortally anointed hair of the great god swept from his divine head, and all Olympos was shaken' - The Iliad",
   "cost": 185,
@@ -385,8 +381,7 @@
   "isWonder": true,
   "requiredTech": "Mathematics",
   "uniques": [
-   "Gain a free [Garden] [in this city]",
-   "Only available <after adopting [Tradition]>"
+   "Gain a free [Garden] [in this city]"
   ],
   "quote": "'I think that if ever a mortal heard the word of God it would be in a garden at the cool of the day.' - F. Frankfort Moore",
   "cost": 200,
@@ -725,10 +720,10 @@
   "isWonder": true,
   "uniques": [
    "Gain a free [Mosque] [in this city]",
-   "Only available <after adopting [Piety]>",
    "Only available <when religion is enabled>",
    "All newly-trained [Missionary] units [in this city] receive the [Devout] promotion",
-   "All newly-trained [Great Prophet] units [in this city] receive the [Devout] promotion"
+   "All newly-trained [Great Prophet] units [in this city] receive the [Devout] promotion",
+   "Only available <after adopting [Tradition Complete]>"
   ],
   "requiredTech": "Education",
   "quote": "'With the magnificence of eternity before us, let time, with all its fluctuations, dwindle into its own littleness.' - Thomas Chalmers",
@@ -948,7 +943,8 @@
   "isWonder": true,
   "uniques": [
    "All newly-trained [relevant] units [in this city] receive the [Drill I] promotion",
-   "Gain a free [Castle] [in this city]"
+   "Gain a free [Castle] [in this city]",
+   "Only available <after adopting [Authority Complete]>"
   ],
   "requiredTech": "Chivalry",
   "quote": "'Justice is an unassailable fortress, built on the brow of a mountain which cannot be overthrown by the violence of torrents, nor demolished by the force of armies.' - Joseph Addison",
@@ -998,7 +994,8 @@
   "maintenance": 4,
   "hurryCostModifier": 15,
   "uniques": [
-   "Must be next to [Mountain]"
+   "Must be next to [Mountain]",
+   "Only available <after adopting [Scientific Revolution]>"
   ],
   "requiredTech": "Astronomy",
   "cost": 500,
@@ -1130,7 +1127,7 @@
   "name": "Forbidden Palace",
   "isWonder": true,
   "uniques": [
-   "Only available <after adopting [Patronage]>"
+   "Only available <after adopting [Progress Complete]>"
   ],
   "requiredTech": "Civil Service",
   "quote": "'Most of us can, as we choose, make of this world either a palace or a prison' - John Lubbock",
@@ -1197,7 +1194,6 @@
    "Comment [Provides 3 [Great Work of Art] or [Artifact] Slots]",
    "Only available <if [Opera House] is constructed in all [non-[Puppeted]] cities>",
    "Cost increases by [30] per owned city",
-   "Provides [5] [Tourism] <after adopting [Religious Art]>",
    "[+1 Culture] per [4] population [in this city]"
   ],
   "requiredTech": "Architecture",
@@ -1244,8 +1240,7 @@
   "isWonder": true,
   "uniques": [
    "Free [Great Scientist] appears",
-   "Science gained from research agreements [+50]%",
-   "Only available <after adopting [Rationalism]>"
+   "Science gained from research agreements [+50]%"
   ],
   "requiredTech": "Architecture",
   "quote": "'Things always seem fairer when we look back at them, and it is out of that inaccessible tower of the past that Longing leans and beckons.' - James Russell Lowell",
@@ -1308,8 +1303,7 @@
   "name": "Kremlin",
   "isWonder": true,
   "uniques": [
-   "Free Social Policy",
-   "Only available <after adopting [Order]>"
+   "Free Social Policy"
   ],
   "requiredTech": "Replaceable Parts",
   "quote": "'The Law is a fortress on a hill that armies cannot take or floods wash away.' - The Prophet Muhammed",
@@ -1349,7 +1343,7 @@
   "uniques": [
    "Free [Great Artist] appears",
    "Comment [Provides 4 [Great Work of Art] or [Artifact] Slots]",
-   "Only available <after adopting [Exploration]>",
+   "Only available <after adopting [Artistry Complete]>",
    "Free [Archaeologist] appears",
    "Free [Archaeologist] appears"
   ],
@@ -1418,7 +1412,7 @@
   "isWonder": true,
   "uniques": [
    "[Gold] cost of purchasing items in cities [-15]%",
-   "Only available <after adopting [Commerce]>",
+   "Only available <after adopting [Statecraft Complete]>",
    "Free [Great Merchant] appears"
   ],
   "requiredTech": "Industrialization",
@@ -1594,8 +1588,7 @@
    "Great Engineer": 2
   },
   "uniques": [
-   "Free Social Policy",
-   "Only available <after adopting [Freedom]>"
+   "Free Social Policy"
   ],
   "requiredTech": "Biology",
   "quote": "'Give me your tired, your poor, your huddled masses yearning to breathe free, the wretched refuse of your teeming shore. Send these, the homeless, tempest-tossed to me, I lift my lamp beside the golden door!' - Emma Lazarus",
@@ -1679,6 +1672,7 @@
    "Great Engineer": 2
   },
   "uniques": [
+   "Only available <after adopting [Imperialism Complete]>",
    "[+50]% Production when constructing [Air] units [in this city]",
    "Free [Jet Fighter] appears",
    "Free [Jet Fighter] appears"
@@ -1874,8 +1868,6 @@
    "Can be purchased for [200] [Faith] [in all cities in which the majority religion is a major religion]",
    "Only available <when religion is enabled>",
    "Comment [Provides 1 [Great Work of Art] or [Artifact] Slot]",
-   "Only available <after adopting [Cathedrals]>",
-   "Provides [2] [Tourism] <after adopting [Sacred Sites]>",
    "Destroyed when the city is captured",
    "Unbuildable",
    "Can be purchased with [Faith] [in all cities]",
@@ -1899,10 +1891,9 @@
    "Unbuildable",
    "Unsellable",
    "Can be purchased for [150] [Faith] [in all cities in which the majority religion is a major religion]",
-   "Only available <after adopting [Monasteries]>",
    "Only available <when religion is enabled>",
    "Destroyed when the city is captured",
-   "Provides [2] [Tourism] <after adopting [Sacred Sites]>",
+   "Only available <after adopting [Fealty]>",
    "Unbuildable",
    "Can be purchased with [Faith] [in all cities]"
   ],
@@ -1917,9 +1908,7 @@
    "Unbuildable",
    "Unsellable",
    "Can be purchased for [200] [Faith] [in all cities in which the majority religion is a major religion]",
-   "Only available <after adopting [Mosques]>",
    "Only available <when religion is enabled>",
-   "Provides [2] [Tourism] <after adopting [Sacred Sites]>",
    "Destroyed when the city is captured",
    "Unbuildable",
    "Can be purchased with [Faith] [in all cities]"
@@ -1935,8 +1924,6 @@
    "Unsellable",
    "Can be purchased for [200] [Faith] [in all cities in which the majority religion is a major religion]",
    "Only available <when religion is enabled>",
-   "Only available <after adopting [Pagodas]>",
-   "Provides [2] [Tourism] <after adopting [Sacred Sites]>",
    "Destroyed when the city is captured",
    "Unbuildable",
    "Can be purchased with [Faith] [in all cities]"
@@ -2277,7 +2264,8 @@
   "isWonder": true,
   "uniques": [
    "Free [Great Musician] appears",
-   "Comment [Provides 3 [Great Work of Music] Slots]"
+   "Comment [Provides 3 [Great Work of Music] Slots]",
+   "Only available <after adopting [Industry Complete]>"
   ],
   "requiredTech": "Radio",
   "quote": "'Broadway is a main artery of New York cultural life - the hardened artery' - Walter Winchell",
@@ -2313,8 +2301,7 @@
    "Never destroyed when the city is captured <hidden from users>",
    "Automatically built in all cities where it is buildable <hidden from users>",
    "Provides [3] [Tourism]",
-   "Provides [3] [Tourism] <in [Capital] cities> <for [City of Light] Civilizations> <hidden from users>",
-   "Provides [3] [Tourism] <after adopting [Aesthetics Complete]> <hidden from users>"
+   "Provides [3] [Tourism] <in [Capital] cities> <for [City of Light] Civilizations> <hidden from users>"
   ],
   "civilopediaText": [
    {
@@ -2403,8 +2390,7 @@
    "Never destroyed when the city is captured <hidden from users>",
    "Automatically built in all cities where it is buildable <hidden from users>",
    "Provides [2] [Tourism]",
-   "Provides [2] [Tourism] <in [Capital] cities> <for [City of Light] Civilizations> <hidden from users>",
-   "Provides [2] [Tourism] <after adopting [Aesthetics Complete]> <hidden from users>"
+   "Provides [2] [Tourism] <in [Capital] cities> <for [City of Light] Civilizations> <hidden from users>"
   ],
   "civilopediaText": [
    {
@@ -2495,8 +2481,7 @@
    "Never destroyed when the city is captured <hidden from users>",
    "Automatically built in all cities where it is buildable <hidden from users>",
    "Provides [2] [Tourism]",
-   "Provides [2] [Tourism] <in [Capital] cities> <for [City of Light] Civilizations> <hidden from users>",
-   "Provides [2] [Tourism] <after adopting [Aesthetics Complete]> <hidden from users>"
+   "Provides [2] [Tourism] <in [Capital] cities> <for [City of Light] Civilizations> <hidden from users>"
   ],
   "civilopediaText": [
    {
@@ -2564,8 +2549,7 @@
    "Never destroyed when the city is captured <hidden from users>",
    "Automatically built in all cities where it is buildable <hidden from users>",
    "Provides [4] [Tourism]",
-   "Provides [4] [Tourism] <in [Capital] cities> <for [City of Light] Civilizations> <hidden from users>",
-   "Provides [4] [Tourism] <after adopting [Aesthetics Complete]> <hidden from users>"
+   "Provides [4] [Tourism] <in [Capital] cities> <for [City of Light] Civilizations> <hidden from users>"
   ],
   "civilopediaText": [
    {
@@ -2731,6 +2715,7 @@
   },
   "isWonder": true,
   "uniques": [
+   "Only available <after adopting [Fealty Complete]>",
    "Free [Great Engineer] appears"
   ],
   "requiredTech": "Metallurgy",
@@ -2838,8 +2823,7 @@
   "isWonder": true,
   "uniques": [
    "Free [Great Artist] appears",
-   "Comment [Provides 3 [Great Work of Art] or [Artifact] Slots]",
-   "Only available <after adopting [Aesthetics]>"
+   "Comment [Provides 3 [Great Work of Art] or [Artifact] Slots]"
   ],
   "requiredTech": "Economics",
   "quote": "'The painter is not simply someone who looks and who sees. Above all, the artist is someone who exposes a personal vision by rendering it visible.' - Marcel Parquet",
@@ -2875,8 +2859,7 @@
    "Never destroyed when the city is captured <hidden from users>",
    "Automatically built in all cities where it is buildable <hidden from users>",
    "Provides [3] [Tourism]",
-   "Provides [3] [Tourism] <in [Capital] cities> <for [City of Light] Civilizations> <hidden from users>",
-   "Provides [3] [Tourism] <after adopting [Aesthetics Complete]> <hidden from users>"
+   "Provides [3] [Tourism] <in [Capital] cities> <for [City of Light] Civilizations> <hidden from users>"
   ],
   "civilopediaText": [
    {
@@ -3003,8 +2986,7 @@
   "isWonder": true,
   "uniques": [
    "Free Social Policy",
-   "Must be next to [Coast]",
-   "Only available <after adopting [Autocracy]>"
+   "Must be next to [Coast]"
   ],
   "requiredTech": "Flight",
   "quote": "'This loss (of freedom) means the fading from human life of values infinitely precious to it. There only remain ironbound conditions of employment and trivial amusements for leisure.' - A.N. Whitehead"
@@ -3060,8 +3042,7 @@
    "Never destroyed when the city is captured <hidden from users>",
    "Automatically built in all cities where it is buildable <hidden from users>",
    "Provides [2] [Tourism]",
-   "Provides [2] [Tourism] <in [Capital] cities> <for [City of Light] Civilizations> <hidden from users>",
-   "Provides [2] [Tourism] <after adopting [Aesthetics Complete]> <hidden from users>"
+   "Provides [2] [Tourism] <in [Capital] cities> <for [City of Light] Civilizations> <hidden from users>"
   ],
   "civilopediaText": [
    {
@@ -3163,8 +3144,7 @@
    "Never destroyed when the city is captured <hidden from users>",
    "Automatically built in all cities where it is buildable <hidden from users>",
    "Provides [2] [Tourism]",
-   "Provides [2] [Tourism] <in [Capital] cities> <for [City of Light] Civilizations> <hidden from users>",
-   "Provides [2] [Tourism] <after adopting [Aesthetics Complete]> <hidden from users>"
+   "Provides [2] [Tourism] <in [Capital] cities> <for [City of Light] Civilizations> <hidden from users>"
   ],
   "civilopediaText": [
    {
@@ -3350,8 +3330,7 @@
    "Never destroyed when the city is captured <hidden from users>",
    "Automatically built in all cities where it is buildable <hidden from users>",
    "Provides [2] [Tourism]",
-   "Provides [2] [Tourism] <in [Capital] cities> <for [City of Light] Civilizations> <hidden from users>",
-   "Provides [2] [Tourism] <after adopting [Aesthetics Complete]> <hidden from users>"
+   "Provides [2] [Tourism] <in [Capital] cities> <for [City of Light] Civilizations> <hidden from users>"
   ],
   "civilopediaText": [
    {
@@ -3417,8 +3396,7 @@
    "Never destroyed when the city is captured <hidden from users>",
    "Automatically built in all cities where it is buildable <hidden from users>",
    "Provides [2] [Tourism]",
-   "Provides [2] [Tourism] <in [Capital] cities> <for [City of Light] Civilizations> <hidden from users>",
-   "Provides [2] [Tourism] <after adopting [Aesthetics Complete]> <hidden from users>"
+   "Provides [2] [Tourism] <in [Capital] cities> <for [City of Light] Civilizations> <hidden from users>"
   ],
   "civilopediaText": [
    {
@@ -3485,8 +3463,7 @@
    "Never destroyed when the city is captured <hidden from users>",
    "Automatically built in all cities where it is buildable <hidden from users>",
    "Provides [3] [Tourism]",
-   "Provides [3] [Tourism] <in [Capital] cities> <for [City of Light] Civilizations> <hidden from users>",
-   "Provides [3] [Tourism] <after adopting [Aesthetics Complete]> <hidden from users>"
+   "Provides [3] [Tourism] <in [Capital] cities> <for [City of Light] Civilizations> <hidden from users>"
   ],
   "civilopediaText": [
    {
@@ -3617,10 +3594,7 @@
    "Unsellable <hidden from users>",
    "Unavailable <before the [Modern era]> <when number of [[Factory] Buildings] is less than [3]> <hidden from users>",
    "Only available <in cities with a [Palace]> <hidden from users>",
-   "Limited to [1] per Civilization <hidden from users>",
-   "Unavailable <after adopting [Freedom]> <hidden from users>",
-   "Unavailable <after adopting [Order]> <hidden from users>",
-   "Unavailable <after adopting [Autocracy]> <hidden from users>"
+   "Limited to [1] per Civilization <hidden from users>"
   ],
   "civilopediaText": [
    {
@@ -3658,7 +3632,6 @@
    "Moves to new capital when capital changes <hidden from users>",
    "Unsellable <hidden from users>",
    "Only available <in cities with a [Palace]> <hidden from users>",
-   "Only available <after adopting [Cultural Revolution]>",
    "Automatically built in all cities where it is buildable <hidden from users>",
    "Will not be displayed in Civilopedia",
    "Moves to new capital when capital changes <hidden from users>"
@@ -4254,7 +4227,10 @@
   "cost": 2150,
   "requiredTech": "Computers",
   "science": 5,
-  "culture": 1
+  "culture": 1,
+  "uniques": [
+   "Only available <after adopting [Rationalism Complete]>"
+  ]
  },
  {
   "name": "Empire State Building",
@@ -4270,6 +4246,92 @@
   "requiredTech": "Particle Physics",
   "science": 10,
   "culture": 1
+ },
+ {
+  "name": "Throne Room",
+  "isNationalWonder": true,
+  "percentStatBonus": {
+   "food": 10,
+   "production": 10,
+   "gold": 10,
+   "science": 10,
+   "faith": 10
+  },
+  "specialistSlots": {
+   "Artist": 1
+  },
+  "uniques": [
+   "Unbuildable",
+   "Unsellable"
+  ]
+ },
+ {
+  "name": "State Treasury",
+  "isNationalWonder": true,
+  "gold": 4,
+  "specialistSlots": {
+   "Merchant": 1
+  },
+  "uniques": [
+   "Unbuildable",
+   "Unsellable",
+   "[+2 Culture] from all [Garden] buildings",
+   "[+2 Culture] from all [Bath] buildings",
+   "[+2 Culture] from all [Monument] buildings"
+  ]
+ },
+ {
+  "name": "Royal Guardhouse",
+  "isNationalWonder": true,
+  "cityStrength": 2.0,
+  "cityHealth": 50,
+  "production": 3,
+  "specialistSlots": {
+   "Engineer": 1
+  },
+  "uniques": [
+   "Unbuildable",
+   "Unsellable"
+  ]
+ },
+ {
+  "name": "Palace Gardens",
+  "isNationalWonder": true,
+  "food": 5,
+  "specialistSlots": {
+   "Artist": 1
+  },
+  "uniques": [
+   "Unbuildable",
+   "Unsellable"
+  ]
+ },
+ {
+  "name": "Court Chapel",
+  "isNationalWonder": true,
+  "faith": 3,
+  "specialistSlots": {
+   "Artist": 1
+  },
+  "uniques": [
+   "Unbuildable",
+   "Unsellable"
+  ]
+ },
+ {
+  "name": "Royal Astrologer",
+  "isNationalWonder": true,
+  "science": 3,
+  "specialistSlots": {
+   "Scientist": 1
+  },
+  "uniques": [
+   "Unbuildable",
+   "Unsellable",
+   "[+1 Science] from all [Council] buildings",
+   "[+1 Science] from all [Smokehouse] buildings",
+   "[+1 Science] from all [Herbalist] buildings"
+  ]
  },
  {
   "name": "Stupa",

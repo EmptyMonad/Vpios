@@ -3,78 +3,75 @@
   "name": "Ancestor Worship",
   "type": "Pantheon",
   "uniques": [
-   "[+1 Culture] from every [Shrine]"
+   "[+1 Culture, +2 Faith] from every [Council]",
+   "[+1 Faith] per [4] population [in this city]"
   ]
  },
  {
   "name": "Dance of the Aurora",
   "type": "Pantheon",
   "uniques": [
-   "[+1 Faith] from [Tundra] tiles without [Forest] [in this city]"
+   "[+1 Food, +1 Culture, +1 Faith] from [Tundra] tiles [in this city]",
+   "[+1 Food, +1 Culture, +1 Faith] from [Snow] tiles [in this city]"
   ]
  },
  {
   "name": "Desert Folklore",
   "type": "Pantheon",
   "uniques": [
-   "[+1 Faith] from every [Desert]"
-  ]
- },
- {
-  "name": "Faith Healers",
-  "type": "Pantheon",
-  "uniques": [
-   "[All] Units adjacent to this city heal [+30] HP per turn when healing"
+   "[+1 Production, +1 Gold, +1 Faith] from [Desert] tiles [in this city]",
+   "[+3 Food] from [Oasis] tiles [in this city]"
   ]
  },
  {
   "name": "Fertility Rites",
   "type": "Pantheon",
   "uniques": [
-   "[+10]% growth [in this city]"
-  ]
- },
- {
-  "name": "God of Craftsman",
-  "type": "Pantheon",
-  "uniques": [
-   "[+1 Production] [in cities following this religion] <in cities with at least [3] [Population]>"
+   "[+1 Food, +1 Faith] from every [Shrine]",
+   "Gain [8] [Faith] <upon constructing [Buildings] [in all cities]>",
+   "[+25]% growth [in this city]"
   ]
  },
  {
   "name": "God of the Open Sky",
   "type": "Pantheon",
   "uniques": [
-   "[+1 Culture] from every [Pasture]"
+   "[+3 Gold, +1 Faith] from [Pasture] tiles [in this city]",
+   "[+1 Culture] [in this city] <for every [2] [Worked [Grassland] Tiles in this city]>",
+   "[+1 Faith] [in this city] <for every [2] [Worked [Grassland] Tiles in this city]>",
+   "[+1 Culture] [in this city] <for every [2] [Worked [Plains] Tiles in this city]>",
+   "[+1 Faith] [in this city] <for every [2] [Worked [Plains] Tiles in this city]>"
   ]
  },
  {
   "name": "God of the Sea",
   "type": "Pantheon",
   "uniques": [
-   "[+1 Production] from every [Fishing Boats]"
+   "[+1 Production, +1 Faith] from [Fishing Boats] tiles [in this city]",
+   "[+1 Production, +1 Faith] from [Atoll] tiles [in this city]",
+   "[+2 Food, +1 Faith] [in this city] <in [Coastal] cities>"
   ]
  },
  {
   "name": "God of War",
   "type": "Pantheon",
   "uniques": [
-   "Earn [50]% of [Military] unit's [Strength] as [Faith] when killed within 4 tiles of a city following this religion"
+   "[+1 Production, +2 Faith] from every [Barracks]"
   ]
  },
  {
   "name": "Goddess of Festivals",
   "type": "Pantheon",
   "uniques": [
-   "[+1 Culture, +1 Faith] from every [Wine]",
-   "[+1 Culture, +1 Faith] from every [Incense]"
+   "[+1 Faith] from every [Palace]"
   ]
  },
  {
   "name": "Goddess of Love",
   "type": "Pantheon",
   "uniques": [
-   "[+1 Happiness] [in cities following this religion] <in cities with at least [6] [Population]>"
+   "[+3 Production, +2 Gold, +1 Faith] [in this city]",
+   "[+1 Production, +1 Faith] from every [Engineer]"
   ]
  },
  {
@@ -88,36 +85,42 @@
   "name": "Goddess of the Hunt",
   "type": "Pantheon",
   "uniques": [
-   "[+1 Food] from every [Camp]"
+   "[+2 Food] from every [Smokehouse]",
+   "[+1 Gold, +1 Culture, +1 Faith] from [Camp] tiles [in this city]"
   ]
  },
  {
   "name": "Messenger of the Gods",
   "type": "Pantheon",
   "uniques": [
-   "[+2 Science] from each Trade Route"
+   "[+2 Gold, +2 Faith] from each Trade Route"
   ]
  },
  {
   "name": "Monument to the Gods",
   "type": "Pantheon",
   "uniques": [
-   "[+15]% Production when constructing [Ancient era] wonders [in cities following this religion]",
-   "[+15]% Production when constructing [Classical era] wonders [in cities following this religion]"
+   "[+2 Faith] from every [Palace]",
+   "[+2 Faith] from every [World Wonder]",
+   "[+1 Faith] from every [Great Work]"
   ]
  },
  {
   "name": "One with Nature",
   "type": "Pantheon",
   "uniques": [
-   "[+4 Faith] from every [Natural Wonder]"
+   "[+2 Culture, +3 Faith] from [Natural Wonder] tiles [in this city]",
+   "[+1 Food] [in this city] <for every [2] [Worked [Mountain] Tiles in this city]>",
+   "[+1 Gold] [in this city] <for every [2] [Worked [Mountain] Tiles in this city]>",
+   "[+1 Faith] [in this city] <for every [2] [Worked [Mountain] Tiles in this city]>"
   ]
  },
  {
   "name": "Oral Tradition",
   "type": "Pantheon",
   "uniques": [
-   "[+1 Culture] from every [Plantation]"
+   "[+1 Science, +2 Faith] from every [Herbalist]",
+   "[+1 Food, +1 Gold, +1 Faith] from [Plantation] tiles [in this city]"
   ]
  },
  {
@@ -132,28 +135,37 @@
   "name": "Religious Settlements",
   "type": "Pantheon",
   "uniques": [
-   "[-15]% Culture cost of natural border growth [in cities following this religion]"
+   "[-25]% Culture cost of natural border growth [in all cities]"
   ]
  },
  {
   "name": "Sacred Path",
   "type": "Pantheon",
   "uniques": [
-   "[+1 Culture] from every [Jungle]"
+   "[+2 Food, +2 Science] from every [Market]",
+   "[+1 Science] [in this city] <for every [2] [Worked [Forest] Tiles in this city]>",
+   "[+1 Culture] [in this city] <for every [2] [Worked [Forest] Tiles in this city]>",
+   "[+1 Faith] [in this city] <for every [2] [Worked [Forest] Tiles in this city]>",
+   "[+1 Science] [in this city] <for every [2] [Worked [Jungle] Tiles in this city]>",
+   "[+1 Culture] [in this city] <for every [2] [Worked [Jungle] Tiles in this city]>",
+   "[+1 Faith] [in this city] <for every [2] [Worked [Jungle] Tiles in this city]>"
   ]
  },
  {
   "name": "Sacred Waters",
   "type": "Pantheon",
   "uniques": [
-   "[+1 Happiness] in cities on [River] tiles"
+   "[+1 Food, +1 Production, +1 Faith] from [Marsh] tiles [in this city]",
+   "[+1 Food, +1 Faith] from [Lakes] tiles [in this city]"
   ]
  },
  {
   "name": "Stone Circles",
   "type": "Pantheon",
   "uniques": [
-   "[+2 Faith] from every [Quarry]"
+   "[+2 Science, +2 Faith] from every [Palace]",
+   "[+1 Culture, +2 Faith] from every [Stone Works]",
+   "[+1 Production, +1 Faith] from [Quarry] tiles [in this city]"
   ]
  },
  {
@@ -181,7 +193,7 @@
   "name": "Divine inspiration",
   "type": "Follower",
   "uniques": [
-   "[+2 Faith] from every [Wonder]"
+   "[+2 Faith] from every specialist [in this city]"
   ]
  },
  {
@@ -196,7 +208,7 @@
   "name": "Guruship",
   "type": "Follower",
   "uniques": [
-   "[+2 Production] [in cities following this religion] <in cities with at least [1] [Specialists]>",
+   "May buy [Mandir] buildings with [Faith] [in cities following this religion]",
    "May buy [Mandir] buildings with [Faith] [in cities following this religion]"
   ]
  },
@@ -204,7 +216,7 @@
   "name": "Holy Warriors",
   "type": "Follower",
   "uniques": [
-   "May buy [{pre-[Industrial era]} {Military} {Land}] units with [Faith] for [2] times their normal Production cost <in [in cities following this religion] cities>",
+   "May buy [Synagogue] buildings with [Faith] [in cities following this religion]",
    "May buy [Synagogue] buildings with [Faith] [in cities following this religion]"
   ]
  },
@@ -219,7 +231,7 @@
   "name": "Monasteries",
   "type": "Follower",
   "uniques": [
-   "May buy [Monastery] buildings for [150] [Faith] [in cities following this religion]",
+   "May buy [Stupa] buildings with [Faith] [in cities following this religion]",
    "May buy [Stupa] buildings with [Faith] [in cities following this religion]"
   ]
  },
@@ -248,23 +260,19 @@
   "name": "Religious Art",
   "type": "Follower",
   "uniques": [
-   "Comment [[Hermitage] provides +5 [Culture] and +5 [Tourism]]",
-   "[+100]% weight to this choice for AI decisions <if [Hermitage] is constructed>",
-   "[-50]% weight to this choice for AI decisions <when [Cultural] Victory is disabled>",
-   "[-50]% weight to this choice for AI decisions <if [Hermitage] is constructed by anybody> <if [Hermitage] is not constructed>"
-  ],
-  "civilopediaText": [
-   {
-    "text": "Hermitage",
-    "link": "Building/Hermitage"
-   }
+   "[+1 Culture] from every [Writer]",
+   "[+1 Culture] from every [Artist]",
+   "[+1 Culture] from every [Musician]",
+   "[+1 Gold] from every [Merchant]",
+   "[+1 Science] from every [Scientist]",
+   "[+1 Production] from every [Engineer]"
   ]
  },
  {
   "name": "Religious Center",
   "type": "Follower",
   "uniques": [
-   "[+2 Happiness] from every [Temple] <in cities with at least [5] [Followers of this Religion]>",
+   "May buy [Order] buildings with [Faith] [in cities following this religion]",
    "May buy [Order] buildings with [Faith] [in cities following this religion]"
   ]
  },
@@ -279,7 +287,7 @@
   "name": "Swords into Ploughshares",
   "type": "Follower",
   "uniques": [
-   "[+15]% growth [in this city] <when not at war>",
+   "May buy [Church] buildings with [Faith] [in cities following this religion]",
    "May buy [Church] buildings with [Faith] [in cities following this religion]"
   ]
  },
@@ -287,7 +295,9 @@
   "name": "Ceremonial Burial",
   "type": "Founder",
   "uniques": [
-   "[+1 Happiness] <for every [2] [[in cities following our religion] Cities of [Major] Civilizations]>",
+   "Gain [10] [Culture] <upon expending a [Great Person] unit>",
+   "Gain [10] [Faith] <upon expending a [Great Person] unit>",
+   "Gain a free [Mausoleum] [in holy cities]",
    "Gain a free [Mausoleum] [in holy cities]"
   ]
  },
@@ -295,7 +305,7 @@
   "name": "Church Property",
   "type": "Founder",
   "uniques": [
-   "[+2 Gold] for each global city following this religion",
+   "Gain a free [Divine Court] [in holy cities]",
    "Gain a free [Divine Court] [in holy cities]"
   ]
  },
@@ -303,7 +313,7 @@
   "name": "Initiation Rites",
   "type": "Founder",
   "uniques": [
-   "[+100 Gold] when a city adopts this religion for the first time <(modified by game speed)>",
+   "Gain a free [Sacred Garden] [in holy cities]",
    "Gain a free [Sacred Garden] [in holy cities]"
   ]
  },
@@ -311,7 +321,8 @@
   "name": "Interfaith Dialogue",
   "type": "Founder",
   "uniques": [
-   "When spreading religion to a city, gain [10] times the amount of followers of other religions as [Science]",
+   "Gain [100] [Faith] <upon conquering a city>",
+   "Gain a free [Great Altar] [in holy cities]",
    "Gain a free [Great Altar] [in holy cities]"
   ]
  },
@@ -319,9 +330,7 @@
   "name": "Papal Primacy",
   "type": "Founder",
   "uniques": [
-   "Resting point for Influence with City-States following this religion [+15]",
-   "[-100]% weight to this choice for AI decisions <when number of [Remaining [City-State] Civilizations] is less than [2]>",
-   "[-50]% weight to this choice for AI decisions <when number of [Remaining [City-State] Civilizations] is less than [4]>",
+   "Gain a free [Holy Council] [in holy cities]",
    "Gain a free [Holy Council] [in holy cities]"
   ]
  },
@@ -329,7 +338,7 @@
   "name": "Peace Loving",
   "type": "Founder",
   "uniques": [
-   "[+1 Happiness] from every [5] global followers [in non-enemy foreign cities]",
+   "Gain a free [Celestial Throne] [in holy cities]",
    "Gain a free [Celestial Throne] [in holy cities]"
   ]
  },
@@ -337,7 +346,7 @@
   "name": "Pilgrimage",
   "type": "Founder",
   "uniques": [
-   "[+2 Faith] for each global city following this religion",
+   "Gain a free [Apostolic Palace] [in holy cities]",
    "Gain a free [Apostolic Palace] [in holy cities]"
   ]
  },
@@ -345,7 +354,9 @@
   "name": "Tithe",
   "type": "Founder",
   "uniques": [
-   "[+1 Gold] from every [4] global followers [in all cities]",
+   "Gain [2] [Culture] <upon discovering [All] technology>",
+   "Gain [2] [Faith] <upon discovering [All] technology>",
+   "Gain a free [Chartarium] [in holy cities]",
    "Gain a free [Chartarium] [in holy cities]"
   ]
  },
@@ -353,7 +364,7 @@
   "name": "World Church",
   "type": "Founder",
   "uniques": [
-   "[+1 Culture] from every [5] global followers [in foreign cities]",
+   "Gain a free [Grand Ossuary] [in holy cities]",
    "Gain a free [Grand Ossuary] [in holy cities]"
   ]
  },
@@ -361,6 +372,13 @@
   "name": "Defender of the Faith",
   "type": "Enhancer",
   "uniques": [
+   "[+2 Culture, +1 Faith] from every [Walls]",
+   "[+2 Culture, +1 Faith] from every [Castle]",
+   "[+2 Culture, +1 Faith] from every [Bastion Fort]",
+   "[+2 Culture, +1 Faith] from every [Arsenal]",
+   "[+2 Culture, +1 Faith] from every [Military Base]",
+   "[+2 Culture, +1 Faith] from every [Mine Field]",
+   "[+2 Culture, +1 Faith] from every [Bomb Shelter]",
    "[+20]% Strength <for [All] units> <when fighting in [Friendly Land] tiles>"
   ]
  },
@@ -368,8 +386,7 @@
   "name": "Holy Order",
   "type": "Enhancer",
   "uniques": [
-   "[Faith] cost of purchasing [Missionary] units [-30]%",
-   "[Faith] cost of purchasing [Inquisitor] units [-30]%"
+   "Religion naturally spreads to cities [4] tiles away"
   ]
  },
  {
@@ -390,23 +407,29 @@
   "name": "Messiah",
   "type": "Enhancer",
   "uniques": [
-   "[+25]% Spread Religion Strength <for [Great Prophet] units>",
-   "[-25]% Faith cost of generating Great Prophet equivalents"
+   "[+3 Faith, +3 Culture] from [Holy site] tiles [in all cities]"
   ]
  },
  {
   "name": "Missionary Zeal",
   "type": "Enhancer",
   "uniques": [
-   "[+25]% Spread Religion Strength <for [Missionary] units>"
+   "[Great General] is earned [+33]% faster <during a Golden Age>",
+   "[Great Admiral] is earned [+33]% faster <during a Golden Age>",
+   "[Great Engineer] is earned [+33]% faster <during a Golden Age>",
+   "[Great Scientist] is earned [+33]% faster <during a Golden Age>",
+   "[Great Merchant] is earned [+33]% faster <during a Golden Age>",
+   "[Great Artist] is earned [+33]% faster <during a Golden Age>",
+   "[Great Musician] is earned [+33]% faster <during a Golden Age>",
+   "[Great Writer] is earned [+33]% faster <during a Golden Age>",
+   "[Great Prophet] is earned [+33]% faster <during a Golden Age>"
   ]
  },
  {
   "name": "Religious Texts",
   "type": "Enhancer",
   "uniques": [
-   "[+25]% Natural religion spread [in all cities]",
-   "[+25]% Natural religion spread [in all cities] <after discovering [Printing Press]>"
+   "[Faith] cost of purchasing [Inquisitor] units [-33]%"
   ]
  },
  {
@@ -422,83 +445,88 @@
   "name": "Reliquary",
   "type": "Enhancer",
   "uniques": [
-   "Gain [50] [Faith] <upon expending a [Great Person] unit> <(modified by game speed)>"
+   "[+2 Culture, +2 Faith] [in all cities]"
   ]
  },
  {
   "name": "Earth Mother",
   "type": "Pantheon",
   "uniques": [
-   "[+1 Faith] from every [Copper]",
-   "[+1 Faith] from every [Iron]",
-   "[+1 Faith] from every [Salt]"
+   "[+2 Faith] from every [Forge]",
+   "[+1 Production, +1 Culture, +1 Faith] from [Mine] tiles [in this city]"
   ]
  },
  {
   "name": "God-King",
   "type": "Pantheon",
   "uniques": [
-   "[+1 Culture, +1 Faith, +1 Gold, +1 Production, +1 Science] from every [Palace]"
+   "[+2 Production, +2 Faith] from every [Palace]",
+   "[+1 Gold] per [5] population [in this city]",
+   "[+1 Science] per [5] population [in this city]",
+   "[+1 Culture] per [5] population [in this city]",
+   "[+1 Faith] per [5] population [in this city]"
   ]
  },
  {
   "name": "Sun God",
   "type": "Pantheon",
   "uniques": [
-   "[+1 Food] from every [Bananas]",
-   "[+1 Food] from every [Citrus]",
-   "[+1 Food] from every [Wheat]"
+   "[+2 Gold, +2 Faith] from every [Granary]",
+   "[+1 Food, +1 Science, +1 Faith] from [Farm] tiles [in this city]"
   ]
  },
  {
   "name": "Tears of the Gods",
   "type": "Pantheon",
   "uniques": [
-   "[+2 Faith] from every [Gems]",
-   "[+2 Faith] from every [Pearls]"
+   "[+1 Culture] from every [Palace]",
+   "[+1 Faith] from every [Monument]"
   ]
  },
  {
   "name": "Charitable Missions",
   "type": "Enhancer",
   "uniques": [
-   "Only available <after adopting [Reformation]>",
-   "Gifts of Gold to City-States generate [+30]% more Influence",
-   "[-100]% weight to this choice for AI decisions <when number of [Remaining [City-State] Civilizations] is less than [2]>"
+   "[+15]% Natural religion spread [in all cities]"
   ]
  },
  {
   "name": "Evangelism",
   "type": "Enhancer",
   "uniques": [
-   "Only available <after adopting [Reformation]>",
-   "Comment [[Missionary] unit's Spread Religion action erodes existing pressure from other religions]"
-  ],
-  "civilopediaText": [
-   {
-    "text": "Missionary",
-    "link": "Unit/Missionary"
-   }
+   "Gain [50] [Gold] <upon conquering a city>",
+   "Gain [50] [Culture] <upon conquering a city>",
+   "[+20]% Strength <for [All] units> <when fighting in [Enemy Land] tiles>"
   ]
  },
  {
   "name": "Heathen Conversion",
   "type": "Enhancer",
   "uniques": [
-   "Only available <after adopting [Reformation]>",
-   "When defeating a [Barbarian] unit, earn [0] Gold and recruit it",
-   "[-20]% weight to this choice for AI decisions"
+   "[+1]% [Horses] resource production",
+   "[+1]% [Iron] resource production",
+   "[+1]% [Coal] resource production",
+   "[+1]% [Oil] resource production",
+   "[+1]% [Aluminum] resource production",
+   "[+1]% [Uranium] resource production",
+   "[+1]% [Trade Route] resource production",
+   "[+1]% [Tourism] resource production"
   ]
  },
  {
   "name": "Jesuit Education",
   "type": "Enhancer",
   "uniques": [
-   "Only available <after adopting [Reformation]>",
-   "May buy [University] buildings with [Faith] [in all cities in which the majority religion is a major religion]",
-   "May buy [Public School] buildings with [Faith] [in all cities in which the majority religion is a major religion]",
-   "May buy [Research Lab] buildings with [Faith] [in all cities in which the majority religion is a major religion]",
-   "[+50]% weight to this choice for AI decisions",
+   "[+2 Science] from every [Library]",
+   "[+2 Science] from every [University]",
+   "[+2 Science] from every [Public School]",
+   "[+2 Science] from every [Research Lab]",
+   "May buy [Library] buildings with [Faith] [in cities following this religion]",
+   "May buy [University] buildings with [Faith] [in cities following this religion]",
+   "May buy [Public School] buildings with [Faith] [in cities following this religion]",
+   "May buy [Research Lab] buildings with [Faith] [in cities following this religion]",
+   "May buy [Seowon] buildings with [Faith] [in cities following this religion]",
+   "May buy [Skola] buildings with [Faith] [in cities following this religion]",
    "May buy [Library] buildings with [Faith] [in cities following this religion]",
    "May buy [University] buildings with [Faith] [in cities following this religion]",
    "May buy [Public School] buildings with [Faith] [in cities following this religion]",
@@ -511,7 +539,6 @@
   "name": "Religious Fervor",
   "type": "Enhancer",
   "uniques": [
-   "Only available <after adopting [Reformation]>",
    "May buy [{Industrial era} {Land}] units with [Faith] [in all cities in which the majority religion is a major religion]",
    "May buy [{Modern era} {Land}] units with [Faith] [in all cities in which the majority religion is a major religion]",
    "May buy [{Atomic era} {Land}] units with [Faith] [in all cities in which the majority religion is a major religion]",
@@ -524,47 +551,59 @@
   "name": "Sacred Sites",
   "type": "Enhancer",
   "uniques": [
-   "Only available <after adopting [Reformation]>",
-   "Comment [+2 [Tourism] from every [{Cathedral} {Monastery} {Mosque} {Pagoda}]]",
-   "[-100]% weight to this choice for AI decisions <when [Cultural] Victory is disabled>"
-  ],
-  "civilopediaText": [
-   {
-    "text": "Cathedral",
-    "link": "Building/Cathedral"
-   },
-   {
-    "text": "Monastery",
-    "link": "Building/Monastery"
-   },
-   {
-    "text": "Mosque",
-    "link": "Building/Mosque"
-   },
-   {
-    "text": "Pagoda",
-    "link": "Building/Pagoda"
-   }
+   "[+10 Culture] from every [Hermitage]"
   ]
  },
  {
   "name": "To the Glory of God",
   "type": "Enhancer",
   "uniques": [
-   "Only available <after adopting [Reformation]>",
-   "May buy [Great Person] units for [1000] [Faith] [in all cities in which the majority religion is a major religion] at an increasing price ([500]) <starting from the [Industrial era]>",
-   "[+50]% weight to this choice for AI decisions"
+   "Gain [3] [Gold] <upon expending a [Great General] unit>",
+   "Gain [3] [Science] <upon expending a [Great General] unit>",
+   "Gain [3] [Culture] <upon expending a [Great General] unit>",
+   "Gain [3] [Gold] <upon expending a [Great Admiral] unit>",
+   "Gain [3] [Science] <upon expending a [Great Admiral] unit>",
+   "Gain [3] [Culture] <upon expending a [Great Admiral] unit>",
+   "Gain [3] [Gold] <upon expending a [Great Engineer] unit>",
+   "Gain [3] [Science] <upon expending a [Great Engineer] unit>",
+   "Gain [3] [Culture] <upon expending a [Great Engineer] unit>",
+   "Gain [3] [Gold] <upon expending a [Great Scientist] unit>",
+   "Gain [3] [Science] <upon expending a [Great Scientist] unit>",
+   "Gain [3] [Culture] <upon expending a [Great Scientist] unit>",
+   "Gain [3] [Gold] <upon expending a [Great Merchant] unit>",
+   "Gain [3] [Science] <upon expending a [Great Merchant] unit>",
+   "Gain [3] [Culture] <upon expending a [Great Merchant] unit>",
+   "Gain [3] [Gold] <upon expending a [Great Artist] unit>",
+   "Gain [3] [Science] <upon expending a [Great Artist] unit>",
+   "Gain [3] [Culture] <upon expending a [Great Artist] unit>",
+   "Gain [3] [Gold] <upon expending a [Great Musician] unit>",
+   "Gain [3] [Science] <upon expending a [Great Musician] unit>",
+   "Gain [3] [Culture] <upon expending a [Great Musician] unit>",
+   "Gain [3] [Gold] <upon expending a [Great Writer] unit>",
+   "Gain [3] [Science] <upon expending a [Great Writer] unit>",
+   "Gain [3] [Culture] <upon expending a [Great Writer] unit>",
+   "Gain [3] [Gold] <upon expending a [Great Prophet] unit>",
+   "Gain [3] [Science] <upon expending a [Great Prophet] unit>",
+   "Gain [3] [Culture] <upon expending a [Great Prophet] unit>",
+   "Gain [3] [Gold] <upon expending a [Great Diplomat] unit>",
+   "Gain [3] [Science] <upon expending a [Great Diplomat] unit>",
+   "Gain [3] [Culture] <upon expending a [Great Diplomat] unit>"
   ]
  },
  {
   "name": "Underground Sect",
   "type": "Enhancer",
   "uniques": [
-   "Only available <after adopting [Reformation]>",
-   "[+10]% spy effectiveness [in all cities in which the majority religion is a major religion]",
-   "[+10]% Natural religion spread [in all cities in which the majority religion is a major religion]",
-   "Only available <when espionage is enabled> <hidden from users>",
-   "[-50]% weight to this choice for AI decisions",
+   "[+2 Culture] from every [Amphitheater]",
+   "[+2 Culture] from every [Opera House]",
+   "[+2 Culture] from every [Museum]",
+   "[+2 Culture] from every [Broadcast Tower]",
+   "[+1 Happiness] <for every [2] [[in cities following our religion] Cities of [All] Civilizations]>",
+   "May buy [Amphitheater] buildings with [Faith] [in cities following this religion]",
+   "May buy [Opera House] buildings with [Faith] [in cities following this religion]",
+   "May buy [Museum] buildings with [Faith] [in cities following this religion]",
+   "May buy [Broadcast Tower] buildings with [Faith] [in cities following this religion]",
+   "May buy [Acropolis] buildings with [Faith] [in cities following this religion]",
    "May buy [Amphitheater] buildings with [Faith] [in cities following this religion]",
    "May buy [Opera House] buildings with [Faith] [in cities following this religion]",
    "May buy [Museum] buildings with [Faith] [in cities following this religion]",
@@ -576,8 +615,210 @@
   "name": "Unity of the Prophets",
   "type": "Enhancer",
   "uniques": [
-   "Only available <after adopting [Reformation]>",
-   "When spreading religion to a city, gain [2] times the amount of followers of other religions as [Faith]"
+   "[+2 Science, +2 Faith] from [Landmark] tiles [in all cities]",
+   "[+2 Culture] from every [Great Work]"
+  ]
+ },
+ {
+  "name": "Bran, the Sleeping Guardian",
+  "type": "Pantheon",
+  "uniques": [
+   "[+1 Production, +1 Gold, +1 Science, +1 Culture] from every [Palace]",
+   "[+2 Happiness] from every [Circus]",
+   "[+1 Production] per [4] population [in this city]",
+   "[+1 Gold] per [4] population [in this city]",
+   "[+1 Science] per [4] population [in this city]",
+   "[+1 Culture] per [4] population [in this city]",
+   "[+25]% Strength for cities <when attacking>",
+   "[All] Units adjacent to this city heal [+10] HP per turn when healing",
+   "Unavailable <for [non-[Celts]] Civilizations>"
+  ],
+  "civilopediaText": [
+   {
+    "text": "+1 Production, Gold, Science, and Culture from the Palace. +4 Production, Gold, Science, and Culture in your Capital/Holy City for every 5 Followers of your Pantheon in owned Cities. +25% City Ranged Combat Strength. Units heal +10 HP per turn in owned Territory. +2 Happiness from Ceilidh Hall."
+   }
+  ]
+ },
+ {
+  "name": "Cailleach, the Queen of Winter",
+  "type": "Pantheon",
+  "uniques": [
+   "[+1 Gold, +1 Culture] from [Quarry] tiles [in this city]",
+   "[+1 Gold, +1 Culture] from [Mine] tiles [in this city]",
+   "[+1 Food, +1 Production, +1 Science, +1 Culture] from [Snow] tiles [in this city]",
+   "[+1 Production] [in this city] <for every [2] [Worked [Tundra] Tiles in this city]>",
+   "[+1 Food] [in this city] <for every [2] [Worked [Tundra] Tiles in this city]>",
+   "Unavailable <for [non-[Celts]] Civilizations>"
+  ],
+  "civilopediaText": [
+   {
+    "text": "+1 Food and Production for every 2 Tundra tiles worked by the City. +1 Food, Production, Science, and Culture from Snow tiles with Resources. +1 Gold and Culture from Quarries and Mines on Resources. +5 Tourism from Ceilidh Hall."
+   }
+  ]
+ },
+ {
+  "name": "Cernunnos, the Horned Stag",
+  "type": "Pantheon",
+  "uniques": [
+   "[+2 Culture] from every [Circus]",
+   "[+1 Science, +1 Culture] from [Plantation] tiles [in this city]",
+   "[+1 Science, +1 Culture] from [Camp] tiles [in this city]",
+   "[+1 Food, +1 Gold] from [Forest] tiles [in this city]",
+   "[+1 Food, +1 Production] from [Jungle] tiles [in this city]",
+   "Unavailable <for [non-[Celts]] Civilizations>"
+  ],
+  "civilopediaText": [
+   {
+    "text": "+1 Food and Gold from Forests. +1 Food and Production from Jungles. +1 Science and Culture from Camps and Plantations. +2 Culture from Ceilidh Hall."
+   }
+  ]
+ },
+ {
+  "name": "Cooperation",
+  "type": "Follower",
+  "uniques": [
+   "[+2 Production] from every specialist [in this city]"
+  ],
+  "civilopediaText": [
+   {
+    "text": "Food and Production Internal Trade Routes generate +3 of their respective yields, scaling with Era. +2 Production if City has a Specialist."
+   }
+  ]
+ },
+ {
+  "name": "Dagda, the All-Father",
+  "type": "Pantheon",
+  "uniques": [
+   "[+5 Food] from every [Circus]",
+   "[+25]% growth [in this city]",
+   "[+1 Happiness] [in this city]",
+   "Unavailable <for [non-[Celts]] Civilizations>"
+  ],
+  "civilopediaText": [
+   {
+    "text": "+25% Growth and +1 Happiness. +12 Production, Gold, and Culture when a Citizen is born, scaling with Era. +5 Food from Ceilidh Hall."
+   }
+  ]
+ },
+ {
+  "name": "Epona, the Great Mare",
+  "type": "Pantheon",
+  "uniques": [
+   "Unavailable <for [non-[Celts]] Civilizations>"
+  ],
+  "civilopediaText": [
+   {
+    "text": "+3 Border Growth. Gain +8 Food, Production, Science, and Culture every time the City expands its borders naturally, scaling with Era. +5 Border Growth from Ceilidh Hall."
+   }
+  ]
+ },
+ {
+  "name": "Gurdwaras",
+  "type": "Follower",
+  "uniques": [],
+  "civilopediaText": [
+   {
+    "text": "Use Faith to purchase Gurdwaras."
+   }
+  ]
+ },
+ {
+  "name": "Lugh, the Skilled One",
+  "type": "Pantheon",
+  "uniques": [
+   "[+3 Production] from every [Circus]",
+   "[+2 Food, +2 Gold, +2 Science, +2 Culture] from every specialist [in this city]",
+   "[+2 Culture] from every [World Wonder]",
+   "[+10]% Production when constructing [All] wonders [in this city]",
+   "Unavailable <for [non-[Celts]] Civilizations>"
+  ],
+  "civilopediaText": [
+   {
+    "text": "+2 Food, Gold, Science, and Culture if the City has a Specialist. +10% Production towards Wonders. +2 Culture and Tourism from World Wonders. +3 Production from Ceilidh Hall."
+   }
+  ]
+ },
+ {
+  "name": "Manannan, Son of the Sea",
+  "type": "Pantheon",
+  "uniques": [
+   "[+1 Gold] from [Fishing Boats] tiles [in this city]",
+   "[+1 Production] from [Coast] tiles [in this city]",
+   "[+1 Production] from [Ocean] tiles [in this city]",
+   "[+3 Food, +3 Production, +3 Gold] [in this city] <in [Coastal] cities>",
+   "Unavailable <for [non-[Celts]] Civilizations>"
+  ],
+  "civilopediaText": [
+   {
+    "text": "+3 Food, Production, and Gold if the City is coastal. +1 Production from Water tiles and +1 Gold from Fishing Boats. +2 Great Admiral Points from Ceilidh Hall."
+   }
+  ]
+ },
+ {
+  "name": "Morrigan, the Harbinger",
+  "type": "Pantheon",
+  "uniques": [
+   "Unavailable <for [non-[Celts]] Civilizations>"
+  ],
+  "civilopediaText": [
+   {
+    "text": "Gain Gold, Culture, and Golden Age Points from killing enemy units equal to 200% of its Strength.Gain 20 Gold, Culture, and Golden Age Points when you pillage an improvement, scaling with Era. +2 Great General Points from Ceilidh Hall."
+   }
+  ]
+ },
+ {
+  "name": "Nuada, the Silver-Handed",
+  "type": "Pantheon",
+  "uniques": [
+   "[+5 Gold] from every [Circus]",
+   "Unavailable <for [non-[Celts]] Civilizations>"
+  ],
+  "civilopediaText": [
+   {
+    "text": "+15% Gold and Science during \"We Love the King Days\". +3 Gold, Science, and Golden Age Points in your Capital/Holy City for every unique Luxury Resource owned or imported. +3 Gold, Science, and Golden Age Points per active Trade Route to or from the City. +5 Gold from Ceilidh Hall."
+   }
+  ]
+ },
+ {
+  "name": "Ogma, the Learned",
+  "type": "Pantheon",
+  "uniques": [
+   "[+5 Science] from every [Circus]",
+   "[+3 Science, +3 Culture] from every [Palace]",
+   "[+1 Science, +1 Culture] from every [Great Work]",
+   "[+1 Science] per [4] population [in this city]",
+   "Unavailable <for [non-[Celts]] Civilizations>"
+  ],
+  "civilopediaText": [
+   {
+    "text": "+1 Science for every 4 Citizens in the City. +1 Science and Culture from Great Works. +3 Science and Culture from the Palace. +3 Great Scientist Points and Great Artist Points in your Capital/Holy City. +5 Science from Ceilidh Hall."
+   }
+  ]
+ },
+ {
+  "name": "Rhiannon, the Sovereign",
+  "type": "Pantheon",
+  "uniques": [
+   "[+1 Production, +1 Gold] from [Plantation] tiles [in this city]",
+   "[+1 Production, +1 Gold] from [Quarry] tiles [in this city]",
+   "[+1 Production, +1 Gold] from [Fishing Boats] tiles [in this city]",
+   "[+1 Production, +1 Gold] from [Farm] tiles [in this city]",
+   "Unavailable <for [non-[Celts]] Civilizations>"
+  ],
+  "civilopediaText": [
+   {
+    "text": "+2 Culture. +1 Production and Gold from improved Resources. +5 Golden Age Points from Ceilidh Hall."
+   }
+  ]
+ },
+ {
+  "name": "Teocallis",
+  "type": "Follower",
+  "uniques": [],
+  "civilopediaText": [
+   {
+    "text": "Use Faith to purchase Teocallis."
+   }
   ]
  }
 ]

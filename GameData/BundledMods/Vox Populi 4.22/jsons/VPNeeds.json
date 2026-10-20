@@ -637,7 +637,7 @@
   }
  },
  "policies": {
-  "Representation": {
+  "Equality": {
    "global": {
     "distressFlat": 1,
     "povertyFlat": 1,
@@ -645,9 +645,14 @@
     "boredomFlat": 1
    }
   },
-  "Theocracy": {
+  "Divine Right": {
    "global": {
     "boredomFlat": 1
+   }
+  },
+  "Free Trade": {
+   "global": {
+    "povertyFlat": 2
    }
   },
   "Free Thought": {
@@ -655,7 +660,7 @@
     "religiousUnrestFlat": 5
    }
   },
-  "Sovereignty": {
+  "Rights of Man": {
    "global": {
     "distressFlat": 1,
     "povertyFlat": 1,
@@ -688,14 +693,9 @@
     "illiteracyFlat": 2
    }
   },
-  "Fine Arts": {
+  "Refinement": {
    "global": {
     "noUnhappyFromXSpecialists": 1
-   }
-  },
-  "Caravans": {
-   "global": {
-    "povertyFlat": 2
    }
   },
   "Open Society": {
