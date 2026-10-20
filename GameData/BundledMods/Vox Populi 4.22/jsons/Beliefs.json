@@ -539,6 +539,7 @@
   "name": "Religious Fervor",
   "type": "Enhancer",
   "uniques": [
+   "Only available <after adopting [Fiefdoms]>",
    "May buy [{Industrial era} {Land}] units with [Faith] [in all cities in which the majority religion is a major religion]",
    "May buy [{Modern era} {Land}] units with [Faith] [in all cities in which the majority religion is a major religion]",
    "May buy [{Atomic era} {Land}] units with [Faith] [in all cities in which the majority religion is a major religion]",
