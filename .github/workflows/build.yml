@@ -17,6 +17,9 @@ jobs:
       - name: Toolchain
         run: |
           brew install xcodegen >/dev/null
+          ls -d /Applications/Xcode*.app | tee xcodes.txt
+          NEWEST=$(ls -d /Applications/Xcode_*.app | sed -E 's/.*Xcode_([0-9.]+)\.app/\1 &/' | sort -V | tail -1 | cut -d' ' -f2)
+          echo "selecting $NEWEST"; sudo xcode-select -s "$NEWEST/Contents/Developer"
           xcodebuild -version | tee toolchain.txt
           swift --version | tee -a toolchain.txt
       - name: JVM-order primitives vs JVM reference
