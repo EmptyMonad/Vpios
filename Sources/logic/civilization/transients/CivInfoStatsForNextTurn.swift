@@ -28,7 +28,8 @@ extension GameState {
             // "Luxury resources": the summarized supply's luxuries (a zero sum is not in it) that are not obsolete.
             if vpNeeds != nil {   // VP: each luxury's own Happiness (CvPlayer::GetBonusHappinessFromLuxuriesFlat)
                 let lux = Set(civResourceSupply(civId).keys.filter { rs.resources[$0]?.resourceType == "Luxury" })
-                h.add("Luxury resources", Double(vpLuxuryHappiness(civId: civId, luxuries: lux) ?? 0))
+                let uniqueExtra = Double(perLux - Float(4.0 + diff.extraHappinessPerLuxury))   // "[n] Happiness from each type of luxury resource"
+                h.add("Luxury resources", Double(vpLuxuryHappiness(civId: civId, luxuries: lux) ?? 0) + uniqueExtra * Double(lux.filter { (vpNeeds?.luxuryHappiness[$0] ?? 0) > 0 }.count))
                 perLux = 0   // the city-state and traded-luxury rows below are Unciv's, not VP's
             } else {
                 h.add("Luxury resources", Double(Float(luxuryTypesOwned(civId)) * perLux))

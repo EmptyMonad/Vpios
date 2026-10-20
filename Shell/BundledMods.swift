@@ -37,7 +37,7 @@ enum VPSelfTest {
         let args = ProcessInfo.processInfo.arguments
         guard let i = args.firstIndex(of: "-vpSelfTest") else { return }
         let turns = (i + 1 < args.count ? Int(args[i + 1]) : nil) ?? 100
-        Thread.detachNewThread {
+        let worker = Thread {
             epochsAutoplay = true
             setvbuf(stdout, nil, _IOLBF, 0)
             var s = GameSettings()
@@ -65,5 +65,7 @@ enum VPSelfTest {
             print("VPTEST done")
             exit(0)
         }
+        worker.stackSize = 256 << 20   // the turn needs far more than a secondary thread's default 512 KB
+        worker.start()
     }
 }
