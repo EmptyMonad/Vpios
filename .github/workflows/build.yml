@@ -19,6 +19,13 @@ jobs:
           brew install xcodegen >/dev/null
           xcodebuild -version | tee toolchain.txt
           swift --version | tee -a toolchain.txt
+      - name: JVM-order primitives vs JVM reference
+        id: jvmcheck
+        continue-on-error: true
+        run: |
+          set -o pipefail
+          swiftc -O -o jvmcheck Shell/JavaCompat.swift ci/jvmcheck/main.swift 2>&1 | tee jvmcheck.log
+          ./jvmcheck ci/jvmcheck 2>&1 | tee -a jvmcheck.log
       - name: Generate project
         run: xcodegen generate --spec project.yml
       - name: Build (simulator, unsigned)
@@ -28,7 +35,8 @@ jobs:
           set -o pipefail
           xcodebuild -project VPiOS.xcodeproj -scheme VPiOS -configuration Debug \
             -sdk iphonesimulator -destination 'generic/platform=iOS Simulator' \
-            -derivedDataPath dd CODE_SIGNING_ALLOWED=NO build 2>&1 | tee build.log
+            -derivedDataPath dd CODE_SIGNING_ALLOWED=NO -IDEBuildingContinueBuildingAfterErrors=YES \
+            OTHER_SWIFT_FLAGS='$(inherited) -continue-building-after-errors' build 2>&1 | tee build.log
       - name: Build unsigned IPA
         if: steps.build.outcome == 'success'
         run: |
@@ -51,6 +59,7 @@ jobs:
         run: |
           mkdir -p report
           { echo "commit $SHA"; echo "outcome $OUTCOME"; cat toolchain.txt; } > report/summary.txt
+          cp jvmcheck.log report/ 2>/dev/null || true
           grep -E "^/.*: (error|fatal error):" build.log | sed "s#$GITHUB_WORKSPACE/##" | sort -u > report/errors.txt || true
           grep -cE ": error:" build.log >> report/summary.txt || true
           wc -l < report/errors.txt >> report/summary.txt
