@@ -14,6 +14,7 @@
   "name": "Settler",
   "unitType": "Civilian",
   "movement": 2,
+  "cost": 106,
   "uniques": [
    "Comment [Founds a new city]",
    "Excess Food converted to Production when under construction",
@@ -296,7 +297,8 @@
    "Oceanic Perils",
    "Targeting I",
    "Splash Damage I"
-  ]
+  ],
+  "cost": 120
  },
  {
   "name": "Galley",
@@ -513,7 +515,8 @@
    "Skeleton Key",
    "Only Attacks Cities"
   ],
-  "attackSound": "throw"
+  "attackSound": "throw",
+  "cost": 70
  },
  {
   "name": "Pictish Warrior",
@@ -602,7 +605,8 @@
   ],
   "hurryCostModifier": 20,
   "attackSound": "horse",
-  "requiredResource": "Horses"
+  "requiredResource": "Horses",
+  "cost": 90
  },
  {
   "name": "African Forest Elephant",
@@ -711,7 +715,8 @@
    "Moves at half-speed in enemy territory",
    "Cover I",
    "Field I"
-  ]
+  ],
+  "cost": 100
  },
  {
   "name": "Composite Bowman",
@@ -1066,7 +1071,8 @@
    "Range",
    "Assize of Arms"
   ],
-  "attackSound": "arrow"
+  "attackSound": "arrow",
+  "cost": 160
  },
  {
   "name": "Trebuchet",
@@ -1212,7 +1218,8 @@
   "promotions": [
    "Indomitable",
    "Shallow Draft"
-  ]
+  ],
+  "cost": 160
  },
  {
   "name": "Musketman",
@@ -1432,7 +1439,8 @@
   "upgradesTo": "Landship",
   "obsoleteTech": "Combined Arms",
   "attackSound": "horse",
-  "requiredResource": "Horses"
+  "requiredResource": "Horses",
+  "cost": 350
  },
  {
   "name": "Hakkapeliitta",
@@ -1457,7 +1465,8 @@
   "upgradesTo": "Landship",
   "obsoleteTech": "Combined Arms",
   "attackSound": "horse",
-  "requiredResource": "Horses"
+  "requiredResource": "Horses",
+  "cost": 350
  },
  {
   "name": "Cannon",
@@ -1536,7 +1545,8 @@
    "Formation I",
    "Highlanders"
   ],
-  "attackSound": "shot"
+  "attackSound": "shot",
+  "cost": 625
  },
  {
   "name": "Carolean",
@@ -2665,7 +2675,8 @@
    "Uncapturable",
    "Can be added to [The Spaceship] in the Capital",
    "Limited to [3] per Civilization"
-  ]
+  ],
+  "cost": 8000
  },
  {
   "name": "SS Cockpit",
@@ -2679,7 +2690,8 @@
    "Uncapturable",
    "Can be added to [The Spaceship] in the Capital",
    "Limited to [1] per Civilization"
-  ]
+  ],
+  "cost": 8000
  },
  {
   "name": "SS Engine",
@@ -2693,7 +2705,8 @@
    "Uncapturable",
    "Can be added to [The Spaceship] in the Capital",
    "Limited to [1] per Civilization"
-  ]
+  ],
+  "cost": 8000
  },
  {
   "name": "SS Stasis Chamber",
@@ -2707,7 +2720,8 @@
    "Uncapturable",
    "Can be added to [The Spaceship] in the Capital",
    "Limited to [1] per Civilization"
-  ]
+  ],
+  "cost": 8000
  },
  {
   "name": "Caravan",
@@ -3034,7 +3048,8 @@
    "Survivalism I",
    "Pride of the Nation"
   ],
-  "attackSound": "shot"
+  "attackSound": "shot",
+  "cost": 1300
  },
  {
   "name": "Future Infantry",
@@ -3177,7 +3192,8 @@
    "Only Defensive",
    "Naval Target Penalty",
    "Skirmisher Doctrine"
-  ]
+  ],
+  "cost": 135
  },
  {
   "name": "Cuirassier",
@@ -3197,7 +3213,8 @@
    "Only Defensive",
    "Naval Target Penalty",
    "Skirmisher Doctrine"
-  ]
+  ],
+  "cost": 325
  },
  {
   "name": "Field Gun",
@@ -3218,7 +3235,8 @@
    "Moves at half-speed in enemy territory",
    "Cover I",
    "Indirect Fire"
-  ]
+  ],
+  "cost": 625
  },
  {
   "name": "Explorer",
@@ -3234,7 +3252,8 @@
    "Embarked Sight",
    "Ocean Explorer",
    "Reconnaissance"
-  ]
+  ],
+  "cost": 160
  },
  {
   "name": "Commando",
@@ -3250,7 +3269,8 @@
    "Commando",
    "Reconnaissance",
    "Scavenger"
-  ]
+  ],
+  "cost": 625
  },
  {
   "name": "Galley (VP)",
@@ -3407,6 +3427,7 @@
   "name": "Pioneer",
   "unitType": "Civilian",
   "movement": 3,
+  "cost": 106,
   "requiredTech": "Banking",
   "obsoleteTech": "Railroads",
   "upgradesTo": "Colonist",
@@ -3421,6 +3442,7 @@
   "name": "Colonist",
   "unitType": "Civilian",
   "movement": 4,
+  "cost": 106,
   "requiredTech": "Railroads",
   "uniques": [
    "Founds a new city"
@@ -3522,7 +3544,8 @@
    "Flag Bearers"
   ],
   "uniqueTo": "Brazil",
-  "replaces": "Explorer"
+  "replaces": "Explorer",
+  "cost": 160
  },
  {
   "name": "Free Company",
@@ -3551,6 +3574,7 @@
    "Amphibious",
    "Defensive Embarkation",
    "Flank Attack Bonus"
-  ]
+  ],
+  "cost": 1300
  }
 ]
