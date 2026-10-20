@@ -65,20 +65,6 @@ jobs:
           grep "VPTEST" vptest-console.log > vptest.log || true
           tail -c 20000 vptest-console.log > vptest-console-tail.log
           for f in ~/Library/Logs/DiagnosticReports/*VPiOS*; do [ -f "$f" ] && head -c 20000 "$f" > crash.txt; done
-      - name: Build unsigned IPA
-        if: steps.build.outcome == 'success'
-        run: |
-          set -o pipefail
-          xcodebuild -project VPiOS.xcodeproj -scheme VPiOS -configuration Release \
-            -sdk iphoneos -destination 'generic/platform=iOS' -derivedDataPath ddr \
-            CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO build 2>&1 | tail -20
-          mkdir -p Payload && cp -R ddr/Build/Products/Release-iphoneos/VPiOS.app Payload/
-          zip -qry VPiOS-unsigned.ipa Payload
-      - uses: actions/upload-artifact@v4
-        if: steps.build.outcome == 'success'
-        with:
-          name: VPiOS-unsigned-ipa
-          path: VPiOS-unsigned.ipa
       - name: Publish build report to ci-logs branch
         if: always()
         env:
@@ -98,3 +84,17 @@ jobs:
             || { git init -q logs && git -C logs checkout -q -b ci-logs && git -C logs remote add origin "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git"; }
           rm -rf logs/latest && mkdir -p logs/latest && cp report/* logs/latest/
           git -C logs add -A && git -C logs commit -qm "build $SHA: $OUTCOME" && git -C logs push -q origin ci-logs
+      - name: Build unsigned IPA
+        if: steps.build.outcome == 'success'
+        run: |
+          set -o pipefail
+          xcodebuild -project VPiOS.xcodeproj -scheme VPiOS -configuration Release \
+            -sdk iphoneos -destination 'generic/platform=iOS' -derivedDataPath ddr \
+            CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO build 2>&1 | tail -20
+          mkdir -p Payload && cp -R ddr/Build/Products/Release-iphoneos/VPiOS.app Payload/
+          zip -qry VPiOS-unsigned.ipa Payload
+      - uses: actions/upload-artifact@v4
+        if: steps.build.outcome == 'success'
+        with:
+          name: VPiOS-unsigned-ipa
+          path: VPiOS-unsigned.ipa
