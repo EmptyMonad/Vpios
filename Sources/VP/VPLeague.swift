@@ -24,7 +24,18 @@ import Foundation
 enum VPResolution: String, Codable, CaseIterable {
     case banLuxury, artsFunding, sciencesFunding, peaceAccords, casusBelli, culturalHeritage, naturalHeritage,
          historicalLandmarks, techDiscount, worldReligion, worldIdeology, sphereOfInfluence, openDoor, decolonization,
-         cityStateSanctions
+         cityStateSanctions, worldsFair, treasureFleet, wargames, unitedNations
+
+    /// International projects (LeagueProjects): VP's CostPerPlayer
+    var projectCostPerPlayer: Int? {
+        switch self {
+        case .treasureFleet: return 1500
+        case .wargames: return 3300
+        case .worldsFair: return 3750
+        case .unitedNations: return 5100
+        default: return nil
+        }
+    }
 
     enum Choice { case none, luxury, religion, ideology, cityState }
 
@@ -55,6 +66,10 @@ enum VPResolution: String, Codable, CaseIterable {
         case .openDoor: return "Open Door"
         case .decolonization: return "Decolonization"
         case .cityStateSanctions: return "City-State Sanctions"
+        case .worldsFair: return "World's Fair"
+        case .treasureFleet: return "Treasure Fleet"
+        case .wargames: return "Global Wargames"
+        case .unitedNations: return "United Nations"
         }
     }
 
@@ -75,6 +90,10 @@ enum VPResolution: String, Codable, CaseIterable {
         case .openDoor: return "Influence with the City-State is set to 40 for everyone, and no one can become its Ally."
         case .decolonization: return "Influence of all players with all City-States is lowered to 50, unless they are permanent allies."
         case .cityStateSanctions: return "All Corporation Franchises are removed from City-States, and none can be opened there."
+        case .worldsFair: return "Begins the World's Fair project. Bronze: a free Social Policy. Silver: +33% Culture for 20 turns. Gold: the Crystal Palace in the Capital."
+        case .treasureFleet: return "Begins the Treasure Fleet project. Bronze: a Frigate and 300 Golden Age points. Silver: a Great Admiral and 3 maintenance-free units. Gold: the Grand Canal in the Capital."
+        case .wargames: return "Begins the Global Wargames project. Bronze: an Infantry and 3 maintenance-free units. Silver: +25% attack for 30 turns and 4 maintenance-free units. Gold: the Menin Gate in the Capital."
+        case .unitedNations: return "Begins the United Nations project. Bronze: a Great Diplomat. Silver: +25 Influence with all City-States and the Consulate in the Capital. Gold: the United Nations in the Capital, which (with a World Ideology, from the Modern era) opens Global Hegemony votes."
         }
     }
 
@@ -86,6 +105,9 @@ enum VPResolution: String, Codable, CaseIterable {
         case .sphereOfInfluence: return "Steam Power"
         case .openDoor: return "Economics"
         case .decolonization: return "Radio"
+        case .worldsFair: return "Industrialization"
+        case .wargames: return "Replaceable Parts"
+        case .unitedNations: return "Atomic Theory"
         default: return nil
         }
     }
@@ -123,6 +145,48 @@ struct VPLeagueState: Codable, Equatable {
     var pendingProposers: [Int] = []
     var extraDelegates: [String: Int] = [:]
     var lastResults: [String] = []
+    /// international projects underway: resolution -> civ id -> production contributed
+    var projects: [String: [String: Int]] = [:]
+    var completedProjects: [String] = []
+    var sessionCount = 0
+    /// the human player's Global Hegemony vote (nil: abstain)
+    var playerHegemonyVote: Int? = nil
+    var lastHegemony = ""
+
+    init() {}
+    private enum K: String, CodingKey {
+        case founded, host, era, nextSession, active, proposals, playerVotes, pendingProposers, extraDelegates, lastResults,
+             projects, completedProjects, sessionCount, playerHegemonyVote, lastHegemony
+    }
+    /// every field optional, so a save from an older build still loads its Congress
+    init(from d: Decoder) throws {
+        let c = try d.container(keyedBy: K.self)
+        founded = try c.decodeIfPresent(Bool.self, forKey: .founded) ?? false
+        host = try c.decodeIfPresent(Int.self, forKey: .host)
+        era = try c.decodeIfPresent(Int.self, forKey: .era) ?? 0
+        nextSession = try c.decodeIfPresent(Int.self, forKey: .nextSession) ?? 0
+        active = (try? c.decodeIfPresent([VPLeagueEntry].self, forKey: .active)) ?? []
+        proposals = (try? c.decodeIfPresent([VPLeagueEntry].self, forKey: .proposals)) ?? []
+        playerVotes = try c.decodeIfPresent([Int].self, forKey: .playerVotes) ?? []
+        pendingProposers = try c.decodeIfPresent([Int].self, forKey: .pendingProposers) ?? []
+        extraDelegates = try c.decodeIfPresent([String: Int].self, forKey: .extraDelegates) ?? [:]
+        lastResults = try c.decodeIfPresent([String].self, forKey: .lastResults) ?? []
+        projects = try c.decodeIfPresent([String: [String: Int]].self, forKey: .projects) ?? [:]
+        completedProjects = try c.decodeIfPresent([String].self, forKey: .completedProjects) ?? []
+        sessionCount = try c.decodeIfPresent(Int.self, forKey: .sessionCount) ?? 0
+        playerHegemonyVote = try c.decodeIfPresent(Int.self, forKey: .playerHegemonyVote)
+        lastHegemony = try c.decodeIfPresent(String.self, forKey: .lastHegemony) ?? ""
+    }
+    func encode(to e: Encoder) throws {
+        var c = e.container(keyedBy: K.self)
+        try c.encode(founded, forKey: .founded); try c.encodeIfPresent(host, forKey: .host); try c.encode(era, forKey: .era)
+        try c.encode(nextSession, forKey: .nextSession); try c.encode(active, forKey: .active); try c.encode(proposals, forKey: .proposals)
+        try c.encode(playerVotes, forKey: .playerVotes); try c.encode(pendingProposers, forKey: .pendingProposers)
+        try c.encode(extraDelegates, forKey: .extraDelegates); try c.encode(lastResults, forKey: .lastResults)
+        try c.encode(projects, forKey: .projects); try c.encode(completedProjects, forKey: .completedProjects)
+        try c.encode(sessionCount, forKey: .sessionCount); try c.encodeIfPresent(playerHegemonyVote, forKey: .playerHegemonyVote)
+        try c.encode(lastHegemony, forKey: .lastHegemony)
+    }
 }
 
 extension GameState {
@@ -155,9 +219,12 @@ extension GameState {
         let allies = vpLeagueCityStates().filter { isAlly(civId, of: $0.id) }.count
         if allies > 0, GameState.vpLeagueCSDelegates[e] > 0 { rows.append(("City-State allies", allies * GameState.vpLeagueCSDelegates[e])) }
         if let d = vpData {
-            let b = cities(of: civId).flatMap { $0.buildings }.reduce(0) { $0 + Int(VPData.column(d.buildings[$1], "SingleLeagueVotes") + VPData.column(d.buildings[$1], "ExtraLeagueVotes")) }
+            // ExtraLeagueVotes / FreeWCVotes are "1 delegate per X City-States ever in the game" (CvPlayer::ChangeExtraLeagueVotes)
+            let csEver = civs.filter { $0.isCityState }.count
+            func perCS(_ x: Double) -> Int { x > 0 ? csEver / Int(x) : 0 }
+            let b = cities(of: civId).flatMap { $0.buildings }.reduce(0) { $0 + Int(VPData.column(d.buildings[$1], "SingleLeagueVotes")) + perCS(VPData.column(d.buildings[$1], "ExtraLeagueVotes")) }
             if b > 0 { rows.append(("Buildings", b)) }
-            let p = civ.policies.reduce(0) { $0 + Int(VPData.column(d.policies[$1], "FreeWCVotes")) }
+            let p = civ.policies.reduce(0) { $0 + perCS(VPData.column(d.policies[$1], "FreeWCVotes")) }
             if p > 0 { rows.append(("Policies", p)) }
             let r = vpCivBeliefs(civId).reduce(0) { $0 + Int(VPData.column(d.beliefs[$1], "ExtraVotes")) }
             if r > 0 { rows.append(("Religion", r)) }
@@ -205,6 +272,7 @@ extension GameState {
         if e.repeal { return vpLeague.active.contains { $0.resolution == e.resolution && $0.choice == e.choice } }
         if let t = e.resolution.prereqTech, rs.techs[t] != nil, !vpLeagueMembers().contains(where: { $0.techs.contains(t) }) { return false }
         if vpLeague.active.contains(where: { $0.resolution == e.resolution && $0.choice == e.choice }) { return false }
+        if e.resolution.projectCostPerPlayer != nil && vpLeague.completedProjects.contains(e.resolution.rawValue) { return false }
         if let g = e.resolution.exclusiveGroup, vpLeague.active.contains(where: { $0.resolution.exclusiveGroup == g }) { return false }
         if let g = e.resolution.exclusiveGroup, vpLeague.proposals.contains(where: { !$0.repeal && $0.resolution.exclusiveGroup == g }) { return false }
         if e.resolution == .sphereOfInfluence || e.resolution == .openDoor,
@@ -222,7 +290,7 @@ extension GameState {
                 if vpCanPropose(e) { out.append(e) }
             }
         }
-        for a in vpLeague.active {
+        for a in vpLeague.active where a.resolution.projectCostPerPlayer == nil {
             let e = VPLeagueEntry(resolution: a.resolution, choice: a.choice, proposer: civId, repeal: true)
             if vpCanPropose(e) { out.append(e) }
         }
@@ -314,6 +382,13 @@ extension GameState {
             let mine = Double(vpLeagueCityStates().filter { isAlly(civId, of: $0.id) }.count)
             let avg = Double(vpLeagueCityStates().count) / Double(max(1, members.count))
             return (avg - mine) * 20
+        case .worldsFair, .treasureFleet, .wargames:
+            let prod = cities(of: civId).reduce(0.0) { $0 + currentCityStats($1.id).total.production }
+            let avg = members.map { m in cities(of: m.id).reduce(0.0) { $0 + currentCityStats($1.id).total.production } }
+            return (prod - avg.reduce(0, +) / Double(max(1, avg.count))) / 2 + 10
+        case .unitedNations:
+            let mine = Double(vpDelegates(civId).0), best = Double(members.map { vpDelegates($0.id).0 }.max() ?? 0)
+            return mine >= best ? 50 : (mine - best) * 5
         case .cityStateSanctions:
             guard let corp = vpCorporation(of: civId) else { return 5 }
             return -Double(vpLeagueCityStates().filter { c in cities(of: c.id).contains { $0.buildings.contains(corp.franchise) } }.count) * 15
@@ -357,6 +432,7 @@ extension GameState {
             return
         }
         vpLeagueEnforce()
+        vpLeagueProjectsTurn()
         let e = vpLeagueTargetEra()
         if e > vpLeague.era {
             vpLeague.era = e
@@ -377,6 +453,8 @@ extension GameState {
         guard vpLeagueEnabled, !vpLeague.founded, let h = vpLeagueMembers().first else { return }
         vpLeague.founded = true; vpLeague.host = h.id; vpLeague.era = vpLeagueTargetEra()
         vpLeague.nextSession = turn + GameState.vpLeagueIntervals[vpLeague.era]
+        let tf = VPLeagueEntry(resolution: .treasureFleet, choice: nil, proposer: h.id, turn: turn)   // exercise a project too
+        vpLeague.active.append(tf); vpLeague.projects[tf.resolution.rawValue] = [:]
         vpLeagueStartProposals()
     }
 
@@ -420,6 +498,13 @@ extension GameState {
     }
 
     private func vpLeagueSession() {
+        vpLeague.sessionCount += 1
+        // with Global Hegemony open, sessions alternate between Hegemony votes and resolutions (the proposals wait)
+        if vpHegemonyEnabled, vpLeague.sessionCount % 2 == 0 {
+            vpHegemonySession()
+            vpLeague.nextSession = turn + GameState.vpLeagueIntervals[min(3, vpLeague.era)]
+            return
+        }
         var results: [String] = []
         var yea = Array(repeating: 0, count: vpLeague.proposals.count), nay = yea
         for m in vpLeagueMembers() {
@@ -446,6 +531,7 @@ extension GameState {
     }
 
     private func vpLeagueOnEnact(_ a: VPLeagueEntry) {
+        if a.resolution.projectCostPerPlayer != nil { vpLeague.projects[a.resolution.rawValue] = [:]; return }
         switch a.resolution {
         case .openDoor:
             if let c = a.choice, let cs = Int(c) { for m in vpLeagueMembers() { setInfluence(cityState: cs, major: m.id, 40) } }
@@ -491,6 +577,146 @@ extension GameState {
         for m in vpLeagueMembers() where m.isPlayer { notify(m.id, text, category: .General, icons: ["OtherIcons/Pencil"]) }
     }
 
+    // MARK: international projects (CvLeague::DoProjectReward)
+
+    /// Cost per player, scaled with the game speed (CvLeague::GetProjectCostPerPlayer without VP's era scaling).
+    func vpProjectCostPerPlayer(_ r: VPResolution) -> Int { Int(Double(r.projectCostPerPlayer ?? 0) * speed.productionCostModifier) }
+    func vpProjectCost(_ r: VPResolution) -> Int { vpProjectCostPerPlayer(r) * max(1, civs.filter { $0.isMajor }.count) }
+    func vpProjectsUnderway() -> [VPResolution] { vpLeague.projects.keys.compactMap { VPResolution(rawValue: $0) }.sorted { $0.rawValue < $1.rawValue } }
+    func vpProjectProgress(_ r: VPResolution) -> Int { vpLeague.projects[r.rawValue]?.values.reduce(0, +) ?? 0 }
+    func vpProjectContribution(_ r: VPResolution, _ civId: Int) -> Int { vpLeague.projects[r.rawValue]?[String(civId)] ?? 0 }
+
+    /// The perpetual constructions a member's cities may work on (CityConstructions.productionConversions).
+    func vpProjectConversions(_ civId: Int) -> [String] {
+        guard vpLeague.founded, civ(civId)?.isMajor == true else { return [] }
+        return vpProjectsUnderway().map { $0.title }
+    }
+
+    /// 0 none, 1 bronze, 2 silver, 3 gold (CvLeague::GetMemberContributionTier)
+    func vpProjectTier(_ r: VPResolution, _ civId: Int) -> Int {
+        let c = Double(vpProjectContribution(r, civId)), per = Double(vpProjectCostPerPlayer(r))
+        let best = vpLeague.projects[r.rawValue]?.values.max() ?? 0
+        if c > 0 && Int(c) >= best { return 3 }
+        if c >= per { return 2 }
+        if c >= per * 0.5 { return 1 }
+        return 0
+    }
+
+    /// The share of an AI's production that goes to projects (its cities are not switched over; see vpLeagueCityPercent).
+    static let vpAIProjectShare = 15.0
+
+    private func vpLeagueProjectsTurn() {
+        let underway = vpProjectsUnderway()
+        guard !underway.isEmpty else { return }
+        for m in vpLeagueMembers() {
+            for c in cities(of: m.id) {
+                let prod = Int(currentCityStats(c.id).total.production)
+                guard prod > 0 else { continue }
+                if m.isPlayer && !epochsAutoplay {
+                    if let r = underway.first(where: { $0.title == c.convertProductionTo }) { vpLeague.projects[r.rawValue, default: [:]][String(m.id), default: 0] += prod }
+                } else {
+                    let share = Int(Double(prod) * GameState.vpAIProjectShare / 100 / Double(underway.count))
+                    for r in underway { vpLeague.projects[r.rawValue, default: [:]][String(m.id), default: 0] += share }
+                }
+            }
+        }
+        for r in underway where vpProjectProgress(r) >= vpProjectCost(r) { vpCompleteProject(r) }
+    }
+
+    private func vpCompleteProject(_ r: VPResolution) {
+        var lines: [String] = []
+        for m in vpLeagueMembers() {
+            let tier = vpProjectTier(r, m.id)
+            guard tier > 0 else { continue }
+            for t in 1...tier { vpProjectReward(r, tier: t, civId: m.id) }
+            lines.append("\(m.nation): \(["", "Bronze", "Silver", "Gold"][tier])")
+        }
+        vpLeague.projects[r.rawValue] = nil
+        vpLeague.completedProjects.append(r.rawValue)
+        vpLeague.active.removeAll { $0.resolution == r }
+        vpLeagueNotifyAll("[\(r.title)] has been completed. " + lines.joined(separator: ", "))
+    }
+
+    private func vpProjectReward(_ r: VPResolution, tier: Int, civId: Int) {
+        guard let ci = civIndex(civId) else { return }
+        let capital = cities(of: civId).first { $0.isCapital } ?? cities(of: civId).first
+        func unit(_ name: String) { if let cap = capital, rs.units[name] != nil { _ = spawnUnit(name, civId: civId, at: cap.coord) } }
+        func building(_ name: String) {
+            if let cap = capital, let x = cityIndex(cap.id), rs.buildings[name] != nil, !cap.buildings.contains(name) { addBuilding(cityIndex: x, name) }
+        }
+        func temp(_ u: String, _ turns: Int) { addTemporaryUnique(Unique(u), turns: turns, civId: civId, source: r.title) }
+        switch (r, tier) {
+        case (.worldsFair, 1): civs[ci].freePolicies += 1
+        case (.worldsFair, 2): temp("[+33]% [Culture] [in all cities]", 20)
+        case (.worldsFair, 3): building("Crystal Palace")
+        case (.treasureFleet, 1): unit("Frigate"); civs[ci].goldenAgePoints += 300
+        case (.treasureFleet, 2): unit("Great Admiral"); temp("[3] units cost no maintenance", 100000)
+        case (.treasureFleet, 3): building("Grand Canal")
+        case (.wargames, 1): unit("Infantry"); temp("[3] units cost no maintenance", 100000)
+        case (.wargames, 2): temp("[+25]% Strength <when attacking>", 30); temp("[4] units cost no maintenance", 100000)
+        case (.wargames, 3): building("Menin Gate")
+        case (.unitedNations, 1): unit("Great Diplomat")
+        case (.unitedNations, 2):
+            for cs in vpLeagueCityStates() { addInfluence(cityState: cs.id, major: civId, 25) }
+            building("Consulate")
+        case (.unitedNations, 3): building("United Nations")
+        default: break
+        }
+    }
+
+    // MARK: Global Hegemony (RESOLUTION_DIPLOMATIC_VICTORY)
+
+    /// VP: the United Nations built, a World Ideology active and the Modern era reached
+    var vpHegemonyEnabled: Bool {
+        vpLeague.founded && vpLeague.era >= 2 && vpIsActive(.worldIdeology)
+            && cities.contains { $0.buildings.contains("United Nations") }
+    }
+
+    /// CvGame::DoUpdateDiploVictory (MOD_BALANCE_CORE_VICTORY_GAME_CHANGES)
+    func vpHegemonyVotesNeeded() -> Int {
+        var civsCount = 0.0, csCount = 0.0
+        for c in civs where !c.isBarbarian && !c.isSpectator {
+            let alive = c.isAlive && !cities(of: c.id).isEmpty
+            if c.isCityState { csCount += alive ? 1.34 : 0.75 } else if c.isMajor { civsCount += alive ? 1.5 : 0.75 }
+        }
+        let e = min(3, vpLeague.era)
+        let host = GameState.vpLeagueHostDelegates[3], perCiv = GameState.vpLeagueCivDelegates[3], perCS = GameState.vpLeagueCSDelegates[3]
+        _ = e
+        let civPart = max(0, 1.443 * log(max(civsCount, 1e-9)) + 7.0)
+        let csPart = max(0, 16.023 * log(max(csCount, 1e-9)) - 13.758)
+        var need = Int((civPart + csPart).rounded(.down))
+        need = max(host + perCiv + 1, need)
+        need = min(host + perCiv * Int(civsCount) + perCS * Int(csCount), need)
+        return need
+    }
+
+    /// Whom an AI supports: itself when it is one of the two largest delegations, else the largest it is not at war with.
+    func vpAIHegemonyVote(_ civId: Int) -> Int? {
+        let ranked = vpLeagueMembers().sorted { vpDelegates($0.id).0 > vpDelegates($1.id).0 }
+        if ranked.prefix(2).contains(where: { $0.id == civId }) { return civId }
+        return ranked.first { $0.id != civId && civ(civId)?.isAtWar(with: $0.id) != true }?.id
+    }
+
+    private func vpHegemonySession() {
+        var support: [Int: Int] = [:]
+        for m in vpLeagueMembers() {
+            let choice = (m.isPlayer && !epochsAutoplay) ? vpLeague.playerHegemonyVote : vpAIHegemonyVote(m.id)
+            if let c = choice { support[c, default: 0] += vpDelegates(m.id).0 }
+        }
+        let need = vpHegemonyVotesNeeded()
+        let ranked = support.sorted { $0.value != $1.value ? $0.value > $1.value : $0.key < $1.key }
+        let text = ranked.map { "\(civ($0.key)?.nation ?? "?") \($0.value)" }.joined(separator: ", ")
+        if let top = ranked.first, top.value >= need, let ci = civIndex(top.key) {
+            civs[ci].hasEverWonDiplomaticVote = true   // with the United Nations built: Unciv's Diplomatic Victory
+            vpLeague.lastHegemony = "Global Hegemony: \(civs[ci].nation) wins (\(top.value) of \(need) needed). \(text)"
+        } else {
+            for (id, _) in ranked.prefix(2) { vpLeague.extraDelegates[String(id), default: 0] += 5 }   // LeadersVoteBonusOnFail
+            vpLeague.lastHegemony = "Global Hegemony: no winner (\(need) needed). \(text)"
+        }
+        vpLeague.playerHegemonyVote = nil
+        vpLeagueNotifyAll(vpLeague.lastHegemony)
+    }
+
     // MARK: effects
 
     var vpBannedLuxuries: Set<String> { vpLeague.founded ? Set(vpActive(.banLuxury).compactMap { $0.choice }) : [] }
@@ -515,6 +741,7 @@ extension GameState {
         var s = Stats()
         if vpIsActive(.artsFunding) { let b = boost { Double($0.policies.count) }; s.production += b; s.culture += b }
         if vpIsActive(.sciencesFunding) { let b = boost { Double($0.techs.count) }; s.food += b; s.science += b }
+        if !vpLeague.projects.isEmpty && (!me.isPlayer || epochsAutoplay) { s.production -= GameState.vpAIProjectShare }   // the AI's project share
         return s.isEmpty ? nil : s
     }
 

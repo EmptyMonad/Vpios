@@ -11,7 +11,9 @@
 
 - Base BNW resolution and session data is not in the VP database: sessions, delegates and resolutions follow BNW's documented rules with VP's changes (intervals 20/15/10, 3 proposers, VP texts)
 - Delegates are spent across all proposals; no vote trading, no relation changes from votes, host elections go to the civ with the most delegates
-- Not carried over: international projects (World's Fair, ISS, Treasure Fleet, Wargames, United Nations), Global Hegemony (Unciv's own UN vote remains), Sanctions, Cold War, Travel Ban, Passport System, Spaceflight Regulations, Global Liberation, Holy City tourism, ideology public opinion
+- International projects: World's Fair, Treasure Fleet, Global Wargames and United Nations with VP's rewards; the AI puts 15% of its Production into projects instead of switching cities; costs lack VP's era scaling; International Games and ISS are not carried over
+- Global Hegemony replaces Unciv's UN vote: VP's delegates-needed formula, alternating sessions, +5 permanent delegates for the top two on a failed vote; the AI backs itself (top two) or the largest delegation it is not at war with
+- Not carried over: Sanctions, Cold War, Travel Ban, Passport System, Spaceflight Regulations, Global Liberation, Holy City tourism, ideology public opinion
 - Endowment for the Arts / World Science Initiative use a flat 33% instead of 'up to 33%'; Cultural Heritage Sites lacks +1 Science per Great Work
 
 ## Policies: untranslated effects (Authority)
@@ -256,15 +258,6 @@
 - AttackFullyHealedMod: 1
 - NearbyRange: 1
 - NearbyCityCombatMod: 1
-
-## Buildings not emitted (corporation/dummy/no build path)
-
-- Grand Canal
-- Crystal Palace
-- Menin Gate
-- Olympic Village
-- Un
-- Consulate
 
 ## Building effect tables not translated (table: rows)
 

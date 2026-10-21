@@ -54,7 +54,7 @@ enum VPSelfTest {
                 if t % 10 == 0 || g.outcome != nil {
                     print("VPTEST turn \(g.turn) \(Int(Date().timeIntervalSince(t0)))s medians=\(g.vpMedians)")
                     let lg = g.vpLeague
-                    print("VPTEST   congress founded=\(lg.founded) host=\(lg.host.flatMap { g.civ($0)?.nation } ?? "-") era=\(lg.era) next=\(lg.nextSession) active=[\(lg.active.map { g.vpEntryTitle($0) }.joined(separator: "; "))] proposals=[\(lg.proposals.map { g.vpEntryTitle($0) }.joined(separator: "; "))] delegates=[\(g.vpLeagueMembers().map { "\($0.nation)=\(g.vpDelegates($0.id).0)" }.joined(separator: ","))] last=[\(lg.lastResults.joined(separator: "; "))]")
+                    print("VPTEST   congress founded=\(lg.founded) host=\(lg.host.flatMap { g.civ($0)?.nation } ?? "-") era=\(lg.era) next=\(lg.nextSession) active=[\(lg.active.map { g.vpEntryTitle($0) }.joined(separator: "; "))] proposals=[\(lg.proposals.map { g.vpEntryTitle($0) }.joined(separator: "; "))] delegates=[\(g.vpLeagueMembers().map { "\($0.nation)=\(g.vpDelegates($0.id).0)" }.joined(separator: ","))] last=[\(lg.lastResults.joined(separator: "; "))] projects=[\(g.vpProjectsUnderway().map { "\($0.title) \(g.vpProjectProgress($0))/\(g.vpProjectCost($0))" }.joined(separator: ","))] hegemonyNeed=\(g.vpHegemonyVotesNeeded())")
                     for c in g.civs where c.isMajor && c.isAlive {
                         let h = g.happinessBreakdown(c.id)
                         let rows = h.rows.map { "\($0.0)=\(Int($0.1))" }.joined(separator: ",")

@@ -10868,7 +10868,7 @@
     "HurryCostModifier": -5
    }
   },
-  "Un": {
+  "United Nations": {
    "Building_YieldChanges": [
     {
      "YieldType": "Culture",
@@ -10876,7 +10876,7 @@
     }
    ],
    "_": {
-    "BuildingClass": "Un",
+    "BuildingClass": "United Nations",
     "SpecialistType": "Civil Servant",
     "ShowInPedia": 1,
     "GPExpendInfluence": 25,
@@ -12828,9 +12828,9 @@
     "HurryCostModifier": -20
    }
   },
-  "United Nations": {
+  "United Nations (G&K)": {
    "_": {
-    "BuildingClass": "United Nations",
+    "BuildingClass": "United Nations (G&K)",
     "Cost": 3250,
     "PrereqTech": "Globalization",
     "NumPoliciesNeeded": 27,

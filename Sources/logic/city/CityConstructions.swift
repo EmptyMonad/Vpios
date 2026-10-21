@@ -100,6 +100,7 @@ extension GameState {
             if u.param(0) == "Faith" && !religionEnabled { continue }
             if !out.contains(u.param(0)) { out.append(u.param(0)) }
         }
+        out += vpProjectConversions(civId).filter { !out.contains($0) }   // VP: World Congress projects (VP/VPLeague.swift)
         return out
     }
 

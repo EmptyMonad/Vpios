@@ -1879,21 +1879,6 @@
   }
  },
  {
-  "name": "United Nations",
-  "isWonder": true,
-  "greatPersonPoints": {
-   "Great Merchant": 2
-  },
-  "requiredTech": "Globalization",
-  "uniques": [
-   "Triggers voting for the Diplomatic Victory",
-   "Only available <when [Diplomatic] Victory is enabled>",
-   "Triggers a global alert upon completion"
-  ],
-  "quote": "'More than ever before in human history, we share a common destiny. We can master it only if we face it together. And that is why we have the United Nations.' - Kofi Annan",
-  "cost": 3250
- },
- {
   "name": "Cathedral",
   "uniques": [
    "Unbuildable",
@@ -4362,6 +4347,78 @@
   "requiredTech": "Particle Physics",
   "science": 10,
   "culture": 1
+ },
+ {
+  "name": "Grand Canal",
+  "isWonder": true,
+  "culture": 1,
+  "uniques": [
+   "Unbuildable",
+   "Unsellable"
+  ]
+ },
+ {
+  "name": "Crystal Palace",
+  "isWonder": true,
+  "culture": 1,
+  "uniques": [
+   "Unbuildable",
+   "Unsellable",
+   "Empire enters golden age",
+   "[+2 Production, +2 Science] from all [Factory] buildings"
+  ]
+ },
+ {
+  "name": "Menin Gate",
+  "isWonder": true,
+  "happiness": 2,
+  "culture": 2,
+  "greatPersonPoints": {
+   "Great Artist": 1
+  },
+  "uniques": [
+   "Unbuildable",
+   "Unsellable",
+   "[+2 Culture] from [Fort] tiles [in all cities]",
+   "[+2 Culture] from [Citadel] tiles [in all cities]",
+   "[+2 Culture] from [Landmark] tiles [in all cities]"
+  ]
+ },
+ {
+  "name": "Olympic Village",
+  "isWonder": true,
+  "happiness": 3,
+  "culture": 3,
+  "uniques": [
+   "Unbuildable",
+   "Unsellable",
+   "[+2 Gold] from all [Stadium] buildings"
+  ]
+ },
+ {
+  "name": "United Nations",
+  "isWonder": true,
+  "greatPersonPoints": {
+   "Great Merchant": 2
+  },
+  "uniques": [
+   "Triggers a global alert upon completion",
+   "Unbuildable",
+   "Unsellable",
+   "Empire enters golden age"
+  ],
+  "quote": "'More than ever before in human history, we share a common destiny. We can master it only if we face it together. And that is why we have the United Nations.' - Kofi Annan",
+  "culture": 1
+ },
+ {
+  "name": "Consulate",
+  "isNationalWonder": true,
+  "culture": 1,
+  "uniques": [
+   "Unbuildable",
+   "Unsellable",
+   "Destroyed when the city is captured"
+  ]
  },
  {
   "name": "Throne Room",

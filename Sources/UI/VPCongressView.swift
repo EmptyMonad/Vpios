@@ -37,6 +37,8 @@ struct VPCongressView: View {
                                 section("Active resolutions")
                                 if league.active.isEmpty { Text(L("None")).font(Theme.caption).foregroundStyle(Theme.creamDim) }
                                 ForEach(Array(league.active.enumerated()), id: \.offset) { _, a in entry(s, a) }
+                                projects(s, me)
+                                if s.vpHegemonyEnabled || !league.lastHegemony.isEmpty { hegemony(s, me) }
                                 proposals(s, me)
                                 if league.pendingProposers.contains(me) { proposeSection(s, me) }
                                 if !league.lastResults.isEmpty {
@@ -110,6 +112,49 @@ struct VPCongressView: View {
                     }
                 }
             }
+        }
+    }
+
+    @ViewBuilder private func projects(_ s: GameState, _ me: Int) -> some View {
+        let underway = s.vpProjectsUnderway()
+        if !underway.isEmpty {
+            VStack(alignment: .leading, spacing: 4) {
+                section("International projects")
+                ForEach(underway, id: \.self) { r in
+                    let cost = max(1, s.vpProjectCost(r)), done = s.vpProjectProgress(r)
+                    let tier = ["-", "Bronze", "Silver", "Gold"][s.vpProjectTier(r, me)]
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text(L(r.title) + " \(done * 100 / cost)%").font(Theme.body).foregroundStyle(Theme.cream)
+                        Text(L("Your contribution: [\(s.vpProjectContribution(r, me))] (Bronze [\(s.vpProjectCostPerPlayer(r) / 2)], Silver [\(s.vpProjectCostPerPlayer(r))], Gold: the most). Now: [\(tier)]"))
+                            .font(.system(size: 10)).foregroundStyle(Theme.creamDim)
+                        Text(L("Choose \"Produce [\(r.title)]\" in a city to contribute its Production.")).font(.system(size: 10)).foregroundStyle(Theme.creamDim)
+                    }.padding(6).frame(maxWidth: .infinity, alignment: .leading).background(RoundedRectangle(cornerRadius: 6).fill(Theme.panelDark))
+                }
+            }
+        }
+    }
+
+    private func hegemony(_ s: GameState, _ me: Int) -> some View {
+        VStack(alignment: .leading, spacing: 4) {
+            section("Global Hegemony")
+            if s.vpHegemonyEnabled {
+                Text(L("Delegates needed: [\(s.vpHegemonyVotesNeeded())]. Hegemony votes alternate with resolution sessions.")).font(Theme.caption).foregroundStyle(Theme.creamDim)
+                Text(L("Your vote:")).font(Theme.caption).foregroundStyle(Theme.cream)
+                ForEach(s.vpLeagueMembers()) { c in
+                    Button {
+                        s.vpLeague.playerHegemonyVote = c.id; tick += 1
+                    } label: {
+                        HStack(spacing: 6) {
+                            NationBadge(nation: c.nationDef, size: 18)
+                            Text(L(c.nation)).font(Theme.caption)
+                            Spacer()
+                            if s.vpLeague.playerHegemonyVote == c.id { Image(systemName: "checkmark").foregroundStyle(Theme.gold) }
+                        }.padding(4)
+                    }.buttonStyle(.plain)
+                }
+                Button(L("Abstain")) { s.vpLeague.playerHegemonyVote = nil; tick += 1 }.buttonStyle(ThemedButtonStyle(compact: true))
+            }
+            if !s.vpLeague.lastHegemony.isEmpty { Text(s.vpLeague.lastHegemony).font(.system(size: 10)).foregroundStyle(Theme.creamDim) }
         }
     }
 
