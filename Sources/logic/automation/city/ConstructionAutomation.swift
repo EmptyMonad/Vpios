@@ -107,6 +107,7 @@ extension GameState {
                 let alreadyHas = map.tilesWithin(city.coord, radius: twoTurns).flatMap { units(at: $0) }.contains { $0.civId == city.civId && $0.isCivilian && $0.def.createsWaterImprovements }
                 if !alreadyHas && workBoatTileWorthImproving(city) { addChoice(.unit(boat.name), 6) }
             }
+            if let (t, m) = vpWantsTradeUnit(city, unitsBuildable.filter { !shouldAvoid($0.name) }) { addChoice(.unit(t), m) }   // VP: VP/VPTrade.swift
             // addMilitaryUnitChoice
             if ProcessInfo.processInfo.environment["CHOICE_CITY"] == city.name { print("MILE t=\(uncivTurns) \(city.name) atWar=\(atWar) over=\(overAverage) deficit=\(unitSupplyDeficit(city.civId)) goldNext=\(netGoldPerTurn(city.civId)) mil=\(militaryUnits) cities=\(cityCount) gold=\(civ.gold) units=\(civUnits.count) milList=\(civUnits.filter { $0.isMilitary }.map { $0.name }.sorted().joined(separator: ","))") }
             if (atWar || overAverage) && unitSupplyDeficit(city.civId) == 0 && (atWar || (netGoldPerTurn(city.civId) >= 0 && militaryUnits <= max(7, cityCount * 5))) && civ.gold >= -50 {

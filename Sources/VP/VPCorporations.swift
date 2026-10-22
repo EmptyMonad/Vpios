@@ -8,10 +8,9 @@
 //   Monopoly on one of Corporation_ResourceMonopolyOrs (and all of ..Ands), and each civ may found only one
 //   corporation; each corporation exists once in the world (HQs are world wonders). It grants a free Office.
 // - Offices can only be built by the civ that owns the corporation's HQ.
-// - Franchises spread to foreign cities. VP spreads them when a Trade Route from an Office city to a foreign city
-//   completes; this engine has no international trade routes, so each Office city instead plants one in the nearest
-//   foreign city in reach with a 4% chance a turn (about one per Trade Route lifetime). VP's own random spread
-//   (RandomSpreadChance + CorporationRandomForeignFranchiseMod %, a random foreign city) is kept as is.
+// - Franchises spread to foreign cities when a Trade Route from an Office city to a foreign city completes
+//   (VP/VPTrade.swift), and by VP's random spread (RandomSpreadChance + CorporationRandomForeignFranchiseMod %, a
+//   random foreign city).
 // - Franchise limit = BaseFranchises + Offices × BALANCE_CORE_CORP_OFFICE_FRANCHISE_CONVERSION + AdditionalNumFranchises,
 //   then × (100 + AdditionalNumFranchisesMod)%. Building_YieldPerFranchise yields count min(franchises, limit).
 // - One Franchise per city, none in a city that has an Office.
@@ -28,6 +27,10 @@ struct VPCorporation {
     let baseFranchises: Int
     let randomSpreadChance: Int
     let tradeRouteRangeMod: Int
+    let landRangeMod: Int
+    let seaRangeMod: Int
+    let numFreeTradeRoutes: Int
+    let tradeRouteMod: [String: Int]
     let monopolyOr: [String]
     let monopolyAnd: [String]
 
@@ -38,6 +41,10 @@ struct VPCorporation {
         baseFranchises = (d["baseFranchises"] as? Int) ?? 0
         randomSpreadChance = (d["randomSpreadChance"] as? Int) ?? 0
         tradeRouteRangeMod = (d["tradeRouteRangeMod"] as? Int) ?? 0
+        landRangeMod = (d["landRangeMod"] as? Int) ?? 0
+        seaRangeMod = (d["seaRangeMod"] as? Int) ?? 0
+        numFreeTradeRoutes = (d["numFreeTradeRoutes"] as? Int) ?? 0
+        tradeRouteMod = d["tradeRouteMod"] as? [String: Int] ?? [:]
         monopolyOr = d["monopolyOr"] as? [String] ?? []
         monopolyAnd = d["monopolyAnd"] as? [String] ?? []
     }
@@ -129,14 +136,7 @@ extension GameState {
             let limit = vpFranchiseLimit(c, owner: owner)
             guard placed < limit else { continue }
             var rng = stateBasedRandom("VP.franchise.\(c.name)", civId: owner, seed: Int32(truncatingIfNeeded: turn))
-            // Office cities: the nearest foreign city in reach (VP's base trade route range, 10 tiles, + the corporation's range %)
-            let range = 10 * (100 + c.tradeRouteRangeMod) / 100
-            for office in cities(of: owner) where office.buildings.contains(c.office) && placed < limit {
-                guard rng.nextInt(below: 100) < 4 else { continue }
-                let target = cities.filter { vpCanHostFranchise($0, c, owner: owner, corps: d.corporations) && $0.coord.distance(to: office.coord) <= range }
-                    .min { ($0.coord.distance(to: office.coord), $0.id) < ($1.coord.distance(to: office.coord), $1.id) }
-                if let t = target { vpPlantFranchise(c, owner: owner, in: t.id); placed += 1 }
-            }
+            // (franchises also arrive with completed international trade routes from Office cities: VP/VPTrade.swift)
             // VP's random spread to a random foreign city
             let chance = c.randomSpreadChance + vpPolicyColumn(owner, "CorporationRandomForeignFranchiseMod")
             if placed < limit, rng.nextInt(below: 100) < chance {

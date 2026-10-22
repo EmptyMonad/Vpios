@@ -484,6 +484,7 @@ final class CityStats {
         if let f = state.vpFranchiseYields(city) { newBaseStatList["Franchises"] = f }   // VP: VP/VPCorporations.swift (nil without the VP mod)
         if let v = state.vpBuildingYields(city) { newBaseStatList["VP buildings"] = v }   // VP: VP/VPBuildingYields.swift
         if let w = state.vpLeagueCityYields(city) { newBaseStatList["World Congress"] = w }   // VP: VP/VPLeague.swift
+        if let t = state.vpTradeCityYields(city) { newBaseStatList["International trade"] = t }   // VP: VP/VPTrade.swift
         newBaseStatTree.setChild("Buildings", statsFromBuildings)
 
         for source in newBaseStatList.order { newBaseStatTree.addStats(newBaseStatList[source], source) }

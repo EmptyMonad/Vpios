@@ -65,6 +65,7 @@ final class GameState: Codable {
     /// VP: CvGame yield medians for needs-based happiness (VP/VPNeeds.swift). Saved; zero in a save from before them.
     var vpMedians = VPMedians()
     var vpLeague = VPLeagueState()   // VP: VP/VPLeague.swift
+    var vpTradeRoutes: [VPTradeRoute] = []   // VP: VP/VPTrade.swift
     /// Guards the stats refresh that a resource change triggers, so the breakdown it computes - which reads the
     /// resources again - cannot re-enter it.
     var resourceStatsUpdateInProgress = false
@@ -217,7 +218,7 @@ final class GameState: Codable {
         if ProcessInfo.processInfo.environment["GOLDX"] != nil, amount != 0 { print("GOLDX t=\(turn) \(civ(civId)?.nation ?? "?") \(amount) by=\(caller)") }
     }
 
-    private enum CodingKeys: String, CodingKey { case settings, map, civs, cities, units, turn, nextId, outcome, rng, deals, tradeRecords, unVoteTurn, currentHumanIndex, pendingOffers, pendingDemands, encampments, historyStartTurn, attackEvents, currentTurnStartTime, diplomaticVictoryVotesCast, diplomaticVictoryVotesProcessed, oneMoreTurnMode, victoryData, unitNamesTaken, diplomacyTurnDoneThisRound, vpMedians, vpLeague }
+    private enum CodingKeys: String, CodingKey { case settings, map, civs, cities, units, turn, nextId, outcome, rng, deals, tradeRecords, unVoteTurn, currentHumanIndex, pendingOffers, pendingDemands, encampments, historyStartTurn, attackEvents, currentTurnStartTime, diplomaticVictoryVotesCast, diplomaticVictoryVotesProcessed, oneMoreTurnMode, victoryData, unitNamesTaken, diplomacyTurnDoneThisRound, vpMedians, vpLeague, vpTradeRoutes }
     var pendingDemands: [DemandRequest] = []
     /// Unciv GameInfo.historyStartTurn: the first turn the replay can show.
     var historyStartTurn: Int = 1
@@ -306,6 +307,7 @@ final class GameState: Codable {
         victoryData = try c.decodeIfPresent(VictoryRecord.self, forKey: .victoryData)
         vpMedians = (try? c.decodeIfPresent(VPMedians.self, forKey: .vpMedians)) ?? VPMedians()   // VP
         vpLeague = (try? c.decodeIfPresent(VPLeagueState.self, forKey: .vpLeague)) ?? VPLeagueState()   // VP
+        vpTradeRoutes = (try? c.decodeIfPresent([VPTradeRoute].self, forKey: .vpTradeRoutes)) ?? []   // VP
         unitNamesTaken = Set(try c.decodeIfPresent([String].self, forKey: .unitNamesTaken) ?? [])   // a save from before it has none
         pendingOffers = try c.decodeIfPresent([TradeOffer].self, forKey: .pendingOffers) ?? []
         pendingDemands = try c.decodeIfPresent([DemandRequest].self, forKey: .pendingDemands) ?? []
@@ -345,6 +347,7 @@ final class GameState: Codable {
         var c = encoder.container(keyedBy: CodingKeys.self)
         if vpMedians != VPMedians() { try c.encode(vpMedians, forKey: .vpMedians) }   // VP
         if vpLeague != VPLeagueState() { try c.encode(vpLeague, forKey: .vpLeague) }   // VP
+        if !vpTradeRoutes.isEmpty { try c.encode(vpTradeRoutes, forKey: .vpTradeRoutes) }   // VP
         try c.encode(settings, forKey: .settings); try c.encode(map, forKey: .map); try c.encode(civs, forKey: .civs)
         try c.encode(cities, forKey: .cities); try c.encode(units, forKey: .units); try c.encode(turn, forKey: .turn)
         try c.encode(nextId, forKey: .nextId); try c.encodeIfPresent(outcome, forKey: .outcome); try c.encode(rng, forKey: .rng)
